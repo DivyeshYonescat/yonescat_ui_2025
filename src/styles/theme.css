@@ -1,0 +1,10 @@
+@layer theme {
+    @theme {
+        --bg-primary:"#ffffff";
+        --bg-secondary:"#101010";
+        --color-primary:"#f5f6f8";
+        --text-color:"#3886bb";
+        --color-secondary:"#ffffff";
+        --font-pt-sans:"PT Sans";
+    }
+}
