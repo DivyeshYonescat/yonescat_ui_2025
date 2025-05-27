@@ -95,22 +95,22 @@ export default function Footer() {
                     <ul className="flex w-full mt-3.5 float-start items-center">
                         <li className="px-[5px]">
                             <Link rel="nofollow"  href="#" aria-label={'Follow on x'}>
-                                <Image  src={"/images/main/media/facebook.svg"} width={30} height={30} />
+                                <Image  src={"/images/main/media/facebook.svg"} alt="facebook" width={30} height={30} />
                             </Link>
                         </li>
                         <li className="px-[5px]">
                             <Link rel="nofollow"  href="#" aria-label={'Follow on x'}>
-                                <Image  src={"/images/main/media/instagram.svg"} width={30} height={30} />
+                                <Image  src={"/images/main/media/instagram.svg"} alt="instagram" width={30} height={30} />
                             </Link>
                         </li>
                         <li className="px-[5px]">
                             <Link rel="nofollow"  href="#" aria-label={'Follow on x'}>
-                                <Image  src={"/images/main/media/youtube.svg"} width={30} height={30} />
+                                <Image  src={"/images/main/media/youtube.svg"} alt="youtune" width={30} height={30} />
                             </Link>
                         </li>
                         <li className="px-[5px]">
                             <Link rel="nofollow"  href="#" aria-label={'Follow on x'}>
-                                <Image  src={"/images/main/media/x.svg"} width={30} height={30} />
+                                <Image  src={"/images/main/media/x.svg"}  alt="x" width={30} height={30} />
                             </Link>
                         </li>
                         

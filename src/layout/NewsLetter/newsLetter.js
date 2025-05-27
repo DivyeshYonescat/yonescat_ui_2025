@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React, { useState, useRef, useEffect } from 'react';
 
 import useError from "@/api/errorShow";
-import { FormError } from "@/components/form/validationError";
+
 import { useForm } from 'react-hook-form';
 import FloatingSVG from './newslaterAnimation';
 
@@ -50,7 +50,7 @@ const NewsLetterSection = () => {
                                     })}
                                 />
                             </div>
-                            <FormError field={errors.email} />
+                           
                             <div>
                             { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error text-start" key={errorIndex}> {error.message} </div>) }
                             </div>

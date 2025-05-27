@@ -16,7 +16,7 @@ const FloatingSVG = () => {
  
       {/* Floating 1.png */}
       <g transform="translate(103.17 22.79)">
-<motion.image
+      <motion.image
         width="262"
         height="274"
         transform="translate(103.17 22.79)"

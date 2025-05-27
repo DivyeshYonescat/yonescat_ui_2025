@@ -95,7 +95,7 @@ export default function FeaturesSection() {
                       <p className="sub-title font-semibold my-[15px] max-sm:mt-[0] sm:mt-[0] capitalize  group:hover  ">{item.subTitle}</p>
                       <ul className="fbox-list px-2.5">
                         {item.list.map((text) => ( 
-                          <li> <p className="py-[2px] ">{text} </p>  </li>
+                          <li key={text}> <p className="py-[2px] ">{text} </p>  </li>
                         ))}  
                       </ul>
                   </div>

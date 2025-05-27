@@ -250,20 +250,20 @@ export default function SidebarMenu() {
           <div className='flex flex-col items-end h-auto justify-center social-media-header'>
            
             <span className='flex items-center   leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px] header-flaticon-facebook  text-white'>
-              <Image  src={"/images/main/media/facebook.svg"} width={40} height={40} /> <span className="font-bold ml-3">Facebook</span>
+              <Image  src={"/images/main/media/facebook.svg"} alt='facebook' width={40} height={40} /> <span className="font-bold ml-3">Facebook</span>
             </span>
             
             
             <span className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px]  header-flaticon-instagram  text-white'>
-              <Image src={"/images/main/media/instagram.svg"} width={40} height={40} /> <span className="font-bold ml-3">Instagram</span>
+              <Image src={"/images/main/media/instagram.svg"} alt='instagram' width={40} height={40} /> <span className="font-bold ml-3">Instagram</span>
             </span>
             
             <span className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px]  header-flaticon-youtube text-white'>
-              <Image  src={"/images/main/media/youtube.svg"} width={40} height={40} /> <span className="font-bold ml-3">Youtube</span>
+              <Image  src={"/images/main/media/youtube.svg"} alt='youtube' width={40} height={40} /> <span className="font-bold ml-3">Youtube</span>
             </span>
            
             <span className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px]  header-flaticon-x text-white'>
-              <Image  src={"/images/main/media/x.svg"}  width={40} height={40} /> <span className="font-bold ml-3"> X</span>
+              <Image  src={"/images/main/media/x.svg"} alt='x' width={40} height={40} /> <span className="font-bold ml-3"> X</span>
             </span>
            
             

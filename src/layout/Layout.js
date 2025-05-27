@@ -28,7 +28,6 @@ const Layout = ({children})=>{
       {children}
     
       <NewsLetterSection />
-    
     </main>
  
     
