@@ -80,18 +80,17 @@ export default function Footer() {
     return (<>
         <footer className="footer w-full">
         <div className="container">
-            <div className="footer-inner flex flex-row justify-around md:justify-between w-full flex-wrap pt-[50px] pb-[35px]"> 
-                <div className="compnay w-[50%] md:w-[250px]  lg:w-[350px] pr-2.5">
+            <div className="footer-inner flex flex-row justify-around md:justify-between w-full flex-wrap pt-[50px] pb-[35px] max-sm:pb-[20px]"> 
+                <div className="compnay w-[50%]  md:w-[250px]  lg:w-[350px] pr-2.5">
                     <div className="w-full float-start">
                         <Image src="/images/logo.webp" className="w-[170px]" priority={true} alt="Yonescat" width={256} height={48} />
                     </div>
-                    <p className="w-full float-left mt-3.5 mr-2.5">Lorem ipsum is a placeholder or dummy text used in typesetting layouts. </p>
+                    <p className="w-full float-left mt-3.5 mr-2.5 ">Lorem ipsum is a placeholder or dummy text used in typesetting layouts. </p>
                     <ul className="w-full float-left flex mt-3.5">
                         <li className="inline-block  font-bold"><Link className="" href="about">About Us</Link></li>
-                        <li><Link className=" mx-2.5 font-bold" href="contact">Contact Us</Link></li>
-                        <li><Link className=" mx-2.5 font-bold" href="contact">GDPR</Link></li>
+                        <li><Link className=" mx-2.5 font-bold max-sm:mx-1.5 max-sm:text-[13px]" href="contact">Contact Us</Link></li>
+                        <li><Link className=" mx-2.5 font-bold max-sm:mx-1.5 max-sm:text-[13px]" href="contact">GDPR</Link></li>
                     </ul>
-                    
                     <ul className="flex w-full mt-3.5 float-start items-center">
                         <li className="px-[5px]">
                             <Link rel="nofollow"  href="#" aria-label={'Follow on x'}>
@@ -115,11 +114,10 @@ export default function Footer() {
                         </li>
                         
                     </ul>
-                    
                 </div>
                 { footerMenu.map((menu,menuIndex) => <> 
                     <div className="footer-links w-[50%] md:w-auto fl-2" key={menu.heading}>
-                        <h5 className="font-bold mb-[25px]">{menu.heading}</h5>
+                        <h5 className="font-bold mb-[25px] max-sm:mb-[15px]">{menu.heading}</h5>
                         <ul className={`foo-links clearfix ${!openMenus[menuIndex] && 'collapsed'}`}>
                             {
                             menu.items.map((item,itemIndex)=><li  key={`clearfix-${item.title}`}><Link className="" href={item.link}>{item.title}</Link></li>)

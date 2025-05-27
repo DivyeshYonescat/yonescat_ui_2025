@@ -3,7 +3,7 @@
   .section-main{ @apply bg-[var(--bg-primary)] clear-both w-full block py-[50px] md:py-[80px] lg:py-[100px]  relative }
 
   .btn {   
-    @apply text-white bg-black hover:bg-transparent hover:text-black  text-[14px] md:text-[16px] font-semibold rounded-lg px-[20px] py-[10px] md:px-5 md:py-2.5  text-center border border-solid border-transparent  hover:border-black  transition delay-200 duration-500 ease-in-out; 
+    @apply text-white bg-black  text-[14px] md:text-[16px] font-semibold  px-[20px] py-[10px] md:px-5 md:py-2.5  text-center   transition delay-200 duration-500 ease-in-out; 
   }
 
   /* card */

@@ -6,6 +6,7 @@ import SidebarMenu from "./Sidebar";
 import Image from "next/image";
 import YonescatLogo from "@/components/logo";
 import Dropdown from '@/components/dropdown';
+import { Button, buttonVariants } from "@/components/ui/button"
 
 
 const Header = () => {
@@ -38,7 +39,7 @@ const Header = () => {
           <nav className="navbar">
             <div className="navbar-container">
               <div className="nav-container-left">
-                <Link href={'/'} className="brand-logo ">
+                <Link href={'/'} className="brand-logo  w-[170px]">
                   {/* <Image src="/images/logo.webp" alt="Yonescat" width={833} height={136}></Image> */}
                   <YonescatLogo/>
                 </Link>
@@ -46,7 +47,7 @@ const Header = () => {
               
               <div className="nav-container-right flex items-center">
                 {token === null ? <>
-                  <Link href="/auth" className="btn mx-3">Login</Link>
+                  <Link href="/auth" className={buttonVariants({ variant: "outline", className:'btn text-white bg-black border-black '})} >Login</Link>
                 </> : <>
                   <Dropdown token={token}/>
                 </>}

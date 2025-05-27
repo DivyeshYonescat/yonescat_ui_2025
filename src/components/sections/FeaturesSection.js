@@ -39,7 +39,7 @@ export default function FeaturesSection() {
     slidesToScroll: 0,
     responsive: [
       {
-        breakpoint: 767,
+        breakpoint: 1024,
         settings: {
           dots: true,
           arrows: true,
@@ -80,28 +80,28 @@ export default function FeaturesSection() {
           {/* <div className="fbox-wrapper grid max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-3 lg:gap-10" > */}
              <Slider {...settings}>
             {FeaturesList.map((item) => (
-              <div key={item.title} className="min-w-auto sm:min-w-[320px] max-w-[370px]">
+              <div key={item.title} className=" max-lg:w-[320px] lg:max-w-[380px]">
                 <Card>
                   <div  className="card-bg"></div>
-                  <div className="card-header">
+                    <div className="card-header">
                       <div className="flex flex-row items-center">
                           <div className=" max-sm:min-w-[55px] max-sm:w-[55px] max-sm:h-[55px] md:min-w-[70px] lg:min-w-[70px] w-[70px] h-[70px]  bg-[#2a2c34]  rounded-full flex flex-row justify-center items-center">
                               <Image className="w-[40px] h-[40px] max-sm:w-[30px] max-sm:h-[30px]" src={`/images/main/svg/${item.icone}`} width={40} height={40} alt="solution.png" />
                           </div>
                           <h3 className=" font-bold mx-[15px] max-sm:mr-0 max-sm:ml-[10px] sm:mr-0 md:ml-[10px] md:mr-0  ">{item.title}</h3>
                       </div>
-                  </div>
-                  <div className="card-body">
+                    </div>
+                    <div className="card-body">
                       <p className="sub-title font-semibold my-[15px] max-sm:mt-[0] sm:mt-[0] capitalize  group:hover  ">{item.subTitle}</p>
                       <ul className="fbox-list px-2.5">
                         {item.list.map((text) => ( 
                           <li key={text}> <p className="py-[2px] ">{text} </p>  </li>
                         ))}  
                       </ul>
-                  </div>
-                  <div className="card-footer">
+                    </div>
+                    <div className="card-footer">
                       <Link href={`/${item.link}`} className="subtitle inline-block font-bold">View More</Link>
-                  </div>
+                    </div>
                 </Card>
               </div>
             ))}

@@ -1,8 +1,11 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 import CounterUp from "../counterUp";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import { Button, buttonVariants } from "@/components/ui/button"
 gsap.registerPlugin(ScrollTrigger);
 
 const CompanyAchievementsSection = () => {
@@ -22,7 +25,8 @@ const CompanyAchievementsSection = () => {
             <div className="md:max-w-[350px] lg:max-w-[500px] xl:max-w-[600px] m-auto">
               <h2 className="font-bold leading-none">Lorem Ipsum is simply dummy text  </h2>
               <p className=" py-[30px]">{`Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`}</p>
-              <button className="btn">About More</button>
+              <Link href={"/aboutus"} className={buttonVariants({ variant: "outline", className:'bg-transparent hover:bg-gray-900 hover:text-white border-black px-8  py-5'})}>About More</Link>
+              {/* <button className="btn">About More</button> */}
             </div>
           </div>
           <div className="comp-achieve-list w-[100%] md:w-[40%] lg:w-[40%] mt-0 sm:mt-8 md:mt-0">

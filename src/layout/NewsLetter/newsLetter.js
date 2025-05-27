@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import React, { useState, useRef, useEffect } from 'react';
-
+import {Button, buttonVariants } from "@/components/ui/button"
 import useError from "@/api/errorShow";
 
 import { useForm } from 'react-hook-form';
@@ -56,12 +56,12 @@ const NewsLetterSection = () => {
                             </div>
                             <div className="input-group">
                                 <span className="input-group-btn">
-                                    <button type="submit" className="btn btn--theme hover--theme">Subscribe Now</button>
+                                    <Button type="submit">Subscribe Now</Button>
                                 </span>
                             </div>
                         </form>
                     </div>
-                    <div className="newsletter-image w-[50%] max-sm:w-[100%] sm:w-[100%] md:w-[50%] lg:w-[50%] max-sm:order-1 sm:order-1 md:order-2 flex flex-col items-end sm:items-center max-sm:mb-7 sm:mb-7">
+                    <div className="newsletter-image w-[50%] max-sm:w-[100%] sm:w-[100%] md:w-[50%] lg:w-[50%] max-sm:order-1 sm:order-1 md:order-2 flex flex-col items-end max-md:items-center max-sm:mb-7 sm:mb-7">
                         <FloatingSVG />
                     </div>
                 </div>

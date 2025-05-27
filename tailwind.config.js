@@ -15,9 +15,7 @@ module.exports = {
         'md': '768px',  // default medium
         'lg': '1024px', // default large
         'xl': '1280px', // default extra large
-        '2xl': '1536px', // default 2xl
-       
-        
+        '2xl': '1536px', // default 2xl 
       },
     },
   },
