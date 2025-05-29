@@ -327,6 +327,23 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 
 
 
+/* Model */
+.cbox-1, .cbox-2, .cbox-3{ @apply  flex relative  justify-start  !items-stretch;
+  flex-flow: row wrap;
+}
+
+.cbox-2 .ico-wrap {@apply relative mr-[1.625rem];}
+.cbox-2-txt, .cbox-3-txt { @apply mb-[35px];}
+.cbox-1-txt, .cbox-2-txt, .cbox-3-txt { @apply overflow-hidden flex-[1_1] max-w-full;}
+.cbox-2-line {@apply absolute bottom-[20px] left-2/4 w-[2px] bg-[#e4e4e4];
+  height: calc(100% - 90px); transform: translateX(-50%);
+}
+.cbox-2-ico {@apply relative w-[2.625rem] h-[2.625rem] text-center rounded-[100%] text-[1.1875rem] bg-[#000] text-[#fff] font-medium leading-[2.375rem] border-[2px] border-[solid] [transition:all_450ms_ease-in-out];}
+
+.txt-block.legal-info h4{@apply mt-[40px] mb-[20px] font-bold;}
+/* Model */
+
+
 
 
 

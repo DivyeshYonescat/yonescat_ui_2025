@@ -25,10 +25,19 @@
   
 
   /* form Group */
-  .form-group{ @apply w-full}
-  .form-label{ @apply block clear-both mb-2 w-full} 
-  .form-input { @apply block w-full px-1.5 py-3 border border-solid border-black  rounded-sm leading-1 transition-all duration-150 ease-in-out focus:border-black focus:outline-0 focus:ring-2
+  .form-group{ @apply w-full mb-[20px];}
+  .form-input{ @apply flex justify-between max-sm:flex-col; }
+  .form-input > div {@apply mx-[5px] ;}
+  .form-input > div:first-child{@apply ml-[0px] max-sm:mr-[0px];}
+  .form-input > div:last-child{@apply mr-[0px] max-sm:ml-[0px];}
+  .PhoneInput{@apply border border-black pl-[10px] rounded-md;}
+  .PhoneInput > input { @apply h-[45px] px-2.5;
+    width:100% !important;
   }
+  .PhoneInput > input:focus, .PhoneInput > input:focus-visible{ @apply border-0  outline-0;}
+  
+  
+  
 
 
 

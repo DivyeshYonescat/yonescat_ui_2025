@@ -149,7 +149,7 @@ const Overview = ({list})=>{
                 <div>
                   <h2 className="">{list.title}</h2>
                   <p className="py-5 block line-clamp-6 max-md:line-clamp-4 max-sm:line-clamp-3 leading-[28px] max-md:leading-[23px]"> {list.discrition} </p>
-                  <Link href={`${list.link}`} className="btn inline-block inline-block mt-8 max-md:mt-3.5">Read More</Link>
+                  <Link href={`${list.link}`} className="btn inline-block  mt-8 max-md:mt-3.5">Read More</Link>
                 </div>
               </div>  
               </>)}
