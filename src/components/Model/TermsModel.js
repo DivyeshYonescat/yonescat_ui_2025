@@ -1,5 +1,5 @@
 // components/Modal.js
-import React from 'react';
+import React from "react";
 
 
 const TermsModel = ({ isOpen, onClose, children }) => {
@@ -10,7 +10,7 @@ const TermsModel = ({ isOpen, onClose, children }) => {
         <button className="closeButton absolute top-[15px] right-[15px] bg-none border-[none] text-[24px] !cursor-pointer text-[#000] p-0 leading-none m-0" onClick={onClose}>
           &times;
         </button>
-        <div className='ModelBody float-left w-full bg-transparent p-[12px] overflow-x-hidden h-[500px]  overflow-y-scroll'>
+        <div className="ModelBody float-left w-full bg-transparent p-[12px] overflow-x-hidden h-[500px]  overflow-y-scroll">
           <div className="w-full">
             {/* INNER PAGE TITLE */}
             <div className="inner-page-title">
@@ -62,7 +62,7 @@ const TermsModel = ({ isOpen, onClose, children }) => {
 
               <p>The Owner holds and reserves all intellectual property rights for any such content.</p>
               <p>Users may not, therefore, use such content in any way that is not necessary or implicit in the proper use of the Service.</p>
-              <p>In particular, but without limitation, Users may not copy, download, share (beyond the limits set forth below), modify, translate, transform, publish, transmit, sell, sublicence, edit, transfer/assign to third parties or create derivative works from the content available on this Website, nor allow any third party to do so through the User or their device, even without the User's knowledge.</p>
+              <p>In particular, but without limitation, Users may not copy, download, share (beyond the limits set forth below), modify, translate, transform, publish, transmit, sell, sublicence, edit, transfer/assign to third parties or create derivative works from the content available on this Website, nor allow any third party to do so through the User or their device, even without the User&apos;s knowledge.</p>
               <p>Where explicitly stated on this Website, the User may download, copy and/or share some content available through this Website for its sole personal and non-commercial use and provided that the copyright attributions and all the other attributions requested by the Owner are correctly implemented. Any applicable statutory limitation or exception to copyright shall stay unaffecte</p>
 
               <h5 >Access to external resources</h5>
@@ -87,7 +87,7 @@ const TermsModel = ({ isOpen, onClose, children }) => {
               <p> Unless otherwise explicitly stated or agreed with Users, the Owner’s liability for damages in connection with the execution of the Agreement shall be excluded, limited and/or reduced to the maximum extent permitted by applicable law. </p>
 
               <h5 >Indemnification</h5>
-              <p>The User agrees to indemnify and hold the Owner and its subsidiaries, affiliates, officers, directors, agents, co-branders, partners and employees harmless from and against any claim or demand ⁠— including but not limited to lawyer's fees and costs ⁠— made by any third party due to or in relation with any culpable violation of these Terms, third-party rights or statutory provisions connected to the use of the Service by the User or its affiliates, officers, directors, agents, co-branders, partners and employees to the extent allowed by applicable law.</p>
+              <p>The User agrees to indemnify and hold the Owner and its subsidiaries, affiliates, officers, directors, agents, co-branders, partners and employees harmless from and against any claim or demand ⁠— including but not limited to lawyer&apos;s fees and costs ⁠— made by any third party due to or in relation with any culpable violation of these Terms, third-party rights or statutory provisions connected to the use of the Service by the User or its affiliates, officers, directors, agents, co-branders, partners and employees to the extent allowed by applicable law.</p>
 
               <h5 > Limitation of liability </h5>
               <p>Unless otherwise explicitly stated and without prejudice to applicable law, Users shall have no right to claim damages against the Owner (or any natural or legal person acting on its behalf).</p>
@@ -102,7 +102,7 @@ const TermsModel = ({ isOpen, onClose, children }) => {
               <h5 > US Users </h5>
               <h5 > Disclaimer of Warranties</h5>
               <p>This Website is provided strictly on an “as is” and “as available” basis. Use of the Service is at Users’ own risk. To the maximum extent permitted by applicable law, the Owner expressly disclaims all conditions, representations, and warranties — whether express, implied, statutory or otherwise, including, but not limited to, any implied warranty of merchantability, fitness for a particular purpose, or non-infringement of third-party rights. No advice or information, whether oral or written, obtained by the User from the Owner or through the Service will create any warranty not expressly stated herein.</p>
-              <p>Without limiting the foregoing, the Owner, its subsidiaries, affiliates, licensors, officers, directors, agents, co-branders, partners, suppliers and employees do not warrant that the content is accurate, reliable or correct; that the Service will meet Users’ requirements; that the Service will be available at any particular time or location, uninterrupted or secure; that any defects or errors will be corrected; or that the Service is free of viruses or other harmful components. Any content downloaded or otherwise obtained through the use of the Service is downloaded at Users' own risk and Users shall be solely responsible for any damage to Users’ computer system or mobile device or loss of data that results from such download or Users’ use of the Service.</p>
+              <p>Without limiting the foregoing, the Owner, its subsidiaries, affiliates, licensors, officers, directors, agents, co-branders, partners, suppliers and employees do not warrant that the content is accurate, reliable or correct; that the Service will meet Users’ requirements; that the Service will be available at any particular time or location, uninterrupted or secure; that any defects or errors will be corrected; or that the Service is free of viruses or other harmful components. Any content downloaded or otherwise obtained through the use of the Service is downloaded at Users&apos; own risk and Users shall be solely responsible for any damage to Users’ computer system or mobile device or loss of data that results from such download or Users’ use of the Service.</p>
               <p>The Owner does not warrant, endorse, guarantee, or assume responsibility for any product or service advertised or offered by a third party through the Service or any hyperlinked website or service, and the Owner shall not be a party to or in any way monitor any transaction between Users and third-party providers of products or services.</p>
               <p>The Service may become inaccessible or it may not function properly with Users’ web browser, mobile device, and/or operating system. The owner cannot be held liable for any perceived or actual damages arising from Service content, operation, or use of this Service.</p>
               <p>Federal law, some states, and other jurisdictions, do not allow the exclusion and limitations of certain implied warranties. The above exclusions may not apply to Users. This Agreement gives Users specific legal rights, and Users may also have other rights which vary from state to state. The disclaimers and exclusions under this agreement shall not apply to the extent prohibited by applicable law.</p>
@@ -144,7 +144,7 @@ const TermsModel = ({ isOpen, onClose, children }) => {
 
               <h5 >Service interruption</h5>
               <p>To ensure the best possible service level, the Owner reserves the right to interrupt the Service for maintenance, system updates or any other changes, informing the Users appropriately.</p>
-              <p>Within the limits of law, the Owner may also decide to suspend or discontinue the Service altogether. If the Service is discontinued, the Owner will cooperate with Users to enable them to withdraw Personal Data or information and will respect Users' rights relating to continued product use and/or compensation, as provided for by applicable law.</p>
+              <p>Within the limits of law, the Owner may also decide to suspend or discontinue the Service altogether. If the Service is discontinued, the Owner will cooperate with Users to enable them to withdraw Personal Data or information and will respect Users&apos; rights relating to continued product use and/or compensation, as provided for by applicable law.</p>
               <p>Additionally, the Service might not be available due to reasons outside the Owner’s reasonable control, such as “force majeure” events (infrastructural breakdowns or blackouts etc.).</p>
 
               <h5 >Service reselling</h5>
@@ -162,7 +162,7 @@ const TermsModel = ({ isOpen, onClose, children }) => {
               <p>Such changes will only affect the relationship with the User from the date communicated to Users onwards.</p>
               <p><b>The continued use of the Service will signify the User’s acceptance of the revised Terms.</b></p>
               <p>If Users do not wish to be bound by the changes, they must stop using the Service and may terminate the Agreement.</p>
-              <p>The applicable previous version will govern the relationship prior to the User's acceptance. The User can obtain any previous version from the Owner.</p>
+              <p>The applicable previous version will govern the relationship prior to the User&apos;s acceptance. The User can obtain any previous version from the Owner.</p>
               <p>If legally required, the Owner will notify Users in advance of when the modified Terms will take effect.</p>
 
               <h4 >Assignment of contract</h4>

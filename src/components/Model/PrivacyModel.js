@@ -1,5 +1,5 @@
 // components/Modal.js
-import React from 'react';
+import React from "react";
 
 
 const PrivacyModel = ({ isOpen,onClose, type }) => {
@@ -14,7 +14,7 @@ const PrivacyModel = ({ isOpen,onClose, type }) => {
         <button className="closeButton absolute top-[15px] right-[15px] bg-none border-[none] text-[24px] !cursor-pointer text-[#000] p-0 leading-none m-0" onClick={onClose}>
           &times;
         </button>
-        <div className='ModelBody float-left w-full bg-transparent p-[12px] overflow-x-hidden h-[500px]  overflow-y-scroll'>
+        <div className="ModelBody float-left w-full bg-transparent p-[12px] overflow-x-hidden h-[500px]  overflow-y-scroll">
           
             <div className="">
                 
@@ -56,7 +56,7 @@ const PrivacyModel = ({ isOpen,onClose, type }) => {
                                 <span className="cbox-2-line"></span>
                             </div>
                             <div className="cbox-2-txt">
-                                <h3  className='font-bold'>Advertising</h3>
+                                <h3  className="font-bold">Advertising</h3>
                                 <h5 className="font-semibold my-[10px]">Google Ads conversion tracking, Meta ads conversion tracking (Meta pixel) and X Ads conversion tracking</h5>
                                 <p>Personal Data: Trackers; Usage Data</p>
 
