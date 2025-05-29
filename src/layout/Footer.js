@@ -92,7 +92,7 @@ export default function Footer() {
                         <li><Link className=" mx-2.5 font-bold max-sm:mx-1.5 max-sm:text-[13px]" href="contact">GDPR</Link></li>
                     </ul>
                     <ul className="flex w-full mt-3.5 float-start items-center">
-                        <li className="px-[5px]">
+                        <li className="px-[5px] pl-0">
                             <Link rel="nofollow"  href="#" aria-label={'Follow on x'}>
                                 <Image  src={"/images/main/media/facebook.svg"} alt="facebook" width={30} height={30} />
                             </Link>
@@ -102,7 +102,7 @@ export default function Footer() {
                                 <Image  src={"/images/main/media/instagram.svg"} alt="instagram" width={30} height={30} />
                             </Link>
                         </li>
-                        <li className="px-[5px]">
+                        <li className="px-[5px] pr-0">
                             <Link rel="nofollow"  href="#" aria-label={'Follow on x'}>
                                 <Image  src={"/images/main/media/youtube.svg"} alt="youtune" width={30} height={30} />
                             </Link>

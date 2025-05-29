@@ -172,34 +172,19 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 /* clients section */
 
 .clients-logo-container {
-  --circle-size-3: clamp(300px, 60vw, 1600px);
+  --circle-size-3: clamp(360px, 60vw, 1600px);
   --circle-size-2: calc(var(--circle-size-3) / 1.5);   /* 500px */
   --circle-size-1: calc(var(--circle-size-3) / 2.6);  /* 300px */
 
-  margin: auto;
+  
   margin-bottom: calc(-1 * var(--circle-size-3) / 2);
   position: relative;
   width: var(--circle-size-3);
   height: var(--circle-size-3);
+  transform:translate(-50%,0);
+  left:50%;
 }
 
-@media(max-width:767px){
-  .clients-logo-container {
-      --circle-size-3: clamp(500px, 60vw, 1700px);
-  }  
-}
-
-@media(max-width:575px){
-  .clients-logo-container {
-      --circle-size-3: clamp(400px, 60vw, 1700px);
-  }  
-}
-
-@media(max-width:480px){
-  .clients-logo-container {
-      --circle-size-3: clamp(370px, 60vw, 1700px);
-  }  
-}
 
 .clients-logo-container .circle{ @apply absolute top-[50%] left-[50%] rounded-full border border-dashed border-black -translate-x-2/4 -translate-y-2/4;}
 
@@ -210,6 +195,7 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
   --radius: calc(var(--circle-size-1) / 2);
   --color: #00f0ff;
   --item-size: 60px;
+  @apply hidden md:block ;
 }
 
 .clients-logo-container .medium-circle {
@@ -218,7 +204,7 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
   z-index: 2;
   --radius: calc(var(--circle-size-2) / 2);
   --color: #ff00aa;
-  --item-size: 80px;
+  --item-size: 40px;
 }
 
 .clients-logo-container .large-circle {
@@ -227,7 +213,20 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
   z-index: 1;
   --radius: calc(var(--circle-size-3) / 2);
   --color: #ffaa00;
-  --item-size: 100px;
+  --item-size: 60px;
+}
+@media screen and (min-width:768px) and (max-width:1199px)  {
+  .clients-logo-container .small-circle {
+    --item-size: 40px;
+  }
+}
+@media screen and (min-width:768px)  {
+  .clients-logo-container .large-circle {
+    --item-size: 100px;
+  }
+  .clients-logo-container .medium-circle {
+    --item-size: 60px;
+  }
 }
 
 .clients-logo-container .circle .logo {
@@ -284,12 +283,18 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 .social-media-header > span:hover > image {  @apply rotate-[360deg] transition-all duration-[1s];}
 /* .social-media-header > span:hover > image {  transform: rotate(360deg);  transition: all 1s;} */
 /* header */
-
+/* svg */
+.card:hover img{ filter: invert(100%) sepia(1%) saturate(1000%) hue-rotate(360deg); }
 .slick-slide > div{ @apply px-[25px] max-lg:px-[0px] sm:px-[0px];  }
 .slick-list > div{ @apply mx-[-25px] max-lg:mx-[0px] sm:mx-[-0px]; }
-.slick-prev, .slick-next{ width:50px !important; height:50px !important;}
-/* .slick-prev{left:0 !important;}
-.slick-next{right:0 !important;} */
+.slick-prev, .slick-next{ width:40px !important; height:40px !important;}
+.slick-prev{ left:-15px !important; z-index:10}
+.slick-next{right:-15px !important;}
+
+.slick-arrow:hover{@apply hover:!bg-[#000] z-50;}
+.slick-arrow:hover img{ @apply filter invert-[100%] sepia-[1%] saturate-[1000%] hue-rotate-[360deg];}
+  
+/* svg */
 
 .about-img { -webkit-mask-image: url('/images/mask.svg'); mask-image: url('/images/mask.svg');
   @apply absolute left-[45%] bottom-0 mask-bottom mask-cover mask-no-repeat max-w-[800px] h-full max-lg:relative max-lg:left-0 
@@ -303,7 +308,7 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 .clearfix::after {  @apply block clear-both content-[""];}
 .foo-links.collapsed li:nth-child(n + 6) {  @apply hidden;}
 
-.overview-inner .overview-text-main p{
+.overview-inner .overview-text-main p,.user-title{
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -318,6 +323,11 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 .slick-list { @apply my-[-20px] max-sm:my-[-5px];  }
 .slick-slide {@apply py-[20px] max-sm:py-[5px]; }
 .slick-slide > div {max-width:380px; margin: auto;} 
+/* Footer */
+
+
+
+
 
 
 

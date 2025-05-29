@@ -8,6 +8,7 @@ import useError from "@/api/errorShow";
 
 import { useForm } from 'react-hook-form';
 import FloatingSVG from './newslaterAnimation';
+import { Input } from "@/components/ui/input"
 
 
 
@@ -41,14 +42,19 @@ const NewsLetterSection = () => {
                 <div className="newsletter-inner flex flex-row max-sm:flex-col sm:flex-col md:flex-row  justify-between  items-center">
                     <div className="newsletter-text w-[40%] max-sm:w-[100%] sm:w-[100%] md:w-[50%] lg:w-[40%] max-sm:order-2 sm:order-2 md:order-1">
                         <h3 className="">Ready To Get Started? Sign Up Now With Yonescat Is Easy, Fast And Free</h3>
-                        <form ref={formRef} name="contactform" className="newsletter-form contact-form" onSubmit={handleSubmit(onSubmit)}>
-                           
+                        {/* onSubmit={handleSubmit(onSubmit)} */}
+                        <form ref={formRef} name="contactform" className="newsletter-form contact-form" >
                             <div className="form-group">
-                                <input type="email" name="email" id="email" autoComplete="off" className="form-input mt-[45px] mb-[15px]" placeholder="Your email address"
-                                    {...register("email", { required: {value:true, message:"Email is required" },
+                                <Input type="email" name="email" id="email" autoComplete="off" className="w-full px-1.5 py-3 h-[50px] mt-[45px] mb-[15px] border-black" placeholder="Your Email Address"  
+                                     {...register("email", { required: {value:true, message:"Email is required" },
                                         pattern: { value:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, message:"Enter valid email."  }
                                     })}
                                 />
+                                {/* <input type="email" name="email" id="email" autoComplete="off" className="form-input mt-[45px] mb-[15px]" placeholder="Your email address"
+                                    {...register("email", { required: {value:true, message:"Email is required" },
+                                        pattern: { value:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, message:"Enter valid email."  }
+                                    })}
+                                /> */}
                             </div>
                            
                             <div>

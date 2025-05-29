@@ -8,21 +8,21 @@ import Card from "../card";
 
 export default function FeaturesSection() {
   const FeaturesList = [{
-    "icone":"solution.png",
+    "icone":"solution.svg",
     "title":"Solutions",
     "subTitle":"For All Kind OF Businesses",
     "list":["Software Development","Product Desing","Ai & Machine learning","Mobile Application","Web & Cloud"],
     "link":"solutions"
     },
     {
-    "icone":"infrastructure.png",
+    "icone":"infrastucture.svg",
     "title":"Infrastructure",
     "subTitle":"For All Kind OF Businesses",
     "list":["Data Center","Ddos Protections","Database As A Service","Microsoft Office365 ","Google G-Suite"],
     "link":"infrastructure"
     },
     {
-    "icone":"hosting.png",
+    "icone":"hosting.svg",
     "title":"Hosting",
     "subTitle":"For All Kind OF Businesses",
     "list":["Shared Hosting","Cloud Reseller","Dedicated Servers","Cloud VPS","Domain Names"],
