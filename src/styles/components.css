@@ -36,9 +36,18 @@
   }
   .PhoneInput > input:focus, .PhoneInput > input:focus-visible{ @apply border-0  outline-0;}
   
+  /* banner */
+  .banenr{@apply  bg-no-repeat bg-cover bg-bottom; }
+  .banenr-inner{@apply  flex flex-col justify-start h-[550px] max-sm:h-[450px] pt-[120px] text-white max-w-[1000px] m-auto; }
+  /* banner */
   
-  
-
-
-
+  /* concat box */
+  .contact-box{@apply flex items-center mb-[30px];}
+  .contact-box a,.contact-box address{@apply text-white ml-[15px]; }
+  /*  */
+  .box-inner-section {@apply shadow-[-10px_10px_10px_-7px_rgba(0,0,0,0.47)] max-md:shadow-[0px_8px_30px_-7px_rgba(0,0,0,0.47)] max-md:h-auto grid max-w-[1000px] m-auto mt-[-200px]  grid-cols-[60%_40%] max-md:grid-cols-1 max-md:order-2;}
+  .box-text-section{@apply flex flex-col justify-center max-md:order-2 p-[30px_60px_60px_60px] bg-white max-lg:p-[40px];}
+  .box-color-section {@apply flex justify-center items-center bg-black p-[30px] max-md:order-1; }
+  /* concat box */
+  .white-image{ filter: invert(100%) sepia(1%) saturate(1000%) hue-rotate(360deg); } 
 }

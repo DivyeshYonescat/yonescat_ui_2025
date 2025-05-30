@@ -152,7 +152,7 @@ export default function YonescatLogo({ type }) {
           </div>
         </div>
           :
-          <Image src="/images/logo-main.webp" className='' priority={true} alt="Yonescat" width={175} height={48} />
+          <Image src="/images/logo-main.webp" className='bg-blend-soft-light' priority={true} alt="Yonescat" width={175} height={48} />
       }
 
     </>

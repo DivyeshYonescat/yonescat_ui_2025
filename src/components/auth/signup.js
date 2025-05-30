@@ -139,7 +139,7 @@ export default function Signup(props) {
                             <div className="form-input">
                                 <div className="form-group ">
                                     <Label className="">First name </Label>
-                                    <Input type="text" disabled={isSubmitting} name="name" className="border border-black" placeholder="John Doe"
+                                    <Input type="text" disabled={isSubmitting} name="firstname" className="border border-black" placeholder="John Doe"
                                     {...register("firstname",{
                                             required:{ value:true, message:"First name is required" },
                                             minLength:{ value:4, message:"First name is too short." }
@@ -226,7 +226,6 @@ export default function Signup(props) {
                             <Label className=""> Confirm Password </Label>
                             <div className="passowrd-input relative">
                                 <span onClick={()=>{ setIsShowPassword((prev) => !prev);}} className={`absolute right-[10px] top-[15px]  ${isShowPassword ? "active" : ""}`} ><span className="flaticon-visibility eye-pass" /></span>
-
                                 <Input disabled={isSubmitting} type={`${isShowPassword ? "text" : "password"}`} name="confirmPassword" placeholder="Min 8 characters" className="border border-black"
                                     {...register('confirmPassword', {
                                         required: 'Please confirm your password',
