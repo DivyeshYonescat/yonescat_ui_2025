@@ -3,22 +3,32 @@ import React, { useState, useRef, useEffect  } from 'react';
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
+
+import Layout from '@/layout/Layout';
+import Banner from '@/layout/Banner';
+
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
+import ContactLeft from '@/components/contactLeft/contactLeft';
+
+
 import { Controller, useForm } from "react-hook-form";
 // import { toast } from 'react-toastify';
 // import {loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 // import LoginModel from "@/components/elements/LoginModel";
 
-
-
 import { FormError } from "@/components/form/validationError";
 import { careerFormSubmit } from '@/api/formSubmission';
-
 import useError from '@/api/errorShow';
+import Image from 'next/image';
 
-import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
-import Layout from '@/layout/Layout';
-import Banner from '@/layout/Banner';
+
+
 
 export default function Home() {
 
@@ -79,7 +89,7 @@ export default function Home() {
     const file = data.resume;
 
     const name = data.fullname.replace(/\b\w/g, (char) => char.toUpperCase());
-    data.users_permissions_user = showUser.id;
+    //data.users_permissions_user = showUser.id;
     data.fullname = name;
     clearError();
 
@@ -103,182 +113,101 @@ export default function Home() {
     <>
       <Layout>
         <Banner title={"Questions? Let's Talk"} description={"Want to learn more about Yonescat, get a quote, or speak with an expert? Let us know what you are looking for and we’ll get back to you right away"} />
-        <div>
-          <section id="contacts-1" className="pb-50 inner-page-hero contacts-section division">
-            <div className="container">
-              <div className="row justify-content-center">
-                <div className="col-md-10 col-lg-9">
-                  <div className="section-title text-center mb-80">
-                    <h2 className="s-45 w-700">Questions? Let's Talk</h2>
-                    <p className="p-lg">Want to learn more about Yonescat, get a quote, or speak with an expert?
-                      Let us know what you are looking for and we’ll get back to you right away
-                    </p>
-                  </div>
+        <section className="box-main-section mb-[50px]">
+          <div className="container">
+            <div className="box-inner-section ">
+              <div className="box-text-section"> 
+                <div className='flex items-center justify-between mb-[30px]'>
+                  <h3> Send us a Message </h3>
+                  <Image src="/images/contact-icone/send-mail.svg" alt='send_mail' width={50} height={50} />
                 </div>
-              </div>
-            
-              <div className="row justify-content-center">
-                <div className="col-md-11 col-lg-10 col-xl-8">
-                  <div className="form-holder">
-                    <form ref={formRef} name="contactform" className="row contact-form" onSubmit={handleSubmit(onSubmit)}>
-                      <input type="hidden" name="website" {...register("website")} />
-                      <div className="col-md-12">
-                        <div className="form-group">
-                          <label forhtml="fullname" className="p-lg">Your Name *</label>
-                          {/* <span>Please enter your real name </span> */}
-                          <input id="fullname" disabled={isSubmitting} type="text" name="fullname" className="form-control name" placeholder="Your Full Name"
-                            {
-                              ...register("fullname",{
-                                required:{
-                                  value:true,
-                                  message:"Name is required"
-                                },
-                                minLength:{
-                                  value:4,
-                                  message:"Name is too short."
-                                }
-                              })
-                            }
-                          />
-                          <FormError field={errors.fullname} />
-                        </div>
-                      </div>
-                      <div className="col-md-12">
-                        <div className="form-group">
-                          <label forhtml="email"  className="p-lg">Your Email Address * </label>
-                          {/* <span>Please carefully check your email address for accuracy</span> */}
-                          <input value={`${showUser !== null ? showUser.email : ""}`}   disabled={isSubmitting} type="text" id="email" name="email" className="form-control email" placeholder="Email address" 
-                            {
-                              ...register("email", {
-                                required: {
-                                  value:true,
-                                  message:"Email is required"
-                                },
-                                pattern: {
-                                  value:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-                                  message:"Enter valid email."
-                                }
-                              })
-                            }
-                          />
-                          <FormError field={errors.email} />
-                        </div>
-                      </div>
-                      {/* <div className="col-md-12">
-                        <div className="form-group">
-                          <label forhtml="phone" className="p-lg">Your Phone Numbar * </label>
-                          <input disabled={isSubmitting} id="phone" type="text" name="phone" className="form-control phone_numbar" placeholder=" Phone numbar"
-                            {
-                              ...register("phone",{
-                                required:{
-                                  value:true,
-                                  message:"Phone Numbar is required"
-                                },
-                                pattern: {
-                                  value: /\d+/,
-                                  message: "Phone Numbar is only number value."
-                                },
-                                minLength:{
-                                  value:10,
-                                  message:" Phone Name is not valid."
-                                }
-                              })
-                            }
-                          />
-                          <FormError field={errors.phone} />
-                        </div>
-                      </div> */}
-
-                      <div className="col-md-12">
-                          <div className="form-group">
-                              <p className="p-sm input-header">Phone numbar</p>
-                              <div style={{ display: 'flex', alignItems: 'center' }}>
-                                  <Controller
-                                      name="phone" control={control}  rules={{ required: 'Phone number is required' }}
-                                      render={({ field }) => (
-                                          <PhoneInput  {...field} defaultCountry="US" onChange={field.onChange} placeholder="Phone numbar"  />
-                                      )}
-                                  />  
-                              </div>
-                          </div>  
-                          <FormError field={errors.phone} />
-                      </div>
-
-                      <div className="col-md-12">
-                        <div className="form-group">
-                          <label forhtml="Resume" className="p-lg">File Upload (Resume / CV) * </label>
-                          {/* <span>Your OS version, Yonescat version &amp; build, steps you did. Be VERY precise!</span> */}
-                          <input disabled={isSubmitting} aria-label="Resume" type="file" id="Resume" name="resume" className="name" accept="application/pdf,application/msword" style={{display:"block",marginTop:"20px"}}
-                            {...register('resume', {
-                              required: 'A file is required',
-                              message:"Phone Numbar is required",
-                              validate: (value) => {
-                                const acceptedFormats = ['pdf',"msword"];
-                                const fileExtension = value[0]?.name.split('.').pop().toLowerCase();
-                                const fileSize = 1*1024*1204;
-                                if (!acceptedFormats.includes(fileExtension)) {
-                                    return 'Invalid file format. Only PDF and ms word files are allowed.';
-                                }
-
-                                if (value[0].size > fileSize) {
-                                  return 'Invalid file Size. Select lass than 1 MB.';
-                                }
-                                return true;
-                              },
-                            })}
-                          />
-                          <FormError field={errors.resume} />
-                        </div>
-                      </div>
-                      <div className="col-md-12">
-                        <div className="form-group">
-                          <label className="p-lg">Message </label>
-                          {/* <span>Your OS version, Yonescat version &amp; build, steps you did. Be VERY precise!</span> */}
-                          <textarea disabled={isSubmitting} className="form-control message" name="message"  maxLength="150" rows={6} placeholder="Enter your message" {...register("message")} />
-                        </div>
-                      </div>
-                      {/* <div className='capchbox'>
-                        <LoadCanvasTemplate />
-                        <input placeholder='Enter Captcha Code ' id="user_captcha_input" name="captcha_input" className="form-control"  type="text" 
-                          {
-                            ...register("captcha_input", {
-                              required: {
-                                value:true,
-                                message:"Captcha is required"
-                              },
-                            })
-                          } 
-                        />
+                <form ref={formRef} name="contactform" className="row contact-form" onSubmit={handleSubmit(onSubmit)}>
+                  <input type="hidden" name="website" {...register("website")} />
+                  <div className="form-input">
+                    <div className="form-group ">
+                      <Label className="">Your Name * </Label>
+                      <Input type="text" disabled={isSubmitting} name="fullname" className="border border-black" placeholder="John Doe"
+                      {...register("fullname",{
+                              required:{ value:true, message:"Name is required" },
+                              minLength:{ value:4, message:"Name is too short." }
+                          })}
+                      />
+                      <FormError field={errors.fullname} />
+                    </div>
+                    <div className="form-group ">
+                      <Label className=""> Email address </Label>
+                      <Input type={"email"} disabled={isSubmitting} name="email" className="" placeholder="example@example.com"
+                          {...register("email", {
+                              required: { value:true, message:"Email is required" },
+                              pattern: { value:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,  message:"Enter valid email." }
+                          })}
+                      />
+                      <FormError field={errors.email} />
+                    </div>
+                  </div>
+                  <div className="form-input">
+                    <div className="form-group ">
+                      <Label className="">Phone numbar</Label>
+                      <div className="flex items-center w-full">
+                          <Controller name="phone" control={control}  rules={{ required: 'Phone number is required' }}
+                              render={({ field }) => ( <PhoneInput className="w-full"  {...field} defaultCountry="US" onChange={field.onChange} placeholder="Phone numbar"  /> )}
+                          />  
                       </div> 
-                      <FormError field={errors.captcha_input} /> */}
+                      <FormError field={errors.phone} />   
+                    </div>
 
-                      <div className='float-left w-100'>
-                        { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error" key={errorIndex}> {error.message} </div>) }
-                      </div>
+                    <div className="form-group">
+                      <Label className="">File Upload (Resume / CV)</Label>
+                      <Input disabled={isSubmitting}  type="file" id="Resume" name="resume" accept="application/pdf,application/msword" 
+                        {...register('resume', { required: 'A file is required', 
+                            validate: (value) => {
+                              const acceptedFormats = ['pdf',"msword"];
+                              const fileExtension = value[0]?.name.split('.').pop().toLowerCase();
+                              const fileSize = 1*1024*1204;
+                              if (!acceptedFormats.includes(fileExtension)) {
+                                  return 'Invalid file format. Only PDF and ms word files are allowed.';
+                              }
 
-                      {isSubmitting === false ? 
-                        <div className="col-md-12 mt-15 form-btn text-right mt-10">
-                          <button type="submit" disabled={isSubmitting} className="btn btn--theme hover--theme submit">Submit Request</button>
-                          </div>
-                        :<div className="text-center form-load-bg"><div className="form-loader"></div></div>
-                      }
-                      
-                      <div className="contact-form-notice">
-                        <p className="p-sm">We are committed to your privacy. Yonescat uses the information you
-                          provide us to contact you about our relevant content, products, and services.
-                          You may unsubscribe from these communications at any time. For more information,
-                          check out our <Link href="/privacy">Privacy Policy</Link>.
-                        </p>
-                      </div>
-                     
-                    </form>
+                              if (value[0].size > fileSize) {
+                                return 'Invalid file Size. Select lass than 1 MB.';
+                              }
+                              return true;
+                            },
+                          })}
+                        />
+                        <FormError field={errors.resume} />        
+                    </div>
+                  </div>  
+
+                  <div className="form-group ">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea disabled={isSubmitting} name="message" rows={6} placeholder="Enter your message..." maxLength="150" {...register("message")} />
+                    <FormError field={errors.message} />
                   </div>
-                </div>
-              </div>	   
-            </div>	   
-          </section>	
-          <hr className="divider" />
-        </div>
+
+                  {/* <div className="capchbox">
+                    <LoadCanvasTemplate />
+                    <input placeholder='Enter Captcha Code ' id="user_captcha_input" name="captcha_input"className="form-control"  type="text" 
+                    { ...register("captcha_input", { required: { value:true, message:"Captcha is required" },}) }  />
+                          
+                    <FormError field={errors.captcha_input} />
+                  </div>       */}
+                  <div className="float-left w-full mb-[10px]">
+                    { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error text-red-700 mt-[10px]" key={errorIndex}> {error.message} </div>) }
+                  </div>
+
+                  <p className="mb-[15px]">We are committed to your privacy. Yonescat uses the information you provide us to contact you about our relevant content, products, and services. You may unsubscribe from these communications at any time. For more information, check out our <Link className='underline' href={"/privacy"} >Privacy Policy</Link>.</p>
+
+                  {isSubmitting ? 
+                    <Button disabled> <Loader2 className="animate-spin" /> Please wait </Button>
+                    : <> <Button type="submit" className="px-10 py-5" disabled={isSubmitting} >Submit Request</Button>
+                  </> }
+                </form>      
+              </div>  
+              <ContactLeft/>
+            </div>
+          </div>
+        </section>
         {/* <LoginModel showModal={showModal} closeModal={closeModal} /> */}
       </Layout>
     </>

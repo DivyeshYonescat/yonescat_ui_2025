@@ -19,7 +19,7 @@ export default function Home() {
         {/* <ParallaxVideoReveal></ParallaxVideoReveal> */}
         <AboutUs />
         <CompanyAchievementsSection />
-        <DynamicClients />
+        <DynamicClients title={"Loved And Trusted By Client"} />
 
         {/* <FlotingGrid></FlotingGrid> */}
         {/* <section className="h-[100vh] w-full"></section> */}

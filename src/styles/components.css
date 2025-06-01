@@ -50,4 +50,24 @@
   .box-color-section {@apply flex justify-center items-center bg-black p-[30px] max-md:order-1; }
   /* concat box */
   .white-image{ filter: invert(100%) sepia(1%) saturate(1000%) hue-rotate(360deg); } 
+
+  /* File Upload */
+  .dndFile { @apply  w-full text-center flex-col h-auto flex items-center justify-center relative bg-[#f5f6f8] text-[#3a4a56] px-0 py-5 rounded-md border-2 border-dashed border-[#aaa];}
+  .dndFile input { @apply absolute w-full text-[0] opacity-0 border-0 inset-0; }
+  .prview_image_box{@apply border block border-black mt-[5px];}
+  .prview_image_box,
+  .prview_image_box > div { @apply justify-between flex w-auto items-center p-[5px];}
+  .prview_image_box > div{@apply p-[0px];}
+
+  /* File Uoload */
+
+  /* error */
+  .error{@apply text-red-700;}
+
+  /* text editer */
+.textEditer_cutome_header select {  @apply mr-[18px];}
+.textEditer_cutome_header button {  @apply border-[#ffdead] px-[6px];}
+.textEditer_cutome_header button svg {  @apply w-5;}
+.textEditer_cutome > div > .tiptap img { @apply max-w-full;}
+.tiptap.ProseMirror {  @apply min-h-[130px] border rounded border-solid border-black p-3;}
 }

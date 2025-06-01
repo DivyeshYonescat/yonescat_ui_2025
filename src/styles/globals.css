@@ -384,6 +384,22 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
   .bottom-footer ul {    justify-content: center;  }
 } */
 
+
+.impart-inner{@apply flex justify-start mx-[15px] flex-wrap;}
+.impart-inner > div {@apply p-[30px] mx-[15px] mb-[30px] w-[30.33%]  rounded-3xl transition-[300ms];}
+.impart-inner > .impart-box{@apply bg-[#e0d8cd] shadow-xl;}
+.impart-inner > .impart-box:hover{@apply transition-[300ms]  bg-black; transform: rotateZ(-5deg);}
+.impart-inner > .impart-box > h5{@apply font-bold mb-[15px] transition-[300ms];}
+
+.impart-inner > .impart-box:hover h5,
+.impart-inner > .impart-box:hover h3,
+.impart-inner > .impart-box:hover p{@apply text-white transition-[300ms]; }
+
+.director-section{@apply bg-no-repeat  bg-[left_center];
+  background-size: 605px 100%;
+}
+.director-image{@apply  text-right;}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

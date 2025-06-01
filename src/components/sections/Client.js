@@ -17,7 +17,7 @@ const logos = [
   '/images/clients/nhs.webp',
 ];
 
-const Clients = () => {
+const Clients = ({title}) => {
   const containerRef = useRef(null);
   const smallCircleRef = useRef(null);
   const mediumCircleRef = useRef(null);
@@ -99,7 +99,7 @@ const Clients = () => {
     <section className="section-main overflow-hidden" ref={containerRef}>
       <div className="container">
         <h2 className="text-center mb-16" ref={titleRef}>
-          Loved And Trusted By Client
+          {title}
         </h2>
       </div>
       <div

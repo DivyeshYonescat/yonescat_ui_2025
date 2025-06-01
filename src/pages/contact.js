@@ -5,6 +5,9 @@ import Link from "next/link";
 import Image from 'next/image';
 
 import { Button } from "@/components/ui/button";
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 
 import { useForm } from "react-hook-form";
 
@@ -13,9 +16,7 @@ import Layout from "@/layout/Layout";
 import { FormError } from "@/components/form/validationError";
 import { contactUsForm } from '@/api/formSubmission';
 import useError from '@/api/errorShow';
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+
 
 import { Loader2 } from 'lucide-react';
 import Banner from '@/layout/Banner';
