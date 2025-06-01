@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
-const DynamicClients = dynamic(() => import('@/components/sections/Client'),{ssr:true});
+const DynamicClients = dynamic(() => import("@/components/sections/Client"),{ssr:true});
 
 export default function Home() {
 
@@ -15,12 +15,12 @@ export default function Home() {
             <p>Welcome to Yonescat. I am Heman Yones. We began our journey back in 2004 driven by a love and passion for meaningful design. working on European initiatives and with educational institutions to produce digital tools. Having started offering digital services more than 20 years ago, we have developed an amazing clientele. From municipal agencies and charity to corporate companies and private firms.</p>
           </div>
           <div className="grid grid-cols-3 gap-5 ">
-            <div><Image className="rounded-xl" src={'/images/main/about/2.jpg'} width={400} height={200} alt={"gridImage"} /></div>
-            <div ><Image className="rounded-xl" src={'/images/main/about/1.jpg'} width={400} height={200} alt={"gridImage"} /></div>
-            <div className="col-span-2 rounded-xl"><Image className="rounded-xl" src={'/images/main/about/4.jpg'} width={850} height={300} alt={"gridImage"} /></div>
+            <div><Image className="rounded-xl" src={"/images/main/about/2.jpg"} width={400} height={200} alt={"gridImage"} /></div>
+            <div ><Image className="rounded-xl" src={"/images/main/about/1.jpg"} width={400} height={200} alt={"gridImage"} /></div>
+            <div className="col-span-2 rounded-xl"><Image className="rounded-xl" src={"/images/main/about/4.jpg"} width={850} height={300} alt={"gridImage"} /></div>
             <div className="row-start-1 row-end-3 col-start-3">
               <div className="p-10 bg-black text-white rounded-xl">
-                <p className="leading-[27px]">Hello, this is Heman Yones. In 2004, I founded Yonescat, motivated by a desire to create meaningful design. Over the last 20 years, we've transformed the way creative businesses connect and collaborate.Our journey began with European projects and partnerships with schools to create innovative digital services. Today, our impressive clientele includes charities, local governments, corporations, and private organizations.Join us as we continue to shape the future of digital services by forging lasting connections and fostering impactful collaborations.</p>
+                <p className="leading-[27px]">Hello, this is Heman Yones. In 2004, I founded Yonescat, motivated by a desire to create meaningful design. Over the last 20 years, we&apos;ve transformed the way creative businesses connect and collaborate.Our journey began with European projects and partnerships with schools to create innovative digital services. Today, our impressive clientele includes charities, local governments, corporations, and private organizations.Join us as we continue to shape the future of digital services by forging lasting connections and fostering impactful collaborations.</p>
                 <p className="block mt-[30px] font-bold">Heman Yones</p>
                 <p className="font-bold">CEO</p>
               </div>
