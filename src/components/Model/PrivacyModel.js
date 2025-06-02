@@ -10,8 +10,8 @@ const PrivacyModel = ({ isOpen,onClose, type }) => {
    
     
     <div className="overlay fixed top-[0] left-[0] w-full h-full bg-[rgba(0,_0,_0,_0.5)] right-[0] bottom-[0] flex" onClick={onClose}>
-      <div className="modal bg-[white] p-[20px] rounded-[8px] w-[1000px] max-w-full [box-shadow:0_4px_8px_rgba(0,_0,_0,_0.1)] relative inline-block m-auto max-h-[530px] overflow-hidden" onClick={(e) => e.stopPropagation()}>
-        <button className="closeButton absolute top-[15px] right-[15px] bg-none border-[none] text-[24px] !cursor-pointer text-[#000] p-0 leading-none m-0" onClick={onClose}>
+      <div className="modal bg-stone-100 p-[20px] rounded-[8px] w-[1000px] max-w-full [box-shadow:0_4px_8px_rgba(0,_0,_0,_0.1)] relative inline-block m-auto max-h-[530px] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+        <button className="closeButton absolute top-[15px] right-[15px] bg-none border-[none] text-[24px] !cursor-pointer text-stone-900 p-0 leading-none m-0" onClick={onClose}>
           &times;
         </button>
         <div className="ModelBody float-left w-full bg-transparent p-[12px] overflow-x-hidden h-[500px]  overflow-y-scroll">

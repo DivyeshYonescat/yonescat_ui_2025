@@ -28,17 +28,17 @@ export default function Home() {
         <div className='auth-image bg-no-repeat bg-cover rounded-2xl max-md:order-1 flex justify-center items-center' style={{backgroundImage:"url('/images/login.jpg')"}}>
           {type === 'login' && 
             <div className='max-w-[250px] max-md:max-w-[500px] text-center py-[25px]'>
-              <h2 className='text-white'>Welcome To Yonescat</h2>
-              <p className='text-white my-[15px]'>New Here?</p>
-              <Button type="button" variant="outline" className={`hover:bg-white text-white bg-transparent hover:text-black border-white px-10  ml-[15px] font-bold py-5 border-2 ${type  === 'register' ? "active" : ""}` }  onClick={() => handleTabChange('register')} > Register</Button>
+              <h2 className='text-stone-100'>Welcome To Yonescat</h2>
+              <p className='text-stone-100 my-[15px]'>New Here?</p>
+              <Button type="button" variant="outline" className={`hover:bg-stone-100 text-stone-100 bg-transparent hover:text-stone-900 border-stone-100 px-10  ml-[15px] font-bold py-5 border-2 ${type  === 'register' ? "active" : ""}` }  onClick={() => handleTabChange('register')} > Register</Button>
             </div>
           }
           {type === 'register' && 
             <div className='max-w-[250px] max-md:max-w-[500px] text-center py-[25px]'>
-              <h2 className='text-white'>Login</h2>
-              <p className='text-white my-[15px]'>Hay Welcome back!</p>
-              <p className='text-white my-[15px]'>We hope you had a great day</p>
-              <Button type="button" variant="outline" className={`hover:bg-white text-white bg-transparent hover:text-black border-white px-10  ml-[15px] font-bold py-5 border-2 ${type  === 'register' ? "active" : ""}` }  onClick={() => handleTabChange('login')} > Login</Button>
+              <h2 className='text-stone-100'>Login</h2>
+              <p className='text-stone-100 my-[15px]'>Hay Welcome back!</p>
+              <p className='text-stone-100 my-[15px]'>We hope you had a great day</p>
+              <Button type="button" variant="outline" className={`hover:bg-stone-100 text-stone-100 bg-transparent hover:text-stone-900 border-stone-100 px-10  ml-[15px] font-bold py-5 border-2 ${type  === 'register' ? "active" : ""}` }  onClick={() => handleTabChange('login')} > Login</Button>
             </div>
           }
         </div>

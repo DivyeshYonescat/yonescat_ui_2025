@@ -25,13 +25,13 @@ const CompanyAchievementsSection = () => {
             <div className="md:max-w-[350px] lg:max-w-[500px] xl:max-w-[600px] m-auto">
               <h2 className="font-bold leading-none">Lorem Ipsum is simply dummy text  </h2>
               <p className=" py-[30px]">{`Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`}</p>
-              <Link href={"/aboutus"} className={buttonVariants({ variant: "outline", className:'bg-transparent hover:bg-gray-900 hover:text-white border-black px-8  py-5'})}>About More</Link>
+              <Link href={"/aboutus"} className={buttonVariants({ variant: "outline", className:'bg-transparent hover:bg-gray-900 hover:text-stone-100 border-stone-900 px-8  py-5'})}>About More</Link>
               {/* <button className="btn">About More</button> */}
             </div>
           </div>
           <div className="comp-achieve-list w-[100%] md:w-[40%] lg:w-[40%] mt-0 sm:mt-8 md:mt-0">
             {copmAchievment.map((item) => (
-              <div key={item.icone} className="flex flex-row justify-between items-center w-full border-b border-black border-solid py-[25px] max-sm:py-[15px] sm:py-[15px] lg:py-[25px]">
+              <div key={item.icone} className="flex flex-row justify-between items-center w-full border-b border-stone-900 border-solid py-[25px] max-sm:py-[15px] sm:py-[15px] lg:py-[25px]">
                 <div className="flex flex-row justify-start items-center">
                   <Image src={`/images/main/svg/${item.icone}`} alt="client" width={50} height={50} />
                   <p className="mx-5 text-lg font-bold">{item.title}</p>

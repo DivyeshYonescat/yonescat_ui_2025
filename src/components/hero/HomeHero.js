@@ -15,7 +15,7 @@ const HomeHero = function () {
           <div className="grid-textbox hero-text" >
             <h1 className="" style={{lineHeight:"1.1"}} >Innovative Design & Development Solutions for Your Business</h1>
             <p className="mb-8">Invest in outstanding startups, find investments for your business, involve the best in your ideas.</p>
-            <Link className={buttonVariants({ variant: "outline", className:'bg-gray-900 text-white border-black hover:bg-transparent hover:text-gray-900 hover:border-gray-900 px-8  py-5'})} href={"/services"}>Explore Our Services</Link>
+            <Link className={buttonVariants({ variant: "outline", className:'bg-stone-900 text-stone-100 border-stone-900 hover:bg-transparent hover:text-stone-900 hover:border-stone-900 px-8  py-5'})} href={"/services"}>Explore Our Services</Link>
           </div>
           {/* <div className="h-[700px] hero-image" >
             <CylinderScene/>

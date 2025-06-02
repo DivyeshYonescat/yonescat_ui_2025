@@ -126,7 +126,7 @@ export default function Home() {
                   <div className="form-input">
                     <div className="form-group ">
                       <Label className="">Your Name * </Label>
-                      <Input type="text" disabled={isSubmitting} name="fullname" className="border border-black" placeholder="John Doe"
+                      <Input type="text" disabled={isSubmitting} name="fullname" className="border border-stone-900" placeholder="John Doe"
                       {...register("fullname",{
                               required:{ value:true, message:"Name is required" },
                               minLength:{ value:4, message:"Name is too short." }

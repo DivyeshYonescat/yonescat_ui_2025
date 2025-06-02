@@ -7,7 +7,7 @@ const ContactLeft = ()=>{
     <>
       <div className="box-color-section">
         <div className="w-full">
-          <h3 className="text-white mb-[30px]">Contact Information</h3>
+          <h3 className="text-stone-100 mb-[30px]">Contact Information</h3>
           <div className='contact_list'>
             <div className='contact-box '>
               <Image className="white-image" src="/images/contact-icone/maps-and-flags.png" alt="address" width={25} height={25} />

@@ -73,7 +73,7 @@ export default function FeaturesSection() {
       <section className="section-main">
         <div className="container">
           <div className="section-title mb-20 sm:mb-10 max-sm:mb-5 text-center">
-            <h2 className=" mb-5.5"> What Types Of Services Do We Provide </h2>
+            -
             <p className="text-lg color--grey">on the other hand,we denounce with righteous indignation and dislike nam who are so beguiled.</p>
           </div>
 
@@ -86,7 +86,7 @@ export default function FeaturesSection() {
                     <div className="card-header">
                       <div className="flex flex-row items-center">
                           <div className=" max-sm:min-w-[55px] max-sm:w-[55px] max-sm:h-[55px] md:min-w-[70px] lg:min-w-[70px] w-[70px] h-[70px]  bg-[#2a2c34]  rounded-full flex flex-row justify-center items-center">
-                              <Image className="w-[40px] h-[40px] max-sm:w-[30px] max-sm:h-[30px]" src={`/images/main/svg/${item.icone}`} width={40} height={40} alt="solution.png" />
+                              <Image className="white-image w-[40px] h-[40px] max-sm:w-[30px] max-sm:h-[30px]" src={`/images/main/svg/${item.icone}`} width={40} height={40} alt="solution.png" />
                           </div>
                           <h3 className=" font-bold mx-[15px] max-sm:mr-0 max-sm:ml-[10px] sm:mr-0 md:ml-[10px] md:mr-0  ">{item.title}</h3>
                       </div>

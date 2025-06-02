@@ -45,7 +45,7 @@ const NewsLetterSection = () => {
                         {/* onSubmit={handleSubmit(onSubmit)} */}
                         <form ref={formRef} name="contactform" className="newsletter-form contact-form" >
                             <div className="form-group">
-                                <Input type="email" name="email" id="email" autoComplete="off" className="w-full px-1.5 py-3 h-[50px] mt-[45px] mb-[15px] border-black" placeholder="Your Email Address"  
+                                <Input type="email" name="email" id="email" autoComplete="off" className="w-full px-1.5 py-3 h-[50px] mt-[45px] mb-[15px] border-stone-900" placeholder="Your Email Address"  
                                      {...register("email", { required: {value:true, message:"Email is required" },
                                         pattern: { value:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, message:"Enter valid email."  }
                                     })}

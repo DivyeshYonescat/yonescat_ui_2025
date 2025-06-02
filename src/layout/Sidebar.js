@@ -249,20 +249,20 @@ export default function SidebarMenu() {
         <div className='h-screen fixed flex flex-col justify-center align-middle max-w-auto top-0 right-0'>
           <div className='flex flex-col items-end h-auto justify-center social-media-header'>
            
-            <span className='flex items-center   leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px] header-flaticon-facebook  text-white'>
+            <span className='flex items-center   leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px] header-flaticon-facebook  text-stone-100'>
               <Image  src={"/images/main/media/facebook.svg"} alt='facebook' width={40} height={40} /> <span className="font-bold ml-3">Facebook</span>
             </span>
             
             
-            <span className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px]  header-flaticon-instagram  text-white'>
+            <span className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px]  header-flaticon-instagram  text-stone-100'>
               <Image src={"/images/main/media/instagram.svg"} alt='instagram' width={40} height={40} /> <span className="font-bold ml-3">Instagram</span>
             </span>
             
-            <span className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px]  header-flaticon-youtube text-white'>
+            <span className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px]  header-flaticon-youtube text-stone-100'>
               <Image  src={"/images/main/media/youtube.svg"} alt='youtube' width={40} height={40} /> <span className="font-bold ml-3">Youtube</span>
             </span>
            
-            <span className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px]  header-flaticon-x text-white'>
+            <span className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px]  header-flaticon-x text-stone-100'>
               <Image  src={"/images/main/media/x.svg"} alt='x' width={40} height={40} /> <span className="font-bold ml-3"> X</span>
             </span>
            
@@ -282,7 +282,7 @@ export default function SidebarMenu() {
                       <div className={`menu-wrap ${openMenus[menuIndex] ? 'isSubmenuOpen' : ''}`}>
                          {(menu.link != "") ? <Link href={menu.link} className="nav-link flex"> {(menu.icone != "") ? <span className={`menu-icone ${menu.title}`}> <Image width={20} height={20} src={menu.icone} alt={menu.title} />  </span>:"" } {menu.title}</Link> :
                             <div role="button" onClick={() => toggleMenu(menuIndex)} className="nav-link ">{(menu.icone != "") ? <span className={`menu-icone ${menu.title}`}> <Image width={25} height={25} src={menu.icone} alt={menu.title} />  </span>:"" } {menu.title}</div>}
-                        {(menu.subItems.length > 0) && <span className="flaticon-down-arrow text-black submenu-toggle" onClick={() => toggleMenu(menuIndex)}></span>}
+                        {(menu.subItems.length > 0) && <span className="flaticon-down-arrow text-stone-900 submenu-toggle" onClick={() => toggleMenu(menuIndex)}></span>}
                       </div>
                       {
                         (menu.subItems.length > 0) && <div ref={(el) => (subMenuRefs.current[menuIndex] = el)} className="sub-menu-wrap">
