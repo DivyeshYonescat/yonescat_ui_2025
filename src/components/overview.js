@@ -135,7 +135,7 @@ const Overview = ({list})=>{
   }, []);
   return (
     <>  
-      <section className='overview-main block mt-[80px]'>
+      <section className='overview-main block mt-[80px] overflow-hidden' >
         <div className='container'>
           <div className='overview-inner content-container grid max-md:grid-cols-1 grid-cols-[45%_55%] ' ref={containerRef}>
             <div className='overview-img-section h-screen max-md:h-auto max-md:min-h-[300px] max-md:mt-[60px] relative'>
