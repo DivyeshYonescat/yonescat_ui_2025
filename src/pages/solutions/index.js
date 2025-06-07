@@ -1,5 +1,6 @@
 import Layout from "@/layout/Layout";
 import Overview from "@/components/overview";
+import CommonSection from "@/components/sections/section";
 
 
 export default function Home() {
@@ -54,7 +55,8 @@ export default function Home() {
   }]
   return (
     <>
-      <Layout>        
+      <Layout>     
+        <CommonSection />   
         <Overview list={list} />
       </Layout>
     </>

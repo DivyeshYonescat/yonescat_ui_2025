@@ -73,7 +73,7 @@ export default function FeaturesSection() {
       <section className="section-main">
         <div className="container">
           <div className="section-title mb-20 sm:mb-10 max-sm:mb-5 text-center">
-            -
+            <h2 className=" mb-5.5"> What Types Of Services Do We Provide </h2>
             <p className="text-lg color--grey">on the other hand,we denounce with righteous indignation and dislike nam who are so beguiled.</p>
           </div>
 

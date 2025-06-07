@@ -70,4 +70,14 @@
 .textEditer_cutome_header button svg {  @apply w-5;}
 .textEditer_cutome > div > .tiptap img { @apply max-w-full;}
 .tiptap.ProseMirror {  @apply min-h-[130px] border rounded border-solid border-stone-900 p-3;}
+
+/* .right-director-inner{@apply;} */
+.box-director-inner{@apply bg-[var(--bg-box-section)]; }
+
+/*  */
+
+.textsection h3{@apply mb-[15px] font-bold;}
+/*  */
+
+
 }

@@ -393,9 +393,7 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 .impart-inner > .impart-box:hover h3,
 .impart-inner > .impart-box:hover p{@apply text-stone-100 transition-[300ms]; }
 
-.director-section{@apply bg-no-repeat  bg-[left_center];
-  background-size: 605px 100%;
-}
+.director-section{@apply bg-no-repeat  bg-[left_center]; background-size: 605px 100%;}
 .director-image{@apply  text-right;}
 
 @theme inline {
