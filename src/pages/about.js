@@ -7,20 +7,20 @@ const DynamicClients = dynamic(() => import("@/components/sections/Client"),{ssr
 
 export default function Home() {
   const FeaturesList = [{
-    id:"1", icone:"infrastucture.svg", title:"Market Research",
+    id:"1", icone:"Market-Research.png", title:"Market Research",
     discription:"We conduct a comprehensive market study that allows businesses to become aware of changes in industries, tendencies of consumers, and competitiveness. This’s our expertise that assists in making decisions and developing strategies."},
-    { id:"2", icone:"infrastucture.svg", title:"User Experience",
+    { id:"2", icone:"user-Experience.png", title:"User Experience",
     discription:"Our UX services focus on making digital interfaces that are easy to navigate and pleasant to use. Our clients’ demands are centerstage, which calls for the design of effective and memorable user experiences."
     },
-    { id:"3", icone:"infrastucture.svg", title:"Digital Marketing",
+    { id:"3", icone:"Digital-Marketing.png", title:"Digital Marketing",
     discription:"We provide innovative digital marketing tactics to increase interaction, raise brand exposure, and create leads. Our experience includes content marketing, email campaigns, and sponsored adverts. We also offer social media marketing, SEO, and other digital marketing services."
     },
-    { id:"4", icone:"infrastucture.svg", title:"Web Development",
+    { id:"4", icone:"web-development.png", title:"Web Development",
     discription:"Our web development solutions are tailored to modern company requirements, resulting in robust, scalable, and visually appealing websites. We specialize in cutting-edge technologies and frameworks for a more effective online presence."
     },
-    { id:"5", icone:"infrastucture.svg", title:"Brand Design Identity",
+    { id:"5", icone:"Brand-Design-Identity.png", title:"Brand Design Identity",
     discription:"We assist organizations in developing a strong brand identity through smart design, logo creation, and consistent visual storytelling that connects with target audiences."},
-    { id:"6", icone:"infrastucture.svg", title:"SEO & SMM Services",
+    { id:"6", icone:"seo.png", title:"SEO & SMM Services",
     discription:"Increase your online exposure and engagement with our Search Engine Optimization (SEO) and Social Media Marketing (SMM) services. We ensure that your business stands out in an increasingly competitive digital landscape."
     },
   ]
@@ -119,7 +119,7 @@ export default function Home() {
                     <div className="card-header">
                       <div className="flex flex-row items-center">
                           <div className=" max-sm:min-w-[55px] max-sm:w-[55px] max-sm:h-[55px] md:min-w-[55px] lg:min-w-[55px] w-[55px] h-[55px]  bg-[#2a2c34]  rounded-full flex flex-row justify-center items-center">
-                              <Image className="white-image w-[25px] h-[25px] max-sm:w-[30px] max-sm:h-[30px]" src={`/images/main/svg/${item.icone}`} width={25} height={25} alt="solution.png" />
+                              <Image src={`/images/main/about/${item.icone}`} className="white-image w-[25px] h-[25px] max-sm:w-[30px] max-sm:h-[30px]"  width={25} height={25} alt="solution.png" />
                           </div>
                           <h5 className=" font-bold mx-[15px] max-sm:mr-0 max-sm:ml-[10px] sm:mr-0 md:ml-[10px] md:mr-0  ">{item.title}</h5>
                       </div>

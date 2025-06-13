@@ -283,7 +283,7 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 /* .social-media-header > span:hover > image {  transform: rotate(360deg);  transition: all 1s;} */
 /* header */
 /* svg */
-.card:hover img{ filter: invert(100%) sepia(1%) saturate(1000%) hue-rotate(360deg); }
+/* .card:hover img{ filter: invert(100%) sepia(1%) saturate(1000%) hue-rotate(360deg); } */
 .slick-slide > div{ @apply px-[25px] max-lg:px-[0px] sm:px-[0px];  }
 .slick-list > div{ @apply mx-[-25px] max-lg:mx-[0px] sm:mx-[-0px]; }
 .slick-prev, .slick-next{ width:40px !important; height:40px !important;}
@@ -395,6 +395,8 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 
 .director-section{@apply bg-no-repeat  bg-[left_center]; background-size: 605px 100%;}
 .director-image{@apply  text-right;}
+
+.hero-main-subpage{background:none;}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

@@ -56,7 +56,6 @@ export default function Home() {
   return (
     <>
       <Layout>     
-        <CommonSection />   
         <Overview list={list} />
       </Layout>
     </>

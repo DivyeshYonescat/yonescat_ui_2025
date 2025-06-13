@@ -1,10 +1,7 @@
 @layer components {
 
   .section-main{ @apply bg-[var(--bg-primary)] clear-both w-full block py-[50px] md:py-[80px] lg:py-[100px]  relative }
-
-  .btn {   
-    @apply text-stone-100 bg-stone-900  text-[14px] md:text-[16px] font-semibold  px-[20px] py-[10px] md:px-5 md:py-2.5  text-center   transition delay-200 duration-500 ease-in-out; 
-  }
+  .btn { @apply text-stone-100 bg-stone-900  text-[14px] md:text-[16px] font-semibold  px-[20px] py-[10px] md:px-5 md:py-2.5  text-center   transition delay-200 duration-500 ease-in-out; }
 
   /* card */
 
@@ -21,7 +18,7 @@
           md:px-[15px] md:py-[15px] 
           lg:px-[15px] lg:py-[15px]
           xl:px-[30px] xl:py-[15px]
-    ;} 
+  ;} 
   
 
   /* form Group */
@@ -31,9 +28,7 @@
   .form-input > div:first-child{@apply ml-[0px] max-sm:mr-[0px];}
   .form-input > div:last-child{@apply mr-[0px] max-sm:ml-[0px];}
   .PhoneInput{@apply border border-stone-900 pl-[10px] rounded-md;}
-  .PhoneInput > input { @apply h-[45px] px-2.5;
-    width:100% !important;
-  }
+  .PhoneInput > input { @apply h-[45px] px-2.5; width:100% !important;}
   .PhoneInput > input:focus, .PhoneInput > input:focus-visible{ @apply border-0  outline-0;}
   
   /* banner */
@@ -58,26 +53,66 @@
   .prview_image_box,
   .prview_image_box > div { @apply justify-between flex w-auto items-center p-[5px];}
   .prview_image_box > div{@apply p-[0px];}
-
   /* File Uoload */
-
   /* error */
   .error{@apply text-red-700;}
 
   /* text editer */
-.textEditer_cutome_header select {  @apply mr-[18px];}
-.textEditer_cutome_header button {  @apply border-[#ffdead] px-[6px];}
-.textEditer_cutome_header button svg {  @apply w-5;}
-.textEditer_cutome > div > .tiptap img { @apply max-w-full;}
-.tiptap.ProseMirror {  @apply min-h-[130px] border rounded border-solid border-stone-900 p-3;}
+  .textEditer_cutome_header select {  @apply mr-[18px];}
+  .textEditer_cutome_header button {  @apply border-[#ffdead] px-[6px];}
+  .textEditer_cutome_header button svg {  @apply w-5;}
+  .textEditer_cutome > div > .tiptap img { @apply max-w-full;}
+  .tiptap.ProseMirror {  @apply min-h-[130px] border rounded border-solid border-stone-900 p-3;}
 
 /* .right-director-inner{@apply;} */
-.box-director-inner{@apply bg-[var(--bg-box-section)]; }
-
+  .box-director-inner{@apply bg-[var(--bg-box-section)]; }
 /*  */
-
 .textsection h3{@apply mb-[15px] font-bold;}
 /*  */
 
+/* inner page */
+/* sub page textbox */
+.sub-page-textbox{@apply mt-[50px];}
+.sub-page-title{@apply mb-[15px];}
+.sub-page-discretion {@apply mb-[15px];}
+
+.box-image-sub-page{@apply flex items-center flex-col mt-13 bg-[#e6f0f9] p-[20px] rounded-[12px] shadow-lg;}
+.box-image-sub-page > img{@apply w-[65px] h-[65px] p-[15px] rounded-[6px] bg-stone-100 shadow-lg;}
+.box-image-text-sub-page{@apply font-semibold mt-3 text-xl max-sm:text-base text-center;}
+
+
+/* datacenterBG */
+.datacenterBG{@apply w-full py-[50px] bg-no-repeat [background-size:100%_100%] bg-[50%] bg-fixed;}
+.datacenterBG:before{@apply content-[""] block absolute top-[0] left-[0] w-full h-full bg-[hsla(0,_0%,_100%,_.85)];}
+.datacenterBG * {@apply relative z-10;}
+/* datacenterBG */
+
+/* card-main-box */
+.card-box-inner{@apply max-lg:grid-cols-1;}
+.card-box-inner .card-main-box {  @apply p-[50px] rounded-[28px] !flex flex-col justify-start max-lg:p-[25px];
+  background: #b5d7eb;
+}
+
+.card-box-inner .card-main-box-img > img { @apply w-full object-fill h-full m-auto;}
+
+.card-box-inner .card-main-box-img { @apply h-[350px] min-h-[350px] mt-0 m-auto rounded-[14px] w-full;
+  background: #fff;
+}
+
+.card-box-inner .card-main-box-img-text{@apply !items-start h-full;}
+
+.card-box-inner .card-main-box-img-text p {
+  @apply leading-[1.4] mb-2.5;
+}
+
+/* card-main-box */
+
+.box-descriton{@apply  overflow-hidden overflow-ellipsis whitespace-normal;}
+
+.img-database-block > img{@apply w-full h-[400px] max-xl:h-[300px]  rounded-[6px];}
+
+.in_tool_logo{@apply px-[30px] py-[50px] mb-[25px] shadow-2xs;}
+
+/* .hero-main-subpage{@apply !bg-stone-500 ;} */
 
 }

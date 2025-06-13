@@ -136,8 +136,8 @@ const Overview = ({list})=>{
               {list.map((list) => <>
               <div key={`overview-text_${list.id}`} className='overview-text-main max-w-[100%] max-md:min-w-screen p-8 h-[calc(100vh-80px)] max-md:h-auto max-md:items-baseline flex items-center text-left' data-marker-content={`image_${list.id}`}>
                 <div>
-                  <h3 className="text-stone-100">{list.title}</h3>
-                  <p className="py-5 text-stone-100 block line-clamp-6 max-md:line-clamp-4 max-sm:line-clamp-3 leading-[28px] max-md:leading-[23px]"> {list.discrition} </p>
+                  <h3 className="text-stone-900">{list.title}</h3>
+                  <p className="py-5 text-stone-900 block line-clamp-6 max-md:line-clamp-4 max-sm:line-clamp-3 leading-[28px] max-md:leading-[23px]"> {list.discrition} </p>
                   {list.link !== "" && <>
                   <Link href={`${list.link}`} className="btn inline-block  mt-8 max-md:mt-3.5">Read More</Link>
                   </>}
