@@ -12,9 +12,9 @@ export default function SharedHosting() {
               <div className="">
                 <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What is Shared Hosting?</h3>
                 <p className="sub-page-discretion">Shared hosting simply means allowing multiple websites to coexist on a single server. All users sharing the server have a specified limit of the number of server services they can use. Your allotted usage is usually determined by the hosting package you choose.</p>
-                <p className="sub-page-discretion">Shared web hosting is ideal for beginners who have newly built their website. It's no wonder these shared hosting plans are so popular among newbies, given the small monetary investments. Furthermore, you don't have to fret about the hassle of web maintenance either. </p>
-                <p className="sub-page-discretion">Without question, it is the cheapest and undoubtedly an intriguing option for your needs. Indeed, most companies will offer you the same amount of resources for a similar price. Hence, it's imperative that you put your faith in a company you can't trust.</p>
-                <p className="sub-page-discretion">That's where Yonescat comes in! We are the most reliable web hosting server you can get. We will also provide you with countless benefits that you possibly can't get elsewhere for that price.</p>
+                <p className="sub-page-discretion">Shared web hosting is ideal for beginners who have newly built their website. It&apos;s no wonder these shared hosting plans are so popular among newbies, given the small monetary investments. Furthermore, you don&apos;t have to fret about the hassle of web maintenance either. </p>
+                <p className="sub-page-discretion">Without question, it is the cheapest and undoubtedly an intriguing option for your needs. Indeed, most companies will offer you the same amount of resources for a similar price. Hence, it&apos;s imperative that you put your faith in a company you can&apos;t trust.</p>
+                <p className="sub-page-discretion">That&apos;s where Yonescat comes in! We are the most reliable web hosting server you can get. We will also provide you with countless benefits that you possibly can&apos;t get elsewhere for that price.</p>
               </div>
             </div>  
           </BoxSection>

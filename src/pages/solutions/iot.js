@@ -26,13 +26,13 @@ export default function ECommerce() {
         <div className="container">
           <div className="sub-page-textbox">
             <p className="sub-page-discretion">IoT services include consulting, development, data analytics, and app management aimed at optimizing and automating corporate workflows using IoT technology.</p>
-            <p className="sub-page-discretion">Yonescat transforms your business with powerful, adaptive digital solutions that meet today's needs and open up tomorrow's opportunities.</p>
+            <p className="sub-page-discretion">Yonescat transforms your business with powerful, adaptive digital solutions that meet today&apos;s needs and open up tomorrow&apos;s opportunities.</p>
             <h3 className="sub-page-title">IoT, Wide Applications & Yonescat</h3>
             <p className="sub-page-discretion">Yonescat represents Internet of Things in a physical object that has sensors, processing capabilities, application and other technologies that connect and exchange data with other applications and systems over the Internet and other communication networks.</p>
           </div>
           <div className="sub-page-textbox mt-0">
             <h3 className="sub-page-title">We Help Customers To Take Advantage Of IoT And Align Themselves For The Future.</h3>
-            <p className="sub-page-discretion">We help customers leverage IoT to future-proof their businesses. IoT has become integral in all aspects of life, and our services connect everything to create a smarter world. To fully realize IoT's potential, businesses must address key challenges. Yonescat's IoT solutions transform business needs into competitive advantages, offering services from sensor integration to platform selection and data analysis. We help businesses:</p>
+            <p className="sub-page-discretion">We help customers leverage IoT to future-proof their businesses. IoT has become integral in all aspects of life, and our services connect everything to create a smarter world. To fully realize IoT&apos;s potential, businesses must address key challenges. Yonescat&apos;s IoT solutions transform business needs into competitive advantages, offering services from sensor integration to platform selection and data analysis. We help businesses:</p>
             <div className="txt-block mt-10 grid grid-cols-3  max-lg:grid-cols-2 max-sm:grid-cols-1">
               <div className="cbox-2 process-step items-center mb-[10px]">
                 <div className="ico-wrap !mr-4">
@@ -108,7 +108,7 @@ export default function ECommerce() {
                   <div className="cbox-2-ico">2</div>
                 </div>
                 <div className="cbox-2-txt !mb-0 flex items-center">
-                  <p className="">As the number of mobile devices in the corporate world grows, we want to develop mobile devices that can access the company's resources.</p>
+                  <p className="">As the number of mobile devices in the corporate world grows, we want to develop mobile devices that can access the company&apos;s resources.</p>
                 </div>
               </div>
               <div className="cbox-2 process-step items-center mb-[10px]">
@@ -143,7 +143,7 @@ export default function ECommerce() {
               </div>
               <div className="cbox-2-txt">
                 <h3 className="mb-4">RFID technology</h3>
-                <p>RFID technology uses tags containing small circuits to identify radio waves. The tag can be as thin as a paper label or as large as a key fob, depending on the number of data. RFID tags categories into passive tags and active tags. Reading RFID tags does not "require" a "line view" like barcodes, but "reading distance" depends on whether the RFID tag is active or passive. RFID readers can be fixed readers or mobile readers, but mobile phones cannot read RFID tags such as barcodes.</p>
+                <p>RFID technology uses tags containing small circuits to identify radio waves. The tag can be as thin as a paper label or as large as a key fob, depending on the number of data. RFID tags categories into passive tags and active tags. Reading RFID tags does not &quot;require&quot; a &quot;line view&quot; like barcodes, but &quot;reading distance&quot; depends on whether the RFID tag is active or passive. RFID readers can be fixed readers or mobile readers, but mobile phones cannot read RFID tags such as barcodes.</p>
               </div>
             </div>
 
@@ -165,7 +165,7 @@ export default function ECommerce() {
               </div>
               <div className="cbox-2-txt">
                 <h3 className="mb-4">The Beacon </h3>
-                <p>The Beacon is powered by Bluetooth Low Energy (BLE) technology and is a small wireless battery-powered sensor that detects the temperature inside the cold case, movement in the backroom, the amount of items on the shelves, spills in the gas, and more. When a customer logs in to the station or store's mobile app and activates Bluetooth over the phone enters the store. IoT describes such interoperability of machines or mobile application over the Internet; we not only recognize information but also transmit and receive data. In addition, as a part of our services, we make this information available to other applications of consumers.</p>
+                <p>The Beacon is powered by Bluetooth Low Energy (BLE) technology and is a small wireless battery-powered sensor that detects the temperature inside the cold case, movement in the backroom, the amount of items on the shelves, spills in the gas, and more. When a customer logs in to the station or store&apos;s mobile app and activates Bluetooth over the phone enters the store. IoT describes such interoperability of machines or mobile application over the Internet; we not only recognize information but also transmit and receive data. In addition, as a part of our services, we make this information available to other applications of consumers.</p>
               </div>
             </div>
 

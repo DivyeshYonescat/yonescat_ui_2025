@@ -72,9 +72,9 @@ export default function CloudReseller() {
               </div>
               <div className="cbox-2-txt">
                 <h3 className="mb-4">Cloud Computing Services Advantages and Key Features</h3>
-                <p>Let's have a look at some of the core features and benefits of cloud computing from a service user's perspective.</p>
+                <p>Let&apos;s have a look at some of the core features and benefits of cloud computing from a service user&apos;s perspective.</p>
                 <div className="text-center legal-info">
-                  <Image width={700} height={350}  priority={true} src={'/images/main/svg/CCS-Advantages.svg'} alt="list Image" />
+                  <Image width={700} height={350}  priority={true} src={"/images/main/svg/CCS-Advantages.svg"} alt="list Image" />
                 </div>
               </div>
             </div>  

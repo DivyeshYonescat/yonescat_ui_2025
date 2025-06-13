@@ -30,14 +30,14 @@ export default function DecentralizedSystems() {
             <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
               <div className="">
                 <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Yonescat - Decentralized and dApps</h3>
-                <p className="leading-[20px] mb-[15px]">A "blockchain" is a computer-coded system for chaining unmodifiable and unchangeable, reliable and efficient transactions. IBM stated:</p>
+                <p className="leading-[20px] mb-[15px]">A &quot;blockchain&quot; is a computer-coded system for chaining unmodifiable and unchangeable, reliable and efficient transactions. IBM stated:</p>
                 {showMore && (<>
                 <p className="leading-[20px] mb-[15px]">Every transaction is recorded as a block of data. Each block is connected to the previous and next blocks. Transactions are blocked together in an irreversible chain (blockchain).</p>
                 <p className="leading-[20px] mb-[15px]">A set of rules (so-called smart contracts) are stored on the blockchain and executed automatically to speed up transactions. Smart contracts can define corporate bond transfer terms, travel insurance payment terms, and more.</p>
                 <p className="leading-[20px] mb-[15px]">Therefore, smart contracts are an agreement between the parties that are entirely contained in the computer code and blockchain. Our distributed ledger platform and Smart contracts are short and focused on paying for more goods and services.</p>
                 <p>To be lawfully enforceable, our DeFi and smart contract always meet basic requirements of law. Our standard legal agreements on binding contracts allow businesses to achieve the best of both worlds, faster electronic payments.</p>
                 </>)}
-                <Button onClick={toggleText} type="button">{showMore ? 'Read Less' : 'Read More'}</Button>
+                <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
               </div>
             </div>  
           </BoxSection>
@@ -52,7 +52,7 @@ export default function DecentralizedSystems() {
                 <p className="leading-[20px] mb-[15px]">Thanks to the reliable, immutable and transparent properties of blockchain, they are becoming more and more popular and difficult to close. Get the transparency of blockchain, most dApps have open source software that users can review and review on their own.</p>
                 <p>Our projects are protected and promoted by either the Proof of Work (PoW) consensus mechanism, the Proof of Stake (PoS) consensus mechanism, or a combination of both. There are many other types of consensus mechanisms, but these two are the most widely used so we prefer them. Precisely, get a unique way to maintain network security while avoiding centralization issues.</p>
                 </>)}
-                <Button onClick={toggleText} type="button">{showMore ? 'Read Less' : 'Read More'}</Button>
+                <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
               </div>
             </div>  
           </BoxSection>
@@ -78,12 +78,12 @@ export default function DecentralizedSystems() {
 
         <div className="sub-page-textbox">
           <h3 className="sub-page-title">Our Client ⬌ Ð Platform: Fully decentralized application.</h3>
-          <p className="sub-page-discretion">The client (browser or mobile application) communicates directly with the distributed platform using Crypto "wallet" and Ledger.</p>
+          <p className="sub-page-discretion">The client (browser or mobile application) communicates directly with the distributed platform using Crypto &quot;wallet&quot; and Ledger.</p>
         </div>
 
         <div className="sub-page-textbox">
           <h3 className="sub-page-title">Our Ð Platform ⬌ Client ⬌ Backend ⬌ Ð Platform: Centralized or semi-centralized application.</h3>
-          <p className="sub-page-discretion">The client interacts with distributed platforms and servers with little in common. The currencies traded on the exchange are only recorded in traditional databases. Consumers can "replenish" database credits by sending the asset to a specific address, performing some actions in the app and then withdrawing the asset, but keeping everything in connection with it.</p>
+          <p className="sub-page-discretion">The client interacts with distributed platforms and servers with little in common. The currencies traded on the exchange are only recorded in traditional databases. Consumers can &quot;replenish&quot; database credits by sending the asset to a specific address, performing some actions in the app and then withdrawing the asset, but keeping everything in connection with it.</p>
         </div>
         
       </div>

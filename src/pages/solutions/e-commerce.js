@@ -76,7 +76,7 @@ export default function ECommerce() {
                 <p className="p-8 mb-[15px] shadow-xl">Yonescat guarantees the protection of personal data in the UK or EU from a legal point of view.</p>
                 <p className="p-8 mb-[15px] shadow-xl">We ensure the legal actions that may lead to deviations regarding the effectiveness of the GDPR.</p>
                 <p className="p-8 mb-[15px] shadow-xl">We provide the clear concept of data protection with technology design and default settings – suitable for your data protection</p>
-                <p className="p-8 mb-[15px] shadow-xl">Yonescat GDPR implementation enhances the user's right to data processing and data alteration.</p>
+                <p className="p-8 mb-[15px] shadow-xl">Yonescat GDPR implementation enhances the user&apos;s right to data processing and data alteration.</p>
               </div>
               <p className="my-[30px] text-center">Our automated processing, including profiling, is to deny online loan applications or brokerage operations without human intervention through DDS and PCI hosting.</p>
             </div>

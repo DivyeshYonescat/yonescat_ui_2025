@@ -22,8 +22,8 @@ export default function DedicatedServers() {
           <p className="sub-page-discretion">We at Yonescat, provide High performance dedicated servers with cloud flexibility and scalability to all medium and large scale businesses to keep your data safe and secure seamlessly.</p>          
         </div>   
         <div className="sub-page-textbox">
-          <h3 className="sub-page-title">What Core Features Yonescat's Dedicated Servers Offer?</h3>
-          <p className="sub-page-discretion">Dedicated server hosting basically means that your website will have its own independent server all to itself - and that's what makes the dedicated servers the most powerful and influential infrastructure hosting option among all. Unlike other hosting options which empowers multiple sites, the dedicated server will enable you to have your own exclusive server. The server will provide immense flexibility and power as well as ensure higher security and credibility in terms of data management.</p>
+          <h3 className="sub-page-title">What Core Features Yonescat&apos;s Dedicated Servers Offer?</h3>
+          <p className="sub-page-discretion">Dedicated server hosting basically means that your website will have its own independent server all to itself - and that&apos;s what makes the dedicated servers the most powerful and influential infrastructure hosting option among all. Unlike other hosting options which empowers multiple sites, the dedicated server will enable you to have your own exclusive server. The server will provide immense flexibility and power as well as ensure higher security and credibility in terms of data management.</p>
           <p className="sub-page-discretion">The major features of a dedicated server include:</p>
           <div className="grid grid-cols-6 gap-4- max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
             <ListBox ListArray={ListArray} />

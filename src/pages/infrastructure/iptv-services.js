@@ -33,7 +33,7 @@ export default function IPtvServices() {
       <div className="section-main pb-0">
         <div className="container">
           <h3>Why Choose Yonescat for IPTV Services?</h3>
-          <p>Yonescat's IPTV services are remarkably designed for users. You can watch your desired entertainment videos in excellent quality without any interruption. We ensure unrivaled flexibility, added security and encryption, and unparalleled scalability.</p>
+          <p>Yonescat&apos;s IPTV services are remarkably designed for users. You can watch your desired entertainment videos in excellent quality without any interruption. We ensure unrivaled flexibility, added security and encryption, and unparalleled scalability.</p>
           <div className="txt-block mt-10">
             <div className="cbox-2 process-step">
               <div className="ico-wrap">

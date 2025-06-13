@@ -1,12 +1,17 @@
-import ListBox from "@/components/listBox";
-import ContactSection from "@/components/sections/contact";
-import BoxSection from "@/components/sections/section";
-import { Button } from "@/components/ui/button";
-import Layout from "@/layout/Layout";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function virtualReality() {
+import Layout from "@/layout/Layout";
+
+import BoxSection from "@/components/sections/section";
+import ListBox from "@/components/listBox";
+import ContactSection from "@/components/sections/contact";
+
+import { Button } from "@/components/ui/button";
+
+
+
+export default function VirtualReality() {
   const ListArray = [
     {"id":"","listimg":"/images/main/section_image/Icon_Img/Easier_upgrades.webp","title":"Easier upgrades"},
     {"id":"","listimg":"/images/main/section_image/Icon_Img/Scalability.webp","title":"Scalability"},
@@ -50,7 +55,7 @@ export default function virtualReality() {
                 {showMore && (<>
                 <p>As a VR expert, Yonescat sees your work as an opportunity to create a very personal experience and help you take your brand to a place never imagined before. Whether it is a photorealistic reproduction of Times Square or the very real and rugged coastline of the EU, we can make revenue generation dreams come true with personalized experiences.</p>
                 </>)}
-                <Button onClick={toggleText} type="button">{showMore ? 'Read Less' : 'Read More'}</Button>
+                <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
               </div>
             </div>  
           </BoxSection>
@@ -62,11 +67,11 @@ export default function virtualReality() {
                 <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Yonescat - Produce Groundbreaking Immersive VR Experiences</h3>
                 <p className="leading-[20px] mb-[15px]">Do you want Top-Notch Virtual Reality (VR) applications in iOS and Android both native and hybrid to exhilarate your business? Meet Yonescat professionals.</p>
                 {showMore && (<>
-                <p className="leading-[20px] mb-[15px]">To make your viewer's journey as smooth and exciting as possible, we will create individual VR apps according to your experience.</p>
+                <p className="leading-[20px] mb-[15px]">To make your viewer&apos;s journey as smooth and exciting as possible, we will create individual VR apps according to your experience.</p>
                 <p className="leading-[20px] mb-[15px]">The dedicated Yonescat VR services help distribute content on relevant platforms and ensure that all remarks are achieved.</p>
                 <p>Guides the manufacturing process from start to finish, helping you choose from a variety of devices available on the market. We have developed special apps for iOS, Android, Samsung Gear VR, Oculus Rift and HTC Vive.</p>
                 </>)}
-                <Button onClick={toggleText} type="button">{showMore ? 'Read Less' : 'Read More'}</Button>
+                <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
               </div>
             </div>  
           </BoxSection>
@@ -102,7 +107,7 @@ export default function virtualReality() {
         <div className="sub-page-textbox mt-0">
           <h3 className="sub-page-title">With Yonescat, Virtualize before Build and Rollout</h3>
           <p className="sub-page-discretion">Get on to the journey of Virtualization before it is too late!</p>
-          <p className="sub-page-discretion">Many IT organizations often dedicate physical servers to specific applications, so they deploy servers that use only a small portion of their capacity. This is an inefficient mechanism because it usually has excess on unconsumed capacity, which increases operating and IT costs. Virtualization was created to achieve higher capacity utilization and reduce costs. With Yonescat businesses' solutions, anyone can benefit from virtualization.</p>
+          <p className="sub-page-discretion">Many IT organizations often dedicate physical servers to specific applications, so they deploy servers that use only a small portion of their capacity. This is an inefficient mechanism because it usually has excess on unconsumed capacity, which increases operating and IT costs. Virtualization was created to achieve higher capacity utilization and reduce costs. With Yonescat businesses solutions, anyone can benefit from virtualization.</p>
           <div className=" grid grid-cols-5 gap-4  max-lg:grid-cols-2">
             <ListBox ListArray={ListArray2} />
           </div>
@@ -113,7 +118,7 @@ export default function virtualReality() {
       <div className="container">
         <div className="">
           <h3 className="mb-3">Engaging Content for Training & PDP with Yonescat</h3>
-          <p>Yonescat offers the UK's most compelling and prestigious professional compliance and content, as well as training and PDP. If you need a leading video game accessory company to develop high-performance products that enhance your gaming experience, we provide you with knowledge and understanding of the legal requirements that apply to key areas of your day-to-day operations. The services of Yonescat are:</p>
+          <p>Yonescat offers the UK&apos;s most compelling and prestigious professional compliance and content, as well as training and PDP. If you need a leading video game accessory company to develop high-performance products that enhance your gaming experience, we provide you with knowledge and understanding of the legal requirements that apply to key areas of your day-to-day operations. The services of Yonescat are:</p>
           <div className="txt-block mt-10 grid grid-cols-3  max-lg:grid-cols-2 max-sm:grid-cols-1">
             <div className="cbox-2 process-step items-center mb-[10px]">
               <div className="ico-wrap !mr-4">

@@ -13,7 +13,7 @@ export default function SslCertificates() {
               <div className="">
                 <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What are SSL Certificates?</h3>
                 <p className="sub-page-discretion"> SSL stands for Secure Sockets Layer and is a digital certificate that authenticates a website’s identity. It further enables the website for an encrypted connection. SSL certificate creates an encrypted link between a web browser and a web server. In simpler terms, SSL keeps attackers/hackers away from intercepting your organization’s personal information. A padlock beside the web address on the top bar is an indication of an SSL-certified website. </p>
-                <p className="sub-page-discretion"> The question is, is it necessary to obtain SSL Certificates for your website? Well, in the digital world, it is vital. SSL Certificate is important for an organization to secure their online transactions while also keeping their client's information secured. </p>    
+                <p className="sub-page-discretion"> The question is, is it necessary to obtain SSL Certificates for your website? Well, in the digital world, it is vital. SSL Certificate is important for an organization to secure their online transactions while also keeping their client&apos;s information secured. </p>    
               </div>
             </div>  
           </BoxSection>
@@ -111,7 +111,7 @@ export default function SslCertificates() {
           <h3 className="sub-page-title"> Best SSL Certification Service Provider - Yonescat </h3>
           <p className="sub-page-discretion">It is important to be aware of different SSL Certificates before purchasing one for your organization but what service provider to trust with these certificates? Well, this is where we come in.</p>
           <p className="sub-page-discretion">Yonescat’s SSL Certificates are available to all individuals from single traders, enterprises, organizations, to government agencies. With our services, there is no paperwork to supply or callbacks to process. All you have to do is pass domain ownership verification using a simple and easy method. With Yonescat’s SSL Certification services you can protect your websites, corporate portals, and e-commerce enterprises without a worry.</p>
-          <p className="sub-page-discretion">We have crafted various plans for our customers to pick from that suit their needs best. Our SSL certificates are known to be one of the most well-known, and cost-effective in the world. Yonescat's SSL Certificates encrypt an unlimited number of subdomains across an endless number of servers with the right purchased SSL Certificate.</p>
+          <p className="sub-page-discretion">We have crafted various plans for our customers to pick from that suit their needs best. Our SSL certificates are known to be one of the most well-known, and cost-effective in the world. Yonescat&apos;s SSL Certificates encrypt an unlimited number of subdomains across an endless number of servers with the right purchased SSL Certificate.</p>
         </div>    
       </div>      
       <ContactSection/>

@@ -84,7 +84,7 @@ export default function DataCenter() {
                   <div className={`box-descriton ${isExpanded == true ? "isActvie" : "truncate"}`} ref={contentRef}> 
                     <p>Yonescat acknowledges the trust that our clients have in us. And this is why we lay emphasis on data backup. Knowing that data recovery and backup are important for running our business, there is no room for slacking when it comes to data protection.</p>
                     <p> Human errors, random disasters, and computer crash often result in data loss, which is why we have taken big measures to ensure data protection.</p>
-                    <p>Content Delivery Networks (CDNs) are deployed in our data centers through the internet. CDNs effectively speed up the delivery of media content like videos to the users. Through CDNS, Yonescat aims to offer high-quality services to all its customers. This way, our users' demand for over-the-top (OTT) content and the option to access that content at any time, from anywhere, on any device, is covered.</p>
+                    <p>Content Delivery Networks (CDNs) are deployed in our data centers through the internet. CDNs effectively speed up the delivery of media content like videos to the users. Through CDNS, Yonescat aims to offer high-quality services to all its customers. This way, our users&apos; demand for over-the-top (OTT) content and the option to access that content at any time, from anywhere, on any device, is covered.</p>
                   </div>
                   {!isExpanded === true ? <>
                       <b className=" inline-block mb-4 mt-3" onClick={() => toggleDescription(true)}>Read More</b>
@@ -97,7 +97,7 @@ export default function DataCenter() {
           </div>
         </div>
       </div>
-      <div className="datacenterBG relative" style={{background:"url('/images/main/section_image/2151637760.webp')"}}>
+      <div className="datacenterBG relative" style={{background:"url(/images/main/section_image/2151637760.webp)"}}>
         <div className="container">
           <h3 className="text-stone-900 mb-3">GDPR and encrypted client personal information</h3>
             <p className="sub-page-discretion">General Data Protection Regulation (GDPR) is a law that imposes the required security measures. It’s a regulatory body that secures the personal information of users.</p>

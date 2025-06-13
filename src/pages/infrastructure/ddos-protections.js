@@ -25,7 +25,7 @@ export default function DdosProtections() {
       <div className="container">
         <div className="sub-page-textbox">
           <h3 className="sub-page-title"> Understanding what a DDoS Attack Means </h3>
-          <p className="sub-page-discretion">A Distributed Denial of Service (DDoS) attack targets a website by blasting the servers with “fake” traffic. Depending on the size of the attack, this traffic can impact the website's servers and cause an obstruction in service. Consequently, the authentic users of the site may have problems in getting access to the website until the attack is dealt with properly.</p>
+          <p className="sub-page-discretion">A Distributed Denial of Service (DDoS) attack targets a website by blasting the servers with “fake” traffic. Depending on the size of the attack, this traffic can impact the website&apos;s servers and cause an obstruction in service. Consequently, the authentic users of the site may have problems in getting access to the website until the attack is dealt with properly.</p>
           <p className="sub-page-discretion">DDoS attacks vary in severity and size, ranging from a few gigabytes per second to hundred gigabytes. The bigger the attack, the more complicated it would be to counter it. These attacks are becoming more powerful than before. Major websites can be taken down with such an attack as they are becoming more unpredictable and common gradually.</p>
         </div>      
       </div>
@@ -42,7 +42,7 @@ export default function DdosProtections() {
                   <p className="leading-[20px] mb-[15px]">With years of expertise and experience in digitalization, we assist businesses and private firms to be a part of this digital transformation on a global level. To prevent any sort of inconvenience to our customers, we ensure strong DDoS protection.</p>
                   <p>We offer DDoS protection as an option to guard websites from such kinds of attacks. DDoS protection, specifically, works by using advanced software and algorithms to monitor the incoming traffic on the website. Any traffic that does not seem legitimate is denied access. On the contrary, legitimate traffic continues to pour in on the website.</p>
                   </>)}
-                  <Button onClick={toggleText} type="button">{showMore ? 'Read Less' : 'Read More'}</Button>
+                  <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
                 </div>
               </div>  
             </BoxSection>
@@ -57,7 +57,7 @@ export default function DdosProtections() {
                   <p className="leading-[20px] mb-[15px]">Yonescat recognizes this service to have the potential of guarding the websites fiercely. With the help of Cloud DDoS, Yonescat mitigates the largest DDoS attacks in the cloud, with no limit on the mitigation number. It also helps in protecting the infrastructure of IDC/ISP/Hosting Service Providers.</p>
                   <p>Through Cloud DDoS protection, we avail of its services 7T+Capacity, Multi-Vector DDoS Attack Mitigation, and DNS diversion for companies and customers.</p>
                   </>)}
-                  <Button onClick={toggleText} type="button">{showMore ? 'Read Less' : 'Read More'}</Button>
+                  <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
                 </div>
               </div>  
             </BoxSection>

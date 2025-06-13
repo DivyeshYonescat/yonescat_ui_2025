@@ -9,22 +9,22 @@ export default function MicrosoftOffice365() {
  
   const FeaturesList = [
     { id:"1", icone:"word.webp", title:"Microsoft Word",
-      discription:'Microsoft - also known as "MS Word", is typically a word-processing application, enabling users to design and manage numerous documents. Anyone from students to small businesses can use Word to create content, keep a record of data and manage worksheets. This application is one of the most renowned and versatile word processors available in the market.'
+      discription:"Microsoft - also known as 'MS Word', is typically a word-processing application, enabling users to design and manage numerous documents. Anyone from students to small businesses can use Word to create content, keep a record of data and manage worksheets. This application is one of the most renowned and versatile word processors available in the market."
     },
     { id:"2", icone:"excel.webp", title:"Microsoft Excel",
-      discription:'Microsoft Excel is a vibrant and useful spreadsheet program. It enables users to store, track, and control all small and large datasets. Excel can be used for all academic, business and organizational purposes. Businesses can use Microsoft Excel to manage and control their bookkeeping or perhaps track monthly sales numbers.'
+      discription:"Microsoft Excel is a vibrant and useful spreadsheet program. It enables users to store, track, and control all small and large datasets. Excel can be used for all academic, business and organizational purposes. Businesses can use Microsoft Excel to manage and control their bookkeeping or perhaps track monthly sales numbers."
     },
     { id:"", icone:"outlook.webp", title:"Microsoft Outlook",
-      discription:'Microsoft Outlook is a contact management and email application. Outlook users can send and receive emails from their Microsoft account within Outlook, as well as businesses can also use the Calendar Application within the application in order to schedule and manage meetings.'
+      discription:"Microsoft Outlook is a contact management and email application. Outlook users can send and receive emails from their Microsoft account within Outlook, as well as businesses can also use the Calendar Application within the application in order to schedule and manage meetings."
     },
     { id:"", icone:"powerpoint.webp", title:"Microsoft PowerPoint",
-      discription:'PowerPoint is an easy-to-use “presentation program” enabling users to create and share multiple slideshows and presentations. Furthermore, businesses can also use Microsoft PowerPoint to create effective and influential presentations for sales meetings and public speaking events and design and manage marketing materials efficiently.'
+      discription:"PowerPoint is an easy-to-use “presentation program” enabling users to create and share multiple slideshows and presentations. Furthermore, businesses can also use Microsoft PowerPoint to create effective and influential presentations for sales meetings and public speaking events and design and manage marketing materials efficiently."
     },
     { id:"", icone:"publisher.webp", title:"Microsoft Publisher",
-      discription:'Microsoft Publisher is a user-friendly graphic design application. Users can customize designs and create and design layouts for all traditional, digital or print media. Businesses and organizations can use Publisher to create and design logos, newsletters, business cards, or perhaps coupons.'
+      discription:"Microsoft Publisher is a user-friendly graphic design application. Users can customize designs and create and design layouts for all traditional, digital or print media. Businesses and organizations can use Publisher to create and design logos, newsletters, business cards, or perhaps coupons."
     },
     { id:"", icone:"sharepoint.webp", title:"Microsoft SharePoint",
-      discription:'SharePoint - as the name implies, is a collaborative document-sharing application. It is commonly used by small businesses or organizations, to share business documents and reports. The major purpose of using SharePoint is to communicate important information and share documentation within the organization.'
+      discription:"SharePoint - as the name implies, is a collaborative document-sharing application. It is commonly used by small businesses or organizations, to share business documents and reports. The major purpose of using SharePoint is to communicate important information and share documentation within the organization."
     }]
   return(<>
     <Layout>
@@ -91,7 +91,7 @@ export default function MicrosoftOffice365() {
             </>))}
 
           </div>
-          <p className="sub-page-discretion text-center mt-[50px]">Already waited enough to get your Microsoft 365 for your business? don't fret anymore! We at Yonescat, aspire to provide you with every solution possible for your business. Get in touch with us and let us help you get the most effective and result-driven IT solutions for your business.</p>
+          <p className="sub-page-discretion text-center mt-[50px]">Already waited enough to get your Microsoft 365 for your business? don&apos;t fret anymore! We at Yonescat, aspire to provide you with every solution possible for your business. Get in touch with us and let us help you get the most effective and result-driven IT solutions for your business.</p>
         </div>  
       </div>
       <div className="section-main integrations-section">
