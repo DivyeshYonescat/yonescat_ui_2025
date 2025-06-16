@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function CloudReseller() {
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/infrastructure/hosting/"} />
+      {/* <InnerHero imgScr={"/images/animation/infrastructure/hosting/"} /> */}
 
       <div className="container">
         <div className="sub-page-textbox">
