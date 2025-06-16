@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { useState } from "react";
-
 import Layout from "@/layout/Layout";
+import InnerHero from "@/layout/hero2";
 
 import BoxSection from "@/components/sections/section";
 import ListBox from "@/components/listBox";
 import ContactSection from "@/components/sections/contact";
 
 import { Button } from "@/components/ui/button";
+
 
 
 
@@ -36,6 +37,10 @@ export default function VirtualReality() {
     };
   return(<>
   <Layout>
+    <InnerHero imgScr={"/images/animation/solutions/virtual-reality.json"} 
+      title="Virtual Reality" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">Produce ground-breaking immersive VR experiences</p>}
+    />
     <div className="">
       <div className="container">
         <div className="sub-page-textbox">

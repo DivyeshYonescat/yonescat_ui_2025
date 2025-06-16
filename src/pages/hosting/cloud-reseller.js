@@ -1,10 +1,13 @@
 import ContactSection from "@/components/sections/contact";
+import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
 
 export default function CloudReseller() {
   return(<>
     <Layout>
+      <InnerHero imgScr={"/images/animation/infrastructure/hosting/"} />
+
       <div className="container">
         <div className="sub-page-textbox">
           <p className="sub-page-discretion">Yonescat offers you the best reseller cloud hosting services that are swift and smooth. From reseller hosting to web hosting, servers, and WordPress Hosting, Yonescat does it all for you.</p>

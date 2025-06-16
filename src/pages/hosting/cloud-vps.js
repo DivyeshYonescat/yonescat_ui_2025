@@ -1,6 +1,7 @@
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
 import { Button } from "@/components/ui/button";
+import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import { useState } from "react";
 
@@ -12,6 +13,13 @@ export default function CloudVPS() {
     };
   return(<>
     <Layout>
+      <InnerHero imgScr={"/images/animation/hosting/Cloud-VPS.json"} 
+        title="Cloud VPS" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">Get your own Virtual Private Server and have full control over the server's entire configuration
+
+</p>}
+      />
+
       <div className="container">
         <div className="sub-page-textbox">
           <h3 className="sub-page-title">Cloud VPS Hosting</h3>

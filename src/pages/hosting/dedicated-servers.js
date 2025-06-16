@@ -1,5 +1,6 @@
 import ListBox from "@/components/listBox";
 import ContactSection from "@/components/sections/contact";
+import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
 
@@ -14,6 +15,11 @@ export default function DedicatedServers() {
   ];
   return(<>
     <Layout>
+      <InnerHero imgScr={"/images/animation/hosting/Dedicated-Servers.json"} 
+        title="Dedicated Servers" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">With our next generation hardware enjoy global connectivity, unbeatble speeds and uptimes.</p>}
+      />
+
       <div className="container">
         <div className="sub-page-textbox">
           <h3 className="sub-page-title">Dedicated Servers</h3>

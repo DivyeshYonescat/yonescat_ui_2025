@@ -1,8 +1,11 @@
+import { useState } from "react";
+import Layout from "@/layout/Layout";
+import InnerHero from "@/layout/hero2";
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
 import { Button } from "@/components/ui/button";
-import Layout from "@/layout/Layout";
-import { useState } from "react";
+
+
 
 export default function DecentralizedSystems() {
   const [showMore, setShowMore] = useState(false);
@@ -12,6 +15,10 @@ export default function DecentralizedSystems() {
   };
   return(<>
   <Layout>
+    <InnerHero imgScr={"/images/animation/solutions/Decentralized-Systems.json"} 
+      title="Decentralized Systems" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">Our team provide in depth solutions to create stable decentralized applications</p>}
+    />
     <div className="">
       <div className="container">
         <div className="sub-page-textbox">

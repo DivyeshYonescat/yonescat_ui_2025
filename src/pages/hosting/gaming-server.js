@@ -1,6 +1,7 @@
 import ListBox from "@/components/listBox";
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
+import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
 
@@ -16,6 +17,11 @@ export default function GameServer() {
 
   return(<>
     <Layout>
+      <InnerHero imgScr={"/images/animation/hosting/Gaming-Server.json"} 
+        title="Gaming Server" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">The things to consider when building an AI or ML algorithm</p>}
+      />
+
       <div className="section-main">
         <div className="container">
           <BoxSection rightImage={true} ImageUrl={"/images/main/gaming-server.webp"} BgColor={""} order="order-1">

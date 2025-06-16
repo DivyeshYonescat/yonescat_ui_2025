@@ -1,6 +1,7 @@
 import Card from "@/components/card";
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
+import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
 
@@ -44,6 +45,10 @@ export default function VopiVirtualNumbers() {
     },]
   return(<>
     <Layout>
+       <InnerHero imgScr={"/images/animation/infrastructure/Virtual-Numbers.json"} 
+          title="VOIP - Virtual Numbers" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+          subtitle={<p className="sub-page-discretion">Crystal Clear Audio, Global Calling Without Interruption</p>}
+       />
       <div className="section-main">
         <div className="container">
           <div className="sub-page-textbox mt-0">

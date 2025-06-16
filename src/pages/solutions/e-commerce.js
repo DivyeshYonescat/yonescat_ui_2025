@@ -1,7 +1,8 @@
+import Image from "next/image";
+import Layout from "@/layout/Layout";
+import InnerHero from "@/layout/hero2";
 import Card from "@/components/card";
 import ContactSection from "@/components/sections/contact";
-import Layout from "@/layout/Layout";
-import Image from "next/image";
 
 export default function ECommerce() {
   const FeaturesList = [
@@ -26,6 +27,14 @@ export default function ECommerce() {
   ];
   return(<>
     <Layout>
+      <InnerHero imgScr={"/images/animation/solutions/E-commerce.json"} 
+        title="E-commerce" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<>
+        <p className="sub-page-discretion">Grow your sales with our state of-the-art e-commerce solutions</p>
+        <p>When deciding where to sell an item online, many merchants choose to sell it in the market either conventionally or digitally. Each option has its strengths and weaknesses, and while there is no one-size-fits-all solution that works for everyone.</p>
+        <p>However, going digital have ultimate privileges over conventional methods, certainly a great position to be in.</p>
+      </>}
+      />
       <div className="textsection">
         <div className="container">
           <div className="sub-page-textbox">

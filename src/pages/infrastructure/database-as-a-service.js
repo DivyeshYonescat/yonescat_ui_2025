@@ -1,10 +1,15 @@
 import ContactSection from "@/components/sections/contact";
+import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
 
 export default function DatabaseAsService() {
   return(<>
     <Layout>
+      <InnerHero imgScr={"/images/animation/infrastructure/Database-Service.json"} 
+        title="Database as a Service" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">Seemless database management and integration</p>}
+      />
       <div className="container">
         <div className="sub-page-textbox">
           <h3 className="sub-page-title"> Database as A Service </h3>

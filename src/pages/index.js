@@ -16,8 +16,8 @@ export default function Home() {
       <Layout>
         <HomeHero></HomeHero>
         <FeaturesSection />
-        {/* <ParallaxVideoReveal></ParallaxVideoReveal> */}
         <AboutUs />
+        {/* <ParallaxVideoReveal /> */}
         <CompanyAchievementsSection />
         <DynamicClients title={"Loved And Trusted By Client"} />
 

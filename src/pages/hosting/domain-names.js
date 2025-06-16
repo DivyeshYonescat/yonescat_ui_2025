@@ -1,6 +1,7 @@
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
 import { Button } from "@/components/ui/button";
+import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import { useState } from "react";
 
@@ -12,6 +13,11 @@ export default function DomainName() {
   };
   return(<>
     <Layout>
+      <InnerHero imgScr={"/images/animation/hosting/Domain-Names.json"} 
+        title="Domain Names" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">From the most common domain name to the most exotic and excentric ones. We have them all.</p>}
+      />
+
       <div className="section-main">
       <div className="container">
         <div className="card-box-inner grid  grid-cols-2 max-md:grid-cols-1 gap-7">

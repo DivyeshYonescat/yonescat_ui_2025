@@ -107,6 +107,11 @@
 
 /* card-main-box */
 
+/* Inner page Hero section */
+.hero-subpage { @apply overflow-hidden bg-cover bg-bottom pt-[50px] pb-[50px];}
+
+/* Inner Page hero section */
+
 .box-descriton{@apply  overflow-hidden overflow-ellipsis whitespace-normal;}
 
 .img-database-block > img{@apply w-full h-[400px] max-xl:h-[300px]  rounded-[6px];}

@@ -1,8 +1,10 @@
 
 import Image from "next/image";
 import Layout from "@/layout/Layout";
+import InnerHero from "@/layout/hero2";
 import ContactSection from "@/components/sections/contact";
 import ListBox from "@/components/listBox";
+
 
 
 export default function ECommerce() {
@@ -22,6 +24,10 @@ export default function ECommerce() {
   ]  
   return(<>
     <Layout>
+      <InnerHero imgScr={"/images/animation/solutions/IOT.json"} 
+        title="Internet of Things" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">We help customers to take advantage of IoT and align themself for the future.</p>}
+      />
       <div className="">
         <div className="container">
           <div className="sub-page-textbox">

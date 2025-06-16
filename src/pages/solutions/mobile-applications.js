@@ -1,7 +1,8 @@
+import Layout from "@/layout/Layout";
+import InnerHero from "@/layout/hero2";
 import Overview from "@/components/overviewInner";
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
-import Layout from "@/layout/Layout";
 
 export default function MobileApplicationsSection() {
   const list = [
@@ -35,6 +36,10 @@ export default function MobileApplicationsSection() {
   ];
   return(<>
   <Layout>
+    <InnerHero imgScr={"/images/animation/solutions/Mobile-Applications.json"} 
+      title="Mobile Applications" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">Innovative and user-centered applications that supports easy access and streamlined business processes.</p>}
+    />
     <div className="section-main ">
       <div className="container">
         <BoxSection ImageUrl={"/images/main/how-app-works.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">

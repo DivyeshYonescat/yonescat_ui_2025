@@ -1,6 +1,7 @@
 import Card from "@/components/card";
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
+import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
 import { useState } from "react";
@@ -28,6 +29,10 @@ export default function MicrosoftOffice365() {
     }]
   return(<>
     <Layout>
+      <InnerHero imgScr={"/images/animation/infrastructure/Microsoft-Office.json"} 
+          title="Microsoft Office365" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+          subtitle={<p className="sub-page-discretion">Take advantage of the best solution available</p>}
+      />
       <div className="container">
         <div className="sub-page-textbox">
           <h3 className="sub-page-title"> What is Microsoft 365? </h3>

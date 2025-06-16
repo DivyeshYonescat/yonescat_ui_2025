@@ -1,11 +1,17 @@
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
+import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
 
 export default function SslCertificates() {
   return(<>
     <Layout>
+      <InnerHero imgScr={"/images/animation/hosting/SSl-Certificates.json"} 
+        title="SSl certificates" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">Protect your website with SSL in minutes and a few clicks</p>}
+      />
+
       <div className="section-main pb-0">
         <div className="container">
           <BoxSection rightImage={true} ImageUrl={"/images/main/sslcertificate.webp"} BgColor={""} order="order-1">

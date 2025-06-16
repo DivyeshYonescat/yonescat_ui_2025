@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 
 import Layout from "@/layout/Layout";
 import ContactSection from "@/components/sections/contact";
+import InnerHero from "@/layout/hero2";
 
 export default function DataCenter() {
   const pageUrl = usePathname();
@@ -17,6 +18,10 @@ export default function DataCenter() {
   };
   return(<>
     <Layout>
+       <InnerHero imgScr={"/images/animation/infrastructure/datacenter.json"} 
+          title="Datacenter" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+          subtitle={<p className="sub-page-discretion">We bring perfection to the "boring" and often forgoten aspects.</p>}
+       />
       <div className="section-main">
         <div className="container">
           <div className="sub-page-textbox">

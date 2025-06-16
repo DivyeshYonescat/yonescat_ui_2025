@@ -2,6 +2,7 @@ import ListBox from "@/components/listBox";
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
 import { Button } from "@/components/ui/button";
+import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import { useState } from "react";
 
@@ -22,6 +23,10 @@ export default function DdosProtections() {
   ]  
   return(<>
     <Layout>
+       <InnerHero imgScr={"/images/animation/infrastructure/ddos-protections.json"} 
+          title="DDos Protection" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+          subtitle={<p className="sub-page-discretion">We provide high-performance, real-time and automatic DDoS attack protection</p>}
+       />
       <div className="container">
         <div className="sub-page-textbox">
           <h3 className="sub-page-title"> Understanding what a DDoS Attack Means </h3>

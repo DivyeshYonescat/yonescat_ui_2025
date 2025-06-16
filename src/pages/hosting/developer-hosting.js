@@ -1,10 +1,16 @@
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
+import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 
 export default function DeveloperHosting() {
   return(<>
     <Layout>
+      <InnerHero imgScr={"/images/animation/hosting/Developer-Hosting.json"} 
+        title="Developer Hosting" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">Write more code spend less on server configuration</p>}
+      />
+
       <div className="section-main pb-0">
         <div className="container">
       <BoxSection rightImage={true} ImageUrl={"/images/main/shared-hosting-1-1.webp"} BgColor={""} order="order-1">

@@ -2,6 +2,7 @@ import Card from "@/components/card";
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
 import { Button } from "@/components/ui/button";
+import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
 import { useState } from "react";
@@ -31,6 +32,10 @@ export default function GoogleGSuite() {
 
   return(<>
     <Layout>
+       <InnerHero imgScr={"/images/animation/infrastructure/Google-G-Suite.json"} 
+          title="Google G-Suite" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+          subtitle={<p className="sub-page-discretion">Boost productivity with doesens of services and products.</p>}
+       />
       <div className="">
         <div className="container">
           <div className="sub-page-textbox">

@@ -1,10 +1,16 @@
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
+import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 
 export default function Emalilsecurity() {
   return(<>
     <Layout>
+      <InnerHero imgScr={"/images/animation/hosting/Email-Security.json"} 
+        title="Email Security" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">Stop Data Leaks. Stay Compliant and Protect Outbound Email</p>}
+      />
+
       <div className="section-main">
         <div className="container">
           <BoxSection rightImage={true} ImageUrl={"/images/main/email-securiry.webp"} BgColor={""} order="order-1">

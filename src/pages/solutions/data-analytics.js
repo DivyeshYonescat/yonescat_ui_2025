@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/layout/Layout";
+import InnerHero from "@/layout/hero2";
 import BoxSection from "@/components/sections/section";
 import ContactSection from "@/components/sections/contact";
+
 
 export default function DataAnalytics() {
 
@@ -14,6 +16,10 @@ export default function DataAnalytics() {
 
   return(<>
     <Layout>
+      <InnerHero imgScr={"/images/animation/solutions/Data-Analytics.json"} 
+        title="Data Analytics" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">Get, Clean and Understad your data in the most inovative ways.</p>}
+      />
       <div className="">
         <div className="container">
           <div className="sub-page-textbox">
