@@ -20,7 +20,7 @@ export default function DataCenter() {
     <Layout>
        <InnerHero imgScr={"/images/animation/infrastructure/datacenter.json"} 
           title="Datacenter" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
-          subtitle={<p className="sub-page-discretion">We bring perfection to the "boring" and often forgoten aspects.</p>}
+          subtitle={<p className="sub-page-discretion">We bring perfection to the &quot;boring&quot; and often forgoten aspects.</p>}
        />
       <div className="section-main">
         <div className="container">
