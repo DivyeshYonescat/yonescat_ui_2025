@@ -24,6 +24,7 @@ import { ticketFormSubmit } from '@/api/formSubmission';
 import useError from '@/api/errorShow';
 import TiptapEditor from '@/components/TiptapEditor';
 import { Loader2 } from 'lucide-react';
+import AuthModel from '@/components/Model/authModel';
 
 
 
@@ -31,6 +32,8 @@ import { Loader2 } from 'lucide-react';
 export default function Home() {
   const pageUrl = usePathname();
   const formRef = useRef(null);
+  //Model
+  const [isModalOpen, setIsModalOpen] = useState(true);
   //text editer
   const [value, setValue] = useState('');
   //After api Respons data and loader
@@ -288,12 +291,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        
-         
-        
-        {/* <LoginModel showModal={showModal} closeModal={closeModal} /> */}
       </Layout>
+      <AuthModel />
     </>
   )
 }

@@ -106,7 +106,7 @@ const menuItems = [
   },
   {
     title: "GDPR Policy",
-    link: "/GDPR-policy",
+    link: "/GDPR",
      icone: "/images/main/menu/security-protection-gdpr-svgrepo-com.svg",
     subItems: []
   }

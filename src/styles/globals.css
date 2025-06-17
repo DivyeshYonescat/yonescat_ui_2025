@@ -339,8 +339,14 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 }
 .cbox-2-ico {@apply relative w-[2.625rem] h-[2.625rem] text-center rounded-[100%] text-[1.1875rem] bg-stone-900 text-stone-100 font-medium leading-[2.375rem] border-[2px] border-[solid] [transition:all_450ms_ease-in-out];}
 
-.txt-block.legal-info h4{@apply mt-[40px] mb-[20px] font-bold;}
+.legal-info h4{@apply mt-[40px] mb-[20px] font-bold;}
+.legal-info h5{@apply mt-[20px] mb-[10px] font-bold;}
+
+.inner-page-title{@apply text-center mb-[80px]}
 /* Model */
+.modelterms .inner-page-title{@apply mb-[15px];}
+.modelterms .legal-info h4{@apply mb-[15px] mt-[15px];}
+
 
 
 
@@ -397,6 +403,8 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 .director-image{@apply  text-right;}
 
 .hero-main-subpage{background:none;}
+/* Auth Model */
+.auth-form > div{@apply p-0}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

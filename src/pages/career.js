@@ -26,6 +26,8 @@ import { FormError } from "@/components/form/validationError";
 import { careerFormSubmit } from '@/api/formSubmission';
 import useError from '@/api/errorShow';
 import Image from 'next/image';
+import Modal from '@/components/Model/Modal';
+import AuthModel from '@/components/Model/authModel';
 
 
 
@@ -34,6 +36,9 @@ export default function Home() {
 
   const pageUrl = usePathname();
   const formRef = useRef(null);
+
+  //Model
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   const { control, register, handleSubmit, watch, setValue, formState: { errors } } = useForm();
   const { error, showError, clearError } = useError();
@@ -210,6 +215,9 @@ export default function Home() {
         </section>
         {/* <LoginModel showModal={showModal} closeModal={closeModal} /> */}
       </Layout>
+
+      <AuthModel />
+      
     </>
   )
 }

@@ -99,6 +99,7 @@ export default function ECommerce() {
               <h3 className="sub-page-title">The DDS hosting service offers webmasters everywhere a number of options.</h3>
               <p className="sub-page-discretion">Our shared hosting plans range from personal hosting plans to business plans using static IP.</p>
             </div>
+            
           </div>    
         </div>
       </div>

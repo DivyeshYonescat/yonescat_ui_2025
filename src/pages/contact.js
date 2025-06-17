@@ -21,10 +21,12 @@ import useError from '@/api/errorShow';
 import { Loader2 } from 'lucide-react';
 import Banner from '@/layout/Banner';
 import ContactLeft from '@/components/contactLeft/contactLeft';
+import AuthModel from '@/components/Model/authModel';
 
 export default function Home() {
   const pageUrl = usePathname();
-
+  //Model
+  const [isModalOpen, setIsModalOpen] = useState(true);
   useEffect(() => {
     //loadCaptchaEnginge(6);
   },[]);
@@ -135,5 +137,6 @@ export default function Home() {
         </div>
       </section>
     </Layout>  
+    <AuthModel />
   </>);
 }

@@ -48,9 +48,14 @@ export default function Signup(props) {
     const [loading, setLoading] = useState(false);
 
     //Model
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const openModal = () => setIsModalOpen(true);
-    const closeModal = () => setIsModalOpen(false);
+    const [isTemsModal, setIsTemsModal] = useState(false);
+    const openTemsModal = () => setIsTemsModal(true);
+    const closeTemsModal = () => setIsTemsModal(false);
+
+    const [isPrivacyModal, setIsPrivacyModal] = useState(false);
+
+    const openModalPrivacy = () => setIsPrivacyModal(true);
+    const closeModalPrivacy = () => setIsPrivacyModal(false);
 
     // form submit for user signup
     const onSubmit = async(data) => {
@@ -243,15 +248,12 @@ export default function Signup(props) {
                             />
                             <div className="grid gap-1.5 leading-none">
                                 <label  htmlFor="acceptTerms" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" >
-                                    you agree to our <button className="termurl" type="button" onClick={openModal}>Terms</button> and that you have read our <button className="termurl" type="button" onClick={openModal}>Privacy Policy</button>
+                                    you agree to our <button className="termurl" type="button" onClick={openTemsModal}>Terms</button> and that you have read our <button className="termurl" type="button" onClick={openModalPrivacy}>Privacy Policy</button>
                                 </label>
                             </div>
                             
                         </div>
                         <FormError field={errors.acceptTerms} />
-                        <TermsModel isOpen={isModalOpen} onClose={closeModal} />
-                        <PrivacyModel isOpen={isModalOpen} onClose={closeModal} />
-                    
                         <div className='float-left w-full mb-[10px]'>
                             { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error text-red-700 mt-[10px]" key={errorIndex}> {error.message} </div>) }
                         </div>
@@ -302,6 +304,9 @@ export default function Signup(props) {
                 </div>
                 </>}
             </div>
+
+            <TermsModel isOpen={isTemsModal} onClose={closeTemsModal} />
+            <PrivacyModel isOpen={isPrivacyModal} onClose={closeModalPrivacy} />
         </>
     )
 }
