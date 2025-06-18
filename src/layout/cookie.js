@@ -34,7 +34,7 @@ function CookiePopup() {
                     <button className="btn mr-[15px]" onClick={acceptCookie}>Accept Cookies</button>
                     <button className="btn ml-[15px]" onClick={rejectCookie}>Reject Cookies</button>
                 </div>    
-            </div>        3
+            </div>    
         </div>    
     </>
 }
