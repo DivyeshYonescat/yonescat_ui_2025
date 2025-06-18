@@ -406,6 +406,49 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 /* Auth Model */
 .auth-form > div{@apply p-0}
 
+/* accodun */
+.accordion-item { @apply bg-transparent border-b-[#ddd] border-b border-solid; }
+.accordion-thumb { @apply cursor-pointer relative m-0 pt-[25px] pb-[30px] max-md:py-[15px] px-0 border-b-[#ddd] border-b border-solid flex justify-between items-center; }
+
+.accordion-panel { @apply pt-[20px] pb-[15px] px-0;}
+.accordion-panel-item{@apply mt-[15px];}
+.faqs-2-question > h4{@apply font-bold mb-[15px];}
+
+.accordion-thumb .icon img {@apply max-md:w-[20px];}
+.cookie p{@apply pb-[15px];}
+
+/*  */
+.cookie-popup { @apply fixed text-center z-[2100] bottom-[15px] }
+.cookie-popup-content { @apply max-w-[97%] bg-[#2d2d2d] shadow-[0_6px_6px_rgba(0,0,0,0.25)] text-xs font-light text-[#acacac] m-auto p-[35px] rounded-[5px]; }
+.cookie-popup-buttons { @apply mt-[30px];}
+/*  */
+
+/* ai model */
+/* .ai_toggle_btn,
+.ai_toggle_btn_top {  @apply cursor-pointer fixed z-[1000] right-8 botom-8;}
+.ai_toggle_btn {  @apply opacity-0 translate-y-5;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.slide-in {  @apply opacity-100 translate-y-0;}
+.slide-out {  @apply opacity-0 translate-y-5;}
+.ai_toggle_hidden {  @apply hidden;}
+.ai_toggle_btn_top {  @apply right-[50px] bottom-[05px];} */
+
+.ai_toggle_btn,.ai_toggle_btn_top { cursor: pointer; position: fixed;  right: 32px;  bottom: 32px;  z-index: 1000;}
+.ai_toggle_btn{
+  opacity: 0; 
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide-in { opacity: 1;  transform: translateY(0);}
+.slide-out {  opacity: 0; transform: translateY(20px);}
+
+
+.ai_toggle_hidden {display: none;}
+.ai_toggle_btn_top { bottom: 05px;  right: 50px;}
+
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -511,8 +554,6 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
   --sidebar-ring: oklch(0.553 0.013 58.071); }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50; }
-  body {
-    @apply bg-background text-foreground; } }
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground; } }
 

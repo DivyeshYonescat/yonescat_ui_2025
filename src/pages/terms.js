@@ -6,7 +6,9 @@ export default function Home() {
   <Layout>
   <div className="section-main">
     <div className="container">
-      <Terms />
+      <div className="max-w-[1000px] m-auto">
+        <Terms />
+      </div>
     </div>  
   </div>  
   </Layout>
