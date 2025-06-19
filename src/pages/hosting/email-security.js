@@ -13,19 +13,21 @@ export default function Emalilsecurity() {
 
       <div className="section-main">
         <div className="container">
-          <BoxSection rightImage={true} ImageUrl={"/images/main/email-securiry.webp"} BgColor={""} order="order-1">
-            <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
-              <div>
-                <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Email Security</h3>
-                <p className="sub-page-discretion">With the advancement in technology and everything moving towards digital formats, data is the most valuable asset in the world. Whether it&apos;s in the form of research, studies, or reports, utilization of data has changed the course of our world. But one particular sort of data that many don&apos;t put much into consideration is email. Well, it could be because of the massive spread of malware, spam, or phishing attacks that people often don&apos;t take Email Security seriously. We all hate spam. It&apos;s annoying, frustrating, and simply ridiculous. And spam leads to phishing attacks. Phishing is a sort of attack on your personal data in which an attacker sends a suspicious message just to acquire personal and valuable information or deploying harmful software on the victim&apos;s system, such as ransomware. And you don&apos;t want to be a victim of ransomware. With Yonescat, you need not worry about any of it!</p>
-                <p className="sub-page-discretion">We understand that there is very valuable information that is stored in your emails which you might not even be aware of. Email is the most common loophole that attackers are looking for when they wish to gain access to your personal data without authorization. Their main purpose is basically to get a foothold in an enterprise network and obtain valuable company data which they could either sell on the black market or use against you for any reason. Email Security is a vital component when it comes to the Cyber Security of an organization.</p>  
-              </div>
-            </div>  
-          </BoxSection>
+          <div className="single-card-box">
+            <BoxSection rightImage={true} ImageUrl={"/images/main/email-securiry.webp"} BgColor={""} order="order-1">
+              <div className="director-text order-2 max-md:order-2 w-full flex items-center pl-[30px]">
+                <div>
+                  <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Email Security</h3>
+                  <p className="sub-page-discretion">With the advancement in technology and everything moving towards digital formats, data is the most valuable asset in the world. Whether it&apos;s in the form of research, studies, or reports, utilization of data has changed the course of our world. But one particular sort of data that many don&apos;t put much into consideration is email. Well, it could be because of the massive spread of malware, spam, or phishing attacks that people often don&apos;t take Email Security seriously. We all hate spam. It&apos;s annoying, frustrating, and simply ridiculous. And spam leads to phishing attacks. Phishing is a sort of attack on your personal data in which an attacker sends a suspicious message just to acquire personal and valuable information or deploying harmful software on the victim&apos;s system, such as ransomware. And you don&apos;t want to be a victim of ransomware. With Yonescat, you need not worry about any of it!</p>
+                  <p className="sub-page-discretion">We understand that there is very valuable information that is stored in your emails which you might not even be aware of. Email is the most common loophole that attackers are looking for when they wish to gain access to your personal data without authorization. Their main purpose is basically to get a foothold in an enterprise network and obtain valuable company data which they could either sell on the black market or use against you for any reason. Email Security is a vital component when it comes to the Cyber Security of an organization.</p>  
+                </div>
+              </div>  
+            </BoxSection>
+           </div> 
         </div>
       </div>
       <div className="container">
-        <div className="sub-page-textbox">  
+        <div className="sub-page-textbox mt-0">  
           <h3 className="sub-page-title">What is Email Security?</h3>
           <p className="sub-page-discretion"> Email security refers to the methods and strategies used to safeguard email accounts, information, and communication from unwanted access, loss, or compromise. To protect their data, many companies trust solely on email encryption which is a type of disguise to secure data from any unwanted party. The good thing about email encryption is that it usually requires authentication to which only the sender and the receiver are authorized for. This surely keeps data safe but to some extent. Your email data is still vulnerable to cyber-attacks and costs you a fortune if you don&apos;t have it secured. </p>
         </div>

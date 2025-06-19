@@ -25,10 +25,15 @@ export default function GoogleGSuite() {
         discription:'Google+ was launched in 2011, refer to the G Suite social network. G Suit plan helps businesses enjoy the secure and protected IT infrastructure environment as well as restricted outside entities and communities to improve the security standards.'
   }]
 
-  const [showMore, setShowMore] = useState(false);
-  const toggleText = () => {
-    setShowMore(prev => !prev);
-  };
+ const [showMore, setShowMore] = useState({key:0});
+  
+  const handleToggle = (key) => {
+    if(showMore.key == key){
+      setShowMore({key:0})
+    }else{
+      setShowMore({key:key})
+    }
+  }
 
   return(<>
     <Layout>
@@ -49,18 +54,18 @@ export default function GoogleGSuite() {
       <div className="section-main">
         <div className="container">
           <div className="card-box-inner grid  grid-cols-2 max-md:grid-cols-1 gap-7">
-            <BoxSection rightImage={true} ImageUrl={"/images/main/section_image/unnamed-768x867.webp"} BgColor={""} order="order-1">
+            <BoxSection rightImage={true} ImageUrl={"/images/main/section_image/unnamed-768x867.png"} BgColor={""} order="order-1">
               {/* <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
                 <div className="">
                   <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What Does Our Google G Suite Offer You?</h3>
                   <p className="leading-[20px] mb-[15px]">Ideally suited for startups, small and medium businesses, our G Suite will facilitate you with some valuable tools to help you function your business activities properly and accelerate your business.</p>
-                  {showMore && (<>
+                  {showMore.key == "1" && (<>
                   <p className="leading-[20px] mb-[15px]">All of the G Suit Apps are available on smartphones and tablets (Android and iOS), as well as Mac, Windows, or Linux computers. In addition, G Suit provides professional email, shared calendars, online storage, video meetings, and much more - already convinced about getting your own google G Suit from Yonescat?</p>
                   <p className="leading-[20px] mb-[15px]">Why wait anymore? Contact us today!</p>
                   <p>Google Applications in G Suit make collaboration easy and simple - enabling you to share and manage documents and spreadsheets, use instant messaging and create video conferences with Hangouts. Furthermore, organizations can also share calendars with their employees and making meetings easy and convenient to plan.</p>
                   </>)}
-                  <Button onClick={toggleText} type="button">{showMore ? 'Read Less' : 'Read More'}</Button>
+                  <Button onClick={()=>{handleToggle(1)}} type="button">{showMore.key == "1" ? "Read Less" : "Read More"}</Button>
                 </div>
               </div>  
             </BoxSection>
@@ -71,16 +76,18 @@ export default function GoogleGSuite() {
                 <div className="">
                   <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">How To Setup Your G Suit Account?</h3>
                   <p className="leading-[20px] mb-[15px]">Creating your own G Suit account is simple. Learn here:</p>
-                  {showMore && (<>
+                  
                   <ul className="list-disc mb-[15px] pl-[15px]">
                     <li><p className="sub-page-discretion">Enter your company name and specify the number of workers in your company. You can always modify this as per your business dynamic needs.</p></li>
+                    {showMore.key == "2" && (<>
                     <li><p className="sub-page-discretion">Enter your contact information or contact details (information of the person who will be managing the G Suit account). A confirmation email would be sent to the certain email address mentioned in the account.</p></li>
                     <li><p className="sub-page-discretion">Now is the step to insert your business’ domain name (if you have already). And if not, then you can get your domain name from any credible IT solutions provider.</p></li>
                     <li><p className="sub-page-discretion">Enter your business details and essential information.</p></li>
                     <li><p className="sub-page-discretion">Last, choose a certain username and password for your G Suit account.</p></li>
+                     </>)}
                   </ul>
-                  </>)}
-                  <Button onClick={toggleText} type="button">{showMore ? 'Read Less' : 'Read More'}</Button>
+                 
+                  <Button onClick={()=>{handleToggle(2)}} type="button">{showMore.key == "2" ? 'Read Less' : 'Read More'}</Button>
                 </div>
               </div>  
             </BoxSection>
@@ -109,7 +116,6 @@ export default function GoogleGSuite() {
                 <div className="card-body pt-0">
                   <p className="sub-title min-h-[150px] max-sm:min-h-auto group:hover  ">{item.discription}</p>
                 </div>
-                
               </Card>
             </>))}
           </div>

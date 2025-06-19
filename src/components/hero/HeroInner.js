@@ -12,7 +12,7 @@ const HeroInner = function ({title,  subtitle,  cta,  link,  note,  image,  back
       <div className="container">
         <div className="hero-inner-section">
           <div className="hero-inner-text">
-            {title && <h1 className="s-30 w-700 ">{title}</h1>}
+            {title && <h1>{title}</h1>}
             
             {subtitle && <div className="p-lg mt-3 mb-5" >{subtitle}</div>}
             

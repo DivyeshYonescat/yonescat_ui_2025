@@ -30,11 +30,16 @@ export default function VirtualReality() {
     {"id":"","listimg":"/images/main/section_image/Icon_Img/Organizational.webp","title":"Environmentally Friendly"},
   ]  
 
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState({key:0});
   
-    const toggleText = () => {
-      setShowMore(prev => !prev);
-    };
+  const handleToggle = (key) => {
+    if(showMore.key == key){
+      setShowMore({key:0})
+    }else{
+      setShowMore({key:key})
+    }
+  }
+  
   return(<>
   <Layout>
     <InnerHero imgScr={"/images/animation/solutions/virtual-reality.json"} 
@@ -48,7 +53,7 @@ export default function VirtualReality() {
         </div>
       </div>
     </div>
-    <div className="section-main">
+    <div className="section-main pt-[30px]">
       <div className="container">
         <div className="card-box-inner grid  grid-cols-2 max-md:grid-cols-1 gap-7">
           <BoxSection rightImage={true} ImageUrl={"/images/main/section_image/virtual-reality-01.webp"} BgColor={""} order="order-1">
@@ -57,10 +62,10 @@ export default function VirtualReality() {
               <div className="">
                 <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Yonescat changes the way you experience video design</h3>
                 <p className="leading-[20px] mb-[15px]">As viewers move from passive observers to active explorers, there is increasing pressure to create visual experiences that enable deeper levels of interaction, immersiveness, and imagination in order to generate leads and sales.</p>
-                {showMore && (<>
+                {showMore.key == "1" && (<>
                 <p>As a VR expert, Yonescat sees your work as an opportunity to create a very personal experience and help you take your brand to a place never imagined before. Whether it is a photorealistic reproduction of Times Square or the very real and rugged coastline of the EU, we can make revenue generation dreams come true with personalized experiences.</p>
                 </>)}
-                <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
+                <Button onClick={()=>{handleToggle(1)}} type="button">{showMore.key == "1" ? "Read Less" : "Read More"}</Button>
               </div>
             </div>  
           </BoxSection>
@@ -71,12 +76,12 @@ export default function VirtualReality() {
               <div className="">
                 <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Yonescat - Produce Groundbreaking Immersive VR Experiences</h3>
                 <p className="leading-[20px] mb-[15px]">Do you want Top-Notch Virtual Reality (VR) applications in iOS and Android both native and hybrid to exhilarate your business? Meet Yonescat professionals.</p>
-                {showMore && (<>
+                {showMore.key == "2" && (<>
                 <p className="leading-[20px] mb-[15px]">To make your viewer&apos;s journey as smooth and exciting as possible, we will create individual VR apps according to your experience.</p>
                 <p className="leading-[20px] mb-[15px]">The dedicated Yonescat VR services help distribute content on relevant platforms and ensure that all remarks are achieved.</p>
                 <p>Guides the manufacturing process from start to finish, helping you choose from a variety of devices available on the market. We have developed special apps for iOS, Android, Samsung Gear VR, Oculus Rift and HTC Vive.</p>
                 </>)}
-                <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
+                <Button onClick={()=>{handleToggle(2)}} type="button">{showMore.key == "2" ? "Read Less" : "Read More"}</Button>
               </div>
             </div>  
           </BoxSection>
@@ -85,8 +90,9 @@ export default function VirtualReality() {
     </div>  
     
     <div className="container">
+      <div className="single-card-box">
       <BoxSection rightImage={true} ImageUrl={"/images/main/section_image/virtual-reality-03.avif"} BgColor={""} order="order-1">
-        <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
+        <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px]  max-lg:px-[25px]  max-md:py-[25px]">
           <div className="">
             <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Social VR and Metaverse is not a big deal for Yonescat</h3>
             <p className="leading-[20px] mb-[15px]">Meta (formerly Facebook) introduces Horizon Home VR, Messenger VR calls, and fitness VR as part of its metaverse push. The metaverse, a shared online space where people interact as avatars, was first coined by Neal Stephenson in his 1992 novel Snow Crash. It blends virtual and augmented reality with the physical world.</p>
@@ -94,13 +100,14 @@ export default function VirtualReality() {
           </div>
         </div>  
       </BoxSection>
+      </div>
     </div>
     <div className="">
       <div className="container">
         <div className="sub-page-textbox">
           <h3 className="sub-page-title">Virtualization with Yonescat</h3>
           <p className="sub-page-discretion">This may all seem unavoidable, but with virtualization, it is a lot easier than without it. With Yonescat virtualization services, you can get hands-on:</p>
-          <div className="grid grid-cols-6 gap-4 max-lg:grid-cols-3 max-sm:grid-cols-2">
+          <div className="grid grid-cols-6 gap-4 max-lg:grid-cols-3 max-sm:grid-cols-2 my-[30px]">
             <ListBox ListArray={ListArray} />
           </div>
           <p className="sub-page-discretion mt-5">Our Virtualization and cloud computing services comprises On-Demand, Self-Managed, and Broad network access!</p>
@@ -113,7 +120,7 @@ export default function VirtualReality() {
           <h3 className="sub-page-title">With Yonescat, Virtualize before Build and Rollout</h3>
           <p className="sub-page-discretion">Get on to the journey of Virtualization before it is too late!</p>
           <p className="sub-page-discretion">Many IT organizations often dedicate physical servers to specific applications, so they deploy servers that use only a small portion of their capacity. This is an inefficient mechanism because it usually has excess on unconsumed capacity, which increases operating and IT costs. Virtualization was created to achieve higher capacity utilization and reduce costs. With Yonescat businesses solutions, anyone can benefit from virtualization.</p>
-          <div className=" grid grid-cols-5 gap-4  max-lg:grid-cols-2">
+          <div className=" grid grid-cols-5 gap-4  max-lg:grid-cols-2 my-[30px]">
             <ListBox ListArray={ListArray2} />
           </div>
         </div>  

@@ -12,17 +12,19 @@ export default function IPtvServices() {
        />
       <div className="section-main pb-0">
         <div className="container">
-          <BoxSection rightImage={true} ImageUrl={"/images/main/iptv-b-1.webp"} BgColor={""} order="order-2">
-            <div className="director-text order-1 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
-              <div className="">
-                <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What is IPTV?</h3>
-                <p className="sub-page-discretion">IPTV, Internet Protocol Television, is a system using an internet protocol suite to deliver TV services. There is no involvement of cable television, conventional terrestrial, or satellite signal. IPTV ensures secure and reliable streaming of entertainment videos or live streams across an IP data network.</p>
-                <p className="sub-page-discretion"> At Yonescat, IPTV services include broadcast TV, interactive TV, encoded streams, and VOD (Videos On Demand). The services are provided across a network with an IP protocol to deliver audio, video, and control signals.</p>
-                <p className="sub-page-discretion"> Contrary to videos available on the public internet, IPTV deployments ensure strict network security and performance. This allows the users an uninterrupted experience, ensuring an excellent environment for providers and consumers alike.</p>
-                <p className="sub-page-discretion"> Yonescat takes pride in being one of the best IPTV providers in the UK. If you have been thinking about getting an IPTV service, think no more. Contact us today, and we will take you through everything that you need to know.</p>
-              </div>
-            </div>  
-          </BoxSection>
+          <div className="single-card-box">
+            <BoxSection rightImage={true} ImageUrl={"/images/main/iptv-b-1.webp"} BgColor={""} order="order-2">
+              <div className="director-text order-1 max-md:order-2 w-full flex items-center">
+                <div className="">
+                  <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What is IPTV?</h3>
+                  <p className="sub-page-discretion">IPTV, Internet Protocol Television, is a system using an internet protocol suite to deliver TV services. There is no involvement of cable television, conventional terrestrial, or satellite signal. IPTV ensures secure and reliable streaming of entertainment videos or live streams across an IP data network.</p>
+                  <p className="sub-page-discretion"> At Yonescat, IPTV services include broadcast TV, interactive TV, encoded streams, and VOD (Videos On Demand). The services are provided across a network with an IP protocol to deliver audio, video, and control signals.</p>
+                  <p className="sub-page-discretion"> Contrary to videos available on the public internet, IPTV deployments ensure strict network security and performance. This allows the users an uninterrupted experience, ensuring an excellent environment for providers and consumers alike.</p>
+                  <p className="sub-page-discretion"> Yonescat takes pride in being one of the best IPTV providers in the UK. If you have been thinking about getting an IPTV service, think no more. Contact us today, and we will take you through everything that you need to know.</p>
+                </div>
+              </div>  
+            </BoxSection>
+          </div>
         </div>
       </div>    
 

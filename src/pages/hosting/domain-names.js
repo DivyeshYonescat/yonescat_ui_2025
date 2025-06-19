@@ -6,11 +6,15 @@ import Layout from "@/layout/Layout";
 import { useState } from "react";
 
 export default function DomainName() {
-  const [showMore, setShowMore] = useState(false);
-    
-  const toggleText = () => {
-    setShowMore(prev => !prev);
-  };
+   const [showMore, setShowMore] = useState({key:0});
+  
+  const handleToggle = (key) => {
+    if(showMore.key == key){
+      setShowMore({key:0})
+    }else{
+      setShowMore({key:key})
+    }
+  }
   return(<>
     <Layout>
       <InnerHero imgScr={"/images/animation/hosting/Domain-Names.json"} 
@@ -27,11 +31,11 @@ export default function DomainName() {
               <div className="">
                 <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What Is Domain Name?</h3>
                 <p className="sub-page-discretion">A domain name is typically referred to as your site’s name and the address internet users will access your website by which. A domain name is used for identifying and finding companies or businesses on the Internet.</p>
-                {showMore && (<>
+                {showMore.key == "1" && (<>
                 <p>Previously there were IP addresses by which internet users were able to find the business or the company. However, it was way difficult for humans to remember those IP strings containing numbers. To ease this, domain names were developed by which internet users now can easily identify anyone on the internet.</p>
                 <p>Yonescat being the leading IT solutions provider, will help you choose from thousands of extensions and display your website effectively. Why delay anymore? Get the perfect solution to your unique business needs now by contacting us!</p>
                 </>)}
-                 <Button onClick={toggleText} type="button">{showMore ? 'Read Less' : 'Read More'}</Button>
+                 <Button onClick={()=>{handleToggle(1)}} type="button">{showMore.key == "1" ? 'Read Less' : 'Read More'}</Button>
               </div>
             </div>  
           </BoxSection>
@@ -41,7 +45,7 @@ export default function DomainName() {
               <div className="">
                 <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">How to Choose a Domain Name?</h3>
                 <p className="sub-page-discretion">To make your domain name your brand, it is essential to choose the right, easy to type and pronounce, and captivating name for your website. Make sure:</p>
-                {showMore && (<>
+                {showMore.key == "2" && (<>
                 <ul className="list-disc pl-[15px]">
                   <li className="mb-[10px]"> <p>To choose a name that’s simple and easy to type and pronounce so internet users can easily type and pronounce it and it can be memorable for everyone.</p> </li>
                   <li className="mb-[10px]"> <p>Always pick a domain name that you are sure would be turned into a brand.</p> </li>
@@ -50,7 +54,7 @@ export default function DomainName() {
                   <li className="mb-[10px]"> <p>Opt a name that clearly indicates what is your business and what are your services. It is suggested to get an appealing and clever domain name that can help internet users understand what they can expect once they visit your website.</p> </li>
                 </ul>
                 </>)}
-                 <Button onClick={toggleText} type="button">{showMore ? 'Read Less' : 'Read More'}</Button>
+                 <Button onClick={()=>{handleToggle(2)}} type="button">{showMore.key == "2" ? 'Read Less' : 'Read More'}</Button>
               </div>
             </div>  
           </BoxSection>
@@ -58,7 +62,7 @@ export default function DomainName() {
       </div>    
       </div>
       <div className="container">
-        <div className="sub-page-textbox">
+        <div className="sub-page-textbox mt-0">
           <h3 className="sub-page-title">Benefits Of Having A Strong Domain Name that Yonescat Takes Pride To Offer You!</h3>
           <p className="sub-page-discretion">Choosing and registering a strong domain name is quite tricky, also if you do this in rush you may end up getting an inappropriate and non-attractive domain name. That’s why you should not do it in haste.</p>
           <p className="sub-page-discretion">A domain name is of utmost importance irrespective of the type, size and nature of the business. whether you have a small, medium or large scale enterprise, your website’s domain name would be the first step towards either making your business prominent or may fail in it.</p>          
@@ -67,8 +71,8 @@ export default function DomainName() {
         </div>   
       </div>
       <div className="section-main pb-0">
-      <div className="container">
-          <div className="sub-page-textbox">
+        <div className="container">
+          <div className="sub-page-textbox mt-0">
             <h3 className="sub-page-title">Getting Your Domain Name Form Yonescat Will Help You in Various Ways!</h3>
             <p className="sub-page-discretion">Since your domain name acts as a search tool, it must be strong and captivating enough. Getting your domain name from Yonescat will help you in various ways!</p>
             <div className="txt-block mt-10 grid grid-cols-1">

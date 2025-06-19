@@ -13,17 +13,19 @@ export default function DeveloperHosting() {
 
       <div className="section-main pb-0">
         <div className="container">
-      <BoxSection rightImage={true} ImageUrl={"/images/main/shared-hosting-1-1.webp"} BgColor={""} order="order-1">
-        <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
-          <div>
-            <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What is Developer Hosting?</h3>
-            <p className="sub-page-discretion">When we talk about a website, networking, etc. we come along a term, hosting. Now, what exactly is hosting? Well, in simpler terms hosting is a service in which an individual or organization receives storage and computing resources in exchange for organizing and maintaining one or more websites and related services. As simple as that.</p>
-            <p className="sub-page-discretion">In today’s world, the demand for beginner-friendly web hosting has increased by a significant amount. And with this increase in demand for web hosting, companies dealing in this industry keep on expanding their business to attract more customers. This might seem like good news for non-professional communities, but companies in need of developer hosting services, now have to put more effort into finding an optimal web hosting provider.</p>
-            <p>The businesses are looking for a single solution that will provide them with everything. Resources, features, and control, all in a single package to make their work simple, convenient, and efficient. The concept of ‘developer-friendly hosting’ is what they are looking for. Now, what’s that? Let’s look into it.</p>  
+          <div className="single-card-box">
+            <BoxSection rightImage={true} ImageUrl={"/images/main/shared-hosting-1-1.webp"} BgColor={""} order="order-1">
+              <div className="director-text order-2 pl-[30px] max-xl:pt-[30px] max-md:pl-0  max-xl:order-2 w-full flex items-center">
+                <div>
+                  <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What is Developer Hosting?</h3>
+                  <p className="sub-page-discretion">When we talk about a website, networking, etc. we come along a term, hosting. Now, what exactly is hosting? Well, in simpler terms hosting is a service in which an individual or organization receives storage and computing resources in exchange for organizing and maintaining one or more websites and related services. As simple as that.</p>
+                  <p className="sub-page-discretion">In today’s world, the demand for beginner-friendly web hosting has increased by a significant amount. And with this increase in demand for web hosting, companies dealing in this industry keep on expanding their business to attract more customers. This might seem like good news for non-professional communities, but companies in need of developer hosting services, now have to put more effort into finding an optimal web hosting provider.</p>
+                  <p>The businesses are looking for a single solution that will provide them with everything. Resources, features, and control, all in a single package to make their work simple, convenient, and efficient. The concept of ‘developer-friendly hosting’ is what they are looking for. Now, what’s that? Let’s look into it.</p>  
+                </div>
+              </div>  
+            </BoxSection>
           </div>
-        </div>  
-      </BoxSection>
-      </div>
+        </div>
       </div>
       <div className="section-main pb-0">
         <div className="container">

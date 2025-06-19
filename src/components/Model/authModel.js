@@ -16,7 +16,7 @@ export default function AuthModel() {
           <Button type="button" variant="outline" className={`hover:bg-stone-900 hover:text-stone-100 bg-transparent text-stone-900 border-stone-900 px-10  mx-[15px] max-sm:mx-[5px] font-bold py-5 border-2 ${type  === 'register' ? "active" : ""}` }  onClick={() => setType('register')} > Register</Button>
         </div>
         <div className='flex flex-col justify-center  max-md:order-2 max-md:mt-[50px] max-sm:mt-[25px] '> 
-          <div className="max-h-[400px] min-w-[500px] w-full max-sm:min-w-[280px] overflow-auto auth-form ">
+          <div className="max-h-[70vh] min-w-[500px] w-full max-sm:min-w-[280px] overflow-auto auth-form ">
           {type === 'login' && <Login /> }
           {type === 'register' && <Signup /> }
           </div>

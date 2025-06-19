@@ -44,7 +44,7 @@ export default function ECommerce() {
             
         </div>
       </div>
-      <div className="e-commerce-section-main section-main  pb-0">
+      <div className="e-commerce-section-main   pb-0">
         <div className="container">
           <div className="e-commerce-inner">
             <h3 className="">Ecommerce timeline – Where Yonescat Stands?</h3>

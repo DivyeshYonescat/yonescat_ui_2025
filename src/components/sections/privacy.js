@@ -43,7 +43,7 @@ export default function Privacy() {
                     <h5 className="font-semibold my-[10px]">Google Ads conversion tracking, Meta ads conversion tracking (Meta pixel) and X Ads conversion tracking</h5>
                     <p>Personal Data: Trackers; Usage Data</p>
 
-                    <h5 className="s-16 w-700">LinkedIn conversion tracking (LinkedIn Insight Tag)</h5>
+                    <h5>LinkedIn conversion tracking (LinkedIn Insight Tag)</h5>
                     <p>Personal Data: device information; Trackers; Usage Data</p>
                 </div>
             </div>

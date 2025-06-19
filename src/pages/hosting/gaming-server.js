@@ -24,16 +24,18 @@ export default function GameServer() {
 
       <div className="section-main">
         <div className="container">
-          <BoxSection rightImage={true} ImageUrl={"/images/main/gaming-server.webp"} BgColor={""} order="order-1">
-            <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
-              <div className="">
-                <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What Is a Gaming Server?</h3>
-                <p className="sub-page-discretion">A gaming server is referred to as a computer that hosts a video game for a client. This gaming server is used by gamers or clients to run multiplayer online games over the Internet. Such gaming servers can be hosted either remotely or locally. Those hosted remotely can be accessed from across the world whereas those hosted locally can be accessed locally. However, video games and online computer games which are playable on game servers usually require membership fees in return for access.</p>
-                <p className="sub-page-discretion">Gaming servers offer more memory, processing, and storage capabilities. Regardless of the type of game you play, a gaming server will always have enough resources to run the game quickly and efficiently. In addition, gaming servers offer a stable, fast, and reliable connection to your favorite online games.</p>
-                <p className="sub-page-discretion">Yonescat is the leading IT solution provider that can help you obtain the best gaming servers seamlessly –at relatively affordable rates. Don’t look around anymore as you landed the right platform that can help you satisfy your unique business needs seamlessly. Contact us today and we will help you exceptionally.</p>
-              </div>
-            </div>  
-          </BoxSection>
+          <div className="single-card-box">
+            <BoxSection rightImage={true} ImageUrl={"/images/main/gaming-server.webp"} BgColor={""} order="order-1">
+              <div className="director-text pl-[30px] max-md:pl-0 max-xl:pt-[30px] order-2  max-xl:order-2 w-full flex items-center">
+                <div className="">
+                  <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What Is a Gaming Server?</h3>
+                  <p className="sub-page-discretion">A gaming server is referred to as a computer that hosts a video game for a client. This gaming server is used by gamers or clients to run multiplayer online games over the Internet. Such gaming servers can be hosted either remotely or locally. Those hosted remotely can be accessed from across the world whereas those hosted locally can be accessed locally. However, video games and online computer games which are playable on game servers usually require membership fees in return for access.</p>
+                  <p className="sub-page-discretion">Gaming servers offer more memory, processing, and storage capabilities. Regardless of the type of game you play, a gaming server will always have enough resources to run the game quickly and efficiently. In addition, gaming servers offer a stable, fast, and reliable connection to your favorite online games.</p>
+                  <p className="sub-page-discretion">Yonescat is the leading IT solution provider that can help you obtain the best gaming servers seamlessly –at relatively affordable rates. Don’t look around anymore as you landed the right platform that can help you satisfy your unique business needs seamlessly. Contact us today and we will help you exceptionally.</p>
+                </div>
+              </div>  
+            </BoxSection>
+          </div>    
         </div>
       </div>
 
@@ -62,11 +64,11 @@ export default function GameServer() {
       </div>  
       <div className="section-main pb-0">
         <div className="container">
-          <div className="sub-page-textbox">
+          <div className="sub-page-textbox mt-0">
             <h3 className="sub-page-title"> Why Choose the Gaming Servers from Yonescat! </h3>
             <p className="sub-page-discretion">Choosing the gaming server from Yonescat will help you in numerous ways – read here!</p>
             <p className="sub-page-discretion">In order to choose the right and best gaming server, it is suggested to consider your needs first and foremost. However, there are a few specifications that should be in your mind so that you can choose a gaming server according to your certain needs:</p>
-            <div className="grid grid-cols-5 gap-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
+            <div className="grid grid-cols-5 gap-5 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 my-[30px]">
               <ListBox ListArray={ListArray} />
             </div>
           </div>    

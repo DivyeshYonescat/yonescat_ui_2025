@@ -87,10 +87,11 @@ export default function VopiVirtualNumbers() {
           </div>
         </div>
       </div>      
-      {/* <div className="section-main"> */}
+      <div className="section-main pb-0">
         <div className="container">
+          <div className="single-card-box">
           <BoxSection rightImage={true} ImageUrl={"/images/main/voip-teaser.webp"} BgColor={""} order="order-2">
-            <div className="director-text order-1 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
+            <div className="director-text order-1 max-lg:order-2 w-full flex items-center">
               <div className="">
                 <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Why You Should Get Your VoIP Form Yonescat?</h3>
                 <p className="sub-page-discretion">A VoIP phone system is a technology to make phone calls through your internet connection instead of a regular landline or a mobile network. A VoIP system over your broadband connection. A VoIP server is used to connect calls to other telephone networks.</p>
@@ -99,8 +100,9 @@ export default function VopiVirtualNumbers() {
               </div>
             </div>  
           </BoxSection> 
+          </div>
         </div>
-      {/* </div>  */}
+      </div> 
      
         <div className="container">
           <div className="sub-page-textbox">

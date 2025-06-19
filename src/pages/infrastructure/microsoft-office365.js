@@ -41,14 +41,15 @@ export default function MicrosoftOffice365() {
           <p>Considering getting your Microsoft 365 to manage your business records and documents efficiently? No worries! Dive into the article to explore more what applications Yonescat’s Microsoft 365 offers.</p>
         </div>    
       </div>
-      <div className="">
+      <div className="section-main pb-0">
         <div className="container">
+          <div className="single-card-box">
           <BoxSection rightImage={true} ImageUrl={"/images/main/microsoft-teaser.webp"} BgColor={""} order="order-2">
-            <div className="director-text order-1 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
+            <div className="director-text order-1 max-lg:order-2 w-full flex items-center">
               <div className="">
                 <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Crucial Features That Our Microsoft Office 365 Offers</h3>
                 <p>The major features of the Microsoft Office 365 vary depending upon the subscription plan of the service user. Below mentioned are a few of the crucial and common features of Microsoft 365 that you will be benefitted with:</p>
-                <ul className="flex-col my-8 max-md:my-0 list-disc">
+                <ul className="flex-col my-8 pl-[18px] list-disc">
                   <li><p className="sub-page-discretion"><b>Office Suite</b> including Outlook, PowerPoint, Excel, Word, Publisher, OneNote, Skype for Business, and others.</p></li>
                   <li><p className="sub-page-discretion"><b>SharePoint Online</b> used for collaboration between employees and the management of the company.</p></li>
                   <li><p className="sub-page-discretion"><b>Yammer</b> refers to enterprise social networking.</p></li>
@@ -63,6 +64,7 @@ export default function MicrosoftOffice365() {
               </div>
             </div>  
           </BoxSection>
+          </div>
         </div>
       </div>
       
@@ -74,7 +76,7 @@ export default function MicrosoftOffice365() {
             <p className="sub-page-discretion text-center">The available applications and services depend on the Microsoft 365 small business plan you will likely choose. Below mentioned are a few of the current applications available with Microsoft 365.</p>
           </div>    
 
-          <div className="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-12 max-lg:gap-6">
+          <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-12 max-lg:gap-6">
             {FeaturesList.map((item) => (<>
               <Card>
                 <div  className="card-bg"></div>
@@ -99,6 +101,7 @@ export default function MicrosoftOffice365() {
           <p className="sub-page-discretion text-center mt-[50px]">Already waited enough to get your Microsoft 365 for your business? don&apos;t fret anymore! We at Yonescat, aspire to provide you with every solution possible for your business. Get in touch with us and let us help you get the most effective and result-driven IT solutions for your business.</p>
         </div>  
       </div>
+
       <div className="section-main integrations-section">
         <div className="container">
           <div className="integrations-section-inmner">
@@ -123,7 +126,7 @@ export default function MicrosoftOffice365() {
                   </div>
                   <b>Microsoft Invoicing</b>
                 </div>
-                <div className="in-tool ">
+                <div className="in-tool text-center">
                   <div className="in_tool_logo">
                     <Image priority={true} width={65} height={65} className="img-fluid m-auto" src="/images/main/outlook.webp" alt="brand-logo"/>
                   </div>

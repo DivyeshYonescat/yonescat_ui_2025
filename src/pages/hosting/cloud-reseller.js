@@ -6,7 +6,10 @@ import Image from "next/image";
 export default function CloudReseller() {
   return(<>
     <Layout>
-      {/* <InnerHero imgScr={"/images/animation/infrastructure/hosting/"} /> */}
+      <InnerHero imgScr={null} 
+        title="Cloud Reseller" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
+        subtitle={<p className="sub-page-discretion">Become a reseller with Yonescat Cloud. No contracts and one monthly bill.</p>}
+      />
 
       <div className="container">
         <div className="sub-page-textbox">

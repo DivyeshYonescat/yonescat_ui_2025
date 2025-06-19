@@ -88,8 +88,8 @@ export default function ECommerce() {
       <div className="section-main">
         <div className="container">
           <div className="">
-            <h3 className="s-26 w-700">Yonescat Involvement in IoT Applications</h3>
-            <div className="grid grid-cols-6  gap-4 max-lg:grid-cols-3 max-sm:grid-cols-2">
+            <h3>Yonescat Involvement in IoT Applications</h3>
+            <div className="grid grid-cols-6  gap-4 max-lg:grid-cols-3 max-sm:grid-cols-2 my-[30px]">
               <ListBox ListArray={ListArray} />
             </div>
           </div>

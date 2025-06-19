@@ -36,12 +36,13 @@ export default function MobileApplicationsSection() {
   ];
   return(<>
   <Layout>
-    <InnerHero imgScr={"/images/animation/solutions/Mobile-Applications.json"} 
+    <InnerHero imgScr={"/images/animation/solutions/Mobile-Applications1.json"} 
       title="Mobile Applications" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Innovative and user-centered applications that supports easy access and streamlined business processes.</p>}
     />
     <div className="section-main ">
       <div className="container">
+        <div className="single-card-box">
         <BoxSection ImageUrl={"/images/main/how-app-works.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
           <div className="director-text w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px] order-2">
             <div className="">
@@ -51,9 +52,10 @@ export default function MobileApplicationsSection() {
             </div>
           </div>  
         </BoxSection>
+        </div>
       </div>
     </div>
-    <div className="section-main pb-0 concepts bg-stone-100">
+    <div className="concepts bg-stone-100">
       <div className="container">
         <div className="concepts-inner text-center ">
           <h3 className="mb-[15px] text-stone-900">Application Designs and Concepts</h3>
@@ -62,8 +64,13 @@ export default function MobileApplicationsSection() {
         </div>    
       </div>
     </div>
+
+
+
+    
     <div className="section-main pb-0">
       <div className="container">
+        <div className="single-card-box">
         <BoxSection rightImage={true} ImageUrl={"/images/main/frameworks.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
           <div className="order-2 max-md:order-2 director-text w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
             <div className="">
@@ -78,10 +85,12 @@ export default function MobileApplicationsSection() {
             </div>
           </div>  
         </BoxSection>
+        </div>
       </div>
     </div>
     <div className="section-main pb-0">
       <div className="container">
+        <div className="single-card-box">
         <BoxSection rightImage={true} ImageUrl={"/images/main/hybrid-to-native.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
           <div className="order-2 max-md:order-2 director-text w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
             <div className="">
@@ -91,6 +100,7 @@ export default function MobileApplicationsSection() {
             </div>
           </div>  
         </BoxSection>
+        </div>
       </div>  
     </div>
     <ContactSection/>

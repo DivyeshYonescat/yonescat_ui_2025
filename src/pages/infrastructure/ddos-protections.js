@@ -8,10 +8,15 @@ import { useState } from "react";
 
 
 export default function DdosProtections() {
-  const [showMore, setShowMore] = useState(false);
-  const toggleText = () => {
-    setShowMore(prev => !prev);
-  };
+  const [showMore, setShowMore] = useState({key:0});
+  
+  const handleToggle = (key) => {
+    if(showMore.key == key){
+      setShowMore({key:0})
+    }else{
+      setShowMore({key:key})
+    }
+  }
 
   const ListArray = [
     {"id":"1","listimg":"/images/main/section_image/Icon_Img/ddos01.webp","title":"DDoS protection"},
@@ -42,12 +47,12 @@ export default function DdosProtections() {
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">  
                 <div className="">
                   <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What is DDoS Protection and Why Yonescat Stresses its Need</h3>
-                  {showMore && (<>
                   <p className="leading-[20px] mb-[15px]">Yonescat is a creative agency that provides its software development services to clients across the Middle East and Europe. Established in 2004, Yonescat has made remarkable achievements in the rapidly progressing world of IT. We are refining the way businesses run and connect with each other, offering intellectual and technology-based solutions to our customers.</p>
+                  {showMore.key == "1" && (<>
                   <p className="leading-[20px] mb-[15px]">With years of expertise and experience in digitalization, we assist businesses and private firms to be a part of this digital transformation on a global level. To prevent any sort of inconvenience to our customers, we ensure strong DDoS protection.</p>
                   <p>We offer DDoS protection as an option to guard websites from such kinds of attacks. DDoS protection, specifically, works by using advanced software and algorithms to monitor the incoming traffic on the website. Any traffic that does not seem legitimate is denied access. On the contrary, legitimate traffic continues to pour in on the website.</p>
                   </>)}
-                  <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
+                   <Button onClick={()=>{handleToggle(1)}} type="button">{showMore.key == "1" ? "Read Less" : "Read More"}</Button>
                 </div>
               </div>  
             </BoxSection>
@@ -58,11 +63,11 @@ export default function DdosProtections() {
                 <div className="">
                   <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Cloud DDoS Protection Services</h3>
                   <p className="leading-[20px] mb-[15px]">Cloud DDoS Protection Services is one the most preferred options worldwide to combat a DDoS attack. Also called Cloud Anti-DDoS, the inherently distributed nature of this service aims to protect servers against malicious traffic.</p>
-                  {showMore && (<>
+                  {showMore.key == "2" && (<>
                   <p className="leading-[20px] mb-[15px]">Yonescat recognizes this service to have the potential of guarding the websites fiercely. With the help of Cloud DDoS, Yonescat mitigates the largest DDoS attacks in the cloud, with no limit on the mitigation number. It also helps in protecting the infrastructure of IDC/ISP/Hosting Service Providers.</p>
                   <p>Through Cloud DDoS protection, we avail of its services 7T+Capacity, Multi-Vector DDoS Attack Mitigation, and DNS diversion for companies and customers.</p>
                   </>)}
-                  <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
+                   <Button onClick={()=>{handleToggle(2)}} type="button">{showMore.key == "2" ? "Read Less" : "Read More"}</Button>
                 </div>
               </div>  
             </BoxSection>
@@ -71,18 +76,18 @@ export default function DdosProtections() {
       </div>  
       <div className="">
         <div className="container">
-          <div className="sub-page-textbox">
+          <div className="sub-page-textbox mt-0">
             <h3 className="sub-page-title"> CDN-based DDoS scrubbing and DNS component </h3>
             <p className="sub-page-discretion">How can a CDN counter a DDoS attack? Before we discuss this, let’s first understand what a CDN actually is.</p>
             <p className="sub-page-discretion">A CDN stands for Content Delivery Network. It’s a group of multiple servers that are distributed around the globe. When you spot a CDN, know that the content of the website isn’t just stored on the server where the website is hosted, but its copies are also stored (cashed) across the servers. Yonescat uses a CDN based service that has the following features</p>
-            <div className="grid grid-cols-6 gap-4  max-lg:grid-cols-3 max-sm:grid-cols-2">
+            <div className="grid grid-cols-6 gap-4  max-lg:grid-cols-3 max-sm:grid-cols-2 my-[30px]">
               <ListBox ListArray={ListArray} />
             </div>
           </div>    
         </div>
       </div>
 
-      <div className="datacenterBG relative">
+      <div className="datacenterBG relative pb-0">
         <div className="container">
           <h3 className="text-stone-900 mb-3">Comprehensive DDoS Protection</h3>
             <p className="sub-page-discretion">Yonescat DDoS protection offers various benefits such as:</p>

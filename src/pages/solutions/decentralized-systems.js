@@ -8,11 +8,16 @@ import { Button } from "@/components/ui/button";
 
 
 export default function DecentralizedSystems() {
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState({key:0});
   
-  const toggleText = () => {
-    setShowMore(prev => !prev);
-  };
+  const handleToggle = (key) => {
+    if(showMore.key == key){
+      setShowMore({key:0})
+    }else{
+      setShowMore({key:key})
+    }
+  }
+
   return(<>
   <Layout>
     <InnerHero imgScr={"/images/animation/solutions/Decentralized-Systems.json"} 
@@ -29,22 +34,22 @@ export default function DecentralizedSystems() {
         </div>
       </div>
     </div>
-    <div className="section-main">
+    <div className="mt-[50px]">
       <div className="container">
-        <div className="card-box-inner grid  grid-cols-2 max-md:grid-cols-1 gap-7">
+        <div className="card-box-inner grid mb-[50px]  grid-cols-2 max-md:grid-cols-1 gap-7">
           <BoxSection rightImage={true} ImageUrl={"/images/main/section_image/decentralized-systems-01.webp"} BgColor={""} order="order-2">
             {/* <div className="director-text order-1 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
             <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
               <div className="">
                 <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Yonescat - Decentralized and dApps</h3>
                 <p className="leading-[20px] mb-[15px]">A &quot;blockchain&quot; is a computer-coded system for chaining unmodifiable and unchangeable, reliable and efficient transactions. IBM stated:</p>
-                {showMore && (<>
+                {showMore.key == "1" && (<>
                 <p className="leading-[20px] mb-[15px]">Every transaction is recorded as a block of data. Each block is connected to the previous and next blocks. Transactions are blocked together in an irreversible chain (blockchain).</p>
                 <p className="leading-[20px] mb-[15px]">A set of rules (so-called smart contracts) are stored on the blockchain and executed automatically to speed up transactions. Smart contracts can define corporate bond transfer terms, travel insurance payment terms, and more.</p>
                 <p className="leading-[20px] mb-[15px]">Therefore, smart contracts are an agreement between the parties that are entirely contained in the computer code and blockchain. Our distributed ledger platform and Smart contracts are short and focused on paying for more goods and services.</p>
                 <p>To be lawfully enforceable, our DeFi and smart contract always meet basic requirements of law. Our standard legal agreements on binding contracts allow businesses to achieve the best of both worlds, faster electronic payments.</p>
                 </>)}
-                <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
+                <Button onClick={()=>{handleToggle(1)}} type="button">{showMore.key == "1" ? "Read Less" : "Read More"}</Button>
               </div>
             </div>  
           </BoxSection>
@@ -54,25 +59,27 @@ export default function DecentralizedSystems() {
               <div className="">
                 <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Let us legalize Smart Contracts and Decentralized networks for you</h3>
                 <p className="leading-[20px] mb-[15px]">Blockchain can no longer have a revolutionary impact on finance, but it is a reality because our dApps are already bringing value and benefits to consumers.</p>
-                {showMore && (<>
+                {showMore.key == "2" && (<>
                 <p className="leading-[20px] mb-[15px]">Decentralized Finance (DeFi) and Decentralized Applications (dApps) allow anyone with an internet connection to participate in a new generation of financial services. Therefore, our DeFi dApps are a formidable alternative to traditional financial services.</p>
                 <p className="leading-[20px] mb-[15px]">Thanks to the reliable, immutable and transparent properties of blockchain, they are becoming more and more popular and difficult to close. Get the transparency of blockchain, most dApps have open source software that users can review and review on their own.</p>
                 <p>Our projects are protected and promoted by either the Proof of Work (PoW) consensus mechanism, the Proof of Stake (PoS) consensus mechanism, or a combination of both. There are many other types of consensus mechanisms, but these two are the most widely used so we prefer them. Precisely, get a unique way to maintain network security while avoiding centralization issues.</p>
                 </>)}
-                <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
+                <Button onClick={()=>{handleToggle(2)}} type="button">{showMore.key == "2" ? "Read Less" : "Read More"}</Button>
               </div>
             </div>  
           </BoxSection>
         </div>
-        <BoxSection rightImage={true} ImageUrl={"/images/main/section_image/decentralized-systems-02.webp"} BgColor={""} order="order-1">
-          <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
-            <div className="">
-              <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Yonescat Provides Private Blockchains for your Business</h3>
-              <p className="leading-[20px] mb-[15px]">Although the original Bitcoin blockchain provided functional democratically without interference or influence from banks or central regulators, personalized blockchain integration can operate within closed parameters.</p>
-              <p>At Yonescat, we can implement your own blockchain and control the transactions added to the chain. It remains a secure system, but like the traditional banking system, it is based on the trust of decision-makers. Our digital platform provides personalized versions of blockchain technology, such as Ripple, R3 Corda, and Hyperledger Fabric restricting access to transaction data to the third parties involved in the transaction, rather than exposing the data in a public ledger similar to Bitcoin.</p>
-            </div>
-          </div>  
-        </BoxSection>
+        <div className="single-card-box">
+          <BoxSection className="single-card-box" rightImage={true} ImageUrl={"/images/main/section_image/decentralized-systems-02.png"} BgColor={""} order="order-1">
+            <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] ">
+              <div className="">
+                <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Yonescat Provides Private Blockchains for your Business</h3>
+                <p className="leading-[20px] mb-[15px]">Although the original Bitcoin blockchain provided functional democratically without interference or influence from banks or central regulators, personalized blockchain integration can operate within closed parameters.</p>
+                <p>At Yonescat, we can implement your own blockchain and control the transactions added to the chain. It remains a secure system, but like the traditional banking system, it is based on the trust of decision-makers. Our digital platform provides personalized versions of blockchain technology, such as Ripple, R3 Corda, and Hyperledger Fabric restricting access to transaction data to the third parties involved in the transaction, rather than exposing the data in a public ledger similar to Bitcoin.</p>
+              </div>
+            </div>  
+          </BoxSection>
+        </div>
       </div>  
     </div>  
 

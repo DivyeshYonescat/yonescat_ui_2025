@@ -8,11 +8,15 @@ import ContactSection from "@/components/sections/contact";
 
 export default function DataAnalytics() {
 
-  const [showMore, setShowMore] = useState(false);
-
-  const toggleText = () => {
-    setShowMore(prev => !prev);
-  };
+  const [showMore, setShowMore] = useState({key:0});
+  
+  const handleToggle = (key) => {
+    if(showMore.key == key){
+      setShowMore({key:0})
+    }else{
+      setShowMore({key:key})
+    }
+  }
 
   return(<>
     <Layout>
@@ -44,12 +48,12 @@ export default function DataAnalytics() {
                 <div className="">
                   <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">From Data Lakes To Meaningful Dashboards & Reporting</h3>
                   <p className="leading-[20px] mb-[15px]">It is a centralized repository when all the data is collected in an unorganized manner. All the unstructured, as well as structured data, is stored in one place.</p>
-                  {showMore && (<>
+                  {showMore.key == "1" && (<>
                   <p className="leading-[20px] mb-[15px]">However for organizations to store all their miscellaneous data in one place is easy but taking out that one particular set of data from years back is an impossible task when searching for it in a data lake.</p>
                   <p className="leading-[20px] mb-[15px]">The data lake is important but what&apos;s more important than that is organizing the data so that end users can access or reach a specific set of data in a short time, avoiding the hassle.</p>
                   <p>Developing dashboards and further categorizing and reporting will help organizations to make their data organized and accessible all the time</p>
                   </>)}
-                  <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
+                  <Button onClick={()=>{handleToggle(1)}} type="button">{showMore.key == "1" ? "Read Less" : "Read More"}</Button>
                 </div>
               </div>  
             </BoxSection>
@@ -60,39 +64,39 @@ export default function DataAnalytics() {
                 <div className="">
                   <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Both Internal And External Data</h3>
                   <p className="leading-[20px] mb-[15px]">Information on trends and statistics that businesses discover through their campaigns and strategic operation is Internal Data while external is the information that is provided outside the organization that has been processed.</p>
-                  {showMore && (<>
+                  {showMore.key == "2" && (<>
                   <p>According to research, data generated internally is useful for most data analysts. Internal data is supposed to optimize and enhance the efficiency of your business&apos;s operations while external data lets you understand the needs and requirements of your customer base.</p>
                   </>)}
-                  <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
+                  <Button onClick={()=>{handleToggle(2)}} type="button">{showMore.key == "2" ? "Read Less" : "Read More"}</Button>
                 </div>
               </div>  
             </BoxSection>
             
-            <BoxSection rightImage={true} ImageUrl={"/images/img-18.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
+            <BoxSection rightImage={true} ImageUrl={"/images/img-18.jpg"} BgColor={"bg-fuchsia-100/100"} order="order-1">
               {/* <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
                 <div className="">
                   <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Data Consultation, Analytics, and Business Insights</h3>
                   <p className="leading-[20px] mb-[15px]">Data analytics can generate insights that can help in driving considerably great benefits. But when a website collects data, it is not organized and segmented.</p>
-                  {showMore && (<>
+                  {showMore.key == "3" && (<>
                     <p className="leading-[20px] mb-[15px]">Once through data analytics the data is classified, businesses use that data to analyze which strategy had how much impact on the sales or the outcomes. By knowing which marketing strategy worked the best through the collection of data, organizations analyze and implement accordingly.</p>
                     <p>This is how data analytics leads to an organization’s success. The more efficiently your data is collected, the more success your organization gains.</p>
                   </>)}  
-                  <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
+                  <Button onClick={()=>{handleToggle(3)}} type="button">{showMore.key == "3" ? "Read Less" : "Read More"}</Button>
                 </div>
               </div>  
             </BoxSection>
 
-            <BoxSection rightImage={true} ImageUrl={"/images/hero-13-img.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
+            <BoxSection rightImage={true} ImageUrl={"/images/hero-13-img.jpg"} BgColor={"bg-fuchsia-100/100"} order="order-1">
               {/* <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
                 <div className="">
                   <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Putting Data To Work</h3>
                   <p className="leading-[20px] mb-[15px]">Once the data is collected, you as a business, define business aims, understand the source of data, prepare and analyze it. You implement and alter your operations accordingly and then put on a result report that helps you with what lies in the company&apos;s favor and which data indicates the most sales.</p>
-                  {showMore && (<>
+                  {showMore.key == "4" && (<>
                     <p>A data analyst analyzes data, cleans it first and understands it, and then interprets what the data says about certain campaigns or operations. Therefore, businesses alter and make informed decisions accordingly.</p>
                   </>)}
-                  <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
+                  <Button onClick={()=>{handleToggle(4)}} type="button">{showMore.key == "4" ? "Read Less" : "Read More"}</Button>
                 </div>
               </div>  
             </BoxSection>
@@ -100,20 +104,20 @@ export default function DataAnalytics() {
         </div>
       </div>
       <div className="container">
-        <BoxSection rightImage={true} ImageUrl={"/images/img-04.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
+        <div className="single-card-box">
+          <BoxSection rightImage={true} ImageUrl={"/images/img-04.webp"} order="order-1">
             <div className="director-text order-1 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
               <div className="">
                 <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Data Best Practices Built-In</h3>
                 <p className="leading-[20px] mb-[15px]">When you understand what your target audience expects from you and the requirements, you can launch marketing campaigns and market your products accordingly.</p>
-                {showMore && (<>
-                  <p className="leading-[20px] mb-[15px]">Data analytics provides you thorough insights into your customer base which brings a great opportunity to customize and alter your customer services according to your targeted customers.</p>
-                  <p className="leading-[20px] mb-[15px]">You as a business are able to design and execute operations efficiently. It helps put your operations in a streamline and boosts your business growth by also effectively cutting down additional costs.</p>
-                  <p>When you understand your audience and know what they want or need, less time is wasted on bringing up marketing techniques, promoting products that your audience has zero interest in.</p>
-                </>)}
-                <Button onClick={toggleText} type="button">{showMore ? "Read Less" : "Read More"}</Button>
+                <p className="leading-[20px] mb-[15px]">Data analytics provides you thorough insights into your customer base which brings a great opportunity to customize and alter your customer services according to your targeted customers.</p>
+                <p className="leading-[20px] mb-[15px]">You as a business are able to design and execute operations efficiently. It helps put your operations in a streamline and boosts your business growth by also effectively cutting down additional costs.</p>
+                <p>When you understand your audience and know what they want or need, less time is wasted on bringing up marketing techniques, promoting products that your audience has zero interest in.</p>
+               
               </div>
             </div>  
           </BoxSection>
+        </div>  
       </div>
       <ContactSection/>
     </Layout>

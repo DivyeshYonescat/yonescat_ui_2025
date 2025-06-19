@@ -14,15 +14,17 @@ export default function SslCertificates() {
 
       <div className="section-main pb-0">
         <div className="container">
-          <BoxSection rightImage={true} ImageUrl={"/images/main/sslcertificate.webp"} BgColor={""} order="order-1">
-            <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
-              <div className="">
-                <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What are SSL Certificates?</h3>
-                <p className="sub-page-discretion"> SSL stands for Secure Sockets Layer and is a digital certificate that authenticates a website’s identity. It further enables the website for an encrypted connection. SSL certificate creates an encrypted link between a web browser and a web server. In simpler terms, SSL keeps attackers/hackers away from intercepting your organization’s personal information. A padlock beside the web address on the top bar is an indication of an SSL-certified website. </p>
-                <p className="sub-page-discretion"> The question is, is it necessary to obtain SSL Certificates for your website? Well, in the digital world, it is vital. SSL Certificate is important for an organization to secure their online transactions while also keeping their client&apos;s information secured. </p>    
-              </div>
-            </div>  
-          </BoxSection>
+          <div className="single-card-box">
+            <BoxSection rightImage={true} ImageUrl={"/images/main/sslcertificate.webp"} BgColor={""} order="order-1">
+              <div className="director-text order-2 pl-[30px] max-md:pl-0 max-xl:pt-[30px] max-xl:order-2 w-full flex items-center">
+                <div className="">
+                  <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What are SSL Certificates?</h3>
+                  <p className="sub-page-discretion"> SSL stands for Secure Sockets Layer and is a digital certificate that authenticates a website’s identity. It further enables the website for an encrypted connection. SSL certificate creates an encrypted link between a web browser and a web server. In simpler terms, SSL keeps attackers/hackers away from intercepting your organization’s personal information. A padlock beside the web address on the top bar is an indication of an SSL-certified website. </p>
+                  <p className="sub-page-discretion"> The question is, is it necessary to obtain SSL Certificates for your website? Well, in the digital world, it is vital. SSL Certificate is important for an organization to secure their online transactions while also keeping their client&apos;s information secured. </p>    
+                </div>
+              </div>  
+            </BoxSection>
+          </div>      
         </div>  
       </div>    
 
