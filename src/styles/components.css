@@ -44,6 +44,8 @@
   .box-text-section{@apply flex flex-col justify-center max-md:order-2 p-[30px_60px_60px_60px] bg-stone-100 max-lg:p-[40px];}
   .box-color-section {@apply flex justify-center items-center bg-stone-900 p-[30px] max-md:order-1; }
   /* concat box */
+
+  .project-type-list button:hover > img,
   .white-image{ filter: invert(100%) sepia(1%) saturate(1000%) hue-rotate(360deg); } 
 
   /* File Upload */

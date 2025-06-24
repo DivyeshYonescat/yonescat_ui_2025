@@ -36,7 +36,7 @@ export default function MobileApplicationsSection() {
   ];
   return(<>
   <Layout>
-    <InnerHero imgScr={"/images/animation/solutions/Mobile-Applications1.json"} 
+    <InnerHero imgScr={"/images/animation/solutions/Mobile-Applications1.json"} bgColor={"rgba(199, 213, 254, 0.40)"}
       title="Mobile Applications" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Innovative and user-centered applications that supports easy access and streamlined business processes.</p>}
     />

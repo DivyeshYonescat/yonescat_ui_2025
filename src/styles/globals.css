@@ -342,7 +342,8 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 .legal-info h4{@apply mt-[40px] mb-[20px] font-bold;}
 .legal-info h5{@apply mt-[20px] mb-[10px] font-bold;}
 
-.inner-page-title{@apply text-center mb-[80px]}
+.inner-page-title{@apply text-center mb-[80px] max-lg:mb-[40px] max-lg:mt-[30px]}
+.inner-page-title h2{@apply mb-[10px];}
 /* Model */
 .modelterms .inner-page-title{@apply mb-[15px];}
 .modelterms .legal-info h4{@apply mb-[15px] mt-[15px];}
@@ -418,7 +419,7 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 .cookie p{@apply pb-[15px];}
 
 /*  */
-.cookie-popup { @apply fixed text-center z-[2100] bottom-[15px] }
+.cookie-popup { @apply fixed text-center z-[2100] bottom-[15px] left-0 right-0 ;}
 .cookie-popup-content { @apply max-w-[97%] bg-[#2d2d2d] shadow-[0_6px_6px_rgba(0,0,0,0.25)] text-xs font-light text-[#acacac] m-auto p-[35px] rounded-[5px]; }
 .cookie-popup-buttons { @apply mt-[30px];}
 /*  */

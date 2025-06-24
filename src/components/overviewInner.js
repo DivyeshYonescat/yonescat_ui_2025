@@ -128,7 +128,10 @@ const Overview = ({list})=>{
         <div className='container'>
           <div className='overview-inner content-container grid max-md:grid-cols-1 grid-cols-[45%_55%] ' ref={containerRef}>
             <div className='overview-img-section h-[calc(100vh-80px)] max-md:h-auto max-md:min-h-[300px] max-md:mt-[60px] relative'>
-              {list.map((images) => <>
+              {list.map((images,index) => <>
+                {index == 0 && <>
+                  <Image id={`image_${images.id}`} className="absolute left-1/2 top-1/2 opacity-100 visible" src={`/images/main/${images.image}`} width={400} height={400} alt='overview_iamge' />
+                </>}
                 <Image id={`image_${images.id}`} className="absolute left-1/2 top-1/2 opacity-0 invisible" src={`/images/main/${images.image}`} width={400} height={400} alt='overview_iamge' />
               </>)}
             </div>

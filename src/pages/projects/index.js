@@ -29,14 +29,14 @@ export default function Home() {
     <Layout> 
       <div className="section-main project">
         <div className="container">
-          <div className="about_title w-[75%] py-[50px_50px]">
+          <div className="about_title w-[75%] py-[30px_50px] max-xl:w-full ">
             <h1 className="mb-[30px]">We Are Changing The Way Creative Companies Connect And Collaborate</h1>
             <p>Welcome to Yonescat. I am Heman Yones. We began our journey back in 2004 driven by a love and passion for meaningful design. working on European initiatives and with educational institutions to produce digital tools. Having started offering digital services more than 19 years ago, we have developed an amazing clientele. From municipal agencies and charity to corporate companies and private firms.</p>
           </div>
           
-          <div className="project_type grid grid-cols-[25%_75%]">
-            <div className="">
-              <div className="project-type-list sticky top-[80px]">
+          <div className="project_type grid grid-cols-[25%_75%] max-lg:flex max-lg:flex-col">
+            <div className="max-lg:mb-[30px]">
+              <div className="project-type-list max-lg:flex flex-wrap items-center sticky top-[80px]">
                 <Button variant="outline" className="hover:bg-gray-900 hover:text-stone-100 border-stone-900 flex px-2 py-5 font-bold">
                   <Image src={"/images/project_icone/all.svg"} width={20} height={20} alt="type-icone" />
                   All Projects

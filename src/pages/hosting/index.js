@@ -38,6 +38,13 @@ export default function Home() {
     "link":"/hosting/domain-names"
   },
   {
+    "id":"9",
+    "image":"developer-hosting-teaser.webp",
+    "title":"Developer Hosting",
+    "discrition":"Developer hosting is a service where an individual or organization receives storage and computing resources in exchange for organizing and maintaining websites and related services. With the increasing demand for beginner-friendly web hosting, companies are looking for a single solution that provides resources, features, and control in a single package. Yonescat Developer Hosting offers various hosting services, including shared web hosting, cloud hosting, WordPress hosting, VPS hosting, and web hosting for agencies. Yonescat's shared hosting plans cater to beginners and prospective PHP users, while their cloud hosting plans increase server uptime, security, and independence of location. Yonescat's services also offer specialized plugins and a user-friendly interface.",
+    "link":"/hosting/developer-hosting"
+  },
+  {
     "id":"6",
     "image":"email-security-teaser.webp",
     "title":"Email Security",

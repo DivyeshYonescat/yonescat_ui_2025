@@ -26,20 +26,20 @@ export default function Home() {
   ]
   return(<>
     <Layout>
-      <div className="pt-[100px]">
+      <div className="section-main pb-0">
         <div className="container">
-          <div className="about_title w-[75%] py-[50px_20px]">
+          <div className="about_title w-[75%] py-[50px_20px] max-xl:w-full">
             <h1 className="mb-[30px]">We Are Changing The Way Creative Companies Connect And Collaborate</h1>
             <p>Welcome to Yonescat. I am Heman Yones. We began our journey back in 2004 driven by a love and passion for meaningful design. working on European initiatives and with educational institutions to produce digital tools. Having started offering digital services more than 20 years ago, we have developed an amazing clientele. From municipal agencies and charity to corporate companies and private firms.</p>
           </div>
-          <div className="about-grid grid grid-cols-3 grid-rows-2 max-lg:grid-cols-2 gap-5 ">
-            <div className=""><Image className="rounded-xl w-full h-full object-cover" src={"/images/main/about/2.jpg"} width={400} height={200} alt={"gridImage"} /></div>
-            <div className=""><Image className="rounded-xl w-full h-full object-cover" src={"/images/main/about/1.jpg"} width={400} height={200} alt={"gridImage"} /></div>
+          <div className="about-grid grid grid-cols-3 grid-rows-2 max-lg:flex max-lg:flex-col  gap-5 relative">
+            <div className="float-left max-lg:w-[48%]"><Image className="rounded-xl w-full h-full object-cover" src={"/images/main/about/2.jpg"} width={400} height={200} alt={"gridImage"} /></div>
+            <div className="max-lg:w-[48%] max-lg:absolute max-lg:right-0 max-lg:top-0"><Image className="rounded-xl w-full h-full object-cover" src={"/images/main/about/1.jpg"} width={400} height={200} alt={"gridImage"} /></div>
             <div className="col-span-2 rounded-xl"><Image className="rounded-xl w-full h-full object-cover" src={"/images/main/about/4.jpg"} width={850} height={300} alt={"gridImage"} /></div>
-            <div className="p-10 bg-stone-900 text-stone-100 rounded-xl col-start-3 row-start-1 row-span-2">
+            <div className="p-10 max-lg:p-5 bg-stone-900 text-stone-100 rounded-xl col-start-3 row-start-1 row-span-2">
               <div className=" ">
-                <p className="leading-[27px]">Hello, this is Heman Yones. In 2004, I founded Yonescat, motivated by a desire to create meaningful design. Over the last 20 years, we&apos;ve transformed the way creative businesses connect and collaborate.Our journey began with European projects and partnerships with schools to create innovative digital services. Today, our impressive clientele includes charities, local governments, corporations, and private organizations.Join us as we continue to shape the future of digital services by forging lasting connections and fostering impactful collaborations.</p>
-                <p className="block mt-[30px] font-bold">Heman Yones</p>
+                <p className="leading-[27px] max-lg:leading-[20px]">Hello, this is Heman Yones. In 2004, I founded Yonescat, motivated by a desire to create meaningful design. Over the last 20 years, we&apos;ve transformed the way creative businesses connect and collaborate.Our journey began with European projects and partnerships with schools to create innovative digital services. Today, our impressive clientele includes charities, local governments, corporations, and private organizations.Join us as we continue to shape the future of digital services by forging lasting connections and fostering impactful collaborations.</p>
+                <p className="block mt-[30px] max-lg:mt-[15px] font-bold">Heman Yones</p>
                 <p className="font-bold">CEO</p>
               </div>
             </div>

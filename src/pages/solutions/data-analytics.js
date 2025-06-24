@@ -20,7 +20,7 @@ export default function DataAnalytics() {
 
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/solutions/Data-Analytics.json"} 
+      <InnerHero imgScr={"/images/animation/solutions/Data-Analytics.json"} bgColor={"rgba(148, 213, 219, 0.30)"}
         title="Data Analytics" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Get, Clean and Understad your data in the most inovative ways.</p>}
       />

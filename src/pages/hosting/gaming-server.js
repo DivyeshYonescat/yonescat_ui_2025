@@ -17,7 +17,7 @@ export default function GameServer() {
 
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/hosting/Gaming-Server.json"} 
+      <InnerHero imgScr={"/images/animation/hosting/Gaming-Server.json"} bgColor={"rgba(105, 160, 255, 0.22)"}  
         title="Gaming Server" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">The things to consider when building an AI or ML algorithm</p>}
       />

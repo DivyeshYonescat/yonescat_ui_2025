@@ -19,12 +19,12 @@ export default function ECommerce() {
     {"id":"8","listimg":"/images/main/smart-grid.webp","title":"Smart Grids"},
     {"id":"9","listimg":"/images/main/manufacturing.webp","title":"Industrial Internet"},
     {"id":"10","listimg":"/images/main/doctor-consultation.webp","title":"Telehealth"},
-    {"id":"11","listimg":"/images/png_icons/tool-1.webp","title":"Automated Warehouse"},
-    {"id":"12","listimg":"/images/png_icons/tool-1.webp","title":"Smart Supply-chain Management"},
+    {"id":"11","listimg":"/images/png_icons/warehouse.png","title":"Automated Warehouse"},
+    {"id":"12","listimg":"/images/png_icons/supply-chain-management.png","title":"Smart Supply-chain Management"},
   ]  
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/solutions/IOT.json"} 
+      <InnerHero imgScr={"/images/animation/solutions/IOT.json"} bgColor={"rgba(228, 194, 233, 0.50)"} 
         title="Internet of Things" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">We help customers to take advantage of IoT and align themself for the future.</p>}
       />

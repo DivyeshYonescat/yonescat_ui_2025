@@ -6,7 +6,7 @@ import Layout from "@/layout/Layout";
 export default function DeveloperHosting() {
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/hosting/Developer-Hosting.json"} 
+      <InnerHero imgScr={"/images/animation/hosting/Developer-Hosting.json"} bgColor={"rgba(105, 160, 255, 0.22)"} 
         title="Developer Hosting" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Write more code spend less on server configuration</p>}
       />

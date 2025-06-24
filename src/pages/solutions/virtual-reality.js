@@ -42,7 +42,7 @@ export default function VirtualReality() {
   
   return(<>
   <Layout>
-    <InnerHero imgScr={"/images/animation/solutions/virtual-reality.json"} 
+    <InnerHero imgScr={"/images/animation/solutions/virtual-reality.json"} bgColor={"rgba(145, 142, 255, 0.39)"}
       title="Virtual Reality" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Produce ground-breaking immersive VR experiences</p>}
     />

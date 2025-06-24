@@ -1,7 +1,7 @@
 @layer base {
   /* hero title */
   h1 {
-    @apply text-6xl  font-bold;
+    @apply font-bold text-6xl max-xl:text-5xl max-lg:text-4xl ;
   }
   /* section title */
   h2 {

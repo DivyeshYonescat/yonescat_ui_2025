@@ -1,12 +1,20 @@
+import ListBox from "@/components/listBox";
 import ContactSection from "@/components/sections/contact";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
 
 export default function DatabaseAsService() {
+  const ListArray = [
+    {"id":"","listimg":"/images/main/section_image/Icon_Img/no-sql-database.svg","title":"NoSQL"},
+    {"id":"","listimg":"/images/main/section_image/Icon_Img/mysql-64.png","title":"MySQL"},
+    {"id":"","listimg":"/images/main/section_image/Icon_Img/rds-postgresql-64.png","title":"PostgreSQL"},
+    {"id":"","listimg":"/images/main/section_image/Icon_Img/Mongodb.png","title":"MongoDB Atlas"},
+    
+  ];
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/infrastructure/Database-Service.json"} 
+      <InnerHero imgScr={"/images/animation/infrastructure/Database-Service.json"} bgColor={"rgba(137, 75, 157, 0.20)"} 
         title="Database as a Service" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Seemless database management and integration</p>}
       />
@@ -15,12 +23,10 @@ export default function DatabaseAsService() {
           <h3 className="sub-page-title"> Database as A Service </h3>
           <p className="sub-page-discretion">Database as a service usually titled “DBaaS” is a cloud computing service. This database technology provides the same functionality as a standard relational or non-relational database. This cloud computing database as a service is useful for businesses that are trying to make ways to avoid maintaining, configuring and upgrading their own databases.</p>
           <p className="sub-page-discretion">Database as a managed or hosted infrastructure, users don’t have to struggle with setting up hardware or installing and managing software. Everything related to handling and managing the database is controlled by the service provider. In addition, Database hosting options are obtainable for every database type which includes:</p>
-          <ul className="flex max-sm:flex-col my-8 max-sm:my-0 max-sm:ml-3.5 list-disc">
-            <li className="mr-5 font-bold ml-5 max-sm:mx-0 max-sm:my-1.5"><p>NoSQL</p></li>
-            <li className="mr-5 font-bold ml-5 max-sm:mx-0 max-sm:my-1.5"><p>MySQL</p></li>
-            <li className="mr-5 font-bold ml-5 max-sm:mx-0 max-sm:my-1.5"><p>PostgreSQL</p></li>
-            <li className="mr-5 font-bold ml-5 max-sm:mx-0 max-sm:my-1.5"><p>MongoDB Atlas</p></li>
-          </ul>  
+          <div className="grid grid-cols-4 gap-4 max-lg:grid-cols-4 max-md:grid-cols-2 my-[30px]">
+            <ListBox ListArray={ListArray} />
+          </div>
+          
           <p>All these databases are easily and conveniently accessible to service users. If you want to get your database system for your business, Yonescat is the leading IT solutions provider that can help you achieve your goals efficiently.</p>
         </div>      
 
@@ -76,7 +82,7 @@ export default function DatabaseAsService() {
         <div className="sub-page-textbox">
           <h3 className="sub-page-title"> The DBaaS subscription - Yonescat!</h3>
           <p className="sub-page-discretion">The DBaaS subscription usually includes every essential thing that is needed to run a database cloud computing including:</p>
-          <ul className="flex max-md:flex-col my-8 max-md:my-0 list-disc">
+          <ul className="flex max-md:flex-col l my-8 max-sm:my-0 max-sm:ml-3.5 list-disc">
             <li className="mr-5 font-bold ml-5 max-md:mx-0 max-md:my-1.5"><p>Database provisioning</p></li>
             <li className="mr-5 font-bold ml-5 max-md:mx-0 max-md:my-1.5"><p>Licenses</p></li>
             <li className="mr-5 font-bold ml-5 max-md:mx-0 max-md:my-1.5"><p>Support and maintenance</p></li>

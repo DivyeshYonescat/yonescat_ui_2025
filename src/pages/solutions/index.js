@@ -52,6 +52,12 @@ export default function Home() {
     "title":"IoT",
     "discrition":"Yonescat offers IoT services that include consulting, development, data analytics, and app management to optimize and automate corporate workflows using IoT technology. They help businesses turn their needs into a competitive advantage by offering innovative IoT-based solutions. Yonescat incorporates technologies such as RFID, NFC, beacons, and GPRS to meet the requirements of IoT. They are involved in various IoT applications such as smart homes, smart cities, self-driven cars, IoT retail shops, farming, wearables, smart grids, industrial internet, telehealth, automated warehouses, and smart supply-chain management. Yonescat also specializes in hardware and software for tracking and reporting IoT assets, simplifying the management of desktop and mobile devices.",
     "link":"/solutions/iot"
+  },{
+    "id":"8",
+    "image":"iot-teaser.webp",
+    "title":"IoT",
+    "discrition":"Yonescat offers IoT services that include consulting, development, data analytics, and app management to optimize and automate corporate workflows using IoT technology. They help businesses turn their needs into a competitive advantage by offering innovative IoT-based solutions. Yonescat incorporates technologies such as RFID, NFC, beacons, and GPRS to meet the requirements of IoT. They are involved in various IoT applications such as smart homes, smart cities, self-driven cars, IoT retail shops, farming, wearables, smart grids, industrial internet, telehealth, automated warehouses, and smart supply-chain management. Yonescat also specializes in hardware and software for tracking and reporting IoT assets, simplifying the management of desktop and mobile devices.",
+    "link":"/solutions/iot"
   }]
   return (
     <>

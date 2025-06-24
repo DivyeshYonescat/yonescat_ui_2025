@@ -11,11 +11,11 @@ const PrivacyModel = ({ isOpen,onClose, type }) => {
   
   return (<>
     <Modal isOpen={isOpen} onClose={onClose}>
-        <div className="bg-white rounded-lg p-10 px-5  w-full relative max-w-[950px] max-h-[400px] overflow-auto">
+        <div className="bg-white rounded-lg p-10 px-5  w-full relative max-w-[80vw]  overflow-auto">
           <button className="absolute  text-xl text-gray-600 hover:text-red-600 top-[20px] right-[20px]" onClick={onClose}>
             <Image src={"/images/main/svg/close-svgrepo-com.svg"} width="20" height="20"  alt="sadfsd" />
           </button>
-          <div className="modelterms ">
+          <div className="modelterms  max-h-[80vh] w-full overflow-auto">
             <Privacy />  
           </div>  
         </div>  

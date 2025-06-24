@@ -17,7 +17,7 @@ export default function CloudVPS() {
   }
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/hosting/Cloud-VPS.json"} 
+      <InnerHero imgScr={"/images/animation/hosting/Cloud-VPS.json"} bgColor={"rgba(105, 160, 255, 0.22)"}
         title="Cloud VPS" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Get your own Virtual Private Server and have full control over the server&apos;s entire configuration</p>}
       />

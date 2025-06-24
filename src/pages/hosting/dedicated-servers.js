@@ -15,7 +15,7 @@ export default function DedicatedServers() {
   ];
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/hosting/Dedicated-Servers.json"} 
+      <InnerHero imgScr={"/images/animation/hosting/Dedicated-Servers.json"}  bgColor={"rgba(105, 160, 255, 0.22)"}
         title="Dedicated Servers" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">With our next generation hardware enjoy global connectivity, unbeatble speeds and uptimes.</p>}
       />

@@ -17,49 +17,49 @@ export default function DomainName() {
   }
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/hosting/Domain-Names.json"} 
+      <InnerHero imgScr={"/images/animation/hosting/Domain-Names.json"} bgColor={"rgba(105, 160, 255, 0.22)"}
         title="Domain Names" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">From the most common domain name to the most exotic and excentric ones. We have them all.</p>}
       />
 
       <div className="section-main">
-      <div className="container">
-        <div className="card-box-inner grid  grid-cols-2 max-md:grid-cols-1 gap-7">
-          <BoxSection rightImage={true} ImageUrl={"/images/main/domain-name-2.webp"} BgColor={""} order="order-1">
-            {/* <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
-            <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
-              <div className="">
-                <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What Is Domain Name?</h3>
-                <p className="sub-page-discretion">A domain name is typically referred to as your site’s name and the address internet users will access your website by which. A domain name is used for identifying and finding companies or businesses on the Internet.</p>
-                {showMore.key == "1" && (<>
-                <p>Previously there were IP addresses by which internet users were able to find the business or the company. However, it was way difficult for humans to remember those IP strings containing numbers. To ease this, domain names were developed by which internet users now can easily identify anyone on the internet.</p>
-                <p>Yonescat being the leading IT solutions provider, will help you choose from thousands of extensions and display your website effectively. Why delay anymore? Get the perfect solution to your unique business needs now by contacting us!</p>
-                </>)}
-                 <Button onClick={()=>{handleToggle(1)}} type="button">{showMore.key == "1" ? 'Read Less' : 'Read More'}</Button>
-              </div>
-            </div>  
-          </BoxSection>
-          <BoxSection rightImage={true} ImageUrl={"/images/main/what-is-domain.webp"} BgColor={""} order="order-2">
-            {/* <div className="director-text order-1 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
-            <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
-              <div className="">
-                <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">How to Choose a Domain Name?</h3>
-                <p className="sub-page-discretion">To make your domain name your brand, it is essential to choose the right, easy to type and pronounce, and captivating name for your website. Make sure:</p>
-                {showMore.key == "2" && (<>
-                <ul className="list-disc pl-[15px]">
-                  <li className="mb-[10px]"> <p>To choose a name that’s simple and easy to type and pronounce so internet users can easily type and pronounce it and it can be memorable for everyone.</p> </li>
-                  <li className="mb-[10px]"> <p>Always pick a domain name that you are sure would be turned into a brand.</p> </li>
-                  <li className="mb-[10px]"> <p>Keep it simple yet classic and unique. However, don’t try to use hyphens or numbers in your domain name as they will make it difficult for people to pronounce and remember it.</p> </li>
-                  <li className="mb-[10px]"> <p>Keep your domain name short. Long and complicated domains run a risk of being misspelled and mistyped. In addition, users may get frustrated typing your complex and long domain name. Thus, it will make you lose your potential client eventually.</p> </li>
-                  <li className="mb-[10px]"> <p>Opt a name that clearly indicates what is your business and what are your services. It is suggested to get an appealing and clever domain name that can help internet users understand what they can expect once they visit your website.</p> </li>
-                </ul>
-                </>)}
-                 <Button onClick={()=>{handleToggle(2)}} type="button">{showMore.key == "2" ? 'Read Less' : 'Read More'}</Button>
-              </div>
-            </div>  
-          </BoxSection>
-        </div>
-      </div>    
+        <div className="container">
+          <div className="card-box-inner grid  grid-cols-2 max-md:grid-cols-1 gap-7">
+            <BoxSection rightImage={true} ImageUrl={"/images/main/domain-name-2.webp"} BgColor={""} order="order-1">
+              {/* <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
+              <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
+                <div className="">
+                  <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What Is Domain Name?</h3>
+                  <p className="sub-page-discretion">A domain name is typically referred to as your site’s name and the address internet users will access your website by which. A domain name is used for identifying and finding companies or businesses on the Internet.</p>
+                  {showMore.key == "1" && (<>
+                  <p>Previously there were IP addresses by which internet users were able to find the business or the company. However, it was way difficult for humans to remember those IP strings containing numbers. To ease this, domain names were developed by which internet users now can easily identify anyone on the internet.</p>
+                  <p>Yonescat being the leading IT solutions provider, will help you choose from thousands of extensions and display your website effectively. Why delay anymore? Get the perfect solution to your unique business needs now by contacting us!</p>
+                  </>)}
+                  <Button onClick={()=>{handleToggle(1)}} type="button">{showMore.key == "1" ? 'Read Less' : 'Read More'}</Button>
+                </div>
+              </div>  
+            </BoxSection>
+            <BoxSection rightImage={true} ImageUrl={"/images/main/what-is-domain.webp"} BgColor={""} order="order-2">
+              {/* <div className="director-text order-1 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
+              <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
+                <div className="">
+                  <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">How to Choose a Domain Name?</h3>
+                  <p className="sub-page-discretion">To make your domain name your brand, it is essential to choose the right, easy to type and pronounce, and captivating name for your website. Make sure:</p>
+                  {showMore.key == "2" && (<>
+                  <ul className="list-disc pl-[15px]">
+                    <li className="mb-[10px]"> <p>To choose a name that’s simple and easy to type and pronounce so internet users can easily type and pronounce it and it can be memorable for everyone.</p> </li>
+                    <li className="mb-[10px]"> <p>Always pick a domain name that you are sure would be turned into a brand.</p> </li>
+                    <li className="mb-[10px]"> <p>Keep it simple yet classic and unique. However, don’t try to use hyphens or numbers in your domain name as they will make it difficult for people to pronounce and remember it.</p> </li>
+                    <li className="mb-[10px]"> <p>Keep your domain name short. Long and complicated domains run a risk of being misspelled and mistyped. In addition, users may get frustrated typing your complex and long domain name. Thus, it will make you lose your potential client eventually.</p> </li>
+                    <li className="mb-[10px]"> <p>Opt a name that clearly indicates what is your business and what are your services. It is suggested to get an appealing and clever domain name that can help internet users understand what they can expect once they visit your website.</p> </li>
+                  </ul>
+                  </>)}
+                  <Button onClick={()=>{handleToggle(2)}} type="button">{showMore.key == "2" ? 'Read Less' : 'Read More'}</Button>
+                </div>
+              </div>  
+            </BoxSection>
+          </div>
+        </div>    
       </div>
       <div className="container">
         <div className="sub-page-textbox mt-0">

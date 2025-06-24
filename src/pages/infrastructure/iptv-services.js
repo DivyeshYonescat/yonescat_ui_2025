@@ -6,7 +6,7 @@ import Layout from "@/layout/Layout";
 export default function IPtvServices() {
   return(<>
     <Layout>
-       <InnerHero imgScr={"/images/animation/infrastructure/IPTV-Services.json"} 
+       <InnerHero imgScr={"/images/animation/infrastructure/IPTV-Services.json"} bgColor={"rgba(105, 160, 255, 0.22)"}
           title="IPTV Services" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">Fast and Stable IPTV solutions tailored for every need.</p>}
        />

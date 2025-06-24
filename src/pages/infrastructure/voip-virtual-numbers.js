@@ -45,7 +45,7 @@ export default function VopiVirtualNumbers() {
     },]
   return(<>
     <Layout>
-       <InnerHero imgScr={"/images/animation/infrastructure/Virtual-Numbers.json"} 
+       <InnerHero imgScr={"/images/animation/infrastructure/Virtual-Numbers.json"} bgColor={"rgba(105, 160, 255, 0.22)"}
           title="VOIP - Virtual Numbers" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">Crystal Clear Audio, Global Calling Without Interruption</p>}
        />
