@@ -50,8 +50,8 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 .menu-items-list > li {  @apply translate-y-0 scale-0 opacity-0 rotate-z-0;}
 
 .menu-items-list .nav-link {
-  @apply font-bold lg:text-2xl text-4xl text-inherit lg:px-8 px-6 lg:py-6 py-5 block cursor-pointer;
-  padding: 10px 0;  line-height: 1.2;
+  @apply font-bold lg:text-2xl text-4xl text-inherit lg:px-8 px-6 lg:py-2 py-2 block cursor-pointer;
+  line-height: 1.2;
 }
 
 .sub-menu-wrap {  @apply ps-4 text-stone-100;}
@@ -70,17 +70,11 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 
 }
 
-.menu-wrap > .nav-link{ @apply transform-none shadow-none text-2xl max-md:text-xl !px-2 flex items-center text-stone-900  } 
-/* .menu-wrap > .nav-link {  transform: none !important;  box-shadow: none !important;  font-size: 1.6rem;   padding: 8px 0;  display: flex;  align-items: center;  color: #000;} */
-
+.menu-wrap > .nav-link { @apply transform-none shadow-none text-2xl max-md:text-xl flex items-center text-stone-900  } 
 .menu-wrap > .nav-link > span {@apply mr-3.5}
-/* .menu-wrap > .nav-link > span {  margin-right: 15px;}  */
-
 .menu-wrap > .nav-link > span > image{@apply min-w-6}
-/* .menu-wrap > .nav-link > span > image {  min-width: 25px;} */
-
 .sub-menu-wrap .nav-link { @apply text-stone-900 text-2xl max-md:text-xl px-2 max-md:px-1;}
-/* .sub-menu-wrap .nav-link {  font-size: 1.25rem;  padding: 6px 0;} */
+
 
 .menu-wrap.isSubmenuOpen {
   transform: perspective(500px) rotateX(10deg) rotateY(0deg) scale(1.05);

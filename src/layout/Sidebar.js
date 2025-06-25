@@ -287,13 +287,9 @@ export default function SidebarMenu() {
                       {
                         (menu.subItems.length > 0) && <div ref={(el) => (subMenuRefs.current[menuIndex] = el)} className="sub-menu-wrap">
                           <ul>
-                            {
-                              menu.subItems.map((submenu, submenuindex) => {
-                                return <li key={`submenu-${menuIndex}'-'${submenuindex}`}>
-                                  <Link href={submenu.link} className="nav-link ">{submenu.title}</Link>
-                                </li>
-                              })
-                            }
+                            { menu.subItems.map((submenu, submenuindex) => {
+                                return <li key={`submenu-${menuIndex}'-'${submenuindex}`}> <Link href={submenu.link} className="nav-link">{submenu.title}</Link> </li>
+                            })}
                           </ul>
                         </div>
                       }
