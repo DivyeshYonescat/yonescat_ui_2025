@@ -5,7 +5,7 @@ import { useParams, usePathname } from "next/navigation";
 import { useRouter } from "next/router";
 import Layout from "@/layout/Layout";
 import { getProjectByid } from "@/api/projects";
-import ProjectDetailLoader from "@/components/contentLoaders/ProjectDetailLoader";
+//import ProjectDetailLoader from "@/components/contentLoaders/ProjectDetailLoader";
 
 
 
