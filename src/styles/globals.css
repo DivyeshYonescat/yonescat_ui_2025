@@ -70,7 +70,7 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 
 }
 
-.menu-wrap > .nav-link{ @apply transform-none shadow-none text-2xl max-md:text-xl px-2 flex items-center text-stone-900  } 
+.menu-wrap > .nav-link{ @apply transform-none shadow-none text-2xl max-md:text-xl !px-2 flex items-center text-stone-900  } 
 /* .menu-wrap > .nav-link {  transform: none !important;  box-shadow: none !important;  font-size: 1.6rem;   padding: 8px 0;  display: flex;  align-items: center;  color: #000;} */
 
 .menu-wrap > .nav-link > span {@apply mr-3.5}
