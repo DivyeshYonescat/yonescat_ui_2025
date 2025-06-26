@@ -1,13 +1,15 @@
 @layer components {
 
   .section-main{ @apply bg-[var(--bg-primary)] clear-both w-full block py-[50px] md:py-[80px] lg:py-[100px]  relative }
-  .btn { @apply text-stone-100 bg-stone-900  text-[14px] md:text-[16px] font-semibold  px-[20px] py-[10px] md:px-5 md:py-2.5  text-center   transition delay-200 duration-500 ease-in-out; }
+  .btn { @apply text-stone-100 bg-deepsea  text-[14px] md:text-[16px] font-semibold  px-[20px] py-[10px] md:px-5 md:py-2.5  text-center   transition delay-200 duration-500 ease-in-out; }
+
+  .small-text{@apply text-sm;}
 
   /* card */
 
-  .card{ @apply shadow-2xl shadow-stone-900/15 overflow-hidden relative rounded-xl }
-  .card * { @apply duration-300 ease-linear group-hover:text-stone-100; }
-  .card-bg{ @apply bg-gradient-to-tr from-stone-900 to-stone-800 absolute aspect-square pointer-events-none 
+  .card{  @apply shadow-2xl shadow-stone-900/15 overflow-hidden relative rounded-xl bg-aqua/10 backdrop-blur-xs;}
+  .card * { @apply duration-300 ease-linear; }
+  .card-bg{ @apply bg-gradient-to-tr from-aqua to-mintgreen absolute aspect-square pointer-events-none 
             w-[200%] h-[200%] rounded-full  z-[-1] top-[-170px] left-[-170px]  origin-top-left  delay-200 opacity-0 scale-0
             transition-all group-hover:opacity-100 group-hover:scale-100
   }
@@ -19,7 +21,15 @@
           lg:px-[15px] lg:py-[15px]
           xl:px-[30px] xl:py-[15px]
   ;} 
-  
+
+  .card-header{@apply pt-[30px];}
+  .card-footer{@apply pb-[30px];}
+
+  /* toogle button */
+  .toggl-wrap{@apply inline-flex items-center p-1 mb-[15px] cursor-pointer bg-aqua  text-gray-900 rounded-full;}
+  .toggle-user{@apply px-3 py-1 bg-aqua peer-checked:bg-palelce text-shadow-2xs rounded-full font-semibold text-sm;}
+  .toggle-merchant{@apply  px-3 py-1 bg-palelce peer-checked:bg-aqua  text-shadow-2xs rounded-full font-semibold text-sm;}
+  /* toogle button */
 
   /* form Group */
   .form-group{ @apply w-full mb-[20px];}
@@ -27,9 +37,11 @@
   .form-input > div {@apply mx-[5px] ;}
   .form-input > div:first-child{@apply ml-[0px] max-sm:mr-[0px];}
   .form-input > div:last-child{@apply mr-[0px] max-sm:ml-[0px];}
-  .PhoneInput{@apply border border-stone-900 pl-[10px] rounded-md;}
-  .PhoneInput > input { @apply h-[45px] px-2.5; width:100% !important;}
+
+  .PhoneInput{@apply border border-deepsea pl-[10px] rounded-md;}
+  .PhoneInput > input { @apply h-[45px] px-2.5 placeholder:text-aqua; width:100% !important;}
   .PhoneInput > input:focus, .PhoneInput > input:focus-visible{ @apply border-0  outline-0;}
+  .PhoneInput:has(input:focus-visible) { @apply border-2 border-solid border-deepsea ;}
   
   /* banner */
   .banenr{@apply  bg-no-repeat bg-cover bg-bottom; }
@@ -45,11 +57,11 @@
   .box-color-section {@apply flex justify-center items-center bg-stone-900 p-[30px] max-md:order-1; }
   /* concat box */
 
-  .project-type-list button:hover > img,
   .white-image{ filter: invert(100%) sepia(1%) saturate(1000%) hue-rotate(360deg); } 
+  .project-type-list button:hover > img{filter:brightness(0) invert(1);}
 
   /* File Upload */
-  .dndFile { @apply  w-full text-center flex-col h-auto flex items-center justify-center relative bg-[#f5f6f8] text-[#3a4a56] px-0 py-5 rounded-md border-2 border-dashed border-[#aaa];}
+  .dndFile { @apply  w-full text-center flex-col h-auto flex items-center justify-center relative bg-[#f5f6f8] text-deepsea px-0 py-5 rounded-md border-2 border-dashed border-deepsea;}
   .dndFile input { @apply absolute w-full text-[0] opacity-0 border-0 inset-0; }
   .prview_image_box{@apply border block border-stone-900 mt-[5px];}
   .prview_image_box,
@@ -64,7 +76,8 @@
   .textEditer_cutome_header button {  @apply border-[#ffdead] px-[6px];}
   .textEditer_cutome_header button svg {  @apply w-5;}
   .textEditer_cutome > div > .tiptap img { @apply max-w-full;}
-  .tiptap.ProseMirror {  @apply min-h-[130px] border rounded border-solid border-stone-900 p-3;}
+  .tiptap.ProseMirror {  @apply min-h-[130px]  rounded border-0 border-t-1 border-solid border-stone-900 p-3;}
+  .tiptap.ProseMirror:focus-visible{@apply border-deepsea;}
 
 /* .right-director-inner{@apply;} */
   .box-director-inner{@apply bg-[var(--bg-box-section)]; }

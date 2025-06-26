@@ -235,9 +235,9 @@ export default function SidebarMenu() {
       <button type='button' ref={menuToggleRef} className={`navbar-toggle ${isOpen ? 'isVisible' : ''}`} onClick={toggleMainMenu}
         data-cursor-text={isOpen ? 'Close' : 'Menu'}
       >
-        <svg viewBox="0 0 40 40">
+        <svg viewBox="0 0 35 35">
           <line x1="8" y1="12" x2="32" y2="12" />
-          <line x1="8" y1="20" x2="32" y2="20" />
+          <line x1="8" y1="20" x2="26" y2="20" />
           <line x1="8" y1="28" x2="32" y2="28" />
         </svg>
       </button>

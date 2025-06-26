@@ -19,7 +19,7 @@ export default function ContactSection() {
             <h3 className="mb-[20px]">High consideration of support maintenance and upkeep</h3>
             <p className="mb-[10px]">Yonescat understands the need for timely maintenance of mobile apps and is aware of finely investing in support services. Our upkeep of the mobile app ensures that it performs seamlessly with a bug-free operation of our live mobile apps</p>
             <p className="mb-[30px]">From refining, fixing, monitoring to updating our features, we focus to build a successful mobile app. Our objective is to not only aim for the highest rate of downloads but also an ever-increasing rate of active users with a high retention rate as well</p>
-            <Link href={'/about'} className={buttonVariants({ variant: "outline", className:'hover:bg-gray-900 hover:text-stone-100 border-stone-900 px-8  py-5 font-bold'})}>Contact Us</Link>
+            <Link href={'/contact'} className={buttonVariants({ variant: "outline",size:"lg"})}>Contact Us</Link>
          </div>
         </div>  
       </div>

@@ -36,8 +36,8 @@ const TiptapEditor = (props) => {
   const togglePreview = () => { setIsPreview(!isPreview); };
 
   return (
-    <div className='textEditer_cutome border rounded-[3px] border-solid border-stone-900 '> 
-      <div className='textEditer_cutome_header w-full p-2 border-b border-solid'>
+    <div className='textEditer_cutome border rounded-[3px] border-solid border-deepsea '> 
+      <div className='textEditer_cutome_header w-full p-2 border-b border-solid border-deepsea'>
         <select 
           onChange={(e) => {
             const level = Number(e.target.value);

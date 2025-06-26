@@ -124,7 +124,7 @@ export default function Home() {
                   { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error text-red-700 mt-[10px]" key={errorIndex}> {error.message} </div>) }
                 </div>
                 
-                <p className="mb-[15px]">We are committed to your privacy. Yonescat uses the information you provide us to contact you about our relevant content, products, and services. You may unsubscribe from these communications at any time. For more information, check out our <Link className='underline' href={"/privacy"} >Privacy Policy</Link>.</p>
+                <p className="small-text mb-[15px]">We are committed to your privacy. Yonescat uses the information you provide us to contact you about our relevant content, products, and services. You may unsubscribe from these communications at any time. For more information, check out our <Link className='underline' href={"/privacy"} >Privacy Policy</Link>.</p>
 
                 {isSubmitting ? 
                   <Button disabled> <Loader2 className="animate-spin" /> Please wait </Button>

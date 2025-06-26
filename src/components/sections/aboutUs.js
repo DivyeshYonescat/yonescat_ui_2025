@@ -17,7 +17,7 @@ export default function AboutUs() {
                   <p>We do that by taking enormous care of our of out people-talented world-leading web desing specialists.</p>
                   <p>We are passionate about transparency,reliability, trust and outstanding customer care-we aren&apos;t happy with our creation until you are. We take tremendous care of your needs</p>
                 </div>
-                <Link href={'/about'} className={buttonVariants({ variant: "outline", className:'hover:bg-gray-900 hover:text-stone-100 border-stone-900 px-8  py-5'})}>About Us</Link>
+                <Link href={'/about'} className={buttonVariants({ variant: "outline", size:"lg"})}>About Us</Link>
               </div>
               <div className="about-img w-full clear-both block mb-10">
                 <Image className="w-full h-full object-cover" alt="linkedin" src={"/images/pexels-linkedin.jpg"} width={1360} height={767}></Image>

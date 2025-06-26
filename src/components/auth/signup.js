@@ -126,7 +126,7 @@ export default function Signup(props) {
                     <h3 className="text-center pb-[15px]">Create Account</h3>
                     {/* SIGN UP FORM */}
                 
-                    <form  ref={formRef} name="signupform" className='m-auto max-w-[500px]' onSubmit={handleSubmit(onSubmit)}>
+                    <form  ref={formRef} name="signupform" className='m-auto max-w-[500px] px-1.5' onSubmit={handleSubmit(onSubmit)}>
                         {/* <div className="items-top flex justify-start space-x-2 mb-[10px]">
                             <Checkbox id="merchant" onCheckedChange={(value) => setCheck(!!value)} />
                             <div className="grid gap-1.5 leading-none" onCheckedChange={(value) => setCheck(!!value)}>
@@ -134,10 +134,10 @@ export default function Signup(props) {
                             </div>
                         </div> */}
 
-                        <label htmlFor="Toggle4" className="inline-flex items-center p-1 mb-[15px] cursor-pointer bg-gray-700 rounded-md text-gray-100 ">
+                        <label htmlFor="Toggle4" className="toggl-wrap">
                             <input id="Toggle4" type="checkbox" className="hidden peer" />
-                            <span className="px-3 py-1 bg-gray-400 peer-checked:bg-gray-700 rounded-sm" onClick={() => setCheck(false)}>User</span>
-                            <span className="px-3 py-1 bg-gray-700 peer-checked:bg-gray-400 rounded-sm" onClick={() => setCheck(true)}>Merchant</span>
+                            <span className="toggle-user " onClick={() => setCheck(false)}>User</span>
+                            <span className="toggle-merchant" onClick={() => setCheck(true)}>Merchant</span>
                         </label>
 
                         {check ? <> 

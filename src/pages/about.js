@@ -61,7 +61,7 @@ export default function Home() {
       <div className="section-main impact-main bg-[#f8f7f3]">
         <div className="container">
           <div className="impart-inner grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-8 max-lg:gap-4">
-            <div className="impart-box-title ">
+            <div className="impart-box-title max-sm:!pt-0">
               <h3 className="mb-[15px]">Our Impact</h3>
               <p>Lorazepam is used to relieve anxiety. Lorazepam is also used to treat insomnia caused by anxiety or temporary situational stress.</p>
             </div>    
@@ -95,7 +95,7 @@ export default function Home() {
               <Image className="director-inner-img absolute h-full max-md:h-[200px] w-[50vw] max-md:min-w-[200px] max-md:w-full ml-[-100px] max-md:ml-0  left-0 inset-y-0" src="/images/main/about/director-bg.jpg" width={1000} height={500} alt="sadfsdaf" />
               <Image className=" relative z-10 max-md:min-w-[200px]" src={"/images/main/about/heman-yones.webp"} alt="director" width={400} height={700} />
             </div>
-            <div className="director-text w-[55%] max-md:w-full pl-[80px] lg:pl-[50px] max-lg:pl-[25px] py-[30px]">
+            <div className="director-text w-[55%] max-md:w-full pl-[80px] lg:pl-[50px] max-lg:pl-[25px] py-[30px] max-md:pl-0">
               <span className="font-bold text-[14px]">Director of Yonescat Ltd</span>
               <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Heman Yones</h3>
               <p className="leading-[20px]">Heman Yones is a Kurdish-born British entrepreneur and director who has held senior positions in a variety of organisations, most notably in design and innovation. He is currently the CEO of iQ Labs, Director of Yonescat Ltd, and a board member of the MEED Foundation, which promotes economic development and empowerment.</p>

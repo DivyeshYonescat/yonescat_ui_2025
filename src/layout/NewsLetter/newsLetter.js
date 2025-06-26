@@ -62,7 +62,7 @@ const NewsLetterSection = () => {
                             </div>
                             <div className="input-group">
                                 <span className="input-group-btn">
-                                    <Button type="submit">Subscribe Now</Button>
+                                    <Button size={"lg"} type="submit">Subscribe Now</Button>
                                 </span>
                             </div>
                         </form>

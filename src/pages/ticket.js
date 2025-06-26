@@ -227,14 +227,14 @@ export default function Home() {
                   </div>
 
                   <div className="form-group">
-                    <label className="p-lg ">Explain your question in details: </label>
-                    <p className=" questing_name">Your OS version, Yonescat version &amp; build, steps you did. Be VERY precise!</p>
+                    <Label className="p-lg ">Explain your question in details: </Label>
+                    <p className="text-sm questing_name">Your OS version, Yonescat version &amp; build, steps you did. Be VERY precise!</p>
                     <TiptapEditor setContent={setValue} />
                   </div>
 
                   <div className="form-group">
                     <Label className="p-lg">Upload your files   </Label>
-                    <p className='text-sm'>Your OS version, Yonescat version &amp; build, steps you did. Be VERY precise!</p>
+                    <p className='text-sm mb-2.5'>Your OS version, Yonescat version &amp; build, steps you did. Be VERY precise!</p>
                     <div  className={`dndFile ${dragging ? 'dragging' : ''}`} onDragEnter={handleDragEnter} onDragLeave=  {handleDragLeave} onDrop={handleDrop} >
                       <Image src="/images/contact-icone/file-upload.svg" alt="File UpLoad" width={30} height={30} />
                       <input disabled={isSubmitting} aria-label="name" type="file" name="files" onChange={handleFileChange} className="name" multiple  style={{display:"block",marginTop:"24px"}} accept="" />
@@ -279,7 +279,7 @@ export default function Home() {
                     { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error text-red-700 mt-[10px]" key={errorIndex}> {error.message} </div>) }
                   </div>
                   
-                  <p className="mb-[15px]">We are committed to your privacy. Yonescat uses the information you provide us to contact you about our relevant content, products, and services. You may unsubscribe from these communications at any time. For more information, check out our <Link className='underline' href={"/privacy"} >Privacy Policy</Link>.</p>
+                  <p className="small-text mb-[15px]">We are committed to your privacy. Yonescat uses the information you provide us to contact you about our relevant content, products, and services. You may unsubscribe from these communications at any time. For more information, check out our <Link className='underline' href={"/privacy"} >Privacy Policy</Link>.</p>
 
                   {isSubmitting ? 
                     <Button disabled> <Loader2 className="animate-spin" /> Please wait </Button>

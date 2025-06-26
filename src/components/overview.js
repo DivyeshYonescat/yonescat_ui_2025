@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { buttonVariants } from './ui/button';
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -149,8 +150,8 @@ const Overview = ({list})=>{
               <div key={`overview-text_${list.id}`} className='overview-text-main max-w-[100%] max-md:min-w-screen p-8 h-screen max-md:h-auto max-md:items-baseline flex items-center' data-marker-content={`image_${list.id}`}>
                 <div>
                   <h2 className="">{list.title}</h2>
-                  <p className="py-5 block line-clamp-6 max-md:line-clamp-4 max-sm:line-clamp-3 leading-[28px] max-md:leading-[23px]"> {list.discrition} </p>
-                  <Link href={`${list.link}`} className="btn inline-block  mt-8 max-md:mt-3.5">Read More</Link>
+                  <p className="mt-5 block line-clamp-6 mb-8 max-md:mb-3.5 max-md:line-clamp-4 max-sm:line-clamp-3 leading-[28px] max-md:leading-[23px]"> {list.discrition} </p>
+                  <Link href={`${list.link}`} className={buttonVariants({ variant: "", size:"lg"})} >Read More</Link>
                 </div>
               </div>  
               </>)}

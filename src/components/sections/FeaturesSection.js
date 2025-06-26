@@ -12,21 +12,24 @@ export default function FeaturesSection() {
     "title":"Solutions",
     "subTitle":"For All Kind OF Businesses",
     "list":["Software Development","Product Desing","Ai & Machine learning","Mobile Application","Web & Cloud"],
-    "link":"solutions"
+    "link":"solutions",
+    bg:"bg-mintgreen/10"
     },
     {
     "icone":"infrastucture.svg",
     "title":"Infrastructure",
     "subTitle":"For All Kind OF Businesses",
     "list":["Data Center","Ddos Protections","Database As A Service","Microsoft Office365 ","Google G-Suite"],
-    "link":"infrastructure"
+    "link":"infrastructure",
+    bg:"bg-aqua/10"
     },
     {
     "icone":"hosting.svg",
     "title":"Hosting",
     "subTitle":"For All Kind OF Businesses",
     "list":["Shared Hosting","Cloud Reseller","Dedicated Servers","Cloud VPS","Domain Names"],
-    "link":"hosting"    
+    "link":"hosting",
+    bg:"bg-deepsea/10"
   }
   ]
 
@@ -70,10 +73,10 @@ export default function FeaturesSection() {
   };
   return (
     <>
-      <section className="section-main">
+      <section className="section-main pb-0">
         <div className="container">
           <div className="section-title mb-20 sm:mb-10 max-sm:mb-5 text-center">
-            <h2 className=" mb-5.5"> What Types Of Services Do We Provide </h2>
+            <h2 className="mb-0 md:mb-1 xl:mb-2"> What Types Of Services Do We Provide </h2>
             <p className="text-lg color--grey">on the other hand,we denounce with righteous indignation and dislike nam who are so beguiled.</p>
           </div>
 
@@ -81,7 +84,7 @@ export default function FeaturesSection() {
              <Slider {...settings}>
             {FeaturesList.map((item) => (
               <div key={item.title} className=" max-lg:w-[320px] lg:max-w-[380px]">
-                <Card>
+                <Card className={item.bg}>
                   <div  className="card-bg"></div>
                     <div className="card-header">
                       <div className="flex flex-row items-center">
@@ -99,7 +102,7 @@ export default function FeaturesSection() {
                         ))}  
                       </ul>
                     </div>
-                    <div className="card-footer">
+                    <div className="card-footer text-right">
                       <Link href={`/${item.link}`} className="subtitle inline-block font-bold">View More</Link>
                     </div>
                 </Card>

@@ -37,7 +37,7 @@ export default function DataCenter() {
                   <Image priority={true} width={400} height={330} className="img-fluid rounded-sm" src={"/images/main/section_image/datacenter02.jpg"} alt="content-image" />
                 </div>
                 <div className=" box-database-text">
-                  <h5 className="font-bold my-3.5  max-lg:min-h-[50px]">Yonecat’s Data Center</h5>
+                  <h5 className="font-bold my-3.5  max-lg:min-h-[50px] max-sm:min-h-0">Yonecat’s Data Center</h5>
                   <div className={`box-descriton`}> 
                     <p>We are a software-based creative agency that has been making a mark in the world of Information Technology since 2004.</p>
                     {showMore.key == "1" && (<>
@@ -57,7 +57,7 @@ export default function DataCenter() {
                   <Image priority={true} width={400} height={330} className="img-fluid rounded-sm" src={"/images/main/section_image/datacenter03.webp"} alt="content-image" />
                 </div>
                 <div className=" box-database-text">
-                  <h5 className="font-bold my-3.5  max-lg:min-h-[50px]">Different tiers of Data Center and global options</h5>
+                  <h5 className="font-bold my-3.5  max-lg:min-h-[50px] max-sm:min-h-0">Different tiers of Data Center and global options</h5>
                   <div className={`box-descriton`}> 
                     <p>Understanding the difference between different levels of data centers is as significant as choosing a server for web hosting.</p>
                     {showMore.key == "2" && (<>
@@ -72,7 +72,7 @@ export default function DataCenter() {
                   <Image priority={true} width={400} height={330} className="img-fluid rounded-sm" src={"/images/main/section_image/datacenter04.webp"} alt="content-image" />
                 </div>
                 <div className=" box-database-text">
-                  <h5 className="font-bold my-3.5  max-lg:min-h-[50px]">PCI DDS compliance for eCommerce</h5>
+                  <h5 className="font-bold my-3.5  max-lg:min-h-[50px] max-sm:min-h-0">PCI DDS compliance for eCommerce</h5>
                   <div className={`box-descriton`}> 
                     <p>Payment Card Industry Data Security Standard (PCI DSS) is a set of regulations that every business should follow. PCI DSS compliance defines the best standards for eCommerce companies to create a secured environment for the storing, processing, and transmission of cardholders’ details.</p>
                      {showMore.key == "3" && (<>
@@ -87,7 +87,7 @@ export default function DataCenter() {
                   <Image priority={true} width={400} height={330} className="img-fluid rounded-sm" src={"/images/main/section_image/datacenter05.webp"} alt="content-image" />
                 </div>
                 <div className=" box-database-text">
-                  <h5 className="font-bold my-3.5 max-lg:min-h-[50px]">Importance of backup, redundancies, and CDNs</h5>
+                  <h5 className="font-bold my-3.5 max-lg:min-h-[50px] max-sm:min-h-0">Importance of backup, redundancies, and CDNs</h5>
                   <div className={`box-descriton`} > 
                     <p>Yonescat acknowledges the trust that our clients have in us. And this is why we lay emphasis on data backup. Knowing that data recovery and backup are important for running our business, there is no room for slacking when it comes to data protection.</p>
                     {showMore.key == "4" && (<>

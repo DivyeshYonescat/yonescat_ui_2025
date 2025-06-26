@@ -44,8 +44,8 @@ export default function MobileApplicationsSection() {
       <div className="container">
         <div className="single-card-box">
         <BoxSection ImageUrl={"/images/main/how-app-works.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
-          <div className="director-text w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px] order-2">
-            <div className="">
+          <div className="director-text w-full flex items-center px-[30px] py-[50px] lg:px-[50px] max-lg:px-[25px]  max-md:py-[25px] order-2">
+            <div className="px-0 max-lg:px-[20px]">
               <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What are Mobile Applications and How Do They Work?</h3>
               <p className="leading-[20px] mb-[15px]">Mobile applications, also known as apps, are something that you’re already familiar with. Specifically designed to work on mobile devices or tablets, it’s application software that assists users to provide services present on PCs. Apps are relatively smaller. They have limited functionality with individual software units.</p>
               <p>Mobile Applications are a step forward from the integrated software systems used in PCs. It enables functionalities such as calculators, games, or web browsing, making their specificity of operations the desired factor for consumers. This way they can choose what software their devices should have.</p>
@@ -55,11 +55,11 @@ export default function MobileApplicationsSection() {
         </div>
       </div>
     </div>
-    <div className="concepts bg-stone-100">
+    <div className="concepts">
       <div className="container">
-        <div className="concepts-inner text-center ">
+        <div className="concepts-inner text-center">
           <h3 className="mb-[15px] text-stone-900">Application Designs and Concepts</h3>
-          <p className="mb-[30px] text-stone-900">Our mobile app design strategy is one that delivers clarity and easy-to-use features.</p>
+          <p className="mb-[50px] text-stone-900">Our mobile app design strategy is one that delivers clarity and easy-to-use features.</p>
           <Overview list={list} />
         </div>    
       </div>
@@ -68,12 +68,12 @@ export default function MobileApplicationsSection() {
 
 
     
-    <div className="section-main pb-0">
+    <div className="">
       <div className="container">
         <div className="single-card-box">
         <BoxSection rightImage={true} ImageUrl={"/images/main/frameworks.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
           <div className="order-2 max-md:order-2 director-text w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
-            <div className="">
+            <div className="px-0 max-lg:px-[20px]">
               <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Choose the right framework and stay agile</h3>
               <p className="mt-[15px] mb-[30px]">Yonescat’s app development framework critically assesses the different frameworks and picks the most efficient one. Among frameworks like React Native, Flutter, Xamarin, Apache Cordova, Ionic, and many others, our team opts for the one that fits the below criteria for our customers:</p>
               <ul className="list-disc pl-[15px]">
@@ -93,7 +93,7 @@ export default function MobileApplicationsSection() {
         <div className="single-card-box">
         <BoxSection rightImage={true} ImageUrl={"/images/main/hybrid-to-native.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
           <div className="order-2 max-md:order-2 director-text w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
-            <div className="">
+            <div className="px-0 max-lg:px-[20px]">
               <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Build Hybrid Then Go Native</h3>
               <p className="leading-[20px] mb-[15px]">Yonescat works to build a native mobile application. Since the native app is a better-performing one than the hybrid and focuses on the security of our mobile application, we show here no compromises.</p>
               <p>We want our users to benefit from the many advantages that come with a native app. You can easily access every OS feature given, which means high functionality for your applications. This also ensures that your app would be more reliable, secure, and that allows a faster user experience.</p>

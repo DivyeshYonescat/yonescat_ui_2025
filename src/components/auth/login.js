@@ -57,8 +57,7 @@ export default function Login(props) {
                 {isShowMessage !== null &&  <h3 className="text-center">Thank you for login</h3>}
                 
                 {/* LOGIN FORM */}
-                <form ref={formRef} className='m-auto max-w-[500px]' name="signinform" onSubmit={handleSubmit(onSubmit)}>
-                    
+                <form ref={formRef} className='m-auto max-w-[500px] px-1.5' name="signinform" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group mb-[20px]">
                         <Label > Email address </Label>
                         <Input type={"email"} disabled={isSubmitting} name="identifier" placeholder="example@example.com"
@@ -95,11 +94,12 @@ export default function Login(props) {
                         { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error text-red-700 mb-[10px]" key={errorIndex}> {error.message} </div>) }
                     </div>
 
-                    {isSubmitting ? 
-                        <Button disabled> <Loader2 className="animate-spin" /> Please wait </Button>
-                    : <>
-                        <Button disabled={isSubmitting} type="submit" className="px-10 py-5">Log In</Button>
-                    </> }
+                    <Button disabled={isSubmitting} type="submit" className=" px-10 py-5">
+                        {isSubmitting ? <>
+                        <Loader2 className="animate-spin" /> Please wait 
+                        </> : "Log In" }  
+                    </Button>
+                   
                 </form>	
             </div>
         </>

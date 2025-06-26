@@ -16,9 +16,9 @@ export default function InnerHero({bgColor, imgScr,title,  subtitle,  cta,  link
             <div>
               {title && <h2 className="sub-page-title">{title}</h2>}
 
-              {subtitle && <div>{subtitle}</div>}
+              {subtitle && <div className="mb-[30px] max-lg:mb-[15px] max-xl:mb-[15px]">{subtitle}</div>}
 
-             <Link className={buttonVariants({ variant: "outline", className:'mt-[30px] max-lg:mt-[15px] max-xl:mt-[15px] bg-stone-900 text-stone-100 border-stone-900 hover:bg-transparent hover:text-stone-900 hover:border-stone-900 px-8  py-5'})} href={link}>{cta}</Link>
+             <Link className={buttonVariants({ variant: "outline", size:"lg"})} href={link}>{cta}</Link>
             </div>  
           </div>
           <div className="flex items-center">
