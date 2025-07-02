@@ -135,8 +135,8 @@ export default function Footer() {
             <div className="bottom-footer my-5 md:my-5 lg:my-8 flex max-sm:flex-col justify-between w-full items-center">
                 <p className="p-sm w-full max-sm:text-center max-sm:mb-1.5">© {currentYear} Yonescat. <span>All Rights Reserved</span></p>
                 <ul className="w-full flex justify-end max-sm:justify-center">
-                    <li className="inline-block "><Link className="" href="about">Terms & Conditions</Link></li>
-                    <li><Link className=" ml-9.5 " href="contact">Privacy Policy</Link></li>
+                    <li className="inline-block "><Link className="" href="/terms">Terms & Conditions</Link></li>
+                    <li><Link className=" ml-9.5 " href="/privacy">Privacy Policy</Link></li>
                 </ul>
             </div>
         </div>
