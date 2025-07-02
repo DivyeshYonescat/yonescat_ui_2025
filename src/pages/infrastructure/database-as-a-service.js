@@ -14,7 +14,7 @@ export default function DatabaseAsService() {
   ];
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/infrastructure/Database-Service.json"} bgColor={"rgba(137, 75, 157, 0.20)"} 
+      <InnerHero imgScr={"/images/animation/infrastructure/Database-Service.json"} bgImg={"/images/inner-page/db-as-service-bg.webp"} 
         title="Database as a Service" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Seemless database management and integration</p>}
       />

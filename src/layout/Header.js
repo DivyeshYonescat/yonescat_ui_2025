@@ -47,7 +47,7 @@ const Header = () => {
               
               <div className="nav-container-right flex items-center">
                 {token === null ? <>
-                  <Link href="/auth" className={buttonVariants({ variant: ""})} >Login</Link>
+                  <Link href="/auth" className={buttonVariants({ variant: "",className:"mr-[15px]"})} >Login</Link>
                 </> : <>
                   <Dropdown token={token}/>
                 </>}

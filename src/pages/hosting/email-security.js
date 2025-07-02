@@ -6,7 +6,7 @@ import Layout from "@/layout/Layout";
 export default function Emalilsecurity() {
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/hosting/Email-Security.json"} bgColor={"rgba(105, 160, 255, 0.22)"} 
+      <InnerHero imgScr={"/images/animation/hosting/Email-Security.json"}  bgImg={"/images/inner-page/email-securiry-background.webp"} 
         title="Email Security" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Stop Data Leaks. Stay Compliant and Protect Outbound Email</p>}
       />

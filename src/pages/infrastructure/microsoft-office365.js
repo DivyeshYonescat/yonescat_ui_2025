@@ -29,7 +29,7 @@ export default function MicrosoftOffice365() {
     }]
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/infrastructure/Microsoft-Office.json"} bgColor={"rgba(105, 160, 255, 0.22)"}
+      <InnerHero imgScr={"/images/animation/infrastructure/Microsoft-Office.json"} bgImg={"/images/inner-page/ms-office-bg.webp"}
           title="Microsoft Office365" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">Take advantage of the best solution available</p>}
       />

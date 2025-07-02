@@ -27,10 +27,10 @@ const menuItems = [
   },
   {
     title: "Solutions",
-    link: "",
+    link: "solutions",
     icone: "/images/main/menu/solution-svgrepo-com.svg",
     subItems: [
-      { title: "Overview", link: " /solutions" },
+      // { title: "Overview", link: " /solutions" },
       { title: "Software Development", link: " /solutions/software-development " },
       { title: "Product Design", link: " /solutions/product-design " },
       { title: "Ai & Machine Learning", link: " /solutions/ai-and-machine-learning " },
@@ -45,10 +45,10 @@ const menuItems = [
   },
   {
     title: "Infrastructure",
-    link: "",
+    link: "infrastructure",
      icone: "/images/main/menu/infrastructure-solid-svgrepo-com.svg",
     subItems: [
-      { title: "Overview", link: " /infrastructure" },
+      // { title: "Overview", link: " /infrastructure" },
       { title: "Datacenter", link: "/infrastructure/datacenter" },
       { title: "DDos Protections", link: "/infrastructure/ddos-protections" },
       { title: "Database-as-a-Service", link: "/infrastructure/database-as-a-service" },
@@ -60,10 +60,10 @@ const menuItems = [
   },
   {
     title: "Hosting",
-    link: "",
+    link: "hosting",
     icone: "/images/main/menu/hosting-svgrepo-com.svg",
     subItems: [
-      { title: "Overview", link: " /hosting" },
+      // { title: "Overview", link: " /hosting" },
       { title: "Shared Hosting", link: "/hosting/shared-hosting" },
       { title: "Cloud Reseller", link: "/hosting/cloud-reseller" },
       { title: "Dedicated Servers", link: "/hosting/dedicated-servers" },
@@ -187,17 +187,17 @@ export default function SidebarMenu() {
       const el = subMenuRefs.current[key];
       if (!el) return;
       if (openMenus[key]) {
-        gsap.set(el, { display: 'block', transformOrigin: 'top' });
+        gsap.set(el, { display: 'block' });
         gsap.to(el, {
-          autoAlpha: 1,
-          scaleY: 1,
+          //autoAlpha: 1,
+          //scaleY: 1,
           display: 'block',
         });
       } else {
         gsap.to(el, {
-          autoAlpha: 0,
-          scaleY: 0,
-          duration: 0.4,
+          //autoAlpha: 0,
+          //scaleY: 0,
+          //duration: 0.4,
           onComplete: () => gsap.set(el, { display: 'none' }),
         });
       }
@@ -248,26 +248,18 @@ export default function SidebarMenu() {
         <FloatingCircles containerRef={mainMenuContainer} isParentVisible={isOpen}></FloatingCircles>
         <div className='h-screen fixed flex flex-col justify-center align-middle max-w-auto top-0 right-0'>
           <div className='flex flex-col items-end h-auto justify-center social-media-header'>
-           
-            <span className='flex items-center   leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px] header-flaticon-facebook  text-stone-100'>
+            <a href='#' className='flex items-center  cursor-pointer leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[55px] header-flaticon-facebook  text-stone-100'>
               <Image  src={"/images/main/media/facebook.svg"} alt='facebook' width={40} height={40} /> <span className="font-bold ml-3">Facebook</span>
-            </span>
-            
-            
-            <span className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px]  header-flaticon-instagram  text-stone-100'>
+            </a>
+            <a href='#' className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[55px]  header-flaticon-instagram  text-stone-100'>
               <Image src={"/images/main/media/instagram.svg"} alt='instagram' width={40} height={40} /> <span className="font-bold ml-3">Instagram</span>
-            </span>
-            
-            <span className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px]  header-flaticon-youtube text-stone-100'>
+            </a>
+            <a className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[55px]  header-flaticon-youtube text-stone-100'>
               <Image  src={"/images/main/media/youtube.svg"} alt='youtube' width={40} height={40} /> <span className="font-bold ml-3">Youtube</span>
-            </span>
-           
-            <span className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[60px]  header-flaticon-x text-stone-100'>
+            </a>
+            <a href='#' className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[55px]  header-flaticon-x text-stone-100'>
               <Image  src={"/images/main/media/x.svg"} alt='x' width={40} height={40} /> <span className="font-bold ml-3"> X</span>
-            </span>
-           
-            
-            
+            </a>
           </div> 
         </div>
         <div className='menu-items-wrapper'>

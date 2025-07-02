@@ -17,7 +17,7 @@ export default function DomainName() {
   }
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/hosting/Domain-Names.json"} bgColor={"rgba(105, 160, 255, 0.22)"}
+      <InnerHero imgScr={"/images/animation/hosting/Domain-Names.json"} bgImg={"/images/inner-page/domain-names-bg.webp"}
         title="Domain Names" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">From the most common domain name to the most exotic and excentric ones. We have them all.</p>}
       />

@@ -8,19 +8,33 @@ import Signup from '@/components/auth/signup';
 export default function Home() {
 
   const router = useRouter();
-    const { type } = router.query;
-    const handleTabChange = (newType) => { router.push(`auth/?type=${newType}`, undefined, { shallow: true }); };
-    useEffect(() => {
-      if (!type) {
-          // Default to login if no type is specified
-        handleTabChange('login'); 
-      }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[type]);
+  const { type } = router.query;
+  const handleTabChange = (newType) => { router.push(`auth/?type=${newType}`, undefined, { shallow: true }); };
+  useEffect(() => {
+    if (!type) {
+      // Default to login if no type is specified
+      handleTabChange('login'); 
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[type]);
   
   return (
     <>
-      <div className='auth-main auth-inner h-screen max-md:h-auto grid max-md:grid-cols-1 max-md:order-2 grid-cols-2 p-5'>
+      <div  className="pb-[80px] min-h-screen pt-[80px] w-full bg-no-repeat bg-[100%] bg-cover" style={{background:"url(/images/login.webp)"}}>
+        <div className="container">
+          <div className='max-w-2xl m-auto'>
+            <div className='flex justify-center w-full pb-6'>
+              <Button type="button" variant="outline" className={`text-deepsea hover:bg-deepsea hover:text-white px-10  mx-[15px] max-sm:mx-[5px] font-bold py-5 border-2 ${type  === 'login' && "bg-deepsea text-white"}` }   onClick={() => handleTabChange('login')} > Login</Button>
+              <Button type="button" variant="outline" className={`text-deepsea hover:bg-deepsea hover:text-white px-10  mx-[15px] max-sm:mx-[5px] font-bold py-5 border-2 ${type  === 'register' && "bg-deepsea text-white"}` }  onClick={() => handleTabChange('register')} > Register</Button>
+            </div>
+            <div className='auth-form flex flex-col justify-center  max-md:order-2 max-md:mt-[50px] max-sm:mt-[25px]  max-xl:pr-[15px] max-md:pr-0'> 
+              {type === 'login' && <Login /> }
+              {type === 'register' && <Signup /> }
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <div className='auth-main auth-inner h-screen max-md:h-auto grid max-md:grid-cols-1 max-md:order-2 grid-cols-2 p-5'>
         <div className='auth-form flex flex-col justify-center  max-md:order-2 max-md:mt-[50px] max-sm:mt-[25px]  max-xl:pr-[15px] max-md:pr-0'> 
           {type === 'login' && <Login /> }
           {type === 'register' && <Signup /> }
@@ -42,7 +56,7 @@ export default function Home() {
             </div>
           }
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

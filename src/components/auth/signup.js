@@ -135,9 +135,8 @@ export default function Signup(props) {
                         </div> */}
 
                         <label htmlFor="Toggle4" className="toggl-wrap">
-                            <input id="Toggle4" type="checkbox" className="hidden peer" />
-                            <span className="toggle-user " onClick={() => setCheck(false)}>User</span>
-                            <span className="toggle-merchant" onClick={() => setCheck(true)}>Merchant</span>
+                            <span className={`toggle-user ${!check && "active"}`} onClick={() => setCheck(false)}>User</span>
+                            <span className={`toggle-merchant ${check && "active"}`} onClick={() => setCheck(true)}>Merchant</span>
                         </label>
 
                         {check ? <> 
@@ -258,11 +257,15 @@ export default function Signup(props) {
                             { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error text-red-700 mt-[10px]" key={errorIndex}> {error.message} </div>) }
                         </div>
                         {/* Form Submit Button */}
+
+                        <Button disabled={isSubmitting} type="submit" className="w-full px-10 py-5">
+                            {isSubmitting ? <> <Loader2 className="animate-spin" /> Please wait  </> : "Create Account" }  
+                        </Button>
                         
-                        {isSubmitting ? 
+                        {/* {isSubmitting ? 
                             <Button disabled> <Loader2 className="animate-spin" /> Please wait </Button>
                             : <> <Button type="submit" className="px-10 py-5" disabled={isSubmitting} >Create Account</Button>
-                        </> }
+                        </> } */}
                     </form>	{/* END SIGN UP FORM */}
                 </> : <>
                 <div className="">
@@ -293,12 +296,12 @@ export default function Signup(props) {
                         </div>
                         {/* Form Submit Button */}
                         <div className="">
-                        {isSubmitting ? <Button disabled> <Loader2 className="animate-spin" /> Please wait </Button>
-                            : <> <Button type="submit" disabled={isSubmitting} className="px-10 py-5">Submit</Button>
-                        </> }
-                        </div>
+                            <Button disabled={isSubmitting} type="submit" className="w-full px-10 py-5">
+                                {isSubmitting ? <> <Loader2 className="animate-spin" /> Please wait  </> : "Submit" }  
+                            </Button>
+                       </div>
                         <div className="backButotn text-center mt-5" >
-                            <Button type="button" variant="secondary" disabled={isSubmitting}  onClick={()=>{setOtpbox(false)}}> <b>Back To Signup</b> </Button>
+                            <Button  type="button" variant="secondary" disabled={isSubmitting}  onClick={()=>{setOtpbox(false)}}> <b>Back To Signup</b> </Button>
                         </div>
                     </form>
                 </div>

@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function SslCertificates() {
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/hosting/SSl-Certificates.json"} bgColor={"rgba(105, 160, 255, 0.22)"} 
+      <InnerHero imgScr={"/images/animation/hosting/SSl-Certificates.json"} bgImg={"/images/inner-page/iot-bg.webp"} 
         title="SSl certificates" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Protect your website with SSL in minutes and a few clicks</p>}
       />

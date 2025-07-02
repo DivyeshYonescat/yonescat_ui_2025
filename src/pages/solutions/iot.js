@@ -24,7 +24,7 @@ export default function ECommerce() {
   ]  
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/solutions/IOT.json"} bgColor={"rgba(228, 194, 233, 0.50)"} 
+      <InnerHero imgScr={"/images/animation/solutions/IOT.json"} bgImg={"/images/inner-page/iot-bg.webp"}
         title="Internet of Things" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">We help customers to take advantage of IoT and align themself for the future.</p>}
       />

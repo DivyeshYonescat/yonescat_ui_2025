@@ -46,8 +46,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="section-main mission-main pb-0 ">
-        <div className="container">
+      <div className="section-main mission-main">
+        <div className="container"> ``````````````                                                      
           <div className="mission-inner flex items-center max-w-[1000px] max-lg:flex-col max-lg:items-center m-auto">
             <Image className="rounded-xl" src={"/images/main/about/Mission.jpg"} width={500} height={500} alt="mission" />
             <div className="mission-box p-12 ml-[-40px] max-lg:p-5 max-lg:mt-[30px] max-lg:ml-0 bg-stone-100 shadow-xl rounded-xl">
@@ -58,7 +58,8 @@ export default function Home() {
           </div>      
         </div>
       </div> 
-      <div className="section-main impact-main bg-[#f8f7f3]">
+      {/* style={{background:"radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(103, 233, 189, 1) 100%)"}} */}
+      <div className="section-main impact-main pt-0">
         <div className="container">
           <div className="impart-inner grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-8 max-lg:gap-4">
             <div className="impart-box-title max-sm:!pt-0">

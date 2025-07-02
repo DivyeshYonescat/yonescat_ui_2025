@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function WebAndCloudPortals() {
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/solutions/Web-Cloud-Portals.json"} bgColor={"rgba(199, 213, 254, 0.40)"}
+      <InnerHero imgScr={"/images/animation/solutions/Web-Cloud-Portals.json"} bgImg={"/images/inner-page/web-cloud-bg.webp"}
         title="Web & Cloud Portals" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Creative London based agency will help you to reduce costs and increase productivity</p>}
       />

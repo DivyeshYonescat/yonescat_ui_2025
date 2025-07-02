@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function CloudReseller() {
   return(<>
     <Layout>
-      <InnerHero imgScr={null} bgColor={"rgba(105, 160, 255, 0.22)"} 
+      <InnerHero imgScr={null} bgImg={"/images/inner-page/iot-bg.webp"} 
         title="Cloud Reseller" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Become a reseller with Yonescat Cloud. No contracts and one monthly bill.</p>}
       />

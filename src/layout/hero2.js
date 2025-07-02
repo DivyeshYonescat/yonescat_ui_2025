@@ -7,9 +7,9 @@ import Link from "next/link";
 import Background from "@/components/Background";
 
 
-export default function InnerHero({bgColor, imgScr,title,  subtitle,  cta,  link,  note}) {
+export default function InnerHero({bgImg, imgScr,title,  subtitle,  cta,  link, brncolor,  note}) {
   return(<>
-    <section className={`hero-subpage relative`} style={{backgroundColor:`${bgColor}`}}>
+    <section className={`hero-subpage relative`} style={{backgroundImage:`url(${bgImg})` }}>
       <div className="container">
         <div className="grid grid-cols-[40%_60%] max-lg:grid-cols-1 min-h-[400px]">
           <div className="grid-textbox  hero-text flex items-center py-0 max-lg:py-[30px_20px]" >
@@ -18,7 +18,7 @@ export default function InnerHero({bgColor, imgScr,title,  subtitle,  cta,  link
 
               {subtitle && <div className="mb-[30px] max-lg:mb-[15px] max-xl:mb-[15px]">{subtitle}</div>}
 
-             <Link className={buttonVariants({ variant: "outline", size:"lg"})} href={link}>{cta}</Link>
+             <Link className={buttonVariants({ variant: "outline", size:"lg" ,className:`${brncolor}`})} href={link}>{cta}</Link>
             </div>  
           </div>
           <div className="flex items-center">

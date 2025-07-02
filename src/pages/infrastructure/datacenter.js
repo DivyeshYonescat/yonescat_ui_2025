@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Layout from "@/layout/Layout";
 import ContactSection from "@/components/sections/contact";
 import InnerHero from "@/layout/hero2";
+import { Button } from "@/components/ui/button";
 
 export default function DataCenter() {
   const pageUrl = usePathname();
@@ -20,7 +21,7 @@ export default function DataCenter() {
   }
   return(<>
     <Layout>
-       <InnerHero imgScr={"/images/animation/infrastructure/datacenter.json"}  bgColor={"rgba(33, 224, 201, 0.20)"} 
+       <InnerHero imgScr={"/images/animation/infrastructure/datacenter.json"}  bgImg={"/images/inner-page/decenter-bg.webp"} 
           title="Datacenter" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">We bring perfection to the &quot;boring&quot; and often forgoten aspects.</p>}
        />
@@ -44,7 +45,8 @@ export default function DataCenter() {
                     <p>Our experience in this sector has built a great client base, and we are more than proud to serve our users with nothing but the best. We have our markets across Europe and the Middle East, where we prepare the professionals for a digital future.Yonescat considers its data center as an integral part of our enterprise. Our data center services are deployed to secure the integrity and performance of our key data center components.</p>
                     </>)}
                   </div>
-                  <b onClick={()=>{handleToggle(1)}}>{showMore.key == "1" ? "Read Less" : "Read More"}</b>
+                  <Button onClick={()=>{handleToggle(1)}} type="button">{showMore.key == "1" ? "Read Less" : "Read More"}</Button>
+                  {/* <b onClick={()=>{handleToggle(1)}}>{showMore.key == "1" ? "Read Less" : "Read More"}</b> */}
                   {/* {!isExpanded === true ? <>
                       <b className=" inline-block mb-4 mt-3" onClick={() => toggleDescription(true)}>Read More</b>
                     </> : <>
@@ -64,7 +66,7 @@ export default function DataCenter() {
                       <p>Choosing an appropriate server for the wrong location results in lousy performance. We at Yonescat focuses on selecting the data center tier which prioritizes an efficient user experience for our customers. Among the four widely accepted data center tiers, we opt for the one that fits perfectly with the nature of our business. We always go for the highest uptime percentage and one that ensures the functionality of our equipment, preventing them for dangerous spikes.</p>
                     </>)}
                   </div>
-                  <b onClick={()=>{handleToggle(2)}}>{showMore.key == "2" ? "Read Less" : "Read More"}</b>
+                  <Button type="button" onClick={()=>{handleToggle(2)}}>{showMore.key == "2" ? "Read Less" : "Read More"}</Button>
                 </div>
               </div>
               <div className="database-block">
@@ -79,7 +81,7 @@ export default function DataCenter() {
                     <p>Since our objective is to prevent credit card fraud that happens when sensitive data is leaked, Yonescat has proudly achieved PCI DSS compliance. With this remarkable accomplishment, we aspire to grow our business by ensuring our customers that their sensitive data is well secured.</p>
                     </>)}
                   </div>
-                  <b onClick={()=>{handleToggle(3)}}>{showMore.key == "3" ? "Read Less" : "Read More"}</b>
+                  <Button type="button" onClick={()=>{handleToggle(3)}}>{showMore.key == "3" ? "Read Less" : "Read More"}</Button>
                 </div>
               </div>
               <div className="database-block">
@@ -95,7 +97,7 @@ export default function DataCenter() {
                     <p>Content Delivery Networks (CDNs) are deployed in our data centers through the internet. CDNs effectively speed up the delivery of media content like videos to the users. Through CDNS, Yonescat aims to offer high-quality services to all its customers. This way, our users&apos; demand for over-the-top (OTT) content and the option to access that content at any time, from anywhere, on any device, is covered.</p>
                     </>)}
                   </div>
-                  <b onClick={()=>{handleToggle(4)}}>{showMore.key == "4" ? "Read Less" : "Read More"}</b>
+                  <Button type="button" onClick={()=>{handleToggle(4)}}>{showMore.key == "4" ? "Read Less" : "Read More"}</Button>
                 </div>
               </div>
             </div>

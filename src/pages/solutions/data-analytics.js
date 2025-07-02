@@ -20,7 +20,7 @@ export default function DataAnalytics() {
 
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/solutions/Data-Analytics.json"} bgColor={"rgba(148, 213, 219, 0.30)"}
+      <InnerHero imgScr={"/images/animation/solutions/Data-Analytics.json"} bgImg={"/images/inner-page/data-analytics.webp"}
         title="Data Analytics" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Get, Clean and Understad your data in the most inovative ways.</p>}
       />
@@ -42,7 +42,7 @@ export default function DataAnalytics() {
       <div className="section-main">
         <div className="container">
           <div className="card-box-inner grid  grid-cols-2 max-md:grid-cols-1 gap-7">
-            <BoxSection rightImage={true} ImageUrl={"/images/dashboard-01.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
+            <BoxSection rightImage={true} ImageUrl={"/images/dashboard-01.webp"} BgColor={"bg-aqua/10"} order="order-1">
               {/* <div className="card-main-box-img-text director-text order-1 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">  
                 <div className="">
@@ -58,7 +58,7 @@ export default function DataAnalytics() {
               </div>  
             </BoxSection>
 
-            <BoxSection rightImage={true} ImageUrl={"/images/f-02.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
+            <BoxSection rightImage={true} ImageUrl={"/images/f-02.webp"} BgColor={"bg-aqua/10"} order="order-1">
               {/* <div className="director-text order-1 max-md:order-2 w-full flex items-center lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
                 <div className="">
@@ -72,7 +72,7 @@ export default function DataAnalytics() {
               </div>  
             </BoxSection>
             
-            <BoxSection rightImage={true} ImageUrl={"/images/img-18.jpg"} BgColor={"bg-fuchsia-100/100"} order="order-1">
+            <BoxSection rightImage={true} ImageUrl={"/images/img-18.jpg"} BgColor={"bg-aqua/10"} order="order-1">
               {/* <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
                 <div className="">
@@ -87,7 +87,7 @@ export default function DataAnalytics() {
               </div>  
             </BoxSection>
 
-            <BoxSection rightImage={true} ImageUrl={"/images/hero-13-img.jpg"} BgColor={"bg-fuchsia-100/100"} order="order-1">
+            <BoxSection rightImage={true} ImageUrl={"/images/hero-13-img.jpg"} BgColor={"bg-aqua/10"} order="order-1">
               {/* <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
                 <div className="">
@@ -115,7 +115,7 @@ export default function DataAnalytics() {
                 <p>When you understand your audience and know what they want or need, less time is wasted on bringing up marketing techniques, promoting products that your audience has zero interest in.</p>
                
               </div>
-            </div>  
+            </div>      
           </BoxSection>
         </div>  
       </div>

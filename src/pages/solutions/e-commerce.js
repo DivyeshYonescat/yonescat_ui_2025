@@ -27,7 +27,7 @@ export default function ECommerce() {
   ];
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/solutions/E-commerce.json"} bgColor={"rgba(199, 213, 254, 0.40)"} 
+      <InnerHero imgScr={"/images/animation/solutions/E-commerce.json"} bgImg={"/images/inner-page/ecomerce-hero-bg.png"} 
         title="E-commerce" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<>
         <p className="sub-page-discretion">Grow your sales with our state of-the-art e-commerce solutions</p>

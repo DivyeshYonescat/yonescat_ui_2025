@@ -94,10 +94,8 @@ export default function Login(props) {
                         { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error text-red-700 mb-[10px]" key={errorIndex}> {error.message} </div>) }
                     </div>
 
-                    <Button disabled={isSubmitting} type="submit" className=" px-10 py-5">
-                        {isSubmitting ? <>
-                        <Loader2 className="animate-spin" /> Please wait 
-                        </> : "Log In" }  
+                    <Button disabled={isSubmitting} type="submit" className="w-full px-10 py-5">
+                        {isSubmitting ? <> <Loader2 className="animate-spin" /> Please wait  </> : "Log In" }  
                     </Button>
                    
                 </form>	

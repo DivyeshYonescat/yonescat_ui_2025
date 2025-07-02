@@ -17,7 +17,7 @@ export default function CloudVPS() {
   }
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/hosting/Cloud-VPS.json"} bgColor={"rgba(105, 160, 255, 0.22)"}
+      <InnerHero imgScr={"/images/animation/hosting/Cloud-VPS.json"} bgImg={"/images/inner-page/iot-bg.webp"}
         title="Cloud VPS" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Get your own Virtual Private Server and have full control over the server&apos;s entire configuration</p>}
       />
@@ -32,11 +32,11 @@ export default function CloudVPS() {
       <div className="section-main pb-0">
         <div className="container">
           <div className="card-box-inner grid  grid-cols-2 max-md:grid-cols-1 gap-7">
-            <BoxSection rightImage={true} ImageUrl={"/images/main/section_image/freepik__expand__25904.webp"} BgColor={""} order="order-2">
+            <BoxSection rightImage={true} ImageUrl={"/images/main/section_image/freepik__expand__25904.jpg"} BgColor={""} order="order-2">
               {/* <div className="director-text order-1 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
                 <div className="">
-                  <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What Benefits You Will Get Buying Our Cloud VPS System?</h3>
+                  <h4 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What Benefits You Will Get Buying Our Cloud VPS System?</h4>
                   <p className="sub-page-discretion">The Cloud VPS hosting platform is a rapidly growing proprietary cloud computing solution responsible for providing highly effective business IT solutions to the business. The Cloud VPS offers reliability, scalability and transparency to the website or businesses.</p>
                   {showMore.key == "1" && (<>
                   <p className="sub-page-discretion">A Cloud VPS is often known as the Virtual Private Server that is used to host your website, pre-production environment or production environment. The Cloud VPS offers hardware availability and business-level requirements. Unlike shared hosting, the Cloud VPS offers you full control and coverage over your VPS’s entire configuration to make you able to configure it according to your business unique needs.</p>
@@ -47,11 +47,11 @@ export default function CloudVPS() {
               </div>  
             </BoxSection>
 
-            <BoxSection rightImage={true} ImageUrl={"/images/main/section_image/rb_27012.webp"} BgColor={""} order="order-1">
+            <BoxSection rightImage={true} ImageUrl={"/images/main/section_image/rb_27012.jpg"} BgColor={""} order="order-1">
               {/* <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
                 <div className="">
-                  <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Get The Most Effective And Result-Driven Cloud VPS From Yonescat!</h3>
+                  <h4 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Get The Most Effective And Result-Driven Cloud VPS From Yonescat!</h4>
                   <p className="sub-page-discretion">You should first recognize how a Cloud VPS differs from other hosting options to better understand the ultimate benefits of this hosting server. Coming to the point, shared hosting is like living in a complicated and compound apartment.</p>
                   {showMore.key == "2" && (<>
                   <p>This means that all the residents use to live in the same place and have to share all available resources with everyone. Hence, in shared hosting you will have a part of the server and all the resources will be common which can negatively impact your website or business – because of other websites located on the same server.</p>

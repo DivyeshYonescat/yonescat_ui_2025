@@ -36,22 +36,23 @@ export default function MobileApplicationsSection() {
   ];
   return(<>
   <Layout>
-    <InnerHero imgScr={"/images/animation/solutions/Mobile-Applications1.json"} bgColor={"rgba(199, 213, 254, 0.40)"}
+    <InnerHero imgScr={"/images/animation/solutions/Mobile-Applications1.json"} bgImg={"/images/inner-page/banner-bg.webp"}
       title="Mobile Applications" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
-        subtitle={<p className="sub-page-discretion">Innovative and user-centered applications that supports easy access and streamlined business processes.</p>}
+      subtitle={<p className="sub-page-discretion">Innovative and user-centered applications that supports easy access and streamlined business processes.</p>}
     />
+    
     <div className="section-main ">
       <div className="container">
         <div className="single-card-box">
-        <BoxSection ImageUrl={"/images/main/how-app-works.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
-          <div className="director-text w-full flex items-center px-[30px] py-[50px] lg:px-[50px] max-lg:px-[25px]  max-md:py-[25px] order-2">
-            <div className="px-0 max-lg:px-[20px]">
-              <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What are Mobile Applications and How Do They Work?</h3>
-              <p className="leading-[20px] mb-[15px]">Mobile applications, also known as apps, are something that you’re already familiar with. Specifically designed to work on mobile devices or tablets, it’s application software that assists users to provide services present on PCs. Apps are relatively smaller. They have limited functionality with individual software units.</p>
-              <p>Mobile Applications are a step forward from the integrated software systems used in PCs. It enables functionalities such as calculators, games, or web browsing, making their specificity of operations the desired factor for consumers. This way they can choose what software their devices should have.</p>
-            </div>
-          </div>  
-        </BoxSection>
+          <BoxSection ImageUrl={"/images/main/how-app-works.webp"} BgColor={"bg-aqua/10"} order="order-1">
+            <div className="director-text w-full flex items-center px-[30px] py-[50px] lg:px-[50px] max-lg:px-[25px]  max-md:py-[25px] order-2">
+              <div className="px-0 max-lg:px-[20px]">
+                <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">What are Mobile Applications and How Do They Work?</h3>
+                <p className="leading-[20px] mb-[15px]">Mobile applications, also known as apps, are something that you’re already familiar with. Specifically designed to work on mobile devices or tablets, it’s application software that assists users to provide services present on PCs. Apps are relatively smaller. They have limited functionality with individual software units.</p>
+                <p>Mobile Applications are a step forward from the integrated software systems used in PCs. It enables functionalities such as calculators, games, or web browsing, making their specificity of operations the desired factor for consumers. This way they can choose what software their devices should have.</p>
+              </div>
+            </div>  
+          </BoxSection>
         </div>
       </div>
     </div>
@@ -71,7 +72,7 @@ export default function MobileApplicationsSection() {
     <div className="">
       <div className="container">
         <div className="single-card-box">
-        <BoxSection rightImage={true} ImageUrl={"/images/main/frameworks.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
+        <BoxSection rightImage={true} ImageUrl={"/images/main/frameworks.webp"} BgColor={"bg-aqua/10"} order="order-1">
           <div className="order-2 max-md:order-2 director-text w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
             <div className="px-0 max-lg:px-[20px]">
               <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Choose the right framework and stay agile</h3>
@@ -91,7 +92,8 @@ export default function MobileApplicationsSection() {
     <div className="section-main pb-0">
       <div className="container">
         <div className="single-card-box">
-        <BoxSection rightImage={true} ImageUrl={"/images/main/hybrid-to-native.webp"} BgColor={"bg-fuchsia-100/100"} order="order-1">
+        <BoxSection rightImage={true} ImageUrl={"/images/main/hybrid-to-native.webp"} BgColor={"bg-aqua/10"}
+ order="order-1">
           <div className="order-2 max-md:order-2 director-text w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
             <div className="px-0 max-lg:px-[20px]">
               <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Build Hybrid Then Go Native</h3>

@@ -37,7 +37,7 @@ export default function GoogleGSuite() {
 
   return(<>
     <Layout>
-       <InnerHero imgScr={"/images/animation/infrastructure/Google-G-Suite.json"} bgColor={"rgba(105, 160, 255, 0.22)"}
+       <InnerHero imgScr={"/images/animation/infrastructure/Google-G-Suite.json"} bgImg={"/images/inner-page/google-g-bg.webp"}
           title="Google G-Suite" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">Boost productivity with doesens of services and products.</p>}
        />

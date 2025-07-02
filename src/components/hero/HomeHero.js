@@ -15,7 +15,7 @@ const HomeHero = function () {
           <div className="grid-textbox hero-text" >
             <h1 className="" style={{lineHeight:"1.1"}} >Innovative Design & Development Solutions for Your Business</h1>
             <p className="mb-8">Invest in outstanding startups, find investments for your business, involve the best in your ideas.</p>
-            <Link className={buttonVariants({ variant: "", size:"lg"})} href={"/services"}>Explore Our Services</Link>
+            <Link className={buttonVariants({ variant: "", size:"lg"})} href={"/infrastructure"}>Explore Our Services</Link>
           </div>
           {/* <div className="h-[700px] hero-image" >
             <CylinderScene/>

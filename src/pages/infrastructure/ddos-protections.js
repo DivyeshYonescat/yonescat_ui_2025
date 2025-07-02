@@ -28,7 +28,7 @@ export default function DdosProtections() {
   ]  
   return(<>
     <Layout>
-       <InnerHero imgScr={"/images/animation/infrastructure/ddos-protections.json"} 
+       <InnerHero imgScr={"/images/animation/infrastructure/ddos-protections.json"} bgImg={"/images/inner-page/ddos-background.webp"} 
           title="DDos Protection" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">We provide high-performance, real-time and automatic DDoS attack protection</p>}
        />

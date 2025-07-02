@@ -6,7 +6,7 @@ import Layout from "@/layout/Layout";
 export default function SharedHosting() {
   return(<>
     <Layout>
-      <InnerHero imgScr={"/images/animation/hosting/shared-hosting.json"} 
+      <InnerHero imgScr={"/images/animation/hosting/shared-hosting.json"} bgImg={"/images/inner-page/iot-bg.webp"}   
         title="Shared Hosting" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Lighting fast shared Web Hosting with 99.9% Uptime</p>}
       />

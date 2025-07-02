@@ -20,9 +20,9 @@ export default function DecentralizedSystems() {
 
   return(<>
   <Layout>
-    <InnerHero imgScr={"/images/animation/solutions/Decentralized-Systems.json"}
+    <InnerHero imgScr={"/images/animation/solutions/Decentralized-Systems.json"} bgImg={"/images/inner-page/decenter-bg.webp"}
       title="Decentralized Systems" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
-        subtitle={<p className="sub-page-discretion">Our team provide in depth solutions to create stable decentralized applications</p>}
+      subtitle={<p className="sub-page-discretion">Our team provide in depth solutions to create stable decentralized applications</p>}
     />
     <div className="">
       <div className="container">

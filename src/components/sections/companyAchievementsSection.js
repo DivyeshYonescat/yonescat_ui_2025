@@ -18,14 +18,17 @@ const CompanyAchievementsSection = () => {
   ]
 
   return (<>
-    <div className=" section-main  bg-gradient-to-tr from-yellow-50 to-yellow-50 bg-[radial-gradient(circle, rgba(235, 232, 221, 0.98) 0%, rgba(229, 237, 228, 1) 100%)] ">
+    {/* <div className=" section-main  bg-gradient-to-tr from-yellow-50 to-yellow-50 bg-[radial-gradient(circle, rgba(235, 232, 221, 0.98) 0%, rgba(229, 237, 228, 1) 100%)] "> */}
+      <div className=" section-main bg-palelce">
       <div className="container">
         <div className=" w-full flex flex-wrap justify-between items-center">
-          <div className=" w-[100%] md:w-[60%] lg:w-[60%] text-center">
-            <div className="md:max-w-[350px] lg:max-w-[500px] xl:max-w-[600px] m-auto">
-              <h2 className="font-bold leading-none">Lorem Ipsum is simply dummy text  </h2>
-              <p className=" py-[30px]">{`Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`}</p>
-              <Link href={"/aboutus"} className={buttonVariants({ variant: "outline", size:"lg"})}>About More</Link>
+          <div className=" w-[100%] md:w-[60%] lg:w-[60%] ">
+            <div className="w-full md:max-w-[400px] lg:max-w-[500px] xl:max-w-[650px] m-auto">
+              {/* <h2 className="font-bold leading-none">Lorem Ipsum is simply dummy text  </h2> */}
+              <h2 className="font-bold leading-none">Tired Of Tech Troubles? Your IT Heroes Are Ready</h2>
+              {/* <p className=" py-[30px]">{`Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`}</p> */}
+              <p className=" py-[30px]">{`Don't let IT hold your business back. Our team of IT Heroes is here to tackle your tech challenges head-on, providing the expert support and proactive solutions you need to stay ahead of the curve.  We understand that every business is unique, with its own set of needs and goals.`}</p>
+              <Link href={"/about"} className={buttonVariants({ variant: "outline", size:"lg"})}>About Us</Link>
               {/* <button className="btn">About More</button> */}
             </div>
           </div>

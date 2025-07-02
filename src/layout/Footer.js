@@ -18,6 +18,7 @@ export default function Footer() {
     const footerMenu = [
         {
         heading:"Solutions",
+        overview:"solutions",
         items:[
             { title:"Software Development", link:" /solutions/software-development " },
             { title:"Product Design", link:" /solutions/product-design " },
@@ -33,6 +34,7 @@ export default function Footer() {
         },
         {
         heading: "Infrastructure",
+        overview:"/infrastructure",
         items: [
             { title: "Datacenter", link: "/infrastructure/datacenter" },
             { title: "DDos Protections", link: "/infrastructure/ddos-protections" },
@@ -45,6 +47,7 @@ export default function Footer() {
         },
         {
         heading: "Hosting",
+        overview:"hosting",
         items: [
             { title: "Shared Hosting", link: "/hosting/shared-hosting" },
             { title: "Cloud Reseller", link: "/hosting/cloud-reseller" },
@@ -87,9 +90,9 @@ export default function Footer() {
                     </div>
                     <p className="w-full float-left mt-3.5 mr-2.5 ">Lorem ipsum is a placeholder or dummy text used in typesetting layouts. </p>
                     <ul className="w-full float-left flex mt-3.5">
-                        <li className="inline-block  font-bold"><Link className="" href="about">About Us</Link></li>
-                        <li><Link className=" mx-2.5 font-bold max-sm:mx-1.5 max-sm:text-[13px]" href="contact">Contact Us</Link></li>
-                        <li><Link className=" mx-2.5 font-bold max-sm:mx-1.5 max-sm:text-[13px]" href="contact">GDPR</Link></li>
+                        <li className="inline-block  font-bold"><Link className="" href="/about">About Us</Link></li>
+                        <li><Link className=" mx-2.5 font-bold max-sm:mx-1.5 max-sm:text-[13px]" href="/contact">Contact Us</Link></li>
+                        <li><Link className=" mx-2.5 font-bold max-sm:mx-1.5 max-sm:text-[13px]" href="/GDPR">GDPR</Link></li>
                     </ul>
                     <ul className="flex w-full mt-3.5 float-start items-center">
                         <li className="px-[5px] pl-0">
@@ -123,7 +126,8 @@ export default function Footer() {
                             menu.items.map((item,itemIndex)=><li  key={`clearfix-${item.title}`}><Link className="" href={item.link}>{item.title}</Link></li>)
                             }
                         </ul>
-                        { (menu.items && menu.items.length > 5) && <b className="toggle-f-menu font-bold text-[12px]" onClick={() => toggleMenu(menuIndex)}>{openMenus[menuIndex] ? 'Show less' : 'Show more'}</b>}
+                        <Link href={`/${menu.overview}`}><b className="toggle-f-menu font-bold text-[12px]" >Show more</b></Link>
+                        {/* { (menu.items && menu.items.length > 5) && <b className="toggle-f-menu font-bold text-[12px]" onClick={() => toggleMenu(menuIndex)}>{openMenus[menuIndex] ? 'Show less' : 'Show more'}</b>} */}
                     </div>
                 </>) }
             </div>

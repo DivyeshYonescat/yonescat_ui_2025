@@ -81,7 +81,7 @@ export default function FeaturesSection() {
           </div>
 
           {/* <div className="fbox-wrapper grid max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-3 lg:gap-10" > */}
-             <Slider {...settings}>
+          <Slider {...settings} className="services-slider">
             {FeaturesList.map((item) => (
               <div key={item.title} className=" max-lg:w-[320px] lg:max-w-[380px]">
                 <Card className={item.bg}>
