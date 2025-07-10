@@ -106,7 +106,7 @@ export default function Invoice() {
         <div className="container">
           <div className="invoice_list section-main">
             <div className="invoice_header flex justify-end">
-              <Link href={`/invoice/create`} className={buttonVariants({ variant: "",className:"mr-[15px]"})}> <Image src={"/images/main/svg/create-svgrepo-com.svg"} width={20} height={20} /> Create Invoice</Link>  
+              <Link href={`/invoice/create`} className={buttonVariants({ variant: "",className:"mr-[15px]"})}> <Image src={"/images/main/svg/create-svgrepo-com.svg"} width={20} height={20} alt="dsfsd" /> Create Invoice</Link>  
             </div>
             <div className="invoice_body mt-[50px]">
               {Merchant !== null && listInvoice.length != 0 ? <>
