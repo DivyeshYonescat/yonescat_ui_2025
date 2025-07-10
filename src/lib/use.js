@@ -111,7 +111,7 @@ const normalize = (data) => {
 const getImagePath = (image, type = 'url') => {
   if (typeof image != 'object') { return '' };
   let path = (type != 'url') ? ((image?.formats && image?.formats[type]?.url) ? image?.formats[type]?.url : image?.url) : image?.url;
-  const url = (path) ? `${process.env.PUBLIC_BACKEND_URL}${path}` : '';
+  const url = (path) ? `${process.env.NEXT_PUBLIC_BACKEND_URL}${path}` : '';
   return url;
 }
 
@@ -125,13 +125,13 @@ const getApiUrl = (API_NAME = '', PARAMS = {}) => {
   if (Object.keys(PARAMS).length > 0) {
     queryParams = `?${objectToQueryString(PARAMS)}&timestamp=${new Date().getTime()}`;
   }
-  return `${process.env.PUBLIC_BACKEND_URL}/api/${API_NAME}${queryParams}`;
+  return `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/${API_NAME}${queryParams}`;
 };
 
 const replaceImagePath = (content) => {
   return content?.replace(
     /<img src="\/uploads\/([^"]+)"([^>]+)>/g,
-    `<img src="${process.env.PUBLIC_BACKEND_URL}/uploads/$1"$2>`
+    `<img src="${process.env.NEXT_PUBLIC_BACKEND_URL}/uploads/$1"$2>`
   )
 }
 
@@ -169,8 +169,6 @@ function getPaymentIds(payment) {
   if (Array.isArray(paymentIDGroup) && paymentIDGroup.length > 1) {
     try {
       const group = decodeXOR(paymentIDGroup[1]);
-      console.log(group);
-      
       if (Object.keys(group).length > 0) {
         return {
           sessionID: paymentIDGroup[0],

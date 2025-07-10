@@ -27,7 +27,7 @@ const menuItems = [
   },
   {
     title: "Solutions",
-    link: "solutions",
+    link: "/solutions",
     icone: "/images/main/menu/solution-svgrepo-com.svg",
     subItems: [
       // { title: "Overview", link: " /solutions" },
@@ -45,7 +45,7 @@ const menuItems = [
   },
   {
     title: "Infrastructure",
-    link: "infrastructure",
+    link: "/infrastructure",
      icone: "/images/main/menu/infrastructure-solid-svgrepo-com.svg",
     subItems: [
       // { title: "Overview", link: " /infrastructure" },
@@ -60,7 +60,7 @@ const menuItems = [
   },
   {
     title: "Hosting",
-    link: "hosting",
+    link: "/hosting",
     icone: "/images/main/menu/hosting-svgrepo-com.svg",
     subItems: [
       // { title: "Overview", link: " /hosting" },

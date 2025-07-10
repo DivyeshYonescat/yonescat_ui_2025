@@ -4,10 +4,16 @@ const nextConfig = {
   images:{
     remotePatterns:[
       {
-        hostname:"imgs.search.brave.com"
-      }
+        protocol: 'https',
+        hostname: 'admin.yonescat.com',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost', 
+      },
     ]
   }
+  
 };
 
 export default nextConfig;

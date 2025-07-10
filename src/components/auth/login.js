@@ -22,6 +22,8 @@ export default function Login(props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const { error, showError, clearError } = useError();
 
+    const [result, setResult] = useState(null);
+
     const onSubmit = async(data) => {
         if((data.website).toString().trim() != ""){ return; }
         //Semd data  to server ajax

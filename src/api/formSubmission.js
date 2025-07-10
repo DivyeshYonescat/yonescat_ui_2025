@@ -69,6 +69,7 @@ async function userLoginForm(data) {
 // user signup form submit for user
 async function userSignupForm(data) {
     const url = use.getApiUrl("auth/local/register");
+    console.log(process.env.NEXT_PUBLIC_BACKEND_URL);
     console.log(url,data);
     
     try {

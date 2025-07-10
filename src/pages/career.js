@@ -29,16 +29,9 @@ import Image from 'next/image';
 import Modal from '@/components/Model/Modal';
 import AuthModel from '@/components/Model/authModel';
 
-
-
-
 export default function Home() {
-
   const pageUrl = usePathname();
   const formRef = useRef(null);
-
-  //Model
-  const [isModalOpen, setIsModalOpen] = useState(true);
 
   const { control, register, handleSubmit, watch, setValue, formState: { errors } } = useForm();
   const { error, showError, clearError } = useError();
@@ -46,7 +39,7 @@ export default function Home() {
 
   //After api Respons data and loader
   const [result, setResult] = useState(null);
-  //const [loading, setLoading] = useState(false);
+  
 
   //Check User Login Model
   // State to control modal visibility
@@ -54,26 +47,26 @@ export default function Home() {
   // Check User login
   const [showUser, setShowUser] = useState(null); 
 
-  // useEffect(() => {
-  //   if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') {
-  //     setShowModal(true);
-  //     setShowUser(null);
-  //   }else{
-  //     setShowUser(JSON.parse(localStorage.getItem("user")));
-  //   }
-  //   loadCaptchaEnginge(6);
-  // },[]);
+  useEffect(() => {
+    if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') {
+      setShowModal(true);
+      setShowUser(null);
+    }else{
+      setShowUser(JSON.parse(localStorage.getItem("user")));
+      setShowModal(false)
+    }
+    //loadCaptchaEnginge(6);
+  },[]);
 
   // Function to close the modal
-  // const closeModal = () => {
-  //   setShowModal(false);
-    
-  //   if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') {
-  //     setShowUser(null);
-  //   }else{
-  //     setShowUser(JSON.parse(localStorage.getItem("user")));
-  //   }
-  // };
+  const closeModal = () => {
+    setShowModal(false);
+    if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') {
+      setShowUser(null);
+    }else{
+      setShowUser(JSON.parse(localStorage.getItem("user")));
+    }
+  };
   
 
   const onSubmit = async(data) => {
@@ -94,7 +87,7 @@ export default function Home() {
     const file = data.resume;
 
     const name = data.fullname.replace(/\b\w/g, (char) => char.toUpperCase());
-    //data.users_permissions_user = showUser.id;
+    data.users_permissions_user = showUser.id;
     data.fullname = name;
     clearError();
 
@@ -216,7 +209,7 @@ export default function Home() {
         {/* <LoginModel showModal={showModal} closeModal={closeModal} /> */}
       </Layout>
 
-      <AuthModel />
+      <AuthModel closeModal={closeModal} showModal={showModal}/>
       
     </>
   )

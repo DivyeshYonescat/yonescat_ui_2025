@@ -1,3 +1,4 @@
+'use client';
 import Link from "next/link"
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -5,6 +6,7 @@ import { useParams, usePathname } from "next/navigation";
 import { useRouter } from "next/router";
 import Layout from "@/layout/Layout";
 import { getProjectByid } from "@/api/projects";
+import use from "@/lib/use";
 //import ProjectDetailLoader from "@/components/contentLoaders/ProjectDetailLoader";
 
 
@@ -12,38 +14,31 @@ import { getProjectByid } from "@/api/projects";
 export default function Home(){
   const router = useRouter();
   const pageUrl = usePathname();
-  // const projectParams = useParams();
-  // const projectId =  projectParams.projectDetail.length > 0 ? projectParams.projectDetail[1] : null;
-  //Project Details List
-  const [projectDetails, setProjectDetails] = useState({
-  Title:"RAS (Royal Astronomical Society)",
-  Screenshots:[],
-  ProjectUrl:"https://yonescat.com/_next/image?url=https%3A%2F%2Fadmin.yonescat.com%2Fuploads%2Fimage_1_69c7f5ae3f.png&w=1920&q=75",
+  const projectParams = useParams();
+  const projectId =  projectParams?.detail.length > 0 ? projectParams?.detail[1] : null;
 
-  Description:"This is Description",
-  ProjectSummary:"This is Project Summary",
-  SolutionResults:"This is Solution Results"
-  });
+  //Project Details List
+  const [projectDetails, setProjectDetails] = useState(null);
   const [projectDetailserror, setProjectDetailsError] = useState(null);
 
   // function call all data
-  // useEffect(() => {
-  //   const getProject = async () => {
-  //     if(!projectId) { 
-  //       router.replace('/404');
-  //       return;
-  //     }
-  //     const result = await getProjectByid(projectId);
-  //     if (result.success) {
-  //       setProjectDetails(result.data.data);
-  //     }else{
-  //       if(result.errors.status === 404){
-  //         router.replace('/404')
-  //       }
-  //     }
-  //   }
-  //   getProject(projectId);
-  // }, [projectId, router]);
+  useEffect(() => {
+    const getProject = async () => {
+      if(!projectId) { 
+        router.replace('/404');
+        return;
+      }
+      const result = await getProjectByid(projectId);
+      if (result.success) {
+        setProjectDetails(result.data.data);
+      }else{
+        if(result.errors.status === 404){
+          router.replace('/404')
+        }
+      }
+    }
+    getProject(projectId);
+  }, [projectId, router]);
   return(<>
     <Layout>
       <div className="section-main">
@@ -59,15 +54,11 @@ export default function Home(){
                   <div className="project-data">
                     <div className="grid grid-cols-3">
                       <p className="p-lg"><span>Category:</span> Development</p>
-                      <p className="p-lg"><span>Category:</span> Development</p>
+                      <p className="p-lg"><span>Start Date:</span> {use.setDateFormet(projectDetails.updatedAt)}</p>
+                      <p className="p-lg"><span>Handover:</span> {use.setDateFormet(projectDetails.updatedAt)}</p>
                       
                       
-                      {/* <div className="col">
-                        <p className="p-lg"><span>Start Date:</span> {use.setDateFormet(projectDetails.updatedAt)} </p>
-                      </div>
-                      <div className="col">
-                        <p className="p-lg"><span>Handover:</span> {use.setDateFormet(projectDetails.updatedAt)} </p>
-                      </div> */}
+                      
                       {projectDetails.ProjectUrl !== "" && projectDetails.ProjectUrl !== null && projectDetails.ProjectUrl !== undefined ?
                         <div className="col">
                           <p className="p-lg"><Link href={projectDetails.ProjectUrl} className="color--theme">www.website.com</Link></p>
@@ -78,12 +69,12 @@ export default function Home(){
                 </div>
                 {/* PROJECT PREVIEW IMAGE  */}
                 
-                {/* <div className="project-priview-img mb-50">
+                <div className="project-priview-img mb-50">
                   <Image className="img-fluid r-16" priority={true} 
                     width={projectDetails.Screenshots[0].width} height={projectDetails.Screenshots[0].height} alt="Description of the image" 
                     src={use.getImagePath(projectDetails.Screenshots[0])}
                   />
-                </div> */}
+                </div>
                 {/* PROJECT TEXT */}
                 <div className="project-txt">
                   <p>{projectDetails.Description}</p>

@@ -45,8 +45,7 @@ export default function Signup(props) {
     const [otpbox, setOtpbox] = useState(false);
     //After api Respons data and loader
     const [result, setResult] = useState(null);
-    const [loading, setLoading] = useState(false);
-
+    
     //Model
     const [isTemsModal, setIsTemsModal] = useState(false);
     const openTemsModal = () => setIsTemsModal(true);
@@ -65,25 +64,21 @@ export default function Signup(props) {
         delete data.otp;
         delete data.acceptTerms;
         delete data.confirmPassword;
-        // setLoading(true);
+
         clearError();
-        // const id = toast.loading("Please wait...")
         setIsSubmitting(true);
-        // setLoading(true);
-        
         const formData = await userSignupForm(data);
         if(formData.success){
-            // setLoading(false);
+            
             setIsSubmitting(false);
             setOtpbox(true);
             formRef.current.reset();
-            // toast.update(id, { render: "Thank you for register", type: "success", isLoading: false, autoClose: 1000 });
+            
         }else{
             setIsSubmitting(false);
-            // setLoading(false);
             showError([{"message":formData.errors.message}]);
-            // toast.update(id, { render: "Something is wrong", type: "error", isLoading: false, autoClose: 1000 });
         }
+        
     }
 
     //for submit for OTP
@@ -91,16 +86,12 @@ export default function Signup(props) {
         if((data.website).toString().trim() != ""){ return; }
         const otp = {"otp":data.otp,'email':data.email}
         clearError();
-        // const id = toast.loading("Please wait...")
         setIsSubmitting(true);
-        // setLoading(true);
-        
         const formData = await userSignupOtpForm(otp);
         if(formData.success){
-            
             setResult(formData.data);
             setIsShowMessage("Thank you for register");
-            // Store the JWT token securely
+            
             localStorage.setItem('token', formData.data.jwt);
             // Optionally, store user data in localStorage
             localStorage.setItem('user', JSON.stringify(formData.data.user));
@@ -111,9 +102,7 @@ export default function Signup(props) {
             }
         }else{
             setIsSubmitting(false);
-            //setLoading(false);
             showError([{"message":formData.errors.message}]);
-            //toast.update(id, { render: "Something is wrong", type: "error", isLoading: false, autoClose: 1000 });
         }
     }
 

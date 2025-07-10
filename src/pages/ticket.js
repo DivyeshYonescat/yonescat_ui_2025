@@ -8,23 +8,20 @@ import Layout from '@/layout/Layout';
 import Banner from '@/layout/Banner';
 import ContactLeft from '@/components/contactLeft/contactLeft';
 
-
 import { Button } from "@/components/ui/button";
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
-
 import { useForm } from "react-hook-form";
-// import { toast} from 'react-toastify';
-// import {loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
-// import LoginModel from "@/components/elements/LoginModel";
 
-// import TiptapEditor from '@/components/elements/TiptapEditor/TiptapEditor';
+// import {loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
+
 import { FormError } from "@/components/form/validationError";
 import { ticketFormSubmit } from '@/api/formSubmission';
 import useError from '@/api/errorShow';
 import TiptapEditor from '@/components/TiptapEditor';
 import { Loader2 } from 'lucide-react';
 import AuthModel from '@/components/Model/authModel';
+
 
 
 
@@ -43,32 +40,30 @@ export default function Home() {
 
   //Check User Login Model
   // State to control modal visibility
-  // const [showModal, setShowModal] = useState(false); 
-  // const [loading, setLoading] = useState(false);
-
+  const [showModal, setShowModal] = useState(false); 
   // Check User login
-  // const [showUser, setShowUser] = useState(null); 
-  // useEffect(() => {
-  //   if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') {
-  //     setShowModal(true);
-  //     setShowUser(null);
-  //   }else{
-  //     setShowUser(JSON.parse(localStorage.getItem("user")));
-  //   }
+  const [showUser, setShowUser] = useState(null); 
+  useEffect(() => {
+    if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') {
+      setShowModal(true);
+      setShowUser(null);
+    }else{
+      setShowUser(JSON.parse(localStorage.getItem("user")));
+    }
 
-  //   loadCaptchaEnginge(6);
-  // },[]);
+    //loadCaptchaEnginge(6);
+  },[]);
 
  
   // Function to close the modal
-  // const closeModal = () => {
-  //   setShowModal(false);
-  //   if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') {
-  //     setShowUser(null);
-  //   }else{
-  //     setShowUser(JSON.parse(localStorage.getItem("user")));
-  //   }
-  // };
+  const closeModal = () => {
+    setShowModal(false);
+    if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') {
+      setShowUser(null);
+    }else{
+      setShowUser(JSON.parse(localStorage.getItem("user")));
+    }
+  };
 
   // Form validton 
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -79,23 +74,24 @@ export default function Home() {
     //   return
     // }
 
-    // if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') { setShowModal(true);  return;}
+    if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') { setShowModal(true);  return;}
     // description data
     data.description = value ;
     //set upload file
     data.resume = files;
 
-    // const fullname = data.name.replace(/\b\w/g, (char) => char.toUpperCase());
-    const fullname = data.name;
+    const fullname = data.fullname.replace(/\b\w/g, (char) => char.toUpperCase());
+    // const fullname = data.name;
     data.name = fullname;
     if((data.website).toString().trim() != ""){ return; }
       delete data.website;
+      delete data.fullname;
       // delete data.captcha_input;
       clearError();
-      // const id = toast.loading("Please wait...")
+      //const id = toast.loading("Please wait...")
       setIsSubmitting(true);
       // setLoading(true);
-      // data.users_permissions_user = showUser.id;
+      data.users_permissions_user = showUser.id;
       // function for send data with api
       const formData = await ticketFormSubmit(data,files);
       if(formData.success){
@@ -108,13 +104,13 @@ export default function Home() {
         setValue('');
         setInvalidFiles([]);
 
-        // toast.update(id, { render: "Your ticket is Submitted", type: "success", isLoading: false, autoClose: 1000 });
+      //  toast.update(id, { render: "Your ticket is Submitted", type: "success", isLoading: false, autoClose: 1000 });
       }else{
         setIsSubmitting(false);
         // setLoading(false);
         
         showError(formData.errors.errorCollaction);
-        // toast.update(id, { render: "Something is wrong", type: "error", isLoading: false, autoClose: 1000 });
+      //  toast.update(id, { render: "Something is wrong", type: "error", isLoading: false, autoClose: 1000 });
       }
   }
 
@@ -292,7 +288,7 @@ export default function Home() {
           </div>
         </section>
       </Layout>
-      <AuthModel />
+      <AuthModel closeModal={closeModal} showModal={showModal}/>
     </>
   )
 }

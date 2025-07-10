@@ -6,7 +6,7 @@ export async function fetcher(url,options={}){
       
   url = (url.toString().includes('?')) ? url+'&locale='+locale : url+'?locale='+locale;
 
-  const apiendpoint = `${process.env.PUBLIC_BACKEND_URL}/api/${url}`;
+  const apiendpoint = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/${url}`;
 
   try {
       const response = await axios.get(apiendpoint,options.params);

@@ -26,10 +26,32 @@ import AuthModel from '@/components/Model/authModel';
 export default function Home() {
   const pageUrl = usePathname();
   //Model
-  const [isModalOpen, setIsModalOpen] = useState(true);
-  useEffect(() => {
-    //loadCaptchaEnginge(6);
-  },[]);
+  // State to control modal visibility
+  const [showModal, setShowModal] = useState(false); 
+  // Check User login
+    const [showUser, setShowUser] = useState(null); 
+  
+   useEffect(() => {
+      if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') {
+        setShowModal(true);
+        setShowUser(null);
+      }else{
+        setShowUser(JSON.parse(localStorage.getItem("user")));
+        setShowModal(false)
+      }
+      //loadCaptchaEnginge(6);
+    },[]);
+  
+    // Function to close the modal
+    const closeModal = () => {
+      setShowModal(false);
+      
+      if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') {
+        setShowUser(null);
+      }else{
+        setShowUser(JSON.parse(localStorage.getItem("user")));
+      }
+    };
 
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const { error, showError, clearError } = useError();
@@ -39,14 +61,14 @@ export default function Home() {
   //After api Respons data and loader
   const [result, setResult] = useState(null);
 
-   const onSubmit = async(data) => {
+  const onSubmit = async(data) => {
 
     // const userCaptchaValue = data.captcha_input;
     // if (validateCaptcha(userCaptchaValue)) {} else {
     //   showError([{message:"Invalid Captcha"}]); return
     // }
 
-    //if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') { setShowModal(true);  return;}
+    if (!localStorage.getItem('token') || localStorage.getItem('token') === 'null') { setShowModal(true);  return;}
 
     if((data.website).toString().trim() != ""){ return; }
     //Semd data  to server ajax
@@ -54,7 +76,7 @@ export default function Home() {
     //delete data.captcha_input;
     
     const fullname = data.name.replace(/\b\w/g, (char) => char.toUpperCase());
-    //data.users_permissions_user = showUser.id;
+    data.users_permissions_user = showUser.id;
     data.name = fullname;
     clearError();
     setIsSubmitting(true);
@@ -137,6 +159,6 @@ export default function Home() {
         </div>
       </section>
     </Layout>  
-    <AuthModel />
+    <AuthModel closeModal={closeModal} showModal={showModal}/>
   </>);
 }

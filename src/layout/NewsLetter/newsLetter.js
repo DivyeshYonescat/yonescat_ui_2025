@@ -1,27 +1,24 @@
-"use client"
-import Image from 'next/image';
-import Link from 'next/link';
-
-import React, { useState, useRef, useEffect } from 'react';
-import {Button, buttonVariants } from "@/components/ui/button"
-import useError from "@/api/errorShow";
-
+import React, { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
-import FloatingSVG from './newslaterAnimation';
+import {Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-
-
+import useError from '@/api/errorShow';
+import { FormError } from '@/components/form/validationError';
+import FloatingSVG from './newslaterAnimation';
+import { newslaterForm } from '@/api/formSubmission';
 
 const NewsLetterSection = () => {
     const formRef = useRef(null);
-
-     // Form validton 
+    // Form validton 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const { error, showError, clearError } = useError();
 
     const [result, setResult] = useState(null);
 
     const onSubmit = async (data) => {
+        if((data.website).toString().trim() != ""){ return; }
+        delete data.website;
+        
         clearError();
         // const id = toast.loading("Please wait...")
         const formData = await newslaterForm(data);
@@ -42,12 +39,14 @@ const NewsLetterSection = () => {
                 <div className="newsletter-inner flex flex-row max-sm:flex-col sm:flex-col md:flex-row  justify-between  items-center">
                     <div className="newsletter-text w-[40%] max-sm:w-[100%] sm:w-[100%] md:w-[50%] lg:w-[40%] max-sm:order-2 sm:order-2 md:order-1">
                         <h3 className="">Ready To Get Started? Sign Up Now With Yonescat Is Easy, Fast And Free</h3>
-                        {/* onSubmit={handleSubmit(onSubmit)} */}
-                        <form ref={formRef} name="contactform" className="newsletter-form contact-form" >
+                    
+                        <form ref={formRef} name="contactform" className="newsletter-form contact-form"  onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-group">
                                 <Input type="email" name="email" id="email" autoComplete="off" className="w-full px-4 py-3 h-[50px] mt-[45px] mb-[15px] border-stone-900" placeholder="Your Email Address"  
-                                     {...register("email", { required: {value:true, message:"Email is required" },
-                                        pattern: { value:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, message:"Enter valid email."  }
+                                     {...register("email", { 
+                                        required: {value:true, message:"Email is required" },
+                                        pattern: { value:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, 
+                                        message:"Enter valid email."  }
                                     })}
                                 />
                                 {/* <input type="email" name="email" id="email" autoComplete="off" className="form-input mt-[45px] mb-[15px]" placeholder="Your email address"
@@ -56,11 +55,14 @@ const NewsLetterSection = () => {
                                     })}
                                 /> */}
                             </div>
+
+                            <Input type="hidden" name="website" {...register("website")} />
+                            <FormError  field={errors.email} />
                            
                             <div>
                             { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error text-start" key={errorIndex}> {error.message} </div>) }
                             </div>
-                            <div className="input-group">
+                            <div className="input-group mt-[15px]">
                                 <span className="input-group-btn">
                                     <Button size={"lg"} type="submit">Subscribe Now</Button>
                                 </span>

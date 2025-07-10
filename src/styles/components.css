@@ -49,6 +49,7 @@
   /* banner */
   .banenr{@apply  bg-no-repeat bg-cover bg-bottom; }
   .banenr-inner{@apply  flex flex-col justify-start h-[550px] max-sm:h-[450px] pt-[120px] text-stone-100 max-w-[1000px] m-auto; }
+  .shot-banner-inner{@apply pb-[120px] h-auto;}
   /* banner */
   
   /* concat box */
@@ -60,7 +61,7 @@
   .box-color-section {@apply flex justify-center items-center bg-stone-900 p-[30px] max-md:order-1; }
   /* concat box */
 
-  .white-image{ filter: invert(100%) sepia(1%) saturate(1000%) hue-rotate(360deg); } 
+  .white-image{ filter: invert(100%) sepia(1%) saturate(100%) hue-rotate(360deg); } 
   .project-type-list button:hover > img{filter:brightness(0) invert(1);}
 
   /* File Upload */
@@ -128,4 +129,13 @@
 .img-database-block > img{@apply w-full h-[400px] max-xl:h-[300px]  rounded-[6px];}
 .in_tool_logo{@apply px-[0px] py-[0px] mb-[25px] shadow-2xs;}
 
+/* Project loader */
+.load-project.is-loading .image {
+  @apply bg-[200%_100%] animate-[1.5s_shine_linear_infinite] rounded-[5px] h-[300px] mb-[50px] rounded-br-none rounded-bl-none;
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  -webkit-animation: 1.5s shine linear infinite;
+}
+@-webkit-keyframes shine {  to { background-position-x: -200%;}}
+@keyframes shine {  to { background-position-x: -200%;}}
 }

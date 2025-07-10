@@ -3,7 +3,7 @@ import use from "./use";
 import { collectErrors } from "@/api/base";
 
 const axiosInstance = axios.create({
-  baseURL: process.env.PUBLIC_BACKEND_URL,
+  baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
   timeout: 300000, // 5 minutes in milliseconds
 });
 
@@ -42,7 +42,7 @@ axiosInstance.interceptors.request.use(
   function (config) {
     if( config.url.includes("auth/local") || config.url.includes("auth/local/register")){
     }else{  
-      const token = process.env.AUTH_TOKEN;
+      const token = process.env.NEXT_PUBLIC_AUTH_TOKEN;
       if (token) {
         config.headers.Authorization = `Bearer ${token}`;
       }
