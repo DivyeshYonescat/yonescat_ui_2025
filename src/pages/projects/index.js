@@ -113,7 +113,7 @@ export default function Home() {
                     All Projects
                   </Button>
                   {listTag.map((item) => (<>
-                      <Button variant="outline" className="text-deepsea hover:bg-deepsea hover:text-white px-2 py-5 m-1" onClick={() => getProjectbyFilter(item.Name)}>
+                      <Button key={item.Name} variant="outline" className="text-deepsea hover:bg-deepsea hover:text-white px-2 py-5 m-1" onClick={() => getProjectbyFilter(item.Name)}>
                         <Image width={20} height={20} alt="type-icone"  src={use.getImagePath(item.SvgIcon)}  />
                         {item.Name}
                       </Button>

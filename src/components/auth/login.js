@@ -54,7 +54,6 @@ export default function Login(props) {
         
         <>
             <div className="block w-full px-[30px_40px] max-lg:px-[10px_30px] max-sm:px-0">
-               
                <h3 className="text-center pb-[15px]">Log in to Yonescat</h3>
                 {isShowMessage !== null &&  <h3 className="text-center">Thank you for login</h3>}
                 
@@ -99,6 +98,16 @@ export default function Login(props) {
                     <Button disabled={isSubmitting} type="submit" className="w-full px-10 py-5">
                         {isSubmitting ? <> <Loader2 className="animate-spin" /> Please wait  </> : "Log In" }  
                     </Button>
+
+                    <span className='my-5 text-black text-center block'> OR </span>
+
+                    <div className='media_login flex flex-col justify-between text-center'>
+                        <a className='google' href="http://localhost:1337/api/connect/google">Sign in with Google</a>
+                        <a className='facebook' href="http://localhost:1337/api/connect/facebook">Sign in with Facebook</a>
+                    </div>
+
+                    
+                             
                    
                 </form>	
             </div>

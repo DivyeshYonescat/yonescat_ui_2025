@@ -27,10 +27,10 @@ const menuItems = [
   },
   {
     title: "Solutions",
-    link: "/solutions",
+    link: "",
     icone: "/images/main/menu/solution-svgrepo-com.svg",
     subItems: [
-      // { title: "Overview", link: " /solutions" },
+      { title: "Solutions Overview", link: " /solutions" },
       { title: "Software Development", link: " /solutions/software-development " },
       { title: "Product Design", link: " /solutions/product-design " },
       { title: "Ai & Machine Learning", link: " /solutions/ai-and-machine-learning " },
@@ -45,10 +45,10 @@ const menuItems = [
   },
   {
     title: "Infrastructure",
-    link: "/infrastructure",
+    link: "",
      icone: "/images/main/menu/infrastructure-solid-svgrepo-com.svg",
     subItems: [
-      // { title: "Overview", link: " /infrastructure" },
+      { title: "Infrastructure Overview", link: " /infrastructure" },
       { title: "Datacenter", link: "/infrastructure/datacenter" },
       { title: "DDos Protections", link: "/infrastructure/ddos-protections" },
       { title: "Database-as-a-Service", link: "/infrastructure/database-as-a-service" },
@@ -60,10 +60,10 @@ const menuItems = [
   },
   {
     title: "Hosting",
-    link: "/hosting",
+    link: "",
     icone: "/images/main/menu/hosting-svgrepo-com.svg",
     subItems: [
-      // { title: "Overview", link: " /hosting" },
+      { title: "Hosting Overview", link: " /hosting" },
       { title: "Shared Hosting", link: "/hosting/shared-hosting" },
       { title: "Cloud Reseller", link: "/hosting/cloud-reseller" },
       { title: "Dedicated Servers", link: "/hosting/dedicated-servers" },

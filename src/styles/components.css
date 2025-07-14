@@ -138,4 +138,9 @@
 }
 @-webkit-keyframes shine {  to { background-position-x: -200%;}}
 @keyframes shine {  to { background-position-x: -200%;}}
+
+/* Media buttons  */
+.media_login > a {@apply border-1 border-solid py-2 px-6 rounded-full font-semibold mb-5;}
+.media_login > .facebook {@apply border-[#166fe5] text-[#166fe5] hover:text-white hover:bg-[#166fe5] mb-0;}
+.media_login > .google {@apply border-[#EA4335] text-[#EA4335] hover:text-white hover:bg-[#EA4335] ;}
 }

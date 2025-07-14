@@ -123,8 +123,7 @@ export default function Invoice() {
                 </TableHeader>
                 <TableBody>
                   {listInvoice.map((row, index) => <>
-                  {console.log(row)}
-                  <TableRow>
+                  <TableRow key={row.invoice_id}>
                     <TableCell>{index+1}</TableCell>
                     <TableCell>{row.invoice_id}</TableCell>
                     <TableCell>{row.customer_details.fullname}</TableCell>

@@ -103,7 +103,7 @@ export default function GoogleGSuite() {
 
           <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-12 max-lg:gap-6">
             {FeaturesList.map((item) => (<>
-              <Card>
+              <Card key={item.title}>
                 <div  className="card-bg"></div>
                 <div className="card-header">
                   <div className="flex flex-row items-center">
