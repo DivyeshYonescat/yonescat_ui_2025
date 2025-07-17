@@ -36,7 +36,6 @@ export default function Page({payment}) {
 
     try {
       const response = await paymentById({id:id,invoice_id:invoiceID,session_id:sessionID});
-      console.log(response);
         setInvoice(response.data)
     } catch (error) {
       

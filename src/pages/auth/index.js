@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Button, buttonVariants } from "@/components/ui/button"
 import Login from '@/components/auth/login';
 import Signup from '@/components/auth/signup';
+import { Toaster } from '@/components/ui/sonner';
 
 export default function Home() {
 
@@ -34,6 +35,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Toaster richColors position="top-right" />
       {/* <div className='auth-main auth-inner h-screen max-md:h-auto grid max-md:grid-cols-1 max-md:order-2 grid-cols-2 p-5'>
         <div className='auth-form flex flex-col justify-center  max-md:order-2 max-md:mt-[50px] max-sm:mt-[25px]  max-xl:pr-[15px] max-md:pr-0'> 
           {type === 'login' && <Login /> }

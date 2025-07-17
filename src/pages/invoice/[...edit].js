@@ -163,8 +163,6 @@ export default function Home() {
     //data.userid = showUser.id; 
     clearError();
     setIsSubmitting(true);
-    console.log(invoice);
-    
     const formData = await updateInvoice(invoice);
     if(formData.success){
       setIsSubmitting(false);
@@ -174,7 +172,7 @@ export default function Home() {
       router.replace('/invoice');
     }else{
       setIsSubmitting(false);
-      console.log(formData.errors.errorCollaction);
+      
       if(formData.errors.errorCollaction == undefined){
         showError(formData.errors.message);  
       }else{
@@ -294,7 +292,6 @@ export default function Home() {
 
                   {step === 1 && <>
                     <div className="w-full mb-[10px]">
-                      {console.log(error)}
                       { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error text-red-700 mt-[10px]" key={errorIndex}> {error.message} </div>) }
                     </div>
                     <div className="flex justify-between mt-[15px]">

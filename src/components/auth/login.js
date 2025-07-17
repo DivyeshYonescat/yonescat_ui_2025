@@ -9,6 +9,7 @@ import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import { userLoginForm } from '@/api/formSubmission';
 import { Loader2 } from 'lucide-react';
+import { toast } from 'sonner';
 
 export default function Login(props) {
     // Use For Form reset
@@ -25,6 +26,7 @@ export default function Login(props) {
     const [result, setResult] = useState(null);
 
     const onSubmit = async(data) => {
+        
         if((data.website).toString().trim() != ""){ return; }
         //Semd data  to server ajax
         delete data.website;
@@ -33,6 +35,7 @@ export default function Login(props) {
         
         const formData = await userLoginForm(data);
         if(formData.success){
+            toast.success('Login successfully!');
             setResult(formData.data);
             // Store the JWT token securely
             localStorage.setItem('token', formData.data.jwt);
@@ -48,6 +51,7 @@ export default function Login(props) {
         }else{
             setIsSubmitting(false);
             showError([{"message":formData.errors.message}]);
+            toast.error(formData.errors.message);
         }
     }
     return (

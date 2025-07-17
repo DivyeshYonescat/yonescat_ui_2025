@@ -18,7 +18,7 @@ export default function Footer() {
     const footerMenu = [
         {
         heading:"Solutions",
-        overview:"solutions",
+        overview:"/solutions",
         items:[
             { title:"Software Development", link:" /solutions/software-development " },
             { title:"Product Design", link:" /solutions/product-design " },
@@ -47,7 +47,7 @@ export default function Footer() {
         },
         {
         heading: "Hosting",
-        overview:"hosting",
+        overview:"/hosting",
         items: [
             { title: "Shared Hosting", link: "/hosting/shared-hosting" },
             { title: "Cloud Reseller", link: "/hosting/cloud-reseller" },
@@ -126,7 +126,7 @@ export default function Footer() {
                             menu.items.map((item,itemIndex)=><li  key={`clearfix-${item.title}`}><Link className="" href={item.link}>{item.title}</Link></li>)
                             }
                         </ul>
-                        <Link href={`/${menu.overview}`}><b className="toggle-f-menu font-bold text-[12px]" >Show more</b></Link>
+                        <Link href={`${menu.overview}`}><b className="toggle-f-menu font-bold text-[12px]" >Show more</b></Link>
                         {/* { (menu.items && menu.items.length > 5) && <b className="toggle-f-menu font-bold text-[12px]" onClick={() => toggleMenu(menuIndex)}>{openMenus[menuIndex] ? 'Show less' : 'Show more'}</b>} */}
                     </div>
                 </>) }

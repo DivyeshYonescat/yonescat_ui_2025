@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { toast } from 'sonner';
 
 export default function GoogleCallback() {
   const router = useRouter();
@@ -25,8 +26,10 @@ export default function GoogleCallback() {
         // logged in – send user to dashboard
         router.replace('/');
       } catch (err) {
-        console.error('Google auth failed', err);
+        //console.error('Google auth failed', err);
         //router.replace('/login?error=google');
+        toast.error(err.message);
+        setTimeout(() => { router.replace('/auth?type=login');}, 2000);
       }
     };
 

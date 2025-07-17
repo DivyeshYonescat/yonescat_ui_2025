@@ -13,8 +13,6 @@ import {
 
 
 const ProfileDropdown = ({ token }) => {
-  console.log(token);
-  
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');

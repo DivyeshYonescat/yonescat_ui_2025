@@ -105,7 +105,7 @@ const Invoice = ({status, id, invoice_id, products, merchant , customer, payment
                     <div className='list_of_buttons flex justify-between items-center mt-10'>
                         <div>
                             <Link href={`/invoice/edit/${docId}`} className={buttonVariants({ variant: "",className:"mr-[15px]"})}>
-                            <Image src={Edit.src} className='white-image' width={20} height={20} /> Edit</Link>
+                            <Image src={Edit.src} alt='Edit button' className='white-image' width={20} height={20} /> Edit</Link>
                         </div>
                         <div>
                             {send_time !== null ? <>
@@ -113,7 +113,7 @@ const Invoice = ({status, id, invoice_id, products, merchant , customer, payment
                                     <div className="sendsms"> 
                                         {status == false &&
                                             <Button type="button" variant="" className="flex justify-between items-center mt-10" onClick={()=>{sendTOSms(id, invoice_id, products, merchant , customer)}}>
-                                                <Image src={SMS.src} className='white-image' width={20} height={20} /> Send SMS
+                                                <Image src={SMS.src} alt='Send SMS' className='white-image' width={20} height={20} /> Send SMS
                                             </Button>
                                         } 
                                     </div>
@@ -122,7 +122,7 @@ const Invoice = ({status, id, invoice_id, products, merchant , customer, payment
                                 <div className="sendsms"> 
                                     {status == false && 
                                         <Button type="button" className="flex justify-between items-center mt-2" onClick={()=>{sendTOSms(id, invoice_id, products, merchant , customer)}}>
-                                            <Image src={SMS.src} className='white-image' width={20} height={20} /> Send SMS
+                                            <Image src={SMS.src} alt='send sms' className='white-image' width={20} height={20} /> Send SMS
                                         </Button>  
                                     } 
                                 </div>
@@ -139,7 +139,7 @@ const Invoice = ({status, id, invoice_id, products, merchant , customer, payment
                     </form>
                 }
             
-            </>:<p>This invoice payment is payed by payment id :<b>{payment_id}</b> </p>}
+            </>:<p className='text-center mt-5'> This invoice payment is payed by payment id : <b>{payment_id}</b> </p>}
         </div>
     );
 };

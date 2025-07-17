@@ -31,9 +31,12 @@ const menuItems = [
     icone: "/images/main/menu/solution-svgrepo-com.svg",
     subItems: [
       { title: "Solutions Overview", link: " /solutions" },
-      { title: "Software Development", link: " /solutions/software-development " },
-      { title: "Product Design", link: " /solutions/product-design " },
-      { title: "Ai & Machine Learning", link: " /solutions/ai-and-machine-learning " },
+      // { title: "Software Development", link: " /solutions/software-development " },
+      // { title: "Product Design", link: " /solutions/product-design " },
+      // { title: "Ai & Machine Learning", link: " /solutions/ai-and-machine-learning " },
+      { title: "Software Development", link: " /coming-soon " },
+      { title: "Product Design", link: " /coming-soon " },
+      { title: "Ai & Machine Learning", link: " /coming-soon " },
       { title: "Mobile Applications", link: " /solutions/mobile-applications " },
       { title: "Web & Cloud Portals", link: " /solutions/web-and-cloud-portals " },
       { title: "E-commerce", link: " /solutions/e-commerce " },
@@ -248,16 +251,16 @@ export default function SidebarMenu() {
         <FloatingCircles containerRef={mainMenuContainer} isParentVisible={isOpen}></FloatingCircles>
         <div className='h-screen fixed flex flex-col justify-center align-middle max-w-auto top-0 right-0'>
           <div className='flex flex-col items-end h-auto justify-center social-media-header'>
-            <a href='#' className='flex items-center  cursor-pointer leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[55px] header-flaticon-facebook  text-stone-100'>
+            <a href='#' className='flex items-center  cursor-pointer leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] lg:w-[60px] header-flaticon-facebook  text-stone-100'>
               <Image  src={"/images/main/media/facebook.svg"} alt='facebook' width={40} height={40} /> <span className="font-bold ml-3">Facebook</span>
             </a>
-            <a href='#' className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[55px]  header-flaticon-instagram  text-stone-100'>
+            <a href='#' className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] lg:w-[60px]  header-flaticon-instagram  text-stone-100'>
               <Image src={"/images/main/media/instagram.svg"} alt='instagram' width={40} height={40} /> <span className="font-bold ml-3">Instagram</span>
             </a>
-            <a className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[55px]  header-flaticon-youtube text-stone-100'>
+            <a className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] lg:w-[60px]  header-flaticon-youtube text-stone-100'>
               <Image  src={"/images/main/media/youtube.svg"} alt='youtube' width={40} height={40} /> <span className="font-bold ml-3">Youtube</span>
             </a>
-            <a href='#' className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px] lg:hover:w-[150px] md:w-[55px]  header-flaticon-x text-stone-100'>
+            <a href='#' className='flex items-center  leading-none mb-0.5 px-1 py-1 w-[55px] max-sm:w-[55px] max-sm:text-[0px]  lg:w-[60px] lg:hover:w-[150px] header-flaticon-x text-stone-100'>
               <Image  src={"/images/main/media/x.svg"} alt='x' width={40} height={40} /> <span className="font-bold ml-3"> X</span>
             </a>
           </div> 

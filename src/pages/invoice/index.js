@@ -12,7 +12,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow, } from "
 import { Button, buttonVariants } from "@/components/ui/button";
 
 import { invoice_SMS_Send_To_Pay, list_of_invoice, sendStrpePay } from "@/api/formSubmission";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import Sidebar from "@/components/Sidebar";
  
 export default function Invoice() {
@@ -100,6 +100,7 @@ export default function Invoice() {
   }, []);
 
   return(<>
+    <div className={`${toggleButton && "invoice-wapper"}`}>
     <Layout>
       <Banner sortheader={true} title={"Requested Invoices"} description={"Want to learn more about Yonescat, get a quote, or speak with an expert? Let us know what you are looking for and we’ll get back to you right away"} />
       <section>
@@ -136,33 +137,33 @@ export default function Invoice() {
                           <Button variant="outline" className="border-0 focus-visible:ring-[0px]"><Image src={"/images/main/svg/three-dots-vertical.svg"} width={25} height={25} alt="" /> </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className="w-26 invoice-dropdwon" align="end">
-                          <DropdownMenuLabel className="flex items-center" onClick={()=>{setToggleButton(true); setSaidbarData(row.documentId)}}>
+                          <DropdownMenuItem className="flex items-center" onClick={()=>{setToggleButton(true); setSaidbarData(row.documentId)}}>
 
-                            <Image src={"/images/main/svg/preview-svgrepo-com.svg"} className="mr-1.5" width={25} height={25} alt="" /> Preview</DropdownMenuLabel>
+                            <Image src={"/images/main/svg/preview-svgrepo-com.svg"} className="mr-1.5" width={25} height={25} alt="" /> Preview</DropdownMenuItem>
                           {row.invoice_status == false && <>
-                            <DropdownMenuLabel className="flex items-center">
+                            <DropdownMenuItem className="flex items-center">
                               <Link className="flex items-center"  href={`/invoice/edit/${row.documentId}`}>
                                 <Image className="mr-1.5" src={"/images/main/svg/edit-square-svgrepo-com.svg"} alt="profile" width={20} height={20}  /> Edit
                               </Link>
-                            </DropdownMenuLabel>
+                            </DropdownMenuItem>
 
                             {row.sms_send_time !== null ? <>
                               {new Date().getTime() < new Date(row.sms_send_time).getTime() ? "":
-                                <DropdownMenuLabel className="flex items-center">
+                                <DropdownMenuItem className="flex items-center">
                                   {row.invoice_status == false && <> 
                                     <button type="button" className="flex items-center" onClick={()=>{sendSMSToCutomers(row.id,row.invoice_id,JSON.parse(row.product_list),row.customer_details,row.marchand_ids,row.sms_send_time)}}> 
                                       <Image src={"/images/main/svg/sms-gate-svgrepo-com.svg"} className="mr-1.5" alt="profile" width={20} height={20}  /> Send SMS
                                     </button> 
                                   </>}
-                                </DropdownMenuLabel>
+                                </DropdownMenuItem>
                               }
                             </> :<>
-                              <DropdownMenuLabel className="flex items-center"> 
+                              <DropdownMenuItem className="flex items-center"> 
                                 {row.invoice_status == false &&  
                                   <button type="button" className="flex items-center" onClick={()=>{sendSMSToCutomers(row.id,row.invoice_id,JSON.parse(row.product_list),row.customer_details,row.marchand_ids,row.sms_send_time)}}> 
                                     <Image src={"/images/main/svg/sms-gate-svgrepo-com.svg"} className="mr-1.5" alt="profile" width={20} height={20}  /> Send SMS
                                   </button>  }
-                              </DropdownMenuLabel>
+                              </DropdownMenuItem>
                             </>}
                           </>}
                         </DropdownMenuContent>
@@ -179,5 +180,6 @@ export default function Invoice() {
       </section>
       {saidbarData !== null ? <Sidebar showMenu={toggleButton} closeButton={closeButton} id={saidbarData} sendTOSms={sendSMSToCutomers} /> : ""}
     </Layout>
+    </div>
   </>)
 }

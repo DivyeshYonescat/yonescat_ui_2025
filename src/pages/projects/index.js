@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation"
 import Layout from "@/layout/Layout";
 import { Button, buttonVariants } from "@/components/ui/button"
 import { getTags , getProjectList , getProjectListFilter } from "@/api/projects";
+import Pagination from "@/components/Pagination";
 
 const DynamicClients = dynamic(() => import('@/components/sections/Client'),{ssr:true});
 
@@ -121,33 +122,42 @@ export default function Home() {
                 </div> 
               </div>
             )}
-            <div className="project-list grid grid-cols-3 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-3">
 
-              {tagListProjectLoding && ( <> <div className="load-project is-loading grid-container">
+            {tagListProjectLoding && ( <> 
+              <div className="load-project is-loading grid-container">
                 <div className="image grid-item"><div></div></div>  
                 <div className="image grid-item"><div></div></div>  
                 <div className="image grid-item"><div></div></div>  
                 <div className="image grid-item"><div></div></div>  
-              </div> </> )}
+              </div> 
+            </> )}
 
-              {tagListProjectLoding === false && ( <>
-                {listProject !== null && listProject.length > 0  ? <> 
-                  {listProject.map((item,index)=>(<>
-                  <div key={item.documentId} className="project-box bg-stone-200/100 shadow-2xs p-5 rounded-2xl relative max-lg:p-2.5 ">
-                    <span className="text-stone-800 font-semibold text-[14px]">|| 2024</span>
-                    <Link href={ "/projects/detail/" + item.documentId } aria-label="text-data">
-                      <h6 className="text-stone-800 mt-[10px] mb-[15px] font-semibold ">{item.Title}</h6>
-                    </Link>
-                    <Image className="rounded-md m-auto" priority={true}  width={item.Screenshots[0].width} height={item.Screenshots[0].height}
-                      src={use.getImagePath(item.Screenshots[0])} alt="Description of the image"
-                    />
-                    <span className="text-[12px] absolute bottom-9 right-9 px-2 py-1 font-semibold bg-stone-200 rounded-lg">{item.type}</span>
+            {tagListProjectLoding === false && ( <>
+                {listProject !== null && listProject.length > 0  ? <>
+                  <div className="project-list grid grid-cols-3 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-3">
+                    {listProject.map((item,index)=>(<>
+                    <div key={item.documentId} className="project-box bg-stone-200/100 shadow-2xs p-5 rounded-2xl relative max-lg:p-2.5 ">
+                      <span className="text-stone-800 font-semibold text-[14px]">|| 2024</span>
+                      <Link href={ "/projects/detail/" + item.documentId } aria-label="text-data">
+                        <h5 className="text-stone-800 mt-[10px] mb-[15px] font-semibold ">{item.Title}</h5>
+                      </Link>
+                      <Image className="rounded-md m-auto" priority={true}  width={item.Screenshots[0].width} height={item.Screenshots[0].height}
+                        src={use.getImagePath(item.Screenshots[0])} alt="Description of the image"
+                      />
+                      <span className="text-[12px] absolute bottom-9 right-9 px-2 py-1 font-semibold bg-stone-200 rounded-lg">{item.type}</span>
+                    </div>
+                    </>))} 
                   </div>
-                  </>))} 
-                </> : <> <h2 className="s-20"> No project available for this category </h2> </>} 
-              </> )}  
-            </div>
+                </> : <> <h2 className="text-center"> No project available for this category </h2> </>} 
+            </> )}  
           </div>  
+
+          <div className="py-14 text-center">
+            {pageCount > 1 && 
+              <Pagination currentPage={currentPage} totalCount={totalCount} pageSize={pageSize} pageCount={pageCount} onPageChange={handlePageChange} />
+            }
+          </div>
+
         </div>
       </div> 
       <DynamicClients title={"Loved And Trusted By Client"} />

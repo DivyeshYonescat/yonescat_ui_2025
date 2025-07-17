@@ -114,6 +114,21 @@
 .card-box-inner .card-main-box-img { @apply h-[350px] min-h-[350px] mt-0 m-auto rounded-[14px] w-full bg-stone-100;}
 .card-box-inner .card-main-box-img-text{@apply !items-start h-full;}
 .card-box-inner .card-main-box-img-text p {  @apply leading-[1.4] mb-2.5;}
+
+/* overlay-gradient */
+.overlay-gradient{@apply relative;}
+.overlay-gradient > img {filter:contrast(120%);}
+.overlay-gradient:after{@apply absolute top-0 right-0 left-0 bottom-0 h-full w-full z-10 ;
+    content:"";
+    background: #67E98D;
+   
+
+  background: linear-gradient(120deg, rgba(103, 233, 141, 0.2) 0%, rgba(0, 182, 179, 0.30) 50%, rgba(7, 135, 131, 0.50) 100%);
+}
+
+
+/* overlay-gradient */
+
 /* card-main-box */
 
 /* single-card-box */
@@ -144,3 +159,24 @@
 .media_login > .facebook {@apply border-[#166fe5] text-[#166fe5] hover:text-white hover:bg-[#166fe5] mb-0;}
 .media_login > .google {@apply border-[#EA4335] text-[#EA4335] hover:text-white hover:bg-[#EA4335] ;}
 }
+
+/* Project detail */
+.project-description{@apply max-w-5xl m-auto;}
+.project-title{ @apply pb-3.5 md:pb-7 xl:pb-10 border-b-[#ddd] border-b border-solid;}
+/* Project detail */
+
+/* Blog */
+.blog-post-img img {@apply w-full object-cover h-full rounded-2xl;}
+.post-tag{@apply block text-[0.75rem] font-semibold tracking-[0] uppercase mb-5 text-red-500;}
+.truncate, .truncate-2 {@apply whitespace-normal overflow-ellipsis line-clamp-3 overflow-hidden ;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.meta-list-divider{ @apply relative top-0 rotate-90 px-1;}
+  
+/* Blog inner page  */
+
+.blog-post-img > img {@apply max-h-72 w-auto h-auto m-auto;}
+/* pagination */
+.page-item > button { @apply mx-1.5 border-0 rounded-none hover:border hover:rounded-sm border-solid  ;}
+/* pagination */

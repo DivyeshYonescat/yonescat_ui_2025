@@ -41,8 +41,9 @@ export default function DataAnalytics() {
       </div>
       <div className="section-main">
         <div className="container">
+          {/* overlay={"overlay-gradient"} */}
           <div className="card-box-inner grid  grid-cols-2 max-md:grid-cols-1 gap-7">
-            <BoxSection rightImage={true} ImageUrl={"/images/dashboard-01.webp"} BgColor={"bg-aqua/10"} order="order-1">
+            <BoxSection  rightImage={true} ImageUrl={"/images/dashboard-01.webp"} BgColor={"bg-aqua/10"} order="order-1">
               {/* <div className="card-main-box-img-text director-text order-1 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">  
                 <div className="">
@@ -58,7 +59,7 @@ export default function DataAnalytics() {
               </div>  
             </BoxSection>
 
-            <BoxSection rightImage={true} ImageUrl={"/images/f-02.webp"} BgColor={"bg-aqua/10"} order="order-1">
+            <BoxSection  rightImage={true} ImageUrl={"/images/f-02.webp"} BgColor={"bg-aqua/10"} order="order-1">
               {/* <div className="director-text order-1 max-md:order-2 w-full flex items-center lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
                 <div className="">
@@ -72,7 +73,7 @@ export default function DataAnalytics() {
               </div>  
             </BoxSection>
             
-            <BoxSection rightImage={true} ImageUrl={"/images/img-18.jpg"} BgColor={"bg-aqua/10"} order="order-1">
+            <BoxSection  rightImage={true} ImageUrl={"/images/img-18.jpg"} BgColor={"bg-aqua/10"} order="order-1">
               {/* <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
                 <div className="">
@@ -87,7 +88,7 @@ export default function DataAnalytics() {
               </div>  
             </BoxSection>
 
-            <BoxSection rightImage={true} ImageUrl={"/images/hero-13-img.jpg"} BgColor={"bg-aqua/10"} order="order-1">
+            <BoxSection  rightImage={true} ImageUrl={"/images/hero-13-img.jpg"} BgColor={"bg-aqua/10"} order="order-1">
               {/* <div className="director-text order-2 max-md:order-2 w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]"> */}
               <div className="card-main-box-img-text director-text order-2 max-md:order-2 w-full flex items-center">
                 <div className="">

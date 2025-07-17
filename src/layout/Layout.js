@@ -5,6 +5,7 @@ import Header from "./Header";
 import NewsLetterSection from "./NewsLetter/newsLetter";
 import CookiePopup from "./cookie";
 import AIagentComponent from "./AIagent";
+import { Toaster } from "@/components/ui/sonner";
 
 const Layout = ({children})=>{
 
@@ -57,7 +58,7 @@ const Layout = ({children})=>{
   return (
   <>
     <Header />
-    <main className="relative block z-20">
+    <main className="relative block">
       {children}
       <NewsLetterSection />
     </main>
@@ -65,7 +66,7 @@ const Layout = ({children})=>{
     <Footer footerHeight={setFooterHeight}  />
     <AIagentComponent isVisible={isVisible} />
     <CookiePopup />
-   
+    <Toaster richColors position="top-right" />
    </>
    );
 }

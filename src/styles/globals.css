@@ -333,7 +333,7 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 .cbox-2-line {@apply absolute bottom-[20px] left-2/4 w-[2px] bg-[#e4e4e4];
   height: calc(100% - 90px); transform: translateX(-50%);
 }
-.cbox-2-ico {@apply relative w-[2.625rem] h-[2.625rem] max-sm:w-[2.325rem] max-sm:h-[2.325rem] text-center rounded-[100%] text-[1.1875rem] bg-stone-900 text-stone-100 font-medium leading-[2.375rem] max-sm:leading-[1.975rem] border-[2px] border-[solid] [transition:all_450ms_ease-in-out];}
+.cbox-2-ico {@apply relative w-[2.625rem] h-[2.625rem] max-sm:w-[2.325rem] max-sm:h-[2.325rem] text-center rounded-[100%] text-[1.1875rem] bg-deepsea text-stone-100 font-medium leading-[2.375rem] max-sm:leading-[1.975rem] border-2 border-solid border-deepsea [transition:all_450ms_ease-in-out];}
 
 .legal-info h4{@apply mt-[40px] mb-[20px] font-bold;}
 .legal-info h5{@apply mt-[20px] mb-[10px] font-bold;}
@@ -434,6 +434,7 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 .ai_toggle_btn_top { bottom: 05px;  right: 50px;}
 
 /* invoice table */
+.invoice-wapper > .header-main {z-index: 20;}
 .invoice_table > thead > tr > th {@apply font-bold text-lg;}
 .invoice_table > tbody > tr > td {@apply font-medium ;}
 .invoice_table > tbody > tr{@apply border-b-[#E3ECE2];}
@@ -442,9 +443,18 @@ body {  @apply font-pt-sans text-[14px] sm:text-[16px] overflow-x-hidden text-[v
 .invoice-dropdwon > div:hover{@apply bg-white;}
 /* invoice table */
 /* invoice table */
-.invoice_sadebar_main{@apply fixed right-[0] top-[0] bottom-[0] w-3/5 max-sm:w-[90%] pt-[65px] px-[30px] pb-[30px] max-sm:pb-[15px] max-sm:px-[15px] bg-[#fff] h-full overflow-auto;}
-.product-main {  height: 200px;  overflow: auto;}
+.invoice_sadebar_main{@apply fixed right-0 top-0 bottom-0  w-0  bg-[#fff] h-full overflow-auto;
+  transition: 300ms ease-in-out all;
+}
+.invoice_sadebar_main.active{@apply w-3/5 max-sm:w-[90%];
+  transition: 300ms ease-in-out all;
+}
+.invoice_sadebar_main > div{@apply relative pt-[65px] px-[30px] pb-[30px] max-sm:pb-[15px] max-sm:px-[15px] ;}
+.product-main{@apply max-h-52 overflow-auto;}
 .products-table{@apply w-full; }
 .products-table thead th,.products-table tbody td {@apply p-[5px] text-center;}
 .products-table thead tr {@apply border-b-1 border-solid;}
 /* invoice table */
+.project-priview-img > img{@apply !w-auto !m-auto;}
+/* mobile-framework-stay */
+.mobile-framework-stay img{@apply max-md:!object-cover max-2xl:!object-contain ; }

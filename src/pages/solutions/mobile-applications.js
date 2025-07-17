@@ -71,7 +71,7 @@ export default function MobileApplicationsSection() {
     
     <div className="">
       <div className="container">
-        <div className="single-card-box">
+        <div className="single-card-box mobile-framework-stay">
         <BoxSection rightImage={true} ImageUrl={"/images/main/frameworks.webp"} BgColor={"bg-aqua/10"} order="order-1">
           <div className="order-2 max-md:order-2 director-text w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
             <div className="px-0 max-lg:px-[20px]">
@@ -81,7 +81,7 @@ export default function MobileApplicationsSection() {
                 <li className="mb-[10px]"><p>High developmental speed</p></li>
                 <li className="mb-[10px]"><p>The range of applicability of the framework</p></li>
                 <li className="mb-[10px]"><p>Flexibility and manageability of the framework with respect to its architecture and performance</p></li>
-                <li ><p>A narrow-focused framework that streamlines app development by providing a straightforward API and increasing abstraction for its domain.</p></li>
+                <li><p>A narrow-focused framework that streamlines app development by providing a straightforward API and increasing abstraction for its domain.</p></li>
               </ul>
             </div>
           </div>  
@@ -92,8 +92,7 @@ export default function MobileApplicationsSection() {
     <div className="section-main pb-0">
       <div className="container">
         <div className="single-card-box">
-        <BoxSection rightImage={true} ImageUrl={"/images/main/hybrid-to-native.webp"} BgColor={"bg-aqua/10"}
- order="order-1">
+        <BoxSection rightImage={true} ImageUrl={"/images/main/hybrid-to-native.webp"} BgColor={"bg-aqua/10"}  order="order-1">
           <div className="order-2 max-md:order-2 director-text w-full flex items-center px-[30px] lg:px-[50px] max-lg:px-[25px] py-[50px] max-md:py-[25px]">
             <div className="px-0 max-lg:px-[20px]">
               <h3 className="mt-[15px] mb-[20px] max-lg:mt-[10px] max-lg:mb-[10px]">Build Hybrid Then Go Native</h3>
