@@ -21,6 +21,7 @@ import useError from '@/api/errorShow';
 import TiptapEditor from '@/components/TiptapEditor';
 import { Loader2 } from 'lucide-react';
 import AuthModel from '@/components/Model/authModel';
+import { toast } from 'sonner';
 
 
 
@@ -101,12 +102,13 @@ export default function Home() {
         setResult(formData.data.data);
 
         setFiles([]);
-        setValue('');
+        setValue("");
         setInvalidFiles([]);
-
+        toast.success('Your ticket has been Submitted');
       //  toast.update(id, { render: "Your ticket is Submitted", type: "success", isLoading: false, autoClose: 1000 });
       }else{
         setIsSubmitting(false);
+        toast.error('Somethig is missing');
         // setLoading(false);
         
         showError(formData.errors.errorCollaction);

@@ -14,6 +14,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { invoice_SMS_Send_To_Pay, list_of_invoice, sendStrpePay } from "@/api/formSubmission";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import Sidebar from "@/components/Sidebar";
+import { toast } from 'sonner';
  
 export default function Invoice() {
   const router = useRouter();
@@ -50,8 +51,10 @@ export default function Invoice() {
     const formData = await sendStrpePay(data);
     if(formData.success){
       setIsSubmitting(false);
+      toast.success('Payment SMS has send!');
     }else{
       setIsSubmitting(false);
+       toast.error("Something is wrong");
     }
     
   // const sendSMSToCutomers = async (idd,phone) => {
@@ -123,6 +126,7 @@ export default function Invoice() {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
+                  {/*          */}
                   {listInvoice.map((row, index) => <>
                   <TableRow key={row.invoice_id}>
                     <TableCell>{index+1}</TableCell>

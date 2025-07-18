@@ -2,6 +2,13 @@
 import React, { useState, useRef, useEffect  } from 'react';
 import Image from "next/image";
 import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';
+
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Tooltip, TooltipContent, TooltipTrigger,} from "@/components/ui/tooltip"
+import { Loader2 } from 'lucide-react';
 
 import Layout from "@/layout/Layout";
 import Banner from "@/layout/Banner";
@@ -10,34 +17,28 @@ import { Controller, useForm } from "react-hook-form";
 import { FormError } from "@/components/form/validationError";
 import useError from '@/api/errorShow';
 
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Tooltip, TooltipContent, TooltipTrigger,} from "@/components/ui/tooltip"
-import { Loader2 } from 'lucide-react';
-
-
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
 import ProductManager from '@/components/invoice/Product';
 import { createInvoice } from '@/api/formSubmission';
+import Link from 'next/link';
+import { toast } from 'sonner';
+
 
 export default function Home() {
 
   const steps = ['User Info', 'Add Products'];
   const [step, setStep] = useState(0);
 
+  const router = useRouter();
   const pageUrl = usePathname();
   const formRef = useRef(null);
 
   const [Merchant, setMerchant] = useState(null);
+  const {control, register, handleSubmit, trigger, getValues, reset, formState: { errors },} = useForm({ mode: 'onTouched'});
 
-  const {control, register, handleSubmit,    trigger,    getValues,    formState: { errors },  } = useForm({ mode: 'onTouched'});
-
-  const stepFields = [
-    ['fullname', 'email',"phone","address","city","state","postal_code","country"],
-  ];
+  const stepFields = [['fullname', 'email',"phone","address","city","state","postal_code","country"],];
 
   const onNext = async () => {
     const valid = await trigger(stepFields[step]);
@@ -51,7 +52,6 @@ export default function Home() {
 
   const { error, showError, clearError } = useError();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const [result, setResult] = useState(null);
 
   //Product managment
@@ -80,6 +80,7 @@ export default function Home() {
     setCustomer(data);
 
     if(productsJson.length == 0){
+      toast.success('Product list is empty');
       alert("Product is empty")
       return 
     }
@@ -95,10 +96,15 @@ export default function Home() {
       setResetTrigger(prev => !prev);
       setResult(formData.data);
       setStep(0);
+
       formRef.current.reset();
+      reset();
+      setProductsJson([]);
+      toast.success('New invoice has created!');
     }else{
       setIsSubmitting(false);
       showError(formData.errors.errorCollaction);
+      toast.error('Something is wrong!');
     }
   }
 
@@ -112,7 +118,10 @@ export default function Home() {
               <div className="box-text-section"> 
                 <div className='flex items-center justify-between mb-[30px]'>
                   <h4> Create New Invoices </h4>
-                  <Image src="/images/contact-icone/send-mail.svg" alt='send_mail' width={50} height={50} />
+                  <Link className={buttonVariants({ variant: "", size:"lg"})} href={"/invoice"}>Invoices List</Link>
+                  {/* <Image src="/images/contact-icone/send-mail.svg" alt='send_mail' width={50} height={50} /> */}
+
+
                 </div>
                 <form ref={formRef} name="contactform" className="row contact-form" onSubmit={handleSubmit(onSubmit)}>
 

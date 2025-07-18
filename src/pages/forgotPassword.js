@@ -1,14 +1,19 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
+
 import { useForm } from "react-hook-form";
 import useError from "@/api/errorShow";
 import { userForgetPasswordForm } from "@/api/formSubmission";
-import { Label } from "@radix-ui/react-label";
+
+import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { FormError } from "@/components/form/validationError";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
+
+import { FormError } from "@/components/form/validationError";
+
+
 export default function Home() {
   const router = useRouter();
     
@@ -53,12 +58,13 @@ export default function Home() {
   return <>
     <div  className="pb-[80px] min-h-screen pt-[80px] w-full bg-no-repeat bg-[100%] bg-cover flex justify-center items-center" style={{background:"url(/images/login.webp)"}}>
       <div className="block w-full max-lg:px-[10px_30px] max-sm:px-0">
-        <h3 className="text-center pb-[15px]">Forget Password</h3>
-        {isShowMessage !== null &&  <h3 className="text-center">Reset Password Url is send to Email.</h3>}
+        <h3 className="text-center pb-4">Forget Password</h3>
+       
+        {isShowMessage !== null &&  <h3 className="text-center pb-4">Reset Password Url is send to Email.</h3>}
           
         <form ref={formRef} className='m-auto max-w-[500px] px-1.5' name="signinform" onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group mb-[20px]">
-                <Label > Email address </Label>
+                <Label className="mb-2.5 block"> Email address </Label>
                 <Input disabled={isSubmitting} className="form-control email" type="email" name="email" placeholder="example@example.com"
                     { ...register("email", { required: {  value:true, message:"Email is required" },
                       pattern: { value:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, message:"Enter valid email." }

@@ -11,7 +11,7 @@ import { Controller, useForm } from "react-hook-form";
 import { FormError } from "@/components/form/validationError";
 import useError from '@/api/errorShow';
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Tooltip, TooltipContent, TooltipTrigger,} from "@/components/ui/tooltip"
@@ -22,6 +22,8 @@ import PhoneInput from 'react-phone-number-input'
 
 import ProductManager from '@/components/invoice/Product';
 import { createInvoice, invoiceById, updateInvoice } from '@/api/formSubmission';
+import Link from 'next/link';
+import { toast } from 'sonner';
 
 
 export default function Home() {
@@ -40,10 +42,6 @@ export default function Home() {
   const onNext = async () => { const valid = await trigger(stepFields[step]); if (valid) setStep((prev) => prev + 1); };
   const onBack = () => setStep((prev) => prev - 1);
 
-  //Form 
-  const {control, register, handleSubmit,    trigger,    getValues, reset,   formState: { errors },  } = useForm({ mode: 'onTouched'});
-  const { error, showError, clearError } = useError();
-
   // Check User login
   const [listInvoice, setInvoice] = useState(null);
   const [merchant, setMerchant] = useState(null);
@@ -55,6 +53,13 @@ export default function Home() {
   //Product managment
   const [productsJson, setProductsJson] = useState([]);
   const [resetTrigger, setResetTrigger] = useState(false);
+
+  //Form 
+  console.log(listInvoice);
+  
+  const {control, register, handleSubmit, trigger, reset,formState: { errors },  } = useForm({ mode: 'onTouched'},
+);
+  const { error, showError, clearError } = useError();
 
   const handleProductsChange = (updatedProducts) => {
     setProductsJson(updatedProducts);
@@ -84,10 +89,12 @@ export default function Home() {
       return;
     }else{
       setMerchant(JSON.parse(localStorage.getItem('user')));
-      getInvoiceList(invoiceid)
+      if(invoiceid !== null) {
+        getInvoiceList(invoiceid)
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[]);
+  },[invoiceid]);
 
   function areJsonEqual(json1, json2) {
     if (typeof json1 !== 'object' || typeof json2 !== 'object' || json1 === null || json2 === null) { return false;}
@@ -169,15 +176,18 @@ export default function Home() {
       setResetTrigger(prev => !prev);
       setResult(formData.data);
       formRef.current.reset();
-      router.replace('/invoice');
+      toast.success('Invoice has updated!');
+      setTimeout(() => { router.replace('/invoice');}, 3000);
+      
     }else{
       setIsSubmitting(false);
-      
+       toast.error('Somethig is missing')
       if(formData.errors.errorCollaction == undefined){
         showError(formData.errors.message);  
       }else{
         showError(formData.errors.errorCollaction);
       }
+      
       
     }
   }
@@ -190,8 +200,9 @@ export default function Home() {
             <div className="box-inner-section !grid-cols-1">
               <div className="box-text-section"> 
                 <div className='flex items-center justify-between mb-[30px]'>
-                  <h4> Create New Invoices </h4>
-                  <Image src="/images/contact-icone/send-mail.svg" alt='send_mail' width={50} height={50} />
+                  <h4> Edit Invoice </h4>
+                  {/* <Image src="/images/contact-icone/send-mail.svg" alt='send_mail' width={50} height={50} /> */}
+                  <Link className={buttonVariants({ variant: "", size:"lg"})} href={"/invoice"}>Invoices List</Link>
                 </div>
                 <form ref={formRef} name="contactform" className="row contact-form" onSubmit={handleSubmit(onSubmit)}>
 
@@ -209,7 +220,7 @@ export default function Home() {
                       </div>
                       <div className="form-group ">
                         <Label className=""> Email address </Label>
-                        <Input type={"email"} disabled={isSubmitting} name="email" className="" placeholder="example@example.com"
+                        <Input type={"email"} disabled={isSubmitting} defaultValue={`${listInvoice != null ? listInvoice.customer_details.email  :""}`} name="email" className="" placeholder="example@example.com"
                             {...register("email", {
                                 required: { value:true, message:"Email is required" },
                                 pattern: { value:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,  message:"Enter valid email." }
@@ -221,7 +232,7 @@ export default function Home() {
                         <Label className="">Phone numbar</Label>
                         <div className="flex items-center relative w-full">
                             <Controller name="phone" control={control}  rules={{ required: 'Phone number is required' }}
-                                render={({ field }) => ( <PhoneInput className="w-full"  {...field} defaultCountry="US" onChange={field.onChange} placeholder="Phone numbar"  /> )}
+                                render={({ field }) => ( <PhoneInput disabled={true} className="w-full"  {...field} defaultCountry="US" onChange={field.onChange} placeholder="Phone numbar"  /> )}
                             />  
                             <Tooltip>
                               <TooltipTrigger className="absolute right-1.5 top-3.5"> <Image src={"/images/main/svg/info.svg"} width={20} height={20} alt=''/> </TooltipTrigger>
@@ -292,7 +303,10 @@ export default function Home() {
 
                   {step === 1 && <>
                     <div className="w-full mb-[10px]">
+                      
+                      {typeof error == "string" ? <div className="error text-red-700 mt-[10px]"> {error} </div> : <>
                       { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error text-red-700 mt-[10px]" key={errorIndex}> {error.message} </div>) }
+                      </>}
                     </div>
                     <div className="flex justify-between mt-[15px]">
                       <Button className="px-10 py-5" disabled={isSubmitting} onClick={onBack}>Back</Button>

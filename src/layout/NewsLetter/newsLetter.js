@@ -6,6 +6,7 @@ import useError from '@/api/errorShow';
 import { FormError } from '@/components/form/validationError';
 import FloatingSVG from './newslaterAnimation';
 import { newslaterForm } from '@/api/formSubmission';
+import { toast } from 'sonner';
 
 const NewsLetterSection = () => {
     const formRef = useRef(null);
@@ -25,9 +26,11 @@ const NewsLetterSection = () => {
         
         if(formData.success){
             // toast.update(id, { render: "Your Resume is Send", type: "success", isLoading: false, autoClose: 1000 });
+            toast.success('Thank you for subscribe!');
             setResult(formData.data);    
             formRef.current.reset();
         }else{
+            toast.error('Somethig is missing');
             // toast.update(id, { render: "Somethig is missing", type: "error", isLoading: false, autoClose: 1000 });
             showError(formData.errors);
         }

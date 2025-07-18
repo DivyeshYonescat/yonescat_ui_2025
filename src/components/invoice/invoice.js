@@ -55,7 +55,7 @@ const Invoice = ({status, id, invoice_id, products, merchant , customer, payment
                 <div className="billing-address">
                     <h3>Bill To:</h3>
                     {customer != null ? <>
-                    <p>Name : <b>{customer.name} </b></p>
+                    <p>Name : <b>{customer.fullname} </b></p>
                     <p>Phone: <b>{customer.phone}</b></p>
                     <p>Email: <b>{customer.email}</b></p>
                     </> : ""}

@@ -69,7 +69,6 @@ export default function Signup(props) {
         setIsSubmitting(true);
         const formData = await userSignupForm(data);
         if(formData.success){
-            
             setIsSubmitting(false);
             setOtpbox(true);
             formRef.current.reset();
@@ -156,7 +155,7 @@ export default function Signup(props) {
                                 <Label className="">Business name </Label>
                                 <Input disabled={isSubmitting} type="hidden" name="role" value={3} {...register("role")} />
                                 <Input type="text" disabled={isSubmitting} name="business_name" placeholder="Business name" className=""
-                                {...register("business_name",{
+                                    {...register("business_name",{
                                         required:{ value:true, message:"Business name is required" },
                                         minLength:{ value:4, message:"Business name is too short." }
                                     })}
@@ -231,22 +230,29 @@ export default function Signup(props) {
                         </div>
                         {/* Checkbox */}
                         <div className="items-top flex justify-start space-x-2 mb-[10px]">
-                            <Checkbox id="acceptTerms" className={"border-stone-900"} 
-                                {...register('acceptTerms',  { required: 'You must accept the terms and conditions' })} 
-                            />
+                            <Controller name="terms" control={control} rules={{ required: 'You must accept the terms and conditions' }}
+                            render={({ field }) => (
+                                <Checkbox id="acceptTerms" checked={field.value} onCheckedChange={field.onChange} />
+                            )} />
+
+                            {/* <Checkbox id="acceptTerms" name="acceptTerms" className={"border-stone-900"} 
+                                {...register('acceptTerms',  { required:{ value:true, message:"" }})} 
+                                // {...register("business_name",{
+                                //     minLength:{ value:4, message:"Business name is too short." }
+                                // })}
+                            /> */}
                             <div className="grid gap-1.5 leading-none">
                                 <label  htmlFor="acceptTerms" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" >
                                     you agree to our <button className="termurl" type="button" onClick={openTemsModal}>Terms</button> and that you have read our <button className="termurl" type="button" onClick={openModalPrivacy}>Privacy Policy</button>
                                 </label>
                             </div>
-                            
                         </div>
                         <FormError field={errors.acceptTerms} />
+
                         <div className='float-left w-full mb-[10px]'>
                             { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error text-red-700 mt-[10px]" key={errorIndex}> {error.message} </div>) }
                         </div>
                         {/* Form Submit Button */}
-
                         <Button disabled={isSubmitting} type="submit" className="w-full px-10 py-5">
                             {isSubmitting ? <> <Loader2 className="animate-spin" /> Please wait  </> : "Create Account" }  
                         </Button>
@@ -290,7 +296,7 @@ export default function Signup(props) {
                             </Button>
                        </div>
                         <div className="backButotn text-center mt-5" >
-                            <Button  type="button" variant="secondary" disabled={isSubmitting}  onClick={()=>{setOtpbox(false)}}> <b>Back To Signup</b> </Button>
+                            <Button  type="button" variant="secondary" disabled={isSubmitting}  onClick={()=>{ setOtpbox(false)}}> <b>Back To Signup</b> </Button>
                         </div>
                     </form>
                 </div>

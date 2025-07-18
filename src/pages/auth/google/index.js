@@ -7,6 +7,7 @@ import { toast } from 'sonner';
 export default function GoogleCallback() {
   const router = useRouter();
   const search = useSearchParams();
+  const googleUrl = process.env.NEXT_PUBLIC_BACKEND_URL; 
 
   useEffect(() => {
     // Strapi will put ?code=... on the URL. Pass the entire query string to Strapi.
@@ -15,7 +16,7 @@ export default function GoogleCallback() {
         const queryString = window.location.search; // includes leading "?"
         // Forward the code to Strapi; Strapi exchanges it for JWT & user info.
         const { data } = await axios.get(
-          `http://localhost:1337/api/auth/google/callback${queryString}`,
+          `${googleUrl}/api/auth/google/callback${queryString}`,
           { withCredentials: false }
         );
 
@@ -26,7 +27,7 @@ export default function GoogleCallback() {
         // logged in – send user to dashboard
         router.replace('/');
       } catch (err) {
-        //console.error('Google auth failed', err);
+        ///console.error('Google auth failed', err);
         //router.replace('/login?error=google');
         toast.error(err.message);
         setTimeout(() => { router.replace('/auth?type=login');}, 2000);
@@ -36,5 +37,12 @@ export default function GoogleCallback() {
     fetchToken();
   }, [router, search]);
 
-  return <p className="p-4">Signing you in…</p>;
+  return <>
+    <div id="loading" className="loading--theme">
+      <div id="loading-center" className='flex flex-col'>
+        <object type="image/svg+xml" data="/images/yonescat-logo-loader.svg"></object>
+          <h3 className='mt-5'> Login With Google ... </h3>
+      </div>
+    </div>  
+  </>
 }

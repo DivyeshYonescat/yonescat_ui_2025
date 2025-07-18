@@ -28,12 +28,13 @@ import useError from '@/api/errorShow';
 import Image from 'next/image';
 import Modal from '@/components/Model/Modal';
 import AuthModel from '@/components/Model/authModel';
+import { toast } from 'sonner';
 
 export default function Home() {
   const pageUrl = usePathname();
   const formRef = useRef(null);
 
-  const { control, register, handleSubmit, watch, setValue, formState: { errors } } = useForm();
+  const { control, register, handleSubmit, reset, watch, setValue, formState: { errors } } = useForm();
   const { error, showError, clearError } = useError();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -95,11 +96,14 @@ export default function Home() {
     
     if(formData.success){
       setIsSubmitting(false);
+      setResult(formData.data);
       formRef.current.reset();
+      reset();
       //toast.update(id, { render: "Your Resume is Send", type: "success", isLoading: false, autoClose: 1000 });
-      setResult(formData.data);    
+      toast.success("Your resume has been sent");   
       //setLoading(false);
     }else{
+      toast.error("Something is missing");  
       setIsSubmitting(false);
       //setLoading(false);
       showError(formData.errors.errorCollaction);

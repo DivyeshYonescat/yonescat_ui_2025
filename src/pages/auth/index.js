@@ -18,20 +18,26 @@ export default function Home() {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[type]);
+
+  const [otpbox, setOtpbox] = useState(false);
+
   
   return (
     <>
       <div  className="pb-[20px] flex justify-center items-center min-h-screen pt-[20px] w-full bg-no-repeat bg-[100%] bg-cover" style={{background:"url(/images/login.webp)"}}>
         <div className="container">
           <div className='max-w-2xl m-auto'>
+           
             <div className='flex justify-center w-full pb-6 max-sm:pb-3'>
               <Button type="button" variant="outline" className={`text-deepsea hover:bg-deepsea hover:text-white px-10  mx-[15px] max-sm:mx-[5px] font-bold py-5 border-2 ${type  === 'login' && "bg-deepsea text-white"}` }   onClick={() => handleTabChange('login')} > Login</Button>
               <Button type="button" variant="outline" className={`text-deepsea hover:bg-deepsea hover:text-white px-10  mx-[15px] max-sm:mx-[5px] font-bold py-5 border-2 ${type  === 'register' && "bg-deepsea text-white"}` }  onClick={() => handleTabChange('register')} > Register</Button>
             </div>
+            
             <div className='auth-form flex flex-col justify-center  max-md:order-2 '> 
               {type === 'login' && <Login /> }
-              {type === 'register' && <Signup /> }
+              {type === 'register' && <Signup  /> }
             </div>
+            
           </div>
         </div>
       </div>

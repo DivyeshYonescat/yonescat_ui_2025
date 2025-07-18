@@ -8,20 +8,18 @@ import { Button } from "@/components/ui/button";
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-
 import { useForm } from "react-hook-form";
-
 
 import Layout from "@/layout/Layout";
 import { FormError } from "@/components/form/validationError";
 import { contactUsForm } from '@/api/formSubmission';
 import useError from '@/api/errorShow';
 
-
 import { Loader2 } from 'lucide-react';
 import Banner from '@/layout/Banner';
 import ContactLeft from '@/components/contactLeft/contactLeft';
 import AuthModel from '@/components/Model/authModel';
+import { toast } from 'sonner';
 
 export default function Home() {
   const pageUrl = usePathname();
@@ -84,8 +82,10 @@ export default function Home() {
     if(formData.success){
       setIsSubmitting(false);
       setResult(formData.data);
+      toast.success("Thank you for contact us!")
       formRef.current.reset();
     }else{
+      toast.error('Somethig is missing');
       setIsSubmitting(false);
       showError(formData.errors.errorCollaction);
     }

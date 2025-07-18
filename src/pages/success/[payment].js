@@ -166,7 +166,7 @@ export default function Page({payment}) {
               </tbody>
             </table>
             <div className="text-center mt-7">
-              <p>Check your email for the confirmation and details of your order.</p>
+              <p>Check your Phone for the confirmation and details of your order.</p>
             </div>
           </div>
         </div>
