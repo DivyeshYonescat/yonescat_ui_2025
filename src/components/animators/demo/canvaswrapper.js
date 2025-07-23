@@ -1,7 +1,7 @@
 "use client";
 import { Canvas } from "@react-three/fiber";
 import { ScrollControls, OrbitControls } from "@react-three/drei";
-import Scene from "./Scene";
+// import Scene from "./Scene";
 
 export default function CanvasWrapper() {
   return (
@@ -12,7 +12,7 @@ export default function CanvasWrapper() {
     >
       {/* optional scroll-based controls */}
       <ScrollControls pages={1} damping={0.15}>
-        <Scene />
+        {/* <Scene /> */}
       </ScrollControls>
 
       {/* remove if you don’t need free orbiting */}
