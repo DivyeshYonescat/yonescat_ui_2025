@@ -49,7 +49,7 @@ export default function Home() {
     };
 
     return (<>
-        <Layout headerStyle={1} footerStyle={3} headerCls="navbar-dark inner-page-header"
+        <Layout 
           headTitle={"Blogs | Yonescat"} 
           metaDescription={"Yonescat - We Design Solutions"} 
           keywords={"Blogs"} url={pageUrl}

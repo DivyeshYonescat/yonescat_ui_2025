@@ -4,10 +4,11 @@ import Layout from "@/layout/Layout";
 import InnerHero from "@/layout/hero2";
 import BoxSection from "@/components/sections/section";
 import ContactSection from "@/components/sections/contact";
+import { usePathname } from "next/navigation";
 
 
 export default function DataAnalytics() {
-
+   const pageUrl = usePathname();
   const [showMore, setShowMore] = useState({key:0});
   
   const handleToggle = (key) => {
@@ -19,7 +20,9 @@ export default function DataAnalytics() {
   }
 
   return(<>
-    <Layout>
+    <Layout  headTitle="Yonescat Services in Data Analytics | Yonescat" keywords={"Solutions, Data Analytics"} url={pageUrl}
+      metaDescription="Yonescat manages, analyzes and implements data for beginners to take the quintessential data analytics strategy." >
+
       <InnerHero imgScr={"/images/animation/solutions/Data-Analytics.json"} bgImg={"/images/inner-page/data-analytics.webp"}
         title="Data Analytics" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Get, Clean and Understad your data in the most inovative ways.</p>}

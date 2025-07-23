@@ -1,10 +1,9 @@
 import Layout from "@/layout/Layout";
 import Overview from "@/components/overview";
 import CommonSection from "@/components/sections/section";
+import { usePathname } from "next/navigation";
 
-
-export default function Home() {
-  const list = [{
+const list = [{
     "id":"1",
     "image":"mobile-app-teaser.webp",
     "title":"Mobile Applications",
@@ -52,10 +51,14 @@ export default function Home() {
     "title":"IoT",
     "discrition":"Yonescat offers IoT services that include consulting, development, data analytics, and app management to optimize and automate corporate workflows using IoT technology. They help businesses turn their needs into a competitive advantage by offering innovative IoT-based solutions. Yonescat incorporates technologies such as RFID, NFC, beacons, and GPRS to meet the requirements of IoT. They are involved in various IoT applications such as smart homes, smart cities, self-driven cars, IoT retail shops, farming, wearables, smart grids, industrial internet, telehealth, automated warehouses, and smart supply-chain management. Yonescat also specializes in hardware and software for tracking and reporting IoT assets, simplifying the management of desktop and mobile devices.",
     "link":"/solutions/iot"
-  }]
+}]
+export default function Home() {
+  const pageUrl = usePathname();
   return (
     <>
-      <Layout>     
+      <Layout headTitle="Solutions | Yonescat"
+        metaDescription="Discover our comprehensive range of solutions including Software Development, Product Design, AI & Machine Learning, Mobile Applications, Web & Cloud Portals, E-commerce, Data Analytics, Virtual Reality, Decentralized Systems, and IoT. Innovate and transform your business with our expertise."
+        keywords={"Solutions, Software Development, Product Design, Ai & Machine Learning, Mobile Applications, Web & Cloud Portals, E-commerce, Data Analytics, Virtual Reality,  Decentralized Systems, IoT-"} url={pageUrl}>     
         <Overview list={list} />
       </Layout>
     </>

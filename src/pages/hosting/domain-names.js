@@ -3,9 +3,11 @@ import BoxSection from "@/components/sections/section";
 import { Button } from "@/components/ui/button";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function DomainName() {
+  const pageUrl = usePathname();
    const [showMore, setShowMore] = useState({key:0});
   
   const handleToggle = (key) => {
@@ -16,7 +18,11 @@ export default function DomainName() {
     }
   }
   return(<>
-    <Layout>
+    <Layout
+      headTitle="Domain Names | Yonescat"
+        metaDescription="A domain name is the name and address of your website by which internet users will be able to access your website. Explore more in detail."
+        keywords={"Hosting, Domain Names"} url={pageUrl}
+    >
       <InnerHero imgScr={"/images/animation/hosting/Domain-Names.json"} bgImg={"/images/inner-page/domain-names-bg.webp"}
         title="Domain Names" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">From the most common domain name to the most exotic and excentric ones. We have them all.</p>}

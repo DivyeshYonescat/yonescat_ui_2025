@@ -2,10 +2,16 @@ import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
+import { usePathname } from "next/navigation";
 
 export default function DeveloperHosting() {
+  const pageUrl = usePathname();
   return(<>
-    <Layout>
+    <Layout
+       headTitle="Developer Hosting | Yonescat"
+        metaDescription="We provide with optimal web developer hosting services to help you deliver results."
+        keywords={"Hosting, Developer Hosting"} url={pageUrl}
+    >
       <InnerHero imgScr={"/images/animation/hosting/Developer-Hosting.json"} bgImg={"/images/inner-page/developer-hosting-background.webp"}
         title="Developer Hosting" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Write more code spend less on server configuration</p>}

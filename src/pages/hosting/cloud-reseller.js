@@ -2,10 +2,16 @@ import ContactSection from "@/components/sections/contact";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function CloudReseller() {
+  const pageUrl = usePathname();
   return(<>
-    <Layout>
+    <Layout 
+      headTitle="Cloud Reseller | Yonescat"
+      metaDescription="A leading cloud computing service provider, Yonescat helps one become a reseller without contracts."
+      keywords={"Hosting, Cloude Reseller"} url={pageUrl}
+    >
       <InnerHero imgScr={null} bgImg={"/images/inner-page/iot-bg.webp"} 
         title="Cloud Reseller" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Become a reseller with Yonescat Cloud. No contracts and one monthly bill.</p>}

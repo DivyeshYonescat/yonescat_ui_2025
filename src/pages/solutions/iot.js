@@ -4,11 +4,9 @@ import Layout from "@/layout/Layout";
 import InnerHero from "@/layout/hero2";
 import ContactSection from "@/components/sections/contact";
 import ListBox from "@/components/listBox";
+import { usePathname } from "next/navigation";
 
-
-
-export default function ECommerce() {
-  const ListArray = [
+const ListArray = [
     {"id":"1","listimg":"/images/main/smart-house.webp","title":"Smart Homes"},
     {"id":"2","listimg":"/images/main/smart-city.webp","title":"Smart City"},
     {"id":"3","listimg":"/images/png_icons/tool-1.webp","title":"Track & Tracing machines"},
@@ -22,8 +20,13 @@ export default function ECommerce() {
     {"id":"11","listimg":"/images/png_icons/warehouse.png","title":"Automated Warehouse"},
     {"id":"12","listimg":"/images/png_icons/supply-chain-management.png","title":"Smart Supply-chain Management"},
   ]  
+
+export default function Iot() {
+  const pageUrl = usePathname();
   return(<>
-    <Layout>
+    <Layout headTitle="Yonescat Services in IOT | Yonescat" keywords={"Solutions, IOT"} url={pageUrl}
+      metaDescription="Discover our comprehensive range of solutions including Software Development, Product Design, AI & Machine Learning, Mobile Applications, Web & Cloud Portals, E-commerce, Data Analytics, Virtual Reality, Decentralized Systems, and IoT. Innovate and transform your business with our expertise."
+    >
       <InnerHero imgScr={"/images/animation/solutions/IOT.json"} bgImg={"/images/inner-page/iot-bg.webp"}
         title="Internet of Things" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">We help customers to take advantage of IoT and align themself for the future.</p>}

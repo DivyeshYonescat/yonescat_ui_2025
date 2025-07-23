@@ -93,11 +93,8 @@ export default function Home() {
     }else{setListProjectLoding(false);}
   };
 
- 
-  
-
   return (<>
-    <Layout> 
+    <Layout headTitle={"Projects | Yonescat"} metaDescription={"Yonescat - We Design Solutions"} keywords={"Projects"} url={pageUrl}> 
       <div className="section-main project pb-0">
         <div className="container">
           <div className="about_title w-[75%] py-[30px_50px] max-xl:w-full ">

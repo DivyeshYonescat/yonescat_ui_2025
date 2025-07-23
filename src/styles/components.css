@@ -6,8 +6,11 @@
   .whitebtn{@apply !border-stone-100 !text-stone-100 hover:!bg-stone-100 hover:!text-stone-900 ;}
   .small-text{@apply text-sm;}
 
-  /* card */
+  /* Hero section  */
+  .hero-image{@apply scale-[1.5];}
+  /* Hero section */
 
+  /* card */
   .card{  @apply shadow-2xl shadow-stone-900/15 overflow-hidden relative rounded-xl bg-aqua/10 backdrop-blur-xs;}
   .card * { @apply duration-300 ease-linear; }
   .card-bg{ @apply bg-gradient-to-tr from-aqua to-mintgreen absolute aspect-square pointer-events-none 
@@ -47,8 +50,10 @@
   .PhoneInput:has(input:focus-visible) { @apply border-2 border-solid border-deepsea ;}
   
   /* banner */
-  .banenr{@apply  bg-no-repeat bg-cover bg-bottom; }
-  .banenr-inner{@apply  flex flex-col justify-start h-[550px] max-sm:h-[450px] pt-[120px] text-stone-100 max-w-[1000px] m-auto; }
+  .banner{@apply  bg-no-repeat bg-cover bg-bottom; 
+  background-image: radial-gradient(17% 28% at 65% 50%, #b4effbFF 5%, #073aff00 100%), radial-gradient(18% 28% at 18% 71%, #ffffff59 6%, #073aff00 100%), radial-gradient(70% 53% at 42% 85%, #73f2ffFF 0%, #073aff00 100%), linear-gradient(132deg, #85a3b4FF 0%, #19e4f6FF 98%);
+  }
+  .banner-inner{@apply  flex flex-col justify-start h-[550px] max-sm:h-[450px] pt-[120px] text-stone-100 max-w-[1000px] m-auto; }
   .shot-banner-inner{@apply pb-[120px] h-auto;}
   /* banner */
   
@@ -58,7 +63,7 @@
   /*  */
   .box-inner-section {@apply shadow-[-10px_10px_10px_-7px_rgba(0,0,0,0.47)] max-md:shadow-[0px_8px_30px_-7px_rgba(0,0,0,0.47)] max-md:h-auto grid max-w-[1000px] m-auto mt-[-200px]  grid-cols-[60%_40%] max-md:grid-cols-1 max-md:order-2;}
   .box-text-section{@apply flex flex-col justify-center max-md:order-2 p-[30px_60px_60px_60px] bg-stone-100 max-lg:p-[40px];}
-  .box-color-section {@apply flex justify-center items-center bg-stone-900 p-[30px] max-md:order-1; }
+  .box-color-section {@apply flex justify-center items-center bg-deepsea p-[30px] max-md:order-1; }
   /* concat box */
 
   .white-image{ filter: invert(100%) sepia(1%) saturate(100%) hue-rotate(360deg); } 

@@ -4,10 +4,12 @@ import BoxSection from "@/components/sections/section";
 import { Button } from "@/components/ui/button";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 
 export default function DdosProtections() {
+    const pageUrl = usePathname();
   const [showMore, setShowMore] = useState({key:0});
   
   const handleToggle = (key) => {
@@ -27,7 +29,7 @@ export default function DdosProtections() {
     {"id":"6","listimg":"/images/main/section_image/Icon_Img/ddos06.webp","title":"Customization"},
   ]  
   return(<>
-    <Layout>
+    <Layout  headTitle="Ddos Protections | Yonescat" metaDescription='We bring perfection to the "boring" and often forgoten aspects.' keywords={"Infrastructure, Ddos Protections"} url={pageUrl}>
        <InnerHero imgScr={"/images/animation/infrastructure/ddos-protections.json"} bgImg={"/images/inner-page/ddos-background.webp"} 
           title="DDos Protection" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">We provide high-performance, real-time and automatic DDoS attack protection</p>}

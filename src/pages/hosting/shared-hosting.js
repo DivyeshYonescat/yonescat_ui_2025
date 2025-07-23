@@ -2,10 +2,15 @@ import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
+import { usePathname } from "next/navigation";
 
 export default function SharedHosting() {
+  const pageUrl = usePathname();
   return(<>
-    <Layout>
+    <Layout 
+       headTitle="Shared Hosting | Yonescat" keywords={"Hosting, Shared Hosting"} url={pageUrl}
+        metaDescription="Are you a beginner looking to set up your own website? You're in the right place!"
+    >
       <InnerHero imgScr={"/images/animation/hosting/shared-hosting.json"} bgImg={"/images/inner-page/iot-bg.webp"}   
         title="Shared Hosting" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Lighting fast shared Web Hosting with 99.9% Uptime</p>}

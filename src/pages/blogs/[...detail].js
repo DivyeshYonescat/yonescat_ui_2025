@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <>
-      <Layout>
+      <Layout headTitle={"BlogsDetails | Yonescat"} metaDescription={"Yonescat - We Design Solutions"} keywords={"BlogsDetails"} url={pageUrl}>
 
         <div>
           <section className="section-main">

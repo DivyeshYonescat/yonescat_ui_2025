@@ -3,9 +3,11 @@ import BoxSection from "@/components/sections/section";
 import { Button } from "@/components/ui/button";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function CloudVPS() {
+  const pageUrl = usePathname();
   const [showMore, setShowMore] = useState({key:0});
   
   const handleToggle = (key) => {
@@ -16,7 +18,9 @@ export default function CloudVPS() {
     }
   }
   return(<>
-    <Layout>
+    <Layout headTitle="Cloud VPS | Yonescat" keywords={"Hosting, Cloude VPN"} url={pageUrl}
+        metaDescription="What is Cloud VPS and why they can be a good fit for your business? Read here.">
+
       <InnerHero imgScr={"/images/animation/hosting/Cloud-VPS.json"} bgImg={"/images/inner-page/iot-bg.webp"}
         title="Cloud VPS" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Get your own Virtual Private Server and have full control over the server&apos;s entire configuration</p>}

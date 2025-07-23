@@ -11,15 +11,15 @@ const ContactLeft = ()=>{
           <div className='contact_list'>
             <div className='contact-box '>
               <Image className="white-image" src="/images/contact-icone/maps-and-flags.png" alt="address" width={25} height={25} />
-              <address>  Lorem Ipsum is simply dummy  text of the printing and typesetting industry. </address>
+              <address> {process.env.NEXT_PUBLIC_ADDRESS} </address>
             </div>
             <div className='contact-box'>
               <Image className="white-image" src="/images/contact-icone/smartphone-call.png" alt="address" width={25} height={25} />
-              <Link  href={"tel:+911234567890"} >1234567890</Link>
+              <Link  href={`tel:${process.env.NEXT_PUBLIC_PHONE_CODE}${process.env.NEXT_PUBLIC_PHONE}`} >{process.env.NEXT_PUBLIC_PHONE}</Link>
             </div>
             <div className='contact-box'>
               <Image className="white-image" src="/images/contact-icone/letter.png" alt="address" width={25} height={25} />
-              <Link  href={"mail:support@yonescat.com"} > support@yonescat.com</Link>
+              <Link  href={`mail:${process.env.NEXT_PUBLIC_EMAIL}`} > {process.env.NEXT_PUBLIC_EMAIL}</Link>
             </div>
           </div>
           <ul className="flex w-full mt-3.5 float-start items-center">

@@ -2,10 +2,16 @@ import Layout from "@/layout/Layout";
 import InnerHero from "@/layout/hero2";
 import ContactSection from "@/components/sections/contact";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function WebAndCloudPortals() {
+  const pageUrl = usePathname();
   return(<>
-    <Layout>
+    <Layout
+      headTitle="Yonescat Services in Web & Cloud Portals | Yonescat"
+        metaDescription="Creative London based agency will help you to reduce costs and increase productivity"
+        keywords={"Solutions, Yonescat Web & Cloud Portals"} url={pageUrl}
+    >
       <InnerHero imgScr={"/images/animation/solutions/Web-Cloud-Portals.json"} bgImg={"/images/inner-page/web-cloud-bg.webp"}
         title="Web & Cloud Portals" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Creative London based agency will help you to reduce costs and increase productivity</p>}

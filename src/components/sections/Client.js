@@ -89,7 +89,8 @@ const Clients = ({title}) => {
     <div className={`circle ${circleClass}`} ref={ref}>
       {[...logos].sort(() => Math.random() - 0.5).map((logo, index) => (
         <div className="logo" style={{ '--index': index }} key={`${circleClass}-${index}`}>
-          <Image priority={true} src={logo} width={150} height={80} alt="client" />
+          <Image  src={logo}  alt="Yonescat" width={150}  height={80} priority={true} unoptimized={true} />
+
         </div>
       ))}
     </div>

@@ -3,8 +3,10 @@ import ContactSection from "@/components/sections/contact";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function DedicatedServers() {
+  const pageUrl = usePathname();
   const ListArray = [
     {"id":"1","listimg":"/images/main/section_image/Icon_Img/single-tenant.webp","title":"It is a single-tenant hosting environment"},
     {"id":"2","listimg":"/images/main/section_image/Icon_Img/Extremely-flexible.webp","title":"Extremely flexible and credible server."},
@@ -14,7 +16,9 @@ export default function DedicatedServers() {
     {"id":"6","listimg":"/images/main/section_image/Icon_Img/oriented-hosting-server.webp","title":"Rock-solid website foundation"},
   ];
   return(<>
-    <Layout>
+    <Layout headTitle="Dedicated Servers | Yonescat" keywords={"Dedicated Servers"} url={pageUrl}
+        metaDescription="What exactly are dedicated servers and why they are essential for businesses, is what we are going to explore in this article.">
+          
       <InnerHero imgScr={"/images/animation/hosting/Dedicated-Servers.json"} bgImg={"/images/inner-page/iot-bg.webp"}
         title="Dedicated Servers" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">With our next generation hardware enjoy global connectivity, unbeatble speeds and uptimes.</p>}

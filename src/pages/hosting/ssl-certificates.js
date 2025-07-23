@@ -3,10 +3,15 @@ import BoxSection from "@/components/sections/section";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function SslCertificates() {
+  const pageUrl = usePathname();
   return(<>
-    <Layout>
+    <Layout
+      headTitle="SSL Certificate | Yonescat" keywords={"Hosting, SSL Certificates"}  url={pageUrl}
+        metaDescription="Providing clients with the most-secured and cost-effective SSL Certificates for their websites"
+    >
       <InnerHero imgScr={"/images/animation/hosting/SSl-Certificates.json"} bgImg={"/images/inner-page/iot-bg.webp"} 
         title="SSl certificates" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Protect your website with SSL in minutes and a few clicks</p>}

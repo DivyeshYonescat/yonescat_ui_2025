@@ -1,6 +1,7 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Button, buttonVariants } from "@/components/ui/button"
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 
 // Lazy load the CylinderScene component
@@ -17,9 +18,10 @@ const HomeHero = function () {
             <p className="mb-8">Invest in outstanding startups, find investments for your business, involve the best in your ideas.</p>
             <Link className={buttonVariants({ variant: "", size:"lg"})} href={"/infrastructure"}>Explore Our Services</Link>
           </div>
-          {/* <div className="h-[700px] hero-image" >
-            <CylinderScene/>
-          </div> */}
+          <div className="hero-image flex items-center relative" >
+            {/* <CylinderScene/> */}
+              <DotLottieReact className="w-full max-lg:w-[600px] max-sm:w-[400px] h-auto m-auto" src={"/images/hero-animation/02.json"} loop autoplay />
+          </div>
         </div>
       </div>
     </section>

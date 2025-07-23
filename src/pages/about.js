@@ -1,31 +1,35 @@
-"use client";
+"use client"
 import dynamic from "next/dynamic";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
 import Card from "@/components/card";
+import { usePathname } from "next/navigation";
+
+const FeaturesList = [{
+  id:"1", icone:"Market-Research.png", title:"Market Research",
+  discription:"We conduct a comprehensive market study that allows businesses to become aware of changes in industries, tendencies of consumers, and competitiveness. This’s our expertise that assists in making decisions and developing strategies."},
+  { id:"2", icone:"user-Experience.png", title:"User Experience",
+  discription:"Our UX services focus on making digital interfaces that are easy to navigate and pleasant to use. Our clients’ demands are centerstage, which calls for the design of effective and memorable user experiences."
+  },
+  { id:"3", icone:"Digital-Marketing.png", title:"Digital Marketing",
+  discription:"We provide innovative digital marketing tactics to increase interaction, raise brand exposure, and create leads. Our experience includes content marketing, email campaigns, and sponsored adverts. We also offer social media marketing, SEO, and other digital marketing services."
+  },
+  { id:"4", icone:"web-development.png", title:"Web Development",
+  discription:"Our web development solutions are tailored to modern company requirements, resulting in robust, scalable, and visually appealing websites. We specialize in cutting-edge technologies and frameworks for a more effective online presence."
+  },
+  { id:"5", icone:"Brand-Design-Identity.png", title:"Brand Design Identity",
+  discription:"We assist organizations in developing a strong brand identity through smart design, logo creation, and consistent visual storytelling that connects with target audiences."},
+  { id:"6", icone:"seo.png", title:"SEO & SMM Services",
+  discription:"Increase your online exposure and engagement with our Search Engine Optimization (SEO) and Social Media Marketing (SMM) services. We ensure that your business stands out in an increasingly competitive digital landscape."
+}]
+
 const DynamicClients = dynamic(() => import("@/components/sections/Client"),{ssr:true});
 
+
 export default function Home() {
-  const FeaturesList = [{
-    id:"1", icone:"Market-Research.png", title:"Market Research",
-    discription:"We conduct a comprehensive market study that allows businesses to become aware of changes in industries, tendencies of consumers, and competitiveness. This’s our expertise that assists in making decisions and developing strategies."},
-    { id:"2", icone:"user-Experience.png", title:"User Experience",
-    discription:"Our UX services focus on making digital interfaces that are easy to navigate and pleasant to use. Our clients’ demands are centerstage, which calls for the design of effective and memorable user experiences."
-    },
-    { id:"3", icone:"Digital-Marketing.png", title:"Digital Marketing",
-    discription:"We provide innovative digital marketing tactics to increase interaction, raise brand exposure, and create leads. Our experience includes content marketing, email campaigns, and sponsored adverts. We also offer social media marketing, SEO, and other digital marketing services."
-    },
-    { id:"4", icone:"web-development.png", title:"Web Development",
-    discription:"Our web development solutions are tailored to modern company requirements, resulting in robust, scalable, and visually appealing websites. We specialize in cutting-edge technologies and frameworks for a more effective online presence."
-    },
-    { id:"5", icone:"Brand-Design-Identity.png", title:"Brand Design Identity",
-    discription:"We assist organizations in developing a strong brand identity through smart design, logo creation, and consistent visual storytelling that connects with target audiences."},
-    { id:"6", icone:"seo.png", title:"SEO & SMM Services",
-    discription:"Increase your online exposure and engagement with our Search Engine Optimization (SEO) and Social Media Marketing (SMM) services. We ensure that your business stands out in an increasingly competitive digital landscape."
-    },
-  ]
+  const pageUrl = usePathname();
   return(<>
-    <Layout>
+    <Layout headTitle={"About us | Yonescat"}  metaDescription={"Yonescat - We Design Solutions"}  keywords={"Aboutus"} url={pageUrl} >
       <div className="section-main pb-0">
         <div className="container">
           <div className="about_title w-[75%] py-[50px_20px] max-xl:w-full">

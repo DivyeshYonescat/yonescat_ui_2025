@@ -3,17 +3,22 @@ import ContactSection from "@/components/sections/contact";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
-
-export default function DatabaseAsService() {
-  const ListArray = [
+import { usePathname } from "next/navigation";
+const ListArray = [
     {"id":"","listimg":"/images/main/section_image/Icon_Img/no-sql-database.svg","title":"NoSQL"},
     {"id":"","listimg":"/images/main/section_image/Icon_Img/mysql-64.png","title":"MySQL"},
     {"id":"","listimg":"/images/main/section_image/Icon_Img/rds-postgresql-64.png","title":"PostgreSQL"},
     {"id":"","listimg":"/images/main/section_image/Icon_Img/Mongodb.png","title":"MongoDB Atlas"},
     
   ];
+export default function DatabaseAsService() {
+  const pageUrl = usePathname();
   return(<>
-    <Layout>
+    <Layout
+      headTitle="Database As A Service | Yonescat"
+      metaDescription="Learn what is so special about cloud databases and why you should consider moving to a database as a service model."
+      keywords={"Infrastructure, Database As A Service"} url={pageUrl}
+    >
       <InnerHero imgScr={"/images/animation/infrastructure/Database-Service.json"} bgImg={"/images/inner-page/db-as-service-bg.webp"} 
         title="Database as a Service" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Seemless database management and integration</p>}

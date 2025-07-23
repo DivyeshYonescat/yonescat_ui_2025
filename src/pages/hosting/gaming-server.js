@@ -4,9 +4,10 @@ import BoxSection from "@/components/sections/section";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function GameServer() {
-
+  const pageUrl = usePathname();
   const ListArray = [
     {"id":"1","listimg":"/images/main/section_image/Icon_Img/Band.png","title":"Bandwidth"},
     {"id":"2","listimg":"/images/main/section_image/Icon_Img/The_processor.webp","title":"The processor"},
@@ -16,7 +17,8 @@ export default function GameServer() {
   ]
 
   return(<>
-    <Layout>
+    <Layout headTitle="Gaming Server | Yonescat" keywords={"Hosting, Gaming Server"} url={pageUrl}
+        metaDescription="A game server is a remote or local server used by game clients to play multiplayer games. Dive into the article to learn in detail.">
       <InnerHero imgScr={"/images/animation/hosting/Gaming-Server.json"} bgImg={"/images/inner-page/iot-bg.webp"}  
         title="Gaming Server" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">The things to consider when building an AI or ML algorithm</p>}

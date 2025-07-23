@@ -113,7 +113,7 @@ export default function Home() {
 
   return (
     <>
-      <Layout>
+      <Layout headTitle={"Career | Yonescat"} metaDescription={"Yonescat - We Design Solutions"} keywords={"Career"} url={pageUrl}>
         <Banner title={"Questions? Let's Talk"} description={"Want to learn more about Yonescat, get a quote, or speak with an expert? Let us know what you are looking for and we’ll get back to you right away"} />
         <section className="box-main-section mb-[50px]">
           <div className="container">

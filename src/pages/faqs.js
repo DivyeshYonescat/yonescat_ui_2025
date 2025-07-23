@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import Layout from "@/layout/Layout";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
-
+  const pageUrl = usePathname();
   const [isActive, setIsActive] = useState({ status: false, key: 1, })
   const handleToggle = (key) => {
     if (isActive.key === key) { setIsActive({ status: false, }) }
@@ -11,7 +12,7 @@ export default function Home() {
   }
 
   return (<>
-    <Layout>
+    <Layout  headTitle={"FAQ | Yonescat"}  metaDescription={"Yonescat - We Design Solutions"}  keywords={"FAQ"} url={pageUrl}>
       <div className="section-main">
         <div className="container">
           <div className="inner-page-title">

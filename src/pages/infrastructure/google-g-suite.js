@@ -5,10 +5,9 @@ import { Button } from "@/components/ui/button";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
-
-export default function GoogleGSuite() {
-  const FeaturesList = [
+const FeaturesList = [
     { id:"1", icone:"Gmail_Logo.svg", title:"Gmail",
       discription:'Gmail, launched in 2004, is the G Suite email application with over 1 billion users worldwide. A G Suite plan offers businesses unlimited Google Group email addresses, custom company email addresses, 24/7 support, compatible add-ons, and 30GB of storage space.'
     },
@@ -24,7 +23,9 @@ export default function GoogleGSuite() {
     { id:"5", icone:"google-plus.svg", title:"Google+",
         discription:'Google+ was launched in 2011, refer to the G Suite social network. G Suit plan helps businesses enjoy the secure and protected IT infrastructure environment as well as restricted outside entities and communities to improve the security standards.'
   }]
-
+export default function GoogleGSuite() {
+  
+const pageUrl = usePathname();
  const [showMore, setShowMore] = useState({key:0});
   
   const handleToggle = (key) => {
@@ -36,7 +37,11 @@ export default function GoogleGSuite() {
   }
 
   return(<>
-    <Layout>
+    <Layout
+      headTitle="Google G-Suite | Yonescat"
+      metaDescription="What is G Suit software and how to set up an Account on G Suit? Read here."
+      keywords={"Infrastructure, Google G-Suite"} url={pageUrl} 
+    >
        <InnerHero imgScr={"/images/animation/infrastructure/Google-G-Suite.json"} bgImg={"/images/inner-page/google-g-bg.webp"}
           title="Google G-Suite" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">Boost productivity with doesens of services and products.</p>}

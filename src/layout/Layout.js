@@ -1,13 +1,16 @@
 "use "
 import { useEffect, useRef, useState } from "react";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import Footer from "./Footer";
 import Header from "./Header";
 import NewsLetterSection from "./NewsLetter/newsLetter";
 import CookiePopup from "./cookie";
 import AIagentComponent from "./AIagent";
 import { Toaster } from "@/components/ui/sonner";
+import { AnalyticsProvider } from "@/components/googleAnalytics/AnalyticsProvider";
+import PageHead from "./PageHead";
 
-const Layout = ({children})=>{
+const Layout = ({ headTitle, metaDescription, keywords, url, children})=>{
 
   const [scroll, setScroll] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -57,16 +60,20 @@ const Layout = ({children})=>{
 
   return (
   <>
+    <PageHead headTitle={headTitle} metaDescription={metaDescription} keywords={keywords} url={url} />
     <Header />
     <main className="relative block">
       {children}
       <NewsLetterSection />
+      <AnalyticsProvider />
     </main>
      
     <Footer footerHeight={setFooterHeight}  />
     <AIagentComponent isVisible={isVisible} />
     <CookiePopup />
     <Toaster richColors position="top-right" />
+    <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+      
    </>
    );
 }

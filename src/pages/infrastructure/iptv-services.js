@@ -2,10 +2,16 @@ import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
+import { usePathname } from "next/navigation";
 
 export default function IPtvServices() {
+  const pageUrl = usePathname();
   return(<>
-    <Layout>
+    <Layout
+      headTitle="IPTV | Yonescat"
+        metaDescription="Fascinated by the idea of IPTV? Here’s everything you need to know about it."
+        keywords={"Infrastructure,  IPTV Services"} url={pageUrl}
+    >
        <InnerHero imgScr={"/images/animation/infrastructure/IPTV-Services.json"} bgImg={"/images/inner-page/iptv-background.webp"}
           title="IPTV Services" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">Fast and Stable IPTV solutions tailored for every need.</p>}

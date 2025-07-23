@@ -1,7 +1,7 @@
 import Layout from "@/layout/Layout";
 export default function Home() {
   return(<>
-  <Layout>
+  <Layout headTitle={"GDPR-Policy | Yonescat"}  metaDescription={"Yonescat - We Design Solutions"}  keywords={"GDPR-Policy"} >
   <div className="section-main">
     <div className="container">
       <div className="max-w-[1000px] m-auto">

@@ -3,9 +3,8 @@ import InnerHero from "@/layout/hero2";
 import Overview from "@/components/overviewInner";
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
-
-export default function MobileApplicationsSection() {
-  const list = [
+import { usePathname } from "next/navigation";
+ const list = [
     {
       "id":"1",
       "image":"app-navigation.webp",
@@ -34,8 +33,16 @@ export default function MobileApplicationsSection() {
       "link":""
     }
   ];
+export default function MobileApplicationsSection() {
+ const pageUrl = usePathname();
   return(<>
-  <Layout>
+  <Layout
+    headTitle="Yonescat Services in Mobile Applications | Yonescat"
+    metaDescription="Innovative and user-centered applications that support easy access and streamlined business processes. "
+    keywords={"Solutions, Mobile Applications"} url={pageUrl}
+  >
+
+
     <InnerHero imgScr={"/images/animation/solutions/Mobile-Applications1.json"} bgImg={"/images/inner-page/banner-bg.webp"}
       title="Mobile Applications" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
       subtitle={<p className="sub-page-discretion">Innovative and user-centered applications that supports easy access and streamlined business processes.</p>}

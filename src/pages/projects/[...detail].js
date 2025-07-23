@@ -40,7 +40,7 @@ export default function Home(){
     getProject(projectId);
   }, [projectId, router]);
   return(<>
-    <Layout>
+    <Layout url={pageUrl} headTitle={"Project Details | Yonescat"} metaDescription={"Yonescat - We Design Solutions"}  keywords={"Project Details"} >
       <div className="section-main project pb-0">
         <div className="container">
             <div className="about_title w-[75%] py-[30px_50px] max-xl:w-full ">
@@ -86,7 +86,7 @@ export default function Home(){
                 </div>
                 {/* MORE PROJECTS BUTTON */}
                 
-                <h4 className="w-full text-end mt-8">
+                <h4 className="w-full text-end my-8">
                   <Link className="d-inherit" href="/projects">
                     More Projects <span className="flaticon-next mt-[-8px]" />
                   </Link>

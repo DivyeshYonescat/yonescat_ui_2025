@@ -20,6 +20,9 @@
         --color-mintgreen : #67E98D;
         --color-teal : #078783;
         --color-lightgray:#F2EFEB;
+        /* button color */
+        --color-aquamarine:#67E9BD;
+        --color-aquamarine-shade:#5bcda6;
 }
 
 /* :root {

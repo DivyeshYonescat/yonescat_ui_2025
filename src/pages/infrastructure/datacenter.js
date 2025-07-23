@@ -20,7 +20,7 @@ export default function DataCenter() {
     }
   }
   return(<>
-    <Layout>
+    <Layout  headTitle="Data Center | Yonescat" metaDescription='We bring perfection to the "boring" and often forgoten aspects.' keywords={"Infrastructure, Data Center"} url={pageUrl}>
        <InnerHero imgScr={"/images/animation/infrastructure/datacenter.json"}  bgImg={"/images/inner-page/decenter-bg.webp"} 
           title="Datacenter" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">We bring perfection to the &quot;boring&quot; and often forgoten aspects.</p>}

@@ -1,8 +1,7 @@
 import Layout from "@/layout/Layout";
 import Overview from "@/components/overview";
-
-export default function Home() {
-  const list = [{
+import { usePathname } from "next/navigation";
+const list = [{
     "id":"1",
     "image":"shared-hosting-teaser.webp",
     "title":"Shared Hosting",
@@ -65,9 +64,13 @@ export default function Home() {
     "discrition":"A gaming server is a computer that hosts video games for clients, allowing them to run multiplayer online games over the internet. You can host these servers remotely or locally, and membership fees are required for access. They offer more memory, processing, and storage capabilities, providing a stable, fast, and reliable connection to games. Yonescat is a leading IT solution provider that offers the best gaming servers at affordable rates. Choosing the right server depends on your needs, such as bandwidth, processor, storage capacity, speed, and memory. Yonescat's dedicated gaming servers provide benefits such as high traffic demand, reliable infrastructure, high levels of security, and high levels of customization. To get your gaming server today, contact Yonescat.",
     "link":"/hosting/gaming-server"
   }]
+export default function Home() {
+  const pageUrl = usePathname();
   return (
     <>
-      <Layout>        
+      <Layout headTitle={"Hosting | Yonescat"} metaDescription={"Yonescat - We Design Solutions"} 
+        keywords={"Hosting, Shared Hosting, Cloud Reseller, Dedicated Servers, Cloud VPS, Domain Names, Developer Hosting, Email Security, SSl Certificates, Gaming Server"} 
+        url={pageUrl}>        
         <Overview list={list} />
       </Layout>
     </>

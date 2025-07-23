@@ -4,9 +4,8 @@ import BoxSection from "@/components/sections/section";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
-
-export default function VopiVirtualNumbers() {
-  const FeaturesList = [
+import { usePathname } from "next/navigation";
+const FeaturesList = [
     { id:"1", icone:"Unlimited-Calling.webp", title:"Unlimited Calling",
       discription:'Unlimited calling with a VOIP system, you can call anyone as much as you want – there is no time limit for calls.'
     },
@@ -43,8 +42,14 @@ export default function VopiVirtualNumbers() {
     { id:"12", icone:"CRM-Integration.webp", title:"CRM Integration",
       discription:'enhance your productivity with a highly integrated workflow with CRM integration presented by VOIP.'
     },]
+export default function VopiVirtualNumbers() {
+  const pageUrl = usePathname();
   return(<>
-    <Layout>
+    <Layout
+      headTitle="Voice Over Internet Protocol – VOIP | Yonescat"
+        metaDescription="What is VOIP technology and why it is essential for you? Explore here."
+        keywords={"Infrastructure,  Voice Over Internet Protocol – VOIP"} url={pageUrl}
+    >
        <InnerHero imgScr={"/images/animation/infrastructure/Virtual-Numbers.json"} bgImg={"/images/inner-page/voip-bg.webp"}
           title="VOIP - Virtual Numbers" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">Crystal Clear Audio, Global Calling Without Interruption</p>}

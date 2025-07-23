@@ -4,11 +4,9 @@ import BoxSection from "@/components/sections/section";
 import InnerHero from "@/layout/hero2";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
-
-export default function MicrosoftOffice365() {
- 
-  const FeaturesList = [
+const FeaturesList = [
     { id:"1", icone:"word.webp", title:"Microsoft Word",
       discription:"Microsoft - also known as 'MS Word', is typically a word-processing application, enabling users to design and manage numerous documents. Anyone from students to small businesses can use Word to create content, keep a record of data and manage worksheets. This application is one of the most renowned and versatile word processors available in the market."
     },
@@ -27,8 +25,15 @@ export default function MicrosoftOffice365() {
     { id:"", icone:"sharepoint.webp", title:"Microsoft SharePoint",
       discription:"SharePoint - as the name implies, is a collaborative document-sharing application. It is commonly used by small businesses or organizations, to share business documents and reports. The major purpose of using SharePoint is to communicate important information and share documentation within the organization."
     }]
+export default function MicrosoftOffice365() {
+  const pageUrl = usePathname();
+  
   return(<>
-    <Layout>
+    <Layout
+      headTitle="Microsoft Office365 | Yonescat"
+        metaDescription="Are you a small business considering investing in Microsoft 365 for your business? You landed the right place."
+        keywords={"Infrastructure,  Microsoft Office365"} url={pageUrl}
+    >
       <InnerHero imgScr={"/images/animation/infrastructure/Microsoft-Office.json"} bgImg={"/images/inner-page/ms-office-bg.webp"}
           title="Microsoft Office365" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">Take advantage of the best solution available</p>}

@@ -4,6 +4,9 @@ import { usePathname } from 'next/navigation';
 import Link from "next/link";
 import Image from 'next/image';
 
+import { trackGAEvent } from "@/lib/Google/google-analytics"
+import { event } from "@/lib/Google/gtag"
+
 import { Button } from "@/components/ui/button";
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
@@ -60,7 +63,16 @@ export default function Home() {
   const [result, setResult] = useState(null);
 
   const onSubmit = async(data) => {
-
+    window.gtag('event', 'active_user', {
+      user_property: 'active_users',
+    })
+    event({
+      action: 'click_button',
+      category: 'engagement',
+      label: 'homepage_signup',
+      value: 1
+    })
+     trackGAEvent("My Category", "My Action", "My Label");
     // const userCaptchaValue = data.captcha_input;
     // if (validateCaptcha(userCaptchaValue)) {} else {
     //   showError([{message:"Invalid Captcha"}]); return
@@ -91,7 +103,7 @@ export default function Home() {
     }
   }
   return (<>
-    <Layout>
+    <Layout headTitle={"Contact us | Yonescat"}  metaDescription={"Yonescat - We Design Solutions"}  keywords={"Contact us"} url={pageUrl}>
       <Banner title={"Questions? Let's Talk"} description={"Want to learn more about Yonescat, get a quote, or speak with an expert? Let us know what you are looking for and we’ll get back to you right away"} />
       <section className="box-main-section mb-[50px]">
         <div className="container">

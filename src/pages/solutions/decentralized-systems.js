@@ -4,10 +4,12 @@ import InnerHero from "@/layout/hero2";
 import ContactSection from "@/components/sections/contact";
 import BoxSection from "@/components/sections/section";
 import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
 
 
 
 export default function DecentralizedSystems() {
+  const pageUrl = usePathname();
   const [showMore, setShowMore] = useState({key:0});
   
   const handleToggle = (key) => {
@@ -19,7 +21,11 @@ export default function DecentralizedSystems() {
   }
 
   return(<>
-  <Layout>
+  <Layout
+    headTitle="Yonescat Services in Decentralized Systems | Yonescat"
+    metaDescription="Secure, trustless, rapid, scalable, and stable; Yonescat delivers effective dApps across verticals and industries."
+    keywords={"Solutions, Yonescat Services in Decentralized Systems"} url={pageUrl}
+  >
     <InnerHero imgScr={"/images/animation/solutions/Decentralized-Systems.json"} bgImg={"/images/inner-page/decenter-bg.webp"}
       title="Decentralized Systems" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
       subtitle={<p className="sub-page-discretion">Our team provide in depth solutions to create stable decentralized applications</p>}

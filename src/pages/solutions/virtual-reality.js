@@ -8,12 +8,10 @@ import ListBox from "@/components/listBox";
 import ContactSection from "@/components/sections/contact";
 
 import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
 
 
-
-
-export default function VirtualReality() {
-  const ListArray = [
+const ListArray = [
     {"id":"","listimg":"/images/main/section_image/Icon_Img/Easier_upgrades.webp","title":"Easier upgrades"},
     {"id":"","listimg":"/images/main/section_image/Icon_Img/Scalability.webp","title":"Scalability"},
     {"id":"","listimg":"/images/main/section_image/Icon_Img/Saving_software_costs.webp","title":"Saving software costs"},
@@ -30,6 +28,9 @@ export default function VirtualReality() {
     {"id":"","listimg":"/images/main/section_image/Icon_Img/Organizational.webp","title":"Environmentally Friendly"},
   ]  
 
+export default function VirtualReality() {
+  
+  const pageUrl = usePathname();
   const [showMore, setShowMore] = useState({key:0});
   
   const handleToggle = (key) => {
@@ -41,7 +42,10 @@ export default function VirtualReality() {
   }
   
   return(<>
-  <Layout>
+  <Layout keywords={"Solutions, Yonescat Services in Virtual Reality"} url={pageUrl} 
+        headTitle="Yonescat Services in Virtual Reality | Yonescat" headerCls="navbar-dark inner-page-header"
+        metaDescription="Take your business to groundbreaking real life experiences in virtual environment!"
+  >
     <InnerHero imgScr={"/images/animation/solutions/virtual-reality.json"} bgImg={"/images/inner-page/vr-bg.webp"}
       title="Virtual Reality" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">Produce ground-breaking immersive VR experiences</p>}

@@ -12,17 +12,18 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-aqua text-stone-100 shadow-xs hover:bg-deepsea rounded-full",
+          // "bg-aquamarine text-stone-900 hover:text-white  shadow-xs hover:bg-deepsea rounded-full",
+          "bg-aquamarine text-stone-900  shadow-xs hover:bg-aquamarine-shade rounded-full",
           destructive:
-          "bg-destructive text-stone-100 shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+          "bg-destructive text-stone-100 shadow-xs hover:bg-aquamarine-shade focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
           outline:
-          "rounded-full border border-deepsea text-deepsea hover:bg-deepsea hover:text-white  shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "rounded-full border border-deepsea text-black hover:bg-aquamarine-shade hover:text-black  shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
           secondary:
             "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
           ghost:
             "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
           link: 
-            "text-primary underline-offset-4 hover:underline",
+            "text-black underline-offset-4 hover:underline",
           whitebtn:
             "text-stone-100 hover:bg-stone-100 !border-stone-100",
         },

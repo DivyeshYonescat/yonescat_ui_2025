@@ -3,9 +3,8 @@ import Layout from "@/layout/Layout";
 import InnerHero from "@/layout/hero2";
 import Card from "@/components/card";
 import ContactSection from "@/components/sections/contact";
-
-export default function ECommerce() {
-  const FeaturesList = [
+import { usePathname } from "next/navigation";
+const FeaturesList = [
     { id:"1", icone:"Grow your sales.webp", title:"State of the art e-commerce solutions",
       discription:"Yonescat specializes in designing and developing hybrid and premium cloud, iOS, and Android applications. Drawing inspiration from the western genre and space exploration, Yonescat aims to meet the demand for groundbreaking technology. The company is focused on creating e-commerce solutions to help businesses thrive in the fast-paced future."
     },
@@ -25,8 +24,14 @@ export default function ECommerce() {
       discription:"More and more b2b providers are taking their own path and selling directly to consumers. With Yonescat, enterprises can easily adapt to this business strategy. Operate D2C with our solutions and leverage highly personalized marketing and design capabilities to build your brand and serve new target groups."
     }
   ];
+export default function ECommerce() {
+  const pageUrl = usePathname();
   return(<>
-    <Layout>
+    <Layout
+      headTitle="Yonescat E-commerce Services - Digitalize your business!"
+      metaDescription="Generate better sales with Yonescat’s premium e-commerce solutions."
+      keywords={"Solutions, Yonescat E-commerce Services"} url={pageUrl}
+    >
       <InnerHero imgScr={"/images/animation/solutions/E-commerce.json"} bgImg={"/images/inner-page/ecomerce-hero-bg.png"} 
         title="E-commerce" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<>
