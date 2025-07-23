@@ -16,8 +16,8 @@ export default function DedicatedServers() {
     {"id":"6","listimg":"/images/main/section_image/Icon_Img/oriented-hosting-server.webp","title":"Rock-solid website foundation"},
   ];
   return(<>
-    <Layout headTitle="Dedicated Servers | Yonescat" keywords={"Dedicated Servers"} url={pageUrl}
-        metaDescription="What exactly are dedicated servers and why they are essential for businesses, is what we are going to explore in this article.">
+    <Layout headTitle="Powerful Dedicated Servers Hosting | Secure & Managed for Business Growth" keywords={"Hosting, Dedicated Servers, Managed Dedicated Hosting, Secure Servers, Business Hosting"} url={pageUrl}
+        metaDescription="Unlock unmatched performance with our dedicated servers—fully managed, secure, and customizable hosting solutions designed to support your business’s critical applications and data needs.">
           
       <InnerHero imgScr={"/images/animation/hosting/Dedicated-Servers.json"} bgImg={"/images/inner-page/iot-bg.webp"}
         title="Dedicated Servers" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

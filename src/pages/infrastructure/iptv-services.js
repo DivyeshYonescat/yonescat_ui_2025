@@ -8,9 +8,9 @@ export default function IPtvServices() {
   const pageUrl = usePathname();
   return(<>
     <Layout
-      headTitle="IPTV | Yonescat"
-        metaDescription="Fascinated by the idea of IPTV? Here’s everything you need to know about it."
-        keywords={"Infrastructure,  IPTV Services"} url={pageUrl}
+      headTitle="IPTV Services Infrastructure | Reliable, High-Quality Streaming Solutions"
+        metaDescription="Deliver seamless IPTV services with robust infrastructure—offering scalable, secure, and high-definition streaming tailored to meet the needs of modern digital audiences."
+        keywords={"Infrastructure, IPTV Services, Internet TV, Streaming solutions, Digital broadcast"} url={pageUrl}
     >
        <InnerHero imgScr={"/images/animation/infrastructure/IPTV-Services.json"} bgImg={"/images/inner-page/iptv-background.webp"}
           title="IPTV Services" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

@@ -8,8 +8,8 @@ export default function SharedHosting() {
   const pageUrl = usePathname();
   return(<>
     <Layout 
-       headTitle="Shared Hosting | Yonescat" keywords={"Hosting, Shared Hosting"} url={pageUrl}
-        metaDescription="Are you a beginner looking to set up your own website? You're in the right place!"
+       headTitle="Affordable Shared Hosting for Beginners | Fast & Secure Web Hosting" keywords={"Hosting, Shared Hosting, Affordable Web Hosting, Beginner Hosting, Reliable Shared Hosting"} url={pageUrl}
+        metaDescription=" Launch your website with our reliable shared hosting solutions tailored for beginners. Enjoy easy setup, 99.9% uptime, and expert support to grow your online presence hassle-free. Start today!"
     >
       <InnerHero imgScr={"/images/animation/hosting/shared-hosting.json"} bgImg={"/images/inner-page/iot-bg.webp"}   
         title="Shared Hosting" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

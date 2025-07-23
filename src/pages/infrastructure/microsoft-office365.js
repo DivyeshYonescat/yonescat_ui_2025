@@ -30,9 +30,9 @@ export default function MicrosoftOffice365() {
   
   return(<>
     <Layout
-      headTitle="Microsoft Office365 | Yonescat"
-        metaDescription="Are you a small business considering investing in Microsoft 365 for your business? You landed the right place."
-        keywords={"Infrastructure,  Microsoft Office365"} url={pageUrl}
+      headTitle="Microsoft Office365 Infrastructure | Empower Your Business with Cloud Productivity"
+        metaDescription="Simplify your digital workspace with Microsoft Office365 infrastructure—secure, scalable cloud solutions designed to enhance collaboration, communication, and efficiency."
+        keywords={"Infrastructure, Microsoft Office365, Office 365 setup, Cloud productivity, Business collaboration"} url={pageUrl}
     >
       <InnerHero imgScr={"/images/animation/infrastructure/Microsoft-Office.json"} bgImg={"/images/inner-page/ms-office-bg.webp"}
           title="Microsoft Office365" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

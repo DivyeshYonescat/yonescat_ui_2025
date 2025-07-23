@@ -15,9 +15,9 @@ export default function DatabaseAsService() {
   const pageUrl = usePathname();
   return(<>
     <Layout
-      headTitle="Database As A Service | Yonescat"
-      metaDescription="Learn what is so special about cloud databases and why you should consider moving to a database as a service model."
-      keywords={"Infrastructure, Database As A Service"} url={pageUrl}
+      headTitle="Database as a Service | Scalable, Secure & Fully Managed Infrastructure"
+      metaDescription="Simplify your data operations with our Database as a Service solutions—automated scaling, high availability, and expert management to power performance and growth."
+      keywords={" Infrastructure, Database as a Service, DBaaS, Scalable databases, Managed data solutions"} url={pageUrl}
     >
       <InnerHero imgScr={"/images/animation/infrastructure/Database-Service.json"} bgImg={"/images/inner-page/db-as-service-bg.webp"} 
         title="Database as a Service" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

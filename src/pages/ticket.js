@@ -190,9 +190,9 @@ export default function Home() {
     <>
       
       <Layout
-        headTitle={"Ticket | Yonescat"} 
-        metaDescription={"Yonescat - We Design Solutions"} 
-        keywords={"Ticket"} url={pageUrl}
+        headTitle={"Ticket Support | Submit a Request & Get Timely Assistancee"} 
+        metaDescription={"Facing an issue or need service help? Submit a support ticket easily and get fast, reliable responses from our dedicated help desk team."} 
+        keywords={"Ticket, Support ticket, Submit request, Help desk"} url={pageUrl}
       >
         <Banner title={" Ticket Support"} description={"Want to learn more about Yonescat, get a quote, or speak with an expert? Let us know what you are looking for and we’ll get back to you right away"} />
         <section className="box-main-section mb-[50px]">

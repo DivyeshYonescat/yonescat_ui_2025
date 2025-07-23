@@ -56,9 +56,9 @@ export default function Home() {
   const pageUrl = usePathname();
   return (
     <>
-      <Layout headTitle="Solutions | Yonescat"
-        metaDescription="Discover our comprehensive range of solutions including Software Development, Product Design, AI & Machine Learning, Mobile Applications, Web & Cloud Portals, E-commerce, Data Analytics, Virtual Reality, Decentralized Systems, and IoT. Innovate and transform your business with our expertise."
-        keywords={"Solutions, Software Development, Product Design, Ai & Machine Learning, Mobile Applications, Web & Cloud Portals, E-commerce, Data Analytics, Virtual Reality,  Decentralized Systems, IoT-"} url={pageUrl}>     
+      <Layout headTitle=" Solutions | Innovative Software & Technology Services Tailored to Your Needs"
+        metaDescription=" Unlock growth with our expert solutions in software development, AI, mobile apps, e-commerce, and more. Partner with us to create custom, scalable technology that drives your business forward."
+        keywords={"Solutions, Software Development, Product Design, AI & Machine Learning, Mobile Applications, Web & Cloud Portals, E-commerce, Data Analytics, Virtual Reality, Decentralized Systems, IoT"} url={pageUrl}>     
         <Overview list={list} />
       </Layout>
     </>

@@ -29,7 +29,7 @@ const DynamicClients = dynamic(() => import("@/components/sections/Client"),{ssr
 export default function Home() {
   const pageUrl = usePathname();
   return(<>
-    <Layout headTitle={"About us | Yonescat"}  metaDescription={"Yonescat - We Design Solutions"}  keywords={"Aboutus"} url={pageUrl} >
+    <Layout headTitle={"About Us | Meet the Team Driving Innovation & Client Success"}  metaDescription={"Explore our story, values, and the passionate experts behind our projects. See how we turn vision into impact—start your journey with us today."}  keywords={"Aboutus"} url={pageUrl} >
       <div className="section-main pb-0">
         <div className="container">
           <div className="about_title w-[75%] py-[50px_20px] max-xl:w-full">

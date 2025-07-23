@@ -37,9 +37,9 @@ export default function MobileApplicationsSection() {
  const pageUrl = usePathname();
   return(<>
   <Layout
-    headTitle="Yonescat Services in Mobile Applications | Yonescat"
-    metaDescription="Innovative and user-centered applications that support easy access and streamlined business processes. "
-    keywords={"Solutions, Mobile Applications"} url={pageUrl}
+    headTitle="Mobile Applications Solutions | Custom Apps Built for Performance & Engagement"
+    metaDescription=" Drive business growth with tailored mobile application solutions—designed for seamless performance, user experience, and scalability across iOS and Android platforms."
+    keywords={"Solutions, Mobile Applications, App development, Cross-platform apps, User-focused mobile solutions"} url={pageUrl}
   >
 
 

@@ -54,8 +54,8 @@ export default function Home() {
   const pageUrl = usePathname();
   return (
     <>
-      <Layout  headTitle={"Infrastructure | Yonescat"} metaDescription={"Yonescat - We Design Solutions"} 
-        keywords={"Infrastructure, Datacenter, DDos Protections, Database-as-a-Service, Microsoft Office365, Google G-Suite, VOIP - Virtual Numbers, IPTV Services"} url={pageUrl}>        
+      <Layout  headTitle={"Infrastructure Solutions | Secure, Scalable Services from Cloud to Communication"} metaDescription={" Explore robust infrastructure solutions including datacenters, DDoS protection, DBaaS, Office365, G-Suite, VOIP, and IPTV—engineered for performance, security, and business continuity."} 
+        keywords={"Infrastructure, Datacenter, DDoS Protection, Database-as-a-Service, Office365, G-Suite, VOIP, IPTV Services"} url={pageUrl}>        
         <Overview list={list} />
       </Layout>
     </>

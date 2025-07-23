@@ -8,9 +8,9 @@ export default function DeveloperHosting() {
   const pageUrl = usePathname();
   return(<>
     <Layout
-       headTitle="Developer Hosting | Yonescat"
-        metaDescription="We provide with optimal web developer hosting services to help you deliver results."
-        keywords={"Hosting, Developer Hosting"} url={pageUrl}
+       headTitle="Reliable Developer Hosting | Fast, Secure & Developer-Friendly Hosting Solutions"
+        metaDescription="Empower your projects with our developer hosting—offering fast deployment, robust security, and flexible tools designed specifically for web developers to build, test, and launch with ease."
+        keywords={"Hosting, Developer Hosting, Web Developer Hosting, Developer-Friendly Hosting, Fast Deployment"} url={pageUrl}
     >
       <InnerHero imgScr={"/images/animation/hosting/Developer-Hosting.json"} bgImg={"/images/inner-page/developer-hosting-background.webp"}
         title="Developer Hosting" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

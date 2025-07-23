@@ -38,9 +38,9 @@ const pageUrl = usePathname();
 
   return(<>
     <Layout
-      headTitle="Google G-Suite | Yonescat"
-      metaDescription="What is G Suit software and how to set up an Account on G Suit? Read here."
-      keywords={"Infrastructure, Google G-Suite"} url={pageUrl} 
+      headTitle="Google G-Suite Infrastructure | Seamless Cloud Collaboration & Productivity"
+      metaDescription="Optimize your business with Google G-Suite infrastructure—secure email, cloud storage, and collaboration tools designed to enhance productivity and streamline workflows."
+      keywords={"Infrastructure, Google G-Suite, Google Workspace, Cloud collaboration, Business productivity tools"} url={pageUrl} 
     >
        <InnerHero imgScr={"/images/animation/infrastructure/Google-G-Suite.json"} bgImg={"/images/inner-page/google-g-bg.webp"}
           title="Google G-Suite" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

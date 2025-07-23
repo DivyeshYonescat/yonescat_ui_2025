@@ -50,9 +50,9 @@ export default function Home() {
 
     return (<>
         <Layout 
-          headTitle={"Blogs | Yonescat"} 
-          metaDescription={"Yonescat - We Design Solutions"} 
-          keywords={"Blogs"} url={pageUrl}
+          headTitle={"Blogs | Latest Insights and Trends from Industry Experts"} 
+          metaDescription={"Explore our Blogs for fresh ideas, expert tips, and the latest trends in design and technology. Stay informed and inspired—read, learn, and grow with us."} 
+          keywords={" Blogs, Industry insights, Design trends, Expert articles"} url={pageUrl}
         >
         <section id="blog-page" className="section-main pb-14 inner-page-hero blog-page-section">
           <div className="container">

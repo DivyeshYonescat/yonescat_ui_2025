@@ -40,7 +40,7 @@ export default function Home(){
     getProject(projectId);
   }, [projectId, router]);
   return(<>
-    <Layout url={pageUrl} headTitle={"Project Details | Yonescat"} metaDescription={"Yonescat - We Design Solutions"}  keywords={"Project Details"} >
+    <Layout url={pageUrl} headTitle={"Project Details | In-Depth Case Studies Showcasing Our Expertise"} metaDescription={"Explore comprehensive Project Details that highlight our process, challenges, and successful outcomes—see how we bring client visions to life with innovation and precision."}  keywords={"Project Details, Case study, Project overview, Client solutions"} >
       <div className="section-main project pb-0">
         <div className="container">
             <div className="about_title w-[75%] py-[30px_50px] max-xl:w-full ">

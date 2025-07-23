@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <>
-      <Layout headTitle={"BlogsDetails | Yonescat"} metaDescription={"Yonescat - We Design Solutions"} keywords={"BlogsDetails"} url={pageUrl}>
+      <Layout headTitle={"BlogsDetails | In-Depth Articles to Inspire and Inform"} metaDescription={"Dive into BlogsDetails for comprehensive insights and expert analysis on design, technology, and innovation. Get the full story behind every post—engage and discover more."} keywords={"BlogsDetails, Blog posts, Article insights, Detailed blog content"} url={pageUrl}>
 
         <div>
           <section className="section-main">

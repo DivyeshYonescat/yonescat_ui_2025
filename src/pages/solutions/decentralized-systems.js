@@ -22,9 +22,9 @@ export default function DecentralizedSystems() {
 
   return(<>
   <Layout
-    headTitle="Yonescat Services in Decentralized Systems | Yonescat"
-    metaDescription="Secure, trustless, rapid, scalable, and stable; Yonescat delivers effective dApps across verticals and industries."
-    keywords={"Solutions, Yonescat Services in Decentralized Systems"} url={pageUrl}
+    headTitle="Decentralized Systems Solutions | Build Secure & Scalable Blockchain Networks"
+    metaDescription="Leverage our decentralized systems solutions to create secure, transparent, and scalable applications. From blockchain to Web3 integration, we help future-proof your digital infrastructure."
+    keywords={" Solutions, Decentralized Systems, Blockchain solutions, Distributed technologies, Web3"} url={pageUrl}
   >
     <InnerHero imgScr={"/images/animation/solutions/Decentralized-Systems.json"} bgImg={"/images/inner-page/decenter-bg.webp"}
       title="Decentralized Systems" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

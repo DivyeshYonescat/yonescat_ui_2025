@@ -1,7 +1,7 @@
 import Layout from "@/layout/Layout";
 export default function Home() {
   return(<>
-  <Layout headTitle={"GDPR-Policy | Yonescat"}  metaDescription={"Yonescat - We Design Solutions"}  keywords={"GDPR-Policy"} >
+  <Layout headTitle={"GDPR-Policy | How We Protect Your Data & Ensure Compliance"}  metaDescription={"Learn how our GDPR-Policy safeguards your personal data, ensures transparency, and respects your privacy rights—review our commitment to data protection."}  keywords={"GDPR-Policy, Data protection, Privacy policy, User data rights"} >
   <div className="section-main">
     <div className="container">
       <div className="max-w-[1000px] m-auto">

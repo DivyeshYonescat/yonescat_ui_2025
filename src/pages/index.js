@@ -24,11 +24,11 @@ export default function Home() {
       </main> */}
 
       <Head>
-        <title>Home | Yonescat</title>
-        <meta name="description" content="Welcome to Your Website Name. Explore our services and offerings." />
-        <meta name="keywords" content="website, services, home, explore" />
-        <meta property="og:title" content="Home | Your Website Name" />
-        <meta property="og:description" content="Welcome to Your Website Name. Explore our services and offerings." />
+        <title>Explore Our Website Services | Your Trusted Partner for Innovative Solutions</title>
+        <meta name="description" content="Discover a wide range of expert website services designed to elevate your business. Explore our offerings on the homepage and start transforming your digital presence today." />
+        <meta name="keywords" content=" website services, explore services, homepage, service offerings, discover solutions" />
+        <meta property="og:title" content="Explore Our Website Services | Your Trusted Partner for Innovative Solutions" />
+        <meta property="og:description" content="Discover a wide range of expert website services designed to elevate your business. Explore our offerings on the homepage and start transforming your digital presence today." />
         <meta property="og:url" content="https://yonescat.com" />
         <meta property="og:image" content="https://yonescat.com/og-image.jpg" />
         <link rel="icon" href={"/images/main/favicon.ico"} type="image/x-icon" />

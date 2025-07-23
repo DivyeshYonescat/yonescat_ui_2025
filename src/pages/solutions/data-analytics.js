@@ -20,8 +20,8 @@ export default function DataAnalytics() {
   }
 
   return(<>
-    <Layout  headTitle="Yonescat Services in Data Analytics | Yonescat" keywords={"Solutions, Data Analytics"} url={pageUrl}
-      metaDescription="Yonescat manages, analyzes and implements data for beginners to take the quintessential data analytics strategy." >
+    <Layout  headTitle="Data Analytics Solutions | Transform Data into Actionable Insights" keywords={" Solutions, Data Analytics, Data insights, Analytics strategy, Business intelligence"} url={pageUrl}
+      metaDescription="Unlock the full potential of your data with our expert analytics solutions. From strategy to implementation, we help businesses make smarter, data-driven decisions for lasting success." >
 
       <InnerHero imgScr={"/images/animation/solutions/Data-Analytics.json"} bgImg={"/images/inner-page/data-analytics.webp"}
         title="Data Analytics" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

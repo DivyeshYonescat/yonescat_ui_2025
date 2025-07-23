@@ -94,7 +94,7 @@ export default function Home() {
   };
 
   return (<>
-    <Layout headTitle={"Projects | Yonescat"} metaDescription={"Yonescat - We Design Solutions"} keywords={"Projects"} url={pageUrl}> 
+    <Layout headTitle={"Projects | Explore Our Innovative Portfolio and Success Stories"} metaDescription={"Discover how we deliver impactful solutions through our diverse projects. View detailed case studies showcasing creativity, strategy, and measurable results."} keywords={"Projects, Portfolio, Case studies, Client work"} url={pageUrl}> 
       <div className="section-main project pb-0">
         <div className="container">
           <div className="about_title w-[75%] py-[30px_50px] max-xl:w-full ">

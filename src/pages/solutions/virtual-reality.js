@@ -42,9 +42,9 @@ export default function VirtualReality() {
   }
   
   return(<>
-  <Layout keywords={"Solutions, Yonescat Services in Virtual Reality"} url={pageUrl} 
-        headTitle="Yonescat Services in Virtual Reality | Yonescat" headerCls="navbar-dark inner-page-header"
-        metaDescription="Take your business to groundbreaking real life experiences in virtual environment!"
+  <Layout keywords={" Solutions, Virtual Reality, VR experiences, Immersive technology, Interactive simulations"} url={pageUrl} 
+        headTitle="Virtual Reality Solutions | Create Immersive Experiences for Training, Sales & More" 
+        metaDescription="Unlock the power of Virtual Reality with custom-built solutions—enhance user engagement through immersive simulations, interactive environments, and next-gen visual storytelling."
   >
     <InnerHero imgScr={"/images/animation/solutions/virtual-reality.json"} bgImg={"/images/inner-page/vr-bg.webp"}
       title="Virtual Reality" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

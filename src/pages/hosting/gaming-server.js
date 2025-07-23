@@ -17,8 +17,8 @@ export default function GameServer() {
   ]
 
   return(<>
-    <Layout headTitle="Gaming Server | Yonescat" keywords={"Hosting, Gaming Server"} url={pageUrl}
-        metaDescription="A game server is a remote or local server used by game clients to play multiplayer games. Dive into the article to learn in detail.">
+    <Layout headTitle="Reliable Hosting for Gaming Servers | Optimize Multiplayer Performance" keywords={" Hosting, Gaming Server, Multiplayer Game Hosting, Game Server Solutions, Low Latency Gaming"} url={pageUrl}
+        metaDescription="Experience lag-free multiplayer gaming with our robust gaming server hosting. Enjoy high-speed connections, low latency, and 24/7 support to keep your game running smoothly. Level up your gameplay now!">
       <InnerHero imgScr={"/images/animation/hosting/Gaming-Server.json"} bgImg={"/images/inner-page/iot-bg.webp"}  
         title="Gaming Server" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
         subtitle={<p className="sub-page-discretion">The things to consider when building an AI or ML algorithm</p>}

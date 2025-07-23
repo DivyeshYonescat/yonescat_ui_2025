@@ -8,9 +8,9 @@ export default function Emalilsecurity() {
   const pageUrl = usePathname();
   return(<>
     <Layout 
-      metaDescription="Providing the most secured Email gateway for protected email network."
-        headerCls="navbar-dark inner-page-header" headTitle="Email Security | Yonescat"
-        keywords={"Hosting, Email Security"} url={pageUrl}
+      metaDescription="Enhance your email security with our advanced hosting solutions. Protect against threats, spam, and data breaches with a secure email gateway designed for businesses. Stay safe and connected."
+        headTitle=" Robust Email Security with Reliable Hosting | Protect Your Email Network"
+        keywords={"Hosting, Email Security, Secure Email Hosting, Email Protection, Email Gateway"} url={pageUrl}
     >
       <InnerHero imgScr={"/images/animation/hosting/Email-Security.json"}  bgImg={"/images/inner-page/email-securiry-background.webp"} 
         title="Email Security" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

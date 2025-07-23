@@ -68,7 +68,7 @@ export default function Home() {
   const pageUrl = usePathname();
   return (
     <>
-      <Layout headTitle={"Hosting | Yonescat"} metaDescription={"Yonescat - We Design Solutions"} 
+      <Layout headTitle={"Hosting, Web hosting, Cloud hosting, Secure hosting, Managed hosting"} metaDescription={"Discover hosting services tailored for performance and security—scalable web and cloud hosting solutions designed to keep your website fast, safe, and always online."} 
         keywords={"Hosting, Shared Hosting, Cloud Reseller, Dedicated Servers, Cloud VPS, Domain Names, Developer Hosting, Email Security, SSl Certificates, Gaming Server"} 
         url={pageUrl}>        
         <Overview list={list} />

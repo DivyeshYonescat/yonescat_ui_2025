@@ -28,9 +28,9 @@ export default function ECommerce() {
   const pageUrl = usePathname();
   return(<>
     <Layout
-      headTitle="Yonescat E-commerce Services - Digitalize your business!"
-      metaDescription="Generate better sales with Yonescat’s premium e-commerce solutions."
-      keywords={"Solutions, Yonescat E-commerce Services"} url={pageUrl}
+      headTitle="E-commerce Services Solutions | Launch & Scale Your Online Business Seamlessly"
+      metaDescription=" Power your digital storefront with end-to-end e-commerce services—custom design, secure checkout, and growth-driven features that boost sales and customer experience."
+      keywords={"Solutions, E-commerce Services, Online store development, Digital commerce, Scalable e-commerce"} url={pageUrl}
     >
       <InnerHero imgScr={"/images/animation/solutions/E-commerce.json"} bgImg={"/images/inner-page/ecomerce-hero-bg.png"} 
         title="E-commerce" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

@@ -9,8 +9,8 @@ export default function SslCertificates() {
   const pageUrl = usePathname();
   return(<>
     <Layout
-      headTitle="SSL Certificate | Yonescat" keywords={"Hosting, SSL Certificates"}  url={pageUrl}
-        metaDescription="Providing clients with the most-secured and cost-effective SSL Certificates for their websites"
+      headTitle="Secure Your Website with Affordable SSL Certificates | Reliable Hosting Security" keywords={"Hosting, SSL Certificate, Website Security, Affordable SSL, Trusted SSL Certificate"}  url={pageUrl}
+        metaDescription=" Protect your site and visitors with trusted SSL certificates designed for optimal security and seamless integration. Boost trust and SEO with easy installation and 24/7 support. Get secured today!"
     >
       <InnerHero imgScr={"/images/animation/hosting/SSl-Certificates.json"} bgImg={"/images/inner-page/iot-bg.webp"} 
         title="SSl certificates" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

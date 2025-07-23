@@ -18,8 +18,8 @@ export default function CloudVPS() {
     }
   }
   return(<>
-    <Layout headTitle="Cloud VPS | Yonescat" keywords={"Hosting, Cloude VPN"} url={pageUrl}
-        metaDescription="What is Cloud VPS and why they can be a good fit for your business? Read here.">
+    <Layout headTitle="Reliable Cloud VPS Hosting | Scalable Virtual Servers for Your Business" keywords={"Hosting, Cloud VPS, Virtual Private Server, Scalable VPS, Cloud hosting"} url={pageUrl}
+        metaDescription="Experience powerful and flexible Cloud VPS hosting with full root access, scalable resources, and 24/7 support—perfect for businesses seeking control and performance in the cloud.">
 
       <InnerHero imgScr={"/images/animation/hosting/Cloud-VPS.json"} bgImg={"/images/inner-page/iot-bg.webp"}
         title="Cloud VPS" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

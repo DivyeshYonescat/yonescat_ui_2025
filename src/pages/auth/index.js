@@ -5,6 +5,7 @@ import { Button, buttonVariants } from "@/components/ui/button"
 import Login from '@/components/auth/login';
 import Signup from '@/components/auth/signup';
 import { Toaster } from '@/components/ui/sonner';
+import Head from 'next/head';
 
 export default function Home() {
 
@@ -24,6 +25,18 @@ export default function Home() {
   
   return (
     <>
+      <Head>
+        <title>Secure Login & Easy Register | Access Your Account with Confidence</title>
+        <meta name="description" content="Quickly login or register to access your personalized dashboard with secure authentication. Enjoy seamless account management and enhanced privacy protection. Start your journey with us today!,Welcome to Your Website Name. Explore our services and offerings." />
+        <meta name="keywords" content="website, services, home, Login, Register, User Access, Secure Login, Account Registration, Google Login, Facebook Login, Google Register, Facebook Register" />
+        <meta property="og:title" content="Secure Login & Easy Register | Access Your Account with Confidence" />
+        <meta property="og:description" content="Welcome to Your Website Name. Explore our services and offerings." />
+        <meta property="og:url" content="https://yonescat.com" />
+        <meta property="og:image" content="https://yonescat.com/og-image.jpg" />
+        <link rel="icon" href={"/images/main/favicon.ico"} type="image/x-icon" />
+        <link rel="icon" type="image/png" sizes="16x16" href={"/images/main/favicon-16x16.png"} />
+        <link rel="icon" type="image/png" sizes="32x32" href={"/images/main/favicon-32x32.png"} />
+      </Head>
       <div  className="pb-[20px] flex justify-center items-center min-h-screen pt-[20px] w-full bg-no-repeat bg-[100%] bg-cover" style={{background:"url(/images/login.webp)"}}>
         <div className="container">
           <div className='max-w-2xl m-auto'>

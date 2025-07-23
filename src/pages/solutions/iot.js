@@ -24,8 +24,8 @@ const ListArray = [
 export default function Iot() {
   const pageUrl = usePathname();
   return(<>
-    <Layout headTitle="Yonescat Services in IOT | Yonescat" keywords={"Solutions, IOT"} url={pageUrl}
-      metaDescription="Discover our comprehensive range of solutions including Software Development, Product Design, AI & Machine Learning, Mobile Applications, Web & Cloud Portals, E-commerce, Data Analytics, Virtual Reality, Decentralized Systems, and IoT. Innovate and transform your business with our expertise."
+    <Layout headTitle="IoT Solutions | Connect, Monitor & Optimize with Smart Technologies" keywords={"Solutions, IoT, Internet of Things, Smart device integration, Connected systems"} url={pageUrl}
+      metaDescription="Transform your operations with cutting-edge IoT solutions—seamlessly integrate smart devices, gain real-time insights, and drive automation across connected systems."
     >
       <InnerHero imgScr={"/images/animation/solutions/IOT.json"} bgImg={"/images/inner-page/iot-bg.webp"}
         title="Internet of Things" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

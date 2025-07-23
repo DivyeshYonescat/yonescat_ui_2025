@@ -103,7 +103,7 @@ export default function Home() {
     }
   }
   return (<>
-    <Layout headTitle={"Contact us | Yonescat"}  metaDescription={"Yonescat - We Design Solutions"}  keywords={"Contact us"} url={pageUrl}>
+    <Layout headTitle={"Contact Us | Get in Touch with Yonescat’s Expert Team"}  metaDescription={"Have a question or project in mind? Contact us for quick support, expert guidance, or a personalized quote—we're here to help you move forward."}  keywords={"Contact us, Get in touch, Customer support, Connect with Yonescat"} url={pageUrl}>
       <Banner title={"Questions? Let's Talk"} description={"Want to learn more about Yonescat, get a quote, or speak with an expert? Let us know what you are looking for and we’ll get back to you right away"} />
       <section className="box-main-section mb-[50px]">
         <div className="container">

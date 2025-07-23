@@ -19,9 +19,9 @@ export default function DomainName() {
   }
   return(<>
     <Layout
-      headTitle="Domain Names | Yonescat"
-        metaDescription="A domain name is the name and address of your website by which internet users will be able to access your website. Explore more in detail."
-        keywords={"Hosting, Domain Names"} url={pageUrl}
+      headTitle="Secure Your Domain Names & Hosting | Easy Domain Registration with Reliable Hosting"
+        metaDescription="Register your perfect domain name and get seamless hosting all in one place. Fast, affordable, and secure—launch your website today with expert support and flexible options."
+        keywords={"Hosting, Domain Names, Domain Registration, Website Domain, Buy Domain"} url={pageUrl}
     >
       <InnerHero imgScr={"/images/animation/hosting/Domain-Names.json"} bgImg={"/images/inner-page/domain-names-bg.webp"}
         title="Domain Names" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

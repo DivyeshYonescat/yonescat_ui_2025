@@ -8,9 +8,9 @@ export default function CloudReseller() {
   const pageUrl = usePathname();
   return(<>
     <Layout 
-      headTitle="Cloud Reseller | Yonescat"
-      metaDescription="A leading cloud computing service provider, Yonescat helps one become a reseller without contracts."
-      keywords={"Hosting, Cloude Reseller"} url={pageUrl}
+      headTitle="Hosting Cloud Reseller Program | Launch Your Own Cloud Hosting Business"
+      metaDescription="Join our flexible cloud reseller program—no contracts, full support, and white-label solutions to grow your hosting business with ease and maximize profits."
+      keywords={"Hosting, Cloud Reseller, Cloud hosting reseller, White-label cloud, Hosting partnership"} url={pageUrl}
     >
       <InnerHero imgScr={null} bgImg={"/images/inner-page/iot-bg.webp"} 
         title="Cloud Reseller" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

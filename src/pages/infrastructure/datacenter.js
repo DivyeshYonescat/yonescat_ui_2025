@@ -20,7 +20,7 @@ export default function DataCenter() {
     }
   }
   return(<>
-    <Layout  headTitle="Data Center | Yonescat" metaDescription='We bring perfection to the "boring" and often forgoten aspects.' keywords={"Infrastructure, Data Center"} url={pageUrl}>
+    <Layout  headTitle="Data Center Infrastructure | Secure, Reliable & Scalable Hosting Solutions" metaDescription='Experience top-tier data center infrastructure offering secure colocation, cloud integration, and 24/7 monitoring to ensure your business stays online and protected around the clock.' keywords={"Infrastructure, Data Center, Colocation, Cloud infrastructure, Secure hosting"} url={pageUrl}>
        <InnerHero imgScr={"/images/animation/infrastructure/datacenter.json"}  bgImg={"/images/inner-page/decenter-bg.webp"} 
           title="Datacenter" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">We bring perfection to the &quot;boring&quot; and often forgoten aspects.</p>}

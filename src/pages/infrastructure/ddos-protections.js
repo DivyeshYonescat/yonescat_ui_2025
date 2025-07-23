@@ -29,7 +29,10 @@ export default function DdosProtections() {
     {"id":"6","listimg":"/images/main/section_image/Icon_Img/ddos06.webp","title":"Customization"},
   ]  
   return(<>
-    <Layout  headTitle="Ddos Protections | Yonescat" metaDescription='We bring perfection to the "boring" and often forgoten aspects.' keywords={"Infrastructure, Ddos Protections"} url={pageUrl}>
+    <Layout  
+    headTitle="Ddos Protections | Yonescat" 
+    metaDescription='We bring perfection to the "boring" and often forgoten aspects.' 
+    keywords={"Infrastructure, DDoS Protection, Cybersecurity, Network security, Threat mitigation"} url={pageUrl}>
        <InnerHero imgScr={"/images/animation/infrastructure/ddos-protections.json"} bgImg={"/images/inner-page/ddos-background.webp"} 
           title="DDos Protection" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
           subtitle={<p className="sub-page-discretion">We provide high-performance, real-time and automatic DDoS attack protection</p>}

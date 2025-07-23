@@ -46,9 +46,9 @@ export default function VopiVirtualNumbers() {
   const pageUrl = usePathname();
   return(<>
     <Layout
-      headTitle="Voice Over Internet Protocol – VOIP | Yonescat"
-        metaDescription="What is VOIP technology and why it is essential for you? Explore here."
-        keywords={"Infrastructure,  Voice Over Internet Protocol – VOIP"} url={pageUrl}
+      headTitle="VOIP Infrastructure Solutions | Reliable & Cost-Effective Internet Telephony"
+        metaDescription="Transform your communication with VOIP infrastructure—scalable, secure, and feature-rich voice solutions that reduce costs and improve connectivity for businesses of all sizes."
+        keywords={"Infrastructure, Voice Over Internet Protocol, VOIP services, Internet telephony, Business communication"} url={pageUrl}
     >
        <InnerHero imgScr={"/images/animation/infrastructure/Virtual-Numbers.json"} bgImg={"/images/inner-page/voip-bg.webp"}
           title="VOIP - Virtual Numbers" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

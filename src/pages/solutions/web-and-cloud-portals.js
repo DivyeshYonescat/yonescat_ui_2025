@@ -8,9 +8,9 @@ export default function WebAndCloudPortals() {
   const pageUrl = usePathname();
   return(<>
     <Layout
-      headTitle="Yonescat Services in Web & Cloud Portals | Yonescat"
-        metaDescription="Creative London based agency will help you to reduce costs and increase productivity"
-        keywords={"Solutions, Yonescat Web & Cloud Portals"} url={pageUrl}
+      headTitle="Web & Cloud Portals Solutions | Scalable, Secure Platforms for Modern Business"
+        metaDescription="Build powerful web and cloud portal solutions tailored for seamless access, real-time collaboration, and secure data management—empowering your digital transformation."
+        keywords={"Solutions, Web & Cloud Portals, Cloud-based platforms, Web portal development, Scalable digital solutions"} url={pageUrl}
     >
       <InnerHero imgScr={"/images/animation/solutions/Web-Cloud-Portals.json"} bgImg={"/images/inner-page/web-cloud-bg.webp"}
         title="Web & Cloud Portals" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"

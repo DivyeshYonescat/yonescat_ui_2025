@@ -12,7 +12,8 @@ export default function Home() {
   }
 
   return (<>
-    <Layout  headTitle={"FAQ | Yonescat"}  metaDescription={"Yonescat - We Design Solutions"}  keywords={"FAQ"} url={pageUrl}>
+    <Layout  headTitle={"FAQ | Quick Answers to Common Questions About Our Services"}  
+    metaDescription={"Explore our FAQ to find clear, up-to-date answers on services, support, and more. Save time—get the info you need, when you need it."}  keywords={"FAQ, Frequently Asked Questions, Help center, Customer support"} url={pageUrl}>
       <div className="section-main">
         <div className="container">
           <div className="inner-page-title">

@@ -8,9 +8,9 @@ export default function SoftwareDevelopment() {
   const pageUrl = usePathname();
   return(<>
     <Layout
-       headTitle="Yonescat Services in Software Development | Yonescat"
-        metaDescription="Innovative and user-centered applications that support easy access and streamlined business processes. "
-        keywords={"Solutions, Software Development"} url={pageUrl}
+       headTitle="Software Development Solutions | Build Secure, Scalable & Custom Applications"
+        metaDescription=" Accelerate innovation with tailored software development solutions—full-cycle services to design, develop, and deploy secure, high-performance applications that meet your business goals."
+        keywords={"Solutions, Software Development, Custom software, Scalable applications, End-to-end "} url={pageUrl}
     >
       <InnerHero imgScr={"/images/animation/solutions/Software-Development.json"} bgImg={"/images/inner-page/software-bg.webp"} 
         title="Software Development" note="Feel free to contact us. Happy to help" cta="Get in touch" link="/contact"
