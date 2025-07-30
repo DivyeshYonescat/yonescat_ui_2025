@@ -114,7 +114,8 @@ export default function Invoice() {
             </div>
             <div className="invoice_body mt-[50px]">
               {Merchant !== null && listInvoice.length != 0 ? <>
-              <Table className="invoice_table">
+              <div className="invoice_table_list ">
+              <Table className="invoice_table relative ">
                 <TableHeader>
                   <TableRow>
                     <TableHead>ID</TableHead>
@@ -126,7 +127,6 @@ export default function Invoice() {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {/*          */}
                   {listInvoice.map((row, index) => <>
                   <TableRow key={row.invoice_id}>
                     <TableCell>{index+1}</TableCell>
@@ -177,6 +177,7 @@ export default function Invoice() {
                   </>)}
                 </TableBody>
               </Table>
+              </div>
               </> : <h3 className="text-center">No invoice is found</h3>}
             </div>
           </div>

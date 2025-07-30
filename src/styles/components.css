@@ -50,10 +50,11 @@
   .PhoneInput:has(input:focus-visible) { @apply border-2 border-solid border-deepsea ;}
   
   /* banner */
-  .banner{@apply  bg-no-repeat bg-cover bg-bottom; 
-  background-image: radial-gradient(17% 28% at 65% 50%, #b4effbFF 5%, #073aff00 100%), radial-gradient(18% 28% at 18% 71%, #ffffff59 6%, #073aff00 100%), radial-gradient(70% 53% at 42% 85%, #73f2ffFF 0%, #073aff00 100%), linear-gradient(132deg, #85a3b4FF 0%, #19e4f6FF 98%);
+  .banner{@apply  bg-no-repeat bg-cover bg-bottom bg-aquamarine; 
+  /*background-image: radial-gradient(17% 28% at 65% 50%, #b4effbFF 5%, #073aff00 100%), radial-gradient(18% 28% at 18% 71%, #ffffff59 6%, #073aff00 100%), radial-gradient(70% 53% at 42% 85%, #73f2ffFF 0%, #073aff00 100%), linear-gradient(132deg, #85a3b4FF 0%, #19e4f6FF 98%);*/
+
   }
-  .banner-inner{@apply  flex flex-col justify-start h-[550px] max-sm:h-[450px] pt-[120px] text-stone-100 max-w-[1000px] m-auto; }
+  .banner-inner{@apply  flex flex-col justify-start h-[550px] max-sm:h-[450px] pt-[120px] text-stone-900 max-w-[1000px] m-auto; }
   .shot-banner-inner{@apply pb-[120px] h-auto;}
   /* banner */
   

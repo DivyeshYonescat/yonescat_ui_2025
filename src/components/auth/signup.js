@@ -247,7 +247,7 @@ export default function Signup(props) {
                                 </label>
                             </div>
                         </div>
-                        <FormError field={errors.acceptTerms} />
+                        <FormError field={errors.terms} />
 
                         <div className='float-left w-full mb-[10px]'>
                             { error && error.length > 0 && error.map((error,errorIndex)=> <div className="error text-red-700 mt-[10px]" key={errorIndex}> {error.message} </div>) }
